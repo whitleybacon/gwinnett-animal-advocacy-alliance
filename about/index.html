@@ -23,6 +23,43 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        /* Navigation Styles */
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 25px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -59,10 +96,10 @@
 
     <nav>
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/get-involved/">Get Involved</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="https://whitleybacon.github.io/gwinnett-animal-advocacy-alliance/">Home</a></li>
+            <li><a href="https://whitleybacon.github.io/gwinnett-animal-advocacy-alliance/about/">About</a></li>
+            <li><a href="https://whitleybacon.github.io/gwinnett-animal-advocacy-alliance/get-involved/">Get Involved</a></li>
+            <li><a href="https://whitleybacon.github.io/gwinnett-animal-advocacy-alliance/contact/">Contact</a></li>
         </ul>
     </nav>
 
