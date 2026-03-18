@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | Gwinnett Animal Advocacy Alliance</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #27ae60;
+            --light: #f4f7f6;
+            --white: #ffffff;
+            --dark-gray: #555;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--primary);
+            background-color: var(--light);
+        }
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 3rem 1rem; }
+        h1 { font-size: 2.5rem; color: var(--primary); }
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        .highlight { border-left: 5px solid var(--accent); }
+        h2 { color: var(--accent); margin-top: 0; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        footer { text-align: center; padding: 40px; color: #777; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">GAAA</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/get-involved/">Get Involved</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>How You Can Help</h1>
+        <p>Your involvement ensures that the animals of Gwinnett County receive the advocacy and care they deserve.</p>
+
+        <div class="card highlight">
+            <h2>Shelter Status Monitoring</h2>
+            <p>We are currently tracking animals at the <strong>Gwinnett County Animal Shelter</strong> to ensure transparency. Specifically, we monitor animals in status categories such as <em>"Vet Care/Post Op"</em> and <em>"Awaiting Spay/Neuter."</em></p>
+            <p>Our goal is to follow these animals through the system and pull public records to ensure proper care and outcomes.</p>
+            <a href="#" class="btn">View Our Tracking Dashboard</a>
+        </div>
+
+        <div class="card">
+            <h2>Advocacy & Outreach</h2>
+            <p>Help us attend local council meetings and speak up for animal welfare legislation. We provide the data; you provide the voice.</p>
+        </div>
+
+        <div class="card">
+            <h2>Volunteer & Foster</h2>
+            <p>Directly support local rescues by offering your time or opening your home to a pet in transition.</p>
+            <a href="/contact/" class="btn">Inquire About Volunteering</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gwinnett Animal Advocacy Alliance</p>
+    </footer>
+
+</body>
+</html>
