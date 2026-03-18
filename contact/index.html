@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Gwinnett Animal Advocacy Alliance</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #27ae60;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--primary);
+            background-color: var(--light);
+        }
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { text-decoration: none; color: var(--primary); }
+        
+        .container { max-width: 600px; margin: 0 auto; padding: 3rem 1rem; }
+        .contact-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Crucial for padding */
+        }
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        footer { text-align: center; padding: 40px; color: #777; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">GAAA</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/get-involved/">Get Involved</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="contact-card">
+            <h1>Contact GAAA</h1>
+            <p>Have questions about a specific animal in the shelter or want to join our advocacy efforts? Drop us a line.</p>
+            
+            <form action="https://formspree.io/f/your-id-here" method="POST">
+                <label>Name</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Subject</label>
+                <select name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="tracking">Shelter Tracking Data</option>
+                    <option value="volunteer">Volunteering</option>
+                </select>
+
+                <label>Message</label>
+                <textarea name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gwinnett Animal Advocacy Alliance</p>
+    </footer>
+
+</body>
+</html>
