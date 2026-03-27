@@ -111,6 +111,29 @@
             <a href="https://www.facebook.com/profile.php?id=61561772415529&mibextid=LQQJ4d" class="btn">Visit our Facebook Page</a>
         </div>
         </section>
+
+        <section class="advocacy-form">
+            <h2>Email the County Commissioner</h2>
+            <p>Use the form below to share your concerns regarding animal welfare at the Gwinnett County Shelter.</p>
+
+            <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                <label for="name">Your Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+                <label for="email">Your Email Address</label>
+                <input type="email" id="email" name="_replyto" placeholder="jane@example.com" required>
+
+                <label for="subject">Subject Line</label>
+                <input type="text" id="subject" name="subject" value="URGENT: Animal Welfare Advocacy - Gwinnett County" readonly>
+
+                <label for="message">Your Message to the Commissioner</label>
+                <textarea id="message" name="message" rows="8" required placeholder="Dear Commissioner, I am writing to express my concern regarding..."></textarea>
+
+                <input type="hidden" name="_next" value="https://yourdomain.com/thanks/">
+        
+                <button type="submit" class="btn">Send Advocacy Email</button>
+            </form>
+        </section>
     </div>
 
     <footer>
