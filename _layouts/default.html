@@ -1,8 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | GAAA</title>
-    <style> ... </style> 
+    <style> 
+        :root {
+            --primary: #2c3e50;
+            --accent: #27ae60;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--primary);
+            background-color: var(--light);
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .logo img {
+            height: 40px; /* You can change this number to make it bigger or smaller */
+            width: auto;
+            vertical-align: middle;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 25px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero and Content Styles */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 12px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        footer { text-align: center; padding: 40px; color: #777; }
+    </style> 
 </head>
 <body>
     {% include navigation.html %}
@@ -11,6 +96,6 @@
         {{ content }}
     </div>
 
-    <footer>© 2026 Gwinnett Animal Advocacy Alliance</footer>
+    <footer><p>&copy; 2026 Gwinnett Animal Advocacy Alliance</p></footer>
 </body>
 </html>
