@@ -85,9 +85,9 @@
     .nav-links a:hover { color: var(--accent); }
 
       .logo-img {
-    width: 60px;  /* Exact width */
-    height: 60px; /* Exact height */
-    object-fit: cover; /* THIS IS THE SECRET SAUCE */
+    width: 100%;
+    max-width: 300px; /* It will be 300px on desktop, but shrink on small phones */
+    height: auto;
     border-radius: 8px;
 }
 
