@@ -614,6 +614,60 @@
             max-width: 650px;
             margin: 0 auto 28px;
         }
+
+        .who-we-are-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+    .who-we-are-content {
+        display: grid;
+        grid-template-columns: 1.4fr .9fr;
+        gap: 36px;
+        align-items: center;
+    }
+    
+    .section-label {
+        display: block;
+        color: #1f5d2b;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    .who-we-are-text h2 {
+        color: var(--accent);
+        font-size: 2.4rem;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+    
+    .who-we-are-text p {
+        margin-bottom: 16px;
+    }
+    
+    .who-we-are-card {
+        background: #f7fbf6;
+        border: 1px solid rgba(31, 93, 43, .25);
+        border-radius: 12px;
+        padding: 32px;
+    }
+    
+    .who-we-are-card h3 {
+        color: var(--accent);
+        margin-top: 0;
+    }
+    
+    .who-we-are-card ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+    
+    .who-we-are-card li {
+        margin-bottom: 12px;
+    }
         
         @media (max-width: 768px) {
             .difference-section {
@@ -888,6 +942,23 @@
                 width: auto;
                 display: inline-block;
             }
+            .who-we-are-section {
+        margin: 40px auto;
+        padding: 0;
+    }
+
+        .who-we-are-content {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    
+        .who-we-are-text h2 {
+            font-size: 1.8rem;
+        }
+    
+        .who-we-are-card {
+            padding: 24px;
+        }
         }
     </style> 
 </head>
