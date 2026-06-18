@@ -966,7 +966,6 @@
             }
         }
 
-        {% include footer.html %}
     </style> 
 </head>
 
@@ -979,7 +978,7 @@
     <div class="container">
         {{ content }}
     </div>
-
+    {% include footer.html %}
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
