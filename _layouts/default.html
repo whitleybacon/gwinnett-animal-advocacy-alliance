@@ -965,6 +965,8 @@
                 gap: 24px;
             }
         }
+
+        {% include footer.html %}
     </style> 
 </head>
 
@@ -977,8 +979,6 @@
     <div class="container">
         {{ content }}
     </div>
-
-    {% include footer.html %}
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
