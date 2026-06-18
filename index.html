@@ -2,63 +2,208 @@
 layout: default
 title: Home
 ---
-<!DOCTYPE html>
-<html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gwinnett Animal Advocacy Alliance</title>
 
-</head> -->
-<body>
+<img class="page-hero-mobile-img"
+     src="/assets/home-hero-mobile.png"
+     alt="Dog and cat representing animal advocacy in Gwinnett County">
 
-    <div class="container">
-        <div class="hero">
-            <div class="hero-image">
-                <img src="/assets/GAAA-Logo.jpg" alt="GAAA logo big">
-            </div>
+<section class="page-hero"
+         style="background-image:
+            linear-gradient(
+                to right,
+                rgba(0,0,0,.70) 0%,
+                rgba(0,0,0,.50) 38%,
+                rgba(0,0,0,.15) 70%,
+                rgba(0,0,0,0) 100%
+            ),
+            url('/assets/home-hero.png');">
+
+    <div class="page-hero-content">
+        <h1>Advocating for Better Outcomes for Animals in Gwinnett County</h1>
+
+        <p>
+            Gwinnett Animal Advocacy Alliance works to promote transparency,
+            accountability, community engagement, and policies that improve animal
+            welfare throughout Gwinnett County.
+        </p>
+
+        <a href="/about/" class="btn">Learn About GAAA</a>
+        <a href="/county-leadership/" class="btn">Take Action</a>
+    </div>
+</section>
+
+<section class="home-section alert-section">
+    <h2>Current Action Alert</h2>
+
+    <div class="feature-card alert-card">
+        <div>
+            <span class="eyebrow">Community Cats &amp; TNR</span>
+            <h3>Support humane solutions for community cats.</h3>
+            <p>
+                Georgia is considering updates to animal welfare rules that may affect
+                how community cats and Trap-Neuter-Return programs are recognized.
+            </p>
         </div>
 
-        <section style="margin-top: 50px;">
-        <div class="container">
-            <h1>We are their voice.</h1>
-            <p>We are a coalition of dedicated and concerned citizens committed to ensuring the highest standards of animal welfare at our local shelter. Recognizing the critical role that shelters play in the lives of vulnerable animals, we have come together to address issues related to their management and operations at Gwinnett County Animal Shelter. Our mission is to find mutually beneficial ways for the shelter management team and the community members to come together and work on the crisis as a team.</p>
-            <p>Through community engagement, open dialogue, and informed advocacy, we strive to bring about positive change and ensure that the shelter upholds its responsibility to provide compassionate and effective care. We believe every animal deserves a safe and supportive environment, and we are united in our efforts to make this a reality.</p>
-            <a href="https://www.facebook.com/profile.php?id=61561772415529&mibextid=LQQJ4d" class="btn">Visit our Facebook Page</a>
-            <a href="https://www.change.org/p/petition-for-an-independent-animal-welfare-task-for-gwinnett-county-animal-shelter" class="btn">Sign our Petition</a>
+        <a href="/act/" class="btn">Learn More &amp; Take Action</a>
+    </div>
+</section>
+
+<section class="home-section">
+    <h2>Issues &amp; Advocacy</h2>
+
+    <p class="section-intro">
+        GAAA follows key animal welfare issues affecting Gwinnett County residents,
+        animals, shelters, rescues, and community advocates.
+    </p>
+
+    <div class="home-card-grid four-across">
+        <a href="/issues/managed-intake/" class="home-card">
+            <h3>Managed Intake</h3>
+            <p>
+                Understanding intake restrictions, shelter capacity challenges,
+                and their impact on animals and residents.
+            </p>
+            <span>Learn More →</span>
+        </a>
+
+        <a href="/issues/pet-overpopulation/" class="home-card">
+            <h3>Pet Overpopulation</h3>
+            <p>
+                Addressing root causes through prevention, education,
+                responsible ownership, and spay/neuter efforts.
+            </p>
+            <span>Learn More →</span>
+        </a>
+
+        <a href="/issues/community-cats-tnr/" class="home-card">
+            <h3>Community Cats &amp; TNR</h3>
+            <p>
+                Supporting humane, effective approaches to managing outdoor
+                community cat populations.
+            </p>
+            <span>Learn More →</span>
+        </a>
+
+        <a href="/issues/transparency-accountability/" class="home-card">
+            <h3>Transparency &amp; Accountability</h3>
+            <p>
+                Promoting access to information, public engagement, and
+                constructive oversight in animal welfare decisions.
+            </p>
+            <span>Learn More →</span>
+        </a>
+    </div>
+</section>
+
+<section class="home-section">
+    <h2>Animals Needing Immediate Help</h2>
+
+    <p class="section-intro">
+        Some animals need urgent community support, advocacy, foster placement,
+        rescue commitment, or adoption help.
+    </p>
+
+    <div class="profile-grid three-across">
+        <div class="profile-card">
+            <img src="/assets/urgent-animal-1.jpg" alt="Urgent animal needing help">
+            <h3>Featured Animal</h3>
+            <p>Short description or deadline information can go here.</p>
+            <a href="/urgent-animals/" class="profile-link">View Details</a>
         </div>
-        </section>
 
-        <div class="container">
-            <h3>Support the Animal Protection Act in Georgia!</h3>
-            <p>Click <a href="act/index.html">here</a> for more information.</p>
+        <div class="profile-card">
+            <img src="/assets/urgent-animal-2.jpg" alt="Urgent animal needing help">
+            <h3>Featured Animal</h3>
+            <p>Short description or deadline information can go here.</p>
+            <a href="/urgent-animals/" class="profile-link">View Details</a>
         </div>
 
-        <section class="advocacy-form">
-            <h2>Email the County Commissioner</h2>
-            <p>Use the form below to share your concerns regarding animal welfare at the Gwinnett County Shelter.</p>
-
-            <form action="https://formspree.io/f/xqegeazg" method="POST">
-                <label for="name">Your Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-                <label for="email">Your Email Address</label>
-                <input type="email" id="email" name="_replyto" placeholder="youremail@example.com" required>
-
-                <label for="subject">Subject Line</label>
-                <input type="text" id="subject" name="subject" value="URGENT: Animal Welfare Advocacy - Gwinnett County" readonly>
-
-                <label for="message">Your Message to the Commissioner</label>
-                <textarea id="message" name="message" rows="20" required placeholder="Dear Commissioner, I am writing to express my concern regarding..."></textarea>
-
-                <input type="hidden" name="_next" value="https://www.gwinnettanimaladvocacyalliance.com/thanks/">
-                <input type="hidden" name="_subject" value="New Alliance Advocacy Message">
-                <button type="submit" class="btn">Send Advocacy Email</button>
-            </form>
-        </section>
+        <div class="profile-card">
+            <img src="/assets/urgent-animal-3.jpg" alt="Urgent animal needing help">
+            <h3>Featured Animal</h3>
+            <p>Short description or deadline information can go here.</p>
+            <a href="/urgent-animals/" class="profile-link">View Details</a>
+        </div>
     </div>
 
+    <p class="center-button">
+        <a href="/urgent-animals/" class="btn">View All Urgent Animals</a>
+    </p>
+</section>
 
-</body>
-</html>
+<section class="home-section">
+    <h2>Take Action</h2>
 
+    <div class="home-card-grid three-across-cards">
+        <a href="/county-leadership/" class="home-card">
+            <h3>Contact County Leadership</h3>
+            <p>
+                Reach out to elected officials and county leaders who shape
+                animal welfare policy and services.
+            </p>
+            <span>Contact Leaders →</span>
+        </a>
+
+        <a href="/petition/" class="home-card">
+            <h3>Sign the Petition</h3>
+            <p>
+                Add your voice in support of meaningful animal welfare improvements
+                in Gwinnett County.
+            </p>
+            <span>Sign Now →</span>
+        </a>
+
+        <a href="/act/" class="home-card">
+            <h3>Animal Protection Act</h3>
+            <p>
+                Learn about current state-level animal welfare rule changes and
+                opportunities for public comment.
+            </p>
+            <span>Learn More →</span>
+        </a>
+    </div>
+</section>
+
+<section class="home-section">
+    <h2>Get Involved</h2>
+
+    <div class="home-card-grid three-across-cards">
+        <a href="/volunteer-shelter/" class="home-card">
+            <h3>Volunteer at the Shelter</h3>
+            <p>
+                Learn how volunteers can support animals through the county shelter.
+            </p>
+            <span>Volunteer →</span>
+        </a>
+
+        <a href="/council-meetings/" class="home-card">
+            <h3>Attend Council Meetings</h3>
+            <p>
+                Public attendance helps ensure animal welfare issues remain visible
+                to county leadership.
+            </p>
+            <span>Learn More →</span>
+        </a>
+
+        <a href="/join-our-team/" class="home-card">
+            <h3>Join Our Team</h3>
+            <p>
+                Help GAAA with advocacy, research, outreach, public records,
+                content, and community engagement.
+            </p>
+            <span>Join Us →</span>
+        </a>
+    </div>
+</section>
+
+<section class="bottom-cta">
+    <div>
+        <h2>Every animal deserves a voice.</h2>
+        <p>
+            Together we can create a more transparent, accountable, and compassionate
+            future for animals in Gwinnett County.
+        </p>
+        <a href="/get-involved/" class="btn">Get Involved</a>
+    </div>
+</section>
