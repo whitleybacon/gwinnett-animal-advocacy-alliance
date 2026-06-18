@@ -1,13 +1,29 @@
-<nav>
-    <a href="/" class="logo">
-        <img src="/logo.png" alt="GAAA Logo">
+<header class="site-header">
+    <nav>
+    <a href="{{ site.baseurl }}/" class="logo">
+        <img src="{{ site.baseurl }}/assets/logo.png" alt="GAAA Logo">
     </a>
+
+    <button class="menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/get-involved/">Get Involved</a></li>
-        <li><a href="/contact/">Contact</a></li>
-        <li><a href="/resources/">Resources</a></li>
-        <li><a href="/county-leadership/">Contact County Leadership</a></li>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+
+        <li class="dropdown action-nav">
+            <a href="#">Take Action</a>
+            <ul class="submenu">
+                <li><a href="{{ site.baseurl }}/act/">Animal Protection Act</a></li>
+                <li><a href="{{ site.baseurl }}/county-leadership/">Contact County Leadership</a></li>
+                <li><a href="{{ site.baseurl }}/petition/">Sign the Petition</a></li>
+            </ul>
+        </li>
+
+        <li><a href="{{ site.baseurl }}/get-involved/">Get Involved</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li><a href="{{ site.baseurl }}/resources/">Resources</a></li>
+        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
     </ul>
-</nav>
+    </nav>
+</header>
