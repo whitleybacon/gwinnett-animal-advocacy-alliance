@@ -106,19 +106,7 @@
             color: var(--accent);
         }
 
-        .action-nav > a::after {
-            content: "";
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            margin-left: 6px;
-            border-right: 2px solid currentColor;
-            border-bottom: 2px solid currentColor;
-            transform: rotate(45deg);
-            vertical-align: middle;
-        }
-
-       .dropdown {
+        .dropdown {
             position: relative;
         }
         
@@ -148,10 +136,6 @@
         
         .dropdown:hover .submenu {
             display: block;
-        }
-
-        .submenu li {
-            margin: 0;
         }
 
         .submenu a {
@@ -201,21 +185,7 @@
             margin: 10px 0;
         }
 
-        .social-links {
-            margin-bottom: 15px;
-        }
-
-        .social-links a {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin: 0 10px;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-       .page-hero {
+        .page-hero {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto 40px;
@@ -265,7 +235,7 @@
             color: var(--accent);
         }
 
-       .jump-grid {
+        .jump-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 18px;
@@ -273,12 +243,17 @@
             max-width: 900px;
         }
 
-        .jump-card {
+        .jump-card,
+        .profile-card,
+        .home-card {
+            background: #fff;
             border: 1px solid #e5e5e5;
             border-radius: 12px;
-            padding: 20px;
-            background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .jump-card {
+            padding: 20px;
             text-align: left;
         }
 
@@ -298,7 +273,7 @@
             color: var(--primary);
         }
 
-       .contact-section {
+        .contact-section {
             max-width: 1400px;
             margin: 0 auto;
             padding: 60px 20px;
@@ -324,7 +299,7 @@
             grid-template-columns: repeat(5, minmax(220px, 1fr));
         }
 
-     .profile-grid.three-across {
+        .profile-grid.three-across {
             grid-template-columns: repeat(3, 320px);
             justify-content: center;
             gap: 24px;
@@ -332,15 +307,11 @@
 
         .profile-card {
             min-width: 0;
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
             padding: 16px;
             text-align: left;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
 
-       .profile-card img {
+        .profile-card img {
             width: 100%;
             height: 280px;
             object-fit: cover;
@@ -365,25 +336,13 @@
             margin-right: 6px;
         }
 
-        .profile-card .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-        }
-        
-        .profile-card .profile-link {
-            display: block;
-            margin-top: 10px;
-        }
-
         .profile-link {
             display: inline-block;
             margin-top: 10px;
             font-size: 0.85rem;
         }
 
-         .council-table {
+        .council-table {
             max-width: 1200px;
             margin: 30px auto 0;
             border: 1px solid #e5e5e5;
@@ -408,37 +367,28 @@
             color: var(--accent);
         }
 
-        /* ==========================================
-           ALERT BANNER COMPONENT
-        ========================================== */
-        
+        /* Alert Banner */
+
         .alert-banner {
             display: flex;
             align-items: center;
             gap: 28px;
             padding: 34px 48px;
-        
             background: #f7fbf6;
             border: 1px solid rgba(31, 93, 43, 0.35);
             border-radius: 12px;
-        
             box-shadow: 0 4px 14px rgba(0,0,0,.06);
         }
         
         .alert-banner-icon {
             flex: 0 0 86px;
-        
             width: 86px;
             height: 86px;
-        
             border-radius: 50%;
-        
             background: #1f5d2b;
-        
             display: flex;
             align-items: center;
             justify-content: center;
-        
             color: #fff;
             font-size: 2.3rem;
         }
@@ -447,23 +397,18 @@
             flex: 1;
         }
         
-        .alert-banner-label {
+        .alert-banner-label,
+        .section-label {
             display: block;
-        
             color: #1f5d2b;
-        
             text-transform: uppercase;
-            letter-spacing: .05em;
-        
+            letter-spacing: .06em;
             font-weight: 700;
-            font-size: .9rem;
-        
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         
         .alert-banner-content h2 {
             margin: 0 0 10px;
-        
             color: #1f5d2b;
             font-size: 2rem;
         }
@@ -474,12 +419,11 @@
         
         .alert-banner-button {
             flex-shrink: 0;
+            background: #1f5d2b;
         }
 
-        /* ==========================================
-           HOME SECTION COMPONENTS
-        ========================================== */
-        
+        /* Home Sections */
+
         .home-section {
             max-width: 1200px;
             margin: 0 auto 50px;
@@ -499,8 +443,6 @@
             text-align: center;
         }
         
-        /* GRID LAYOUTS */
-        
         .home-card-grid {
             display: grid;
             gap: 24px;
@@ -514,19 +456,11 @@
             grid-template-columns: repeat(3, 1fr);
         }
         
-        /* CARD COMPONENT */
-        
         .home-card {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
             padding: 28px 24px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,.06);
-        
             display: flex;
             flex-direction: column;
-        
             color: var(--primary);
             text-decoration: none;
         }
@@ -540,13 +474,10 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-        
             display: flex;
             align-items: center;
             justify-content: center;
-        
             margin: 0 auto 18px;
-        
             color: #fff;
             font-size: 1.8rem;
         }
@@ -585,11 +516,19 @@
             margin-top: 25px;
         }
 
+        /* Difference Section */
+
         .difference-section {
             max-width: 1400px;
             margin: 50px auto 0;
-            padding: 50px 24px;
-            border-radius: 0;
+            padding: 60px 24px;
+            border-radius: 12px;
+            background:
+                linear-gradient(
+                    rgba(28,64,114,.72),
+                    rgba(28,64,114,.72)
+                ),
+                url('/assets/difference-bg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -615,79 +554,41 @@
             margin: 0 auto 28px;
         }
 
-      .who-we-are-section {
+        /* Who We Are */
+
+        .who-we-are-section {
             max-width: 1200px;
-            margin: 0 auto 60px;
+            margin: 80px auto;
             padding: 0 20px;
         }
-    
-        .who-we-are-content {
-            display: grid;
-            grid-template-columns: 1.4fr .9fr;
-            gap: 36px;
-            align-items: center;
-        }
-        
-        .section-label {
-            display: block;
-            color: #1f5d2b;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .who-we-are-text h2 {
-            color: var(--accent);
-            font-size: 2.4rem;
-            line-height: 1.15;
-            margin-bottom: 18px;
-        }
-        
-        .who-we-are-text p {
-            margin-bottom: 16px;
-        }
-        
-        .who-we-are-card {
-            background: #f7fbf6;
-            border: 1px solid rgba(31, 93, 43, .25);
-            border-radius: 12px;
-            padding: 32px;
-        }
-        
-        .who-we-are-card h3 {
-            color: var(--accent);
-            margin-top: 0;
-        }
-        
-        .who-we-are-card ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        .who-we-are-card li {
-            margin-bottom: 12px;
-        }
-        
-        @media (max-width: 768px) {
-            .difference-section {
-                margin-top: 35px;
-                padding: 36px 16px;
-            }
-        
-            .difference-content h2 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        .bottom-cta {
-            margin: 60px 0 20px;
-            padding: 30px;
-            border-radius: 12px;
-            background: #f3f8f1;
+
+        .who-we-are-text {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-       .site-footer {
+        .who-we-are-text h2 {
+            color: var(--accent);
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .who-we-are-text p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+        .who-we-are-text p:last-of-type {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+
+        .site-footer {
             background: #fff;
             border-top: 1px solid #e5e5e5;
             margin-top: 60px;
@@ -786,7 +687,6 @@
         @media (max-width: 768px) {
             .site-header nav {
                 padding: 0.75rem 1rem;
-                align-items: center;
             }
 
             .logo img {
@@ -827,13 +727,6 @@
                 font-size: 1.25rem;
                 padding: 16px 0;
                 color: var(--accent);
-            }
-
-            .action-nav > a {
-                background: none;
-                color: var(--accent) !important;
-                padding: 16px 0;
-                border-radius: 0;
             }
 
             .submenu {
@@ -961,7 +854,6 @@
             .alert-banner {
                 flex-direction: column;
                 align-items: flex-start;
-        
                 padding: 28px;
             }
         
@@ -969,21 +861,13 @@
                 width: 68px;
                 height: 68px;
                 flex-basis: 68px;
-        
                 font-size: 1.8rem;
             }
         
             .alert-banner-content h2 {
                 font-size: 1.5rem;
             }
-        
-            .alert-banner-button {
-                flex-shrink: 0;
-                background: #1f5d2b;
-            }
 
-            /* Mobile home sections */
-            
             .home-section {
                 max-width: 100%;
                 margin: 0 auto 36px;
@@ -1032,22 +916,29 @@
                 width: auto;
                 display: inline-block;
             }
+
+            .difference-section {
+                margin-top: 35px;
+                padding: 36px 16px;
+                background-position: center right;
+            }
+        
+            .difference-content h2 {
+                font-size: 1.8rem;
+            }
+
             .who-we-are-section {
-                margin: 40px auto;
+                margin: 50px auto;
                 padding: 0;
             }
 
-            .who-we-are-content {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-        
             .who-we-are-text h2 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
-        
-            .who-we-are-card {
-                padding: 24px;
+
+            .who-we-are-text p {
+                font-size: 1rem;
+                line-height: 1.8;
             }
 
             .site-footer {
@@ -1087,18 +978,7 @@
         {{ content }}
     </div>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/gwinnettanimaladvocacyalliance" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/gwinnettanimalshelteradvocates" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-
-        <p>&copy; 2026 Gwinnett Animal Advocacy Alliance</p>
-    </footer>
+    {% include footer.html %}
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
