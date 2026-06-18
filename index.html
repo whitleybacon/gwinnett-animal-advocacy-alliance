@@ -270,15 +270,14 @@ title: Home
         <a href="/about/" class="btn">Learn More About GAAA</a>
 
     </div>
+     
 </section>
 
-<section class="bottom-cta">
-    <div>
-        <h2>Every animal deserves a voice.</h2>
-        <p>
-            Together we can create a more transparent, accountable, and compassionate
-            future for animals in Gwinnett County.
-        </p>
-        <a href="/get-involved/" class="btn">Get Involved</a>
+    <div class="container">
+        {{ content }}
     </div>
-</section>
+
+    {% include footer.html %}
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
