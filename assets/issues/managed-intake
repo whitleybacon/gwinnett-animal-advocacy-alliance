@@ -1,37 +1,6 @@
-<div class="construction-card">
+<section class="coming-soon-page">
 
-    <img src="/assets/construction-dog.jpg"
-         alt="Dog looking at camera">
+    <img src="/assets/finding-its-voice-placeholder.png"
+         alt="This page is still finding its voice">
 
-    <div class="construction-content">
-
-        <div class="construction-paw">
-            <i class="fas fa-paw"></i>
-        </div>
-
-        <h1>This Page Is Still Finding Its Voice</h1>
-
-        <p class="construction-lead">
-            We're currently building this section of the
-            Gwinnett Animal Advocacy Alliance website.
-        </p>
-
-        <p>
-            Our team is working to develop resources,
-            advocacy information, and community tools
-            that support better outcomes for animals
-            in Gwinnett County.
-        </p>
-
-        <p class="construction-note">
-            Please check back soon as we continue
-            expanding the site.
-        </p>
-
-        <a href="/" class="btn">
-            Return Home
-        </a>
-
-    </div>
-
-</div>
+</section>
