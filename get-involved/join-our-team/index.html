@@ -1,113 +1,244 @@
-.volunteer-form-section {
-    max-width: 1200px;
-}
+---
+layout: default
+title: Join Our Team
+---
 
-.volunteer-form {
-    margin-top: 30px;
-}
+<img class="page-hero-mobile-img"
+     src="/assets/join-team-hero-mobile.png"
+     alt="Community advocates working together for animal welfare">
 
-.form-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.06);
-    padding: 30px;
-    margin-bottom: 26px;
-}
+<section class="page-hero"
+         style="background-image:
+            linear-gradient(
+                to right,
+                rgba(0,0,0,.70) 0%,
+                rgba(0,0,0,.50) 38%,
+                rgba(0,0,0,.15) 70%,
+                rgba(0,0,0,0) 100%
+            ),
+            url('/assets/join-team-hero.png');">
 
-.form-card h3 {
-    color: var(--accent);
-    margin-top: 0;
-    margin-bottom: 18px;
-}
+    <div class="page-hero-content">
+        <h1>Join Our Team</h1>
 
-.form-grid.two-column {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px 24px;
-}
+        <p>
+            One Voice. One Mission.<br>
+            Pawtection for Gwinnett Animals.
+        </p>
 
-.form-card label {
-    display: block;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 8px;
-}
+        <p>
+            Whether you have a few hours a month or specialized skills to offer,
+            your voice can help improve outcomes for animals in Gwinnett County.
+        </p>
+    </div>
+</section>
 
-.form-card input,
-.form-card textarea,
-.form-card select {
-    margin-bottom: 18px;
-}
+<section class="home-section">
+    <div class="alert-banner">
+        <div class="alert-banner-icon">
+            <i class="fas fa-users"></i>
+        </div>
 
-.form-card input[type="checkbox"],
-.form-card input[type="radio"] {
-    width: auto;
-    margin: 0 8px 0 0;
-}
+        <div class="alert-banner-content">
+            <span class="alert-banner-label">Why Volunteers Matter</span>
+            <h2>Real change takes community involvement.</h2>
+            <p>
+                From research and public records requests to social media, outreach,
+                documentation, and policy work, volunteers help ensure animal welfare
+                remains a priority in Gwinnett County.
+            </p>
+        </div>
+    </div>
+</section>
 
-.form-card details {
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin-bottom: 12px;
-    background: #f9fbf8;
-}
+<section class="home-section volunteer-form-section" id="volunteer-form">
+    <h2>Volunteer Interest Form</h2>
 
-.form-card summary {
-    cursor: pointer;
-    color: var(--accent);
-    font-weight: 700;
-}
+    <p class="section-intro">
+        Completing this form does not commit you to anything. It simply helps us
+        match people with tasks that fit their time, skills, interests, and comfort level.
+    </p>
 
-.form-card details label {
-    color: var(--primary);
-    font-weight: 500;
-    margin: 12px 0 0;
-}
+    <form class="volunteer-form"
+          action="https://formsubmit.co/YOUR-EMAIL-HERE"
+          method="POST">
 
-.checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 30px;
-    margin-bottom: 20px;
-}
+        <input type="hidden" name="_subject" value="New GAAA Volunteer Interest Form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://gwinnettanimaladvocacyalliance.com/thanks/">
 
-.radio-row,
-.radio-list {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-bottom: 18px;
-}
+        <div class="form-card">
+            <h3>About You</h3>
 
-.radio-list {
-    flex-direction: column;
-    gap: 10px;
-}
+            <div class="form-grid two-column">
+                <div>
+                    <label>First Name *</label>
+                    <input type="text" name="First Name" required>
+                </div>
 
-.form-note,
-.form-privacy {
-    font-size: .95rem;
-}
+                <div>
+                    <label>Last Name *</label>
+                    <input type="text" name="Last Name" required>
+                </div>
 
-.form-privacy {
-    text-align: center;
-    color: var(--primary);
-}
+                <div>
+                    <label>Email *</label>
+                    <input type="email" name="Email" required>
+                </div>
 
-@media (max-width: 768px) {
-    .form-card {
-        padding: 22px;
-    }
+                <div>
+                    <label>Phone Number</label>
+                    <input type="tel" name="Phone Number">
+                </div>
 
-    .form-grid.two-column,
-    .checkbox-grid {
-        grid-template-columns: 1fr;
-    }
+                <div>
+                    <label>County of Residence *</label>
+                    <input type="text" name="County of Residence" required>
+                </div>
 
-    .radio-row {
-        flex-direction: column;
-        gap: 8px;
-    }
-}
+                <div>
+                    <label>Rescue / Organization Affiliation</label>
+                    <input type="text" name="Rescue or Organization Affiliation">
+                </div>
+            </div>
+
+            <label>Would you like to be added to our email list?</label>
+            <div class="radio-row">
+                <label><input type="radio" name="Email List" value="Yes"> Yes</label>
+                <label><input type="radio" name="Email List" value="No"> No</label>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h3>How Would You Like to Help?</h3>
+            <p class="form-note">Select all that apply. This does not commit you to anything.</p>
+
+            <details open>
+                <summary>Admin &amp; Organization</summary>
+                <label><input type="checkbox" name="Admin & Organization[]" value="Organizing documents or files"> Organizing documents or files</label>
+                <label><input type="checkbox" name="Admin & Organization[]" value="Managing spreadsheets or trackers"> Managing spreadsheets or trackers</label>
+                <label><input type="checkbox" name="Admin & Organization[]" value="Taking notes during meetings"> Taking notes during meetings</label>
+                <label><input type="checkbox" name="Admin & Organization[]" value="Keeping timelines updated"> Helping keep timelines updated</label>
+            </details>
+
+            <details>
+                <summary>Data &amp; Research</summary>
+                <label><input type="checkbox" name="Data & Research[]" value="Analyzing shelter reports and trends"> Analyzing shelter reports and trends</label>
+                <label><input type="checkbox" name="Data & Research[]" value="Pulling Open Records Requests"> Helping pull Open Records Requests</label>
+                <label><input type="checkbox" name="Data & Research[]" value="Reviewing Open Records Requests"> Helping review Open Records Requests</label>
+                <label><input type="checkbox" name="Data & Research[]" value="Creating summaries or charts"> Creating summaries or charts</label>
+            </details>
+
+            <details>
+                <summary>Social Media &amp; Marketing Support</summary>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Managing Facebook and Instagram"> Helping manage social media accounts</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Writing or editing advocacy posts"> Writing or editing advocacy posts and captions</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Monitoring comments and inbox messages"> Monitoring and responding to comments/messages using guidelines</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Creating Canva graphics"> Creating simple graphics or visuals</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Sharing posts to community groups"> Sharing posts into relevant community groups</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Organizing screenshots"> Capturing and organizing screenshots of public posts</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Scheduling content"> Scheduling or reposting content</label>
+                <label><input type="checkbox" name="Social Media & Marketing[]" value="Tracking engagement"> Helping track engagement</label>
+            </details>
+
+            <details>
+                <summary>Tech Support</summary>
+                <label><input type="checkbox" name="Tech Support[]" value="Photo or video editing"> Photo or video editing</label>
+                <label><input type="checkbox" name="Tech Support[]" value="Google Drive organization"> Google Drive organization</label>
+                <label><input type="checkbox" name="Tech Support[]" value="Forms Sheets automations"> Forms, Sheets, or automations</label>
+                <label><input type="checkbox" name="Tech Support[]" value="Website or app development"> Website and/or app development</label>
+            </details>
+
+            <details>
+                <summary>Advocacy &amp; Outreach</summary>
+                <label><input type="checkbox" name="Advocacy & Outreach[]" value="Messaging elected officials"> Messaging or emailing elected officials</label>
+                <label><input type="checkbox" name="Advocacy & Outreach[]" value="Community outreach"> Talking to community members about animal welfare issues</label>
+                <label><input type="checkbox" name="Advocacy & Outreach[]" value="Collecting community concerns"> Helping collect community concerns, questions, or feedback</label>
+                <label><input type="checkbox" name="Advocacy & Outreach[]" value="Attending meetings or events"> Attending public meetings or community events as an observer</label>
+                <label><input type="checkbox" name="Advocacy & Outreach[]" value="Sharing advocacy information"> Sharing advocacy information in local/community groups</label>
+            </details>
+
+            <details>
+                <summary>Policy &amp; Government Support</summary>
+                <label><input type="checkbox" name="Policy & Government[]" value="Observing county meetings"> Attending or observing Animal Advisory Board or County Commission meetings</label>
+                <label><input type="checkbox" name="Policy & Government[]" value="Preparing questions or talking points"> Helping prepare questions or talking points</label>
+                <label><input type="checkbox" name="Policy & Government[]" value="Tracking policy discussions"> Tracking animal welfare policy discussions or agenda items</label>
+                <label><input type="checkbox" name="Policy & Government[]" value="Researching best practices"> Researching best practices from other counties or states</label>
+                <label><input type="checkbox" name="Policy & Government[]" value="Drafting policy proposals"> Helping research and draft policy proposals</label>
+            </details>
+
+            <details>
+                <summary>Election-Year Support</summary>
+                <label><input type="checkbox" name="Election Year Support[]" value="Tracking candidate positions"> Tracking where candidates stand on animal welfare issues</label>
+                <label><input type="checkbox" name="Election Year Support[]" value="Drafting candidate questions"> Drafting candidate questions</label>
+                <label><input type="checkbox" name="Election Year Support[]" value="Attending forums"> Attending candidate forums or town halls</label>
+                <label><input type="checkbox" name="Election Year Support[]" value="Taking notes"> Taking notes or summaries from public events</label>
+                <label><input type="checkbox" name="Election Year Support[]" value="Creating voter education materials"> Helping create fact-based, nonpartisan voter education materials</label>
+            </details>
+        </div>
+
+        <div class="form-card">
+            <h3>Skills &amp; Experience</h3>
+
+            <div class="checkbox-grid">
+                <label><input type="checkbox" name="Skills[]" value="Research and data analysis"> Research &amp; Data Analysis</label>
+                <label><input type="checkbox" name="Skills[]" value="Legal or public records"> Legal / Public Records</label>
+                <label><input type="checkbox" name="Skills[]" value="Social media management"> Social Media Management</label>
+                <label><input type="checkbox" name="Skills[]" value="Writing or editing"> Writing or Editing</label>
+                <label><input type="checkbox" name="Skills[]" value="Nonprofit or advocacy work"> Nonprofit or Advocacy Work</label>
+                <label><input type="checkbox" name="Skills[]" value="Government or policy"> Government or Policy</label>
+                <label><input type="checkbox" name="Skills[]" value="Graphic design"> Graphic Design</label>
+                <label><input type="checkbox" name="Skills[]" value="IT or systems"> IT / Systems</label>
+            </div>
+
+            <label>Other skills or experience</label>
+            <input type="text" name="Other Skills">
+        </div>
+
+        <div class="form-card">
+            <h3>Time / Availability / Comfort Level</h3>
+
+            <label>How much time could you realistically help?</label>
+            <div class="radio-list">
+                <label><input type="radio" name="Availability" value="1-2 hours per week"> 1–2 hours per week</label>
+                <label><input type="radio" name="Availability" value="3-5 hours per week"> 3–5 hours per week</label>
+                <label><input type="radio" name="Availability" value="5-10 hours per week"> 5–10 hours per week</label>
+                <label><input type="radio" name="Availability" value="10+ hours per week"> 10+ hours per week</label>
+                <label><input type="radio" name="Availability" value="Project-based only"> Project-based only</label>
+            </div>
+
+            <label>Preferred way to help</label>
+            <div class="radio-list">
+                <label><input type="radio" name="Preferred Help Style" value="Behind the scenes"> Behind-the-scenes</label>
+                <label><input type="radio" name="Preferred Help Style" value="Public facing"> Public-facing</label>
+                <label><input type="radio" name="Preferred Help Style" value="Mix of both"> Mix of both</label>
+            </div>
+
+            <label>Are you comfortable being publicly identified as an advocate?</label>
+            <div class="radio-list">
+                <label><input type="radio" name="Public Identification Comfort" value="Yes"> Yes</label>
+                <label><input type="radio" name="Public Identification Comfort" value="No"> No</label>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h3>Tell Us More</h3>
+
+            <label>What motivated you to get involved?</label>
+            <textarea name="Motivation"></textarea>
+
+            <label>Anything else you'd like us to know?</label>
+            <textarea name="Additional Information"></textarea>
+        </div>
+
+        <p class="form-privacy">
+            Your information will only be used to coordinate GAAA advocacy efforts and will not be shared publicly.
+        </p>
+
+        <p class="center-button">
+            <button type="submit" class="btn">Submit Volunteer Interest Form</button>
+        </p>
+
+    </form>
+</section>
