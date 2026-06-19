@@ -342,6 +342,13 @@
             font-size: 0.85rem;
         }
 
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
         .council-table {
             max-width: 1200px;
             margin: 30px auto 0;
@@ -953,6 +960,15 @@
                 object-fit: cover;
             }
 
+            .three-column-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        
+            .three-column-grid img {
+                max-width: 280px;
+                margin: 0 auto;
+            }
             .contact-section {
                 padding: 40px 0;
             }
