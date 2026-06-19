@@ -1,32 +1,77 @@
 ---
 layout: default
-title: Contact Us
+title: Contact
 ---
 
-        <div class="contact-card">
-            <h1>Contact GAAA</h1>
-            <p>Have questions about a specific animal in the shelter or want to join our advocacy efforts? Drop us a line.</p>
-            
-            <form action="https://formspree.io/f/your-id-here" method="POST">
-                <label>Name</label>
-                <input type="text" name="name" required>
+<section class="home-section">
 
-                <label>Email</label>
-                <input type="email" name="email" required>
+    <div class="who-we-are-section">
 
-                <label>Subject</label>
-                <select name="subject">
-                    <option value="general">General Inquiry</option>
-                    <option value="tracking">Shelter Tracking Data</option>
-                    <option value="volunteer">Volunteering</option>
-                </select>
+        <div class="who-we-are-text">
+            <h2>Contact GAAA</h2>
 
-                <label>Message</label>
-                <textarea name="message" rows="5" required></textarea>
+            <p>
+                Have a question, concern, or information related to animal welfare
+                in Gwinnett County? Use the form below to contact Gwinnett Animal
+                Advocacy Alliance.
+            </p>
 
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <p>
+                Please note: GAAA is not a shelter, rescue organization, foster network,
+                or animal control agency. We are unable to take in animals, rehome pets,
+                pick up strays, provide emergency animal services, or respond to urgent
+                shelter placement requests.
+            </p>
+
+            <p>
+                If your message is related to advocacy, public records, county policy,
+                community concerns, or ways to get involved, we would be glad to hear from you.
+            </p>
         </div>
 
+    </div>
 
-</html>
+</section>
+
+<section class="home-section">
+
+    <form class="volunteer-form"
+          action="https://formsubmit.co/gwinnettanimalshelteradvocates@gmail.com"
+          method="POST">
+
+        <input type="hidden" name="_subject" value="New GAAA Contact Form Submission">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-card">
+
+            <h3>Send Us a Message</h3>
+
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required>
+
+            <label for="subject">Reason for Contact *</label>
+            <select id="subject" name="Reason for Contact" required>
+                <option value="">Please select one</option>
+                <option>General Question</option>
+                <option>Animal welfare concern in Gwinnett County</option>
+                <option>Public records / data / documentation</option>
+                <option>County policy or public meeting concern</option>
+                <option>Volunteer or advocacy involvement</option>
+                <option>Media or partnership inquiry</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Message *</label>
+            <textarea id="message" name="Message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+
+        </div>
+
+    </form>
+
+</section>
