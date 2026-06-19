@@ -1187,6 +1187,59 @@
                 text-align: left;
             }
 
+             .content-card {
+                margin: 32px auto;
+                padding: 0 20px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        
+            .about-story-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 26px;
+                text-align: left;
+            }
+        
+            .about-story-grid > div {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        
+            .about-story-image {
+                order: 2;
+                text-align: center;
+            }
+        
+            .about-story-grid > div:first-child {
+                order: 1;
+            }
+        
+            .about-story-grid > div:last-child {
+                order: 3;
+            }
+        
+            .about-story-image img {
+                display: block;
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+                border-radius: 12px;
+            }
+        
+            .about-story-grid h2 {
+                font-size: 1.8rem;
+                line-height: 1.25;
+                margin: 0 0 14px;
+            }
+        
+            .about-story-grid p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 16px;
+            }
+
             .form-card {
                 padding: 22px;
             }
