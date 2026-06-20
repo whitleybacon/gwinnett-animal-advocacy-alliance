@@ -2,19 +2,9 @@
 layout: default
 title: Animal Protection Act
 ---
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K39Q688P');</script>
-<!-- End Google Tag Manager -->
 
 <div class="hero-banner">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K39Q688P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
     <picture>
         <source media="(max-width: 768px)" srcset="{{ site.baseurl }}/assets/tnr-banner-mobile.png">
         <img src="{{ site.baseurl }}/assets/tnr-banner.jpg"
@@ -116,3 +106,34 @@ Organization: ${organization || 'N/A'}`;
 </script>
         </section>
 </html>
+
+<!-- Google Analytics Base Tracking Script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ67TN4SJR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JZ67TN4SJR');
+</script>
+
+<!-- Custom Button Click Tracker -->
+<script>
+  // This waits for the browser to finish loading the page layout
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Find your button by looking for its link type
+    var emailButton = document.querySelector('a[href^="mailto:"]');
+    
+    // 2. If the button exists, watch for a click
+    if (emailButton) {
+      emailButton.addEventListener('click', function() {
+        // 3. Send the click event straight to GA4
+        gtag('event', 'email_draft_click', {
+          'event_category': 'Engagement',
+          'event_label': 'Open Email Draft Button'
+        });
+      });
+    }
+    
+  });
+</script>
