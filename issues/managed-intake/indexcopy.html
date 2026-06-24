@@ -3,232 +3,423 @@ layout: default
 title: Managed Intake
 ---
 
+<style>
+.managed-intake-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(28,64,114,0.88) 0%,
+            rgba(28,64,114,0.52) 55%,
+            rgba(28,64,114,0.12) 100%
+        ),
+        url('/assets/managed-intake-hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.issue-text-section h2,
+.issue-data-section h2,
+.recent-example-card h2 {
+    color: var(--accent);
+    font-size: 2.3rem;
+    margin-top: 0;
+}
+
+.issue-text-section p,
+.issue-data-section p,
+.recent-example-card p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.issue-overview-section {
+    margin-top: 40px;
+}
+
+.issue-accordion {
+    max-width: 1200px;
+    margin: 24px auto 0;
+}
+
+.issue-accordion details {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.issue-accordion summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 700;
+    padding: 22px 26px;
+    list-style: none;
+    font-size: 1.08rem;
+}
+
+.issue-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.issue-accordion summary::after {
+    content: "+";
+    float: right;
+    color: #1f5d2b;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.issue-accordion details[open] summary::after {
+    content: "–";
+}
+
+.issue-accordion summary i {
+    color: #1f5d2b;
+    margin-right: 10px;
+    width: 22px;
+}
+
+.issue-accordion-content {
+    padding: 0 26px 26px;
+}
+
+.issue-accordion-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+.issue-accordion-content ul {
+    margin: 0 0 22px 22px;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.issue-pullquote {
+    background: #f3f8f1;
+    border-left: 6px solid #1f5d2b;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 22px 26px;
+    border-radius: 10px;
+    margin: 26px 0;
+}
+
+.managed-intake-stats {
+    background: #f7fbf6;
+}
+
+.managed-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.managed-stat-card {
+    padding: 30px 24px;
+}
+
+.managed-stat-card span {
+    display: block;
+    color: var(--accent);
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.managed-stat-card p {
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+}
+
+.recent-example-card {
+    background: #f6f9f5;
+    border: 1px solid rgba(31,93,43,.18);
+    border-radius: 12px;
+    padding: 45px;
+}
+
+.solution-accordion details {
+    border-left: 6px solid #1f5d2b;
+}
+
+.managed-closing-section {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .managed-intake-hero {
+        background-image: none !important;
+    }
+
+    .page-hero-mobile-img {
+        content: url('/assets/managed-intake-hero-mobile.png');
+    }
+
+    .issue-text-section h2,
+    .issue-data-section h2,
+    .recent-example-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .issue-accordion summary {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+
+    .issue-accordion-content {
+        padding: 0 20px 22px;
+    }
+
+    .managed-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-example-card {
+        padding: 28px 22px;
+    }
+
+    .issue-pullquote {
+        font-size: 1.05rem;
+        padding: 18px 20px;
+    }
+}
+</style>
+
 <section class="page-hero managed-intake-hero">
-  <img class="page-hero-mobile-img" src="/assets/managed-intake-hero-mobile.png" alt="Dog behind shelter kennel gate">
-  <div class="page-hero-content">
-    <h1>Managed Intake</h1>
-    <p>Restricting shelter access does not reduce the number of animals needing assistance.</p>
-    <a href="/contact-county-leadership/" class="btn">Contact County Leadership</a>
-  </div>
+    <img class="page-hero-mobile-img" src="/assets/managed-intake-hero-mobile.png" alt="Dog behind shelter kennel gate">
+
+    <div class="page-hero-content">
+        <h1>Managed Intake</h1>
+        <p>Restricting shelter access does not reduce the number of animals needing assistance.</p>
+        <a href="/contact-county-leadership/" class="btn">Contact County Leadership</a>
+    </div>
 </section>
 
 <section class="content-card">
-  <div class="alert-banner managed-intake-stats">
-    <div class="alert-banner-icon">
-      <i class="fa-solid fa-chart-simple"></i>
+    <div class="alert-banner managed-intake-stats">
+        <div class="alert-banner-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+        </div>
+        <div class="alert-banner-content">
+            <span class="alert-banner-label">Gwinnett County Reality</span>
+            <h2>444 requests. 49 accepted. 11% acceptance rate.</h2>
+            <p>During the first three months of 2026, nearly 400 owner surrender requests could not be accommodated.</p>
+        </div>
     </div>
-    <div class="alert-banner-content">
-      <span class="alert-banner-label">Gwinnett County Reality</span>
-      <h2>444 requests. 49 accepted. 11% acceptance rate.</h2>
-      <p>During the first three months of 2026, nearly 400 owner surrender requests could not be accommodated.</p>
-    </div>
-  </div>
 </section>
 
 <section class="content-card issue-text-section">
-  <h2>What is Managed Intake?</h2>
-  <p>Managed intake is a sheltering practice that fundamentally changes the role of an animal shelter. Rather than serving as a safety net for lost, homeless, abandoned, and unwanted animals, access to shelter services becomes dependent on available shelter capacity.</p>
+    <h2>What is Managed Intake?</h2>
+    <p>Managed intake is a sheltering practice that fundamentally changes the role of an animal shelter. Rather than serving as a safety net for lost, homeless, abandoned, and unwanted animals, access to shelter services becomes dependent on available shelter capacity.</p>
 
-  <div class="issue-accordion">
-    <details>
-      <summary>Read Full Explanation</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett Animal Shelter currently utilizes a managed intake system to control overcrowding within the shelter. When kennel space is limited, intake is restricted and animals are prioritized based on available capacity rather than community need.</p>
-        <p>Under this system, not every animal that needs assistance is admitted into the shelter.</p>
-        <p>Residents seeking to surrender a pet may be denied intake altogether. Individuals who find stray animals are frequently asked to hold animals themselves while attempting to locate owners. In some cases, residents report being instructed to release animals where they were found if they are unable to keep them.</p>
-        <p>This program gambles with the welfare of animals by placing responsibility for their care on random members of the community, leaving whether they return home—or even survive—to chance. It fails to meet the public's expectation that taxpayer-funded animal services will provide a reliable safety net for animals in need.</p>
-        <p>The stated purpose of managed intake is to reduce overcrowding within the shelter. By limiting admissions, shelters can lower kennel populations and improve internal performance metrics such as live release rates and euthanasia rates.</p>
-        <p>However, reducing shelter intake does not reduce the number of animals needing assistance within the community.</p>
-        <p>Animals that are denied entry to the shelter do not disappear. They remain in neighborhoods, on roadways, in parks, in abandoned properties, or in homes where owners can no longer care for them.</p>
-        <p>One of the most significant concerns with managed intake is that shelters generally track and report outcomes only for animals that enter the shelter system. The outcomes of animals that are turned away, denied intake, waitlisted, or instructed to remain in the community are often unknown.</p>
-        <p>As a result, shelter statistics may appear to improve while providing little visibility into what happens to the animals that never receive shelter services in the first place.</p>
-        <div class="issue-pullquote">If hundreds of animals are unable to access shelter services each year, what happens to them?</div>
-        <p>Until those outcomes are tracked and publicly reported, neither county leadership nor residents can accurately measure the true impact of managed intake on animal welfare within Gwinnett County.</p>
-      </div>
-    </details>
-  </div>
+    <div class="issue-accordion">
+        <details>
+            <summary>Read Full Explanation</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett Animal Shelter currently utilizes a managed intake system to control overcrowding within the shelter. When kennel space is limited, intake is restricted and animals are prioritized based on available capacity rather than community need.</p>
+                <p>Under this system, not every animal that needs assistance is admitted into the shelter.</p>
+                <p>Residents seeking to surrender a pet may be denied intake altogether. Individuals who find stray animals are frequently asked to hold animals themselves while attempting to locate owners. In some cases, residents report being instructed to release animals where they were found if they are unable to keep them.</p>
+                <p>This program gambles with the welfare of animals by placing responsibility for their care on random members of the community, leaving whether they return home—or even survive—to chance. It fails to meet the public's expectation that taxpayer-funded animal services will provide a reliable safety net for animals in need.</p>
+                <p>The stated purpose of managed intake is to reduce overcrowding within the shelter. By limiting admissions, shelters can lower kennel populations and improve internal performance metrics such as live release rates and euthanasia rates.</p>
+                <p>However, reducing shelter intake does not reduce the number of animals needing assistance within the community.</p>
+                <p>Animals that are denied entry to the shelter do not disappear. They remain in neighborhoods, on roadways, in parks, in abandoned properties, or in homes where owners can no longer care for them.</p>
+                <p>One of the most significant concerns with managed intake is that shelters generally track and report outcomes only for animals that enter the shelter system. The outcomes of animals that are turned away, denied intake, waitlisted, or instructed to remain in the community are often unknown.</p>
+                <p>As a result, shelter statistics may appear to improve while providing little visibility into what happens to the animals that never receive shelter services in the first place.</p>
+                <div class="issue-pullquote">If hundreds of animals are unable to access shelter services each year, what happens to them?</div>
+                <p>Until those outcomes are tracked and publicly reported, neither county leadership nor residents can accurately measure the true impact of managed intake on animal welfare within Gwinnett County.</p>
+            </div>
+        </details>
+    </div>
 </section>
 
 <section class="home-section issue-overview-section">
-  <h2>The Impact</h2>
-  <p class="section-intro">Managed intake affects far more than shelter operations. It impacts animals, residents, public safety, rescue organizations, and transparency throughout Gwinnett County.</p>
+    <h2>The Impact</h2>
+    <p class="section-intro">Managed intake affects far more than shelter operations. It impacts animals, residents, public safety, rescue organizations, and transparency throughout Gwinnett County.</p>
 
-  <div class="issue-accordion">
-    <details>
-      <summary><i class="fa-solid fa-paw"></i> Animals Remain Without a Safety Net</summary>
-      <div class="issue-accordion-content">
-        <p>When Gwinnett County Animal Shelter is unable to accept animals, those animals do not simply disappear. They remain in neighborhoods, on roadways, in parks, in abandoned properties, or in homes where owners can no longer care for them. While managed intake may reduce overcrowding within the shelter, it does not reduce the number of animals needing assistance throughout Gwinnett County.</p>
-        <p>Animals left outside the shelter system face significant risks. They may be struck by vehicles, exposed to extreme weather, suffer from untreated illness or injury, experience neglect, or be abandoned altogether. Many never receive veterinary care or reunification assistance. Others continue to reproduce, contributing to the pet overpopulation crisis that Gwinnett County cites as one of the factors driving shelter overcrowding.</p>
-        <p>The result is that animals who would have previously entered the shelter system are often left to depend on chance, circumstance, and the willingness of individual residents to intervene.</p>
-      </div>
-    </details>
+    <div class="issue-accordion">
+        <details>
+            <summary><i class="fa-solid fa-paw"></i> Animals Remain Without a Safety Net</summary>
+            <div class="issue-accordion-content">
+                <p>When Gwinnett County Animal Shelter is unable to accept animals, those animals do not simply disappear. They remain in neighborhoods, on roadways, in parks, in abandoned properties, or in homes where owners can no longer care for them. While managed intake may reduce overcrowding within the shelter, it does not reduce the number of animals needing assistance throughout Gwinnett County.</p>
+                <p>Animals left outside the shelter system face significant risks. They may be struck by vehicles, exposed to extreme weather, suffer from untreated illness or injury, experience neglect, or be abandoned altogether. Many never receive veterinary care or reunification assistance. Others continue to reproduce, contributing to the pet overpopulation crisis that Gwinnett County cites as one of the factors driving shelter overcrowding.</p>
+                <p>The result is that animals who would have previously entered the shelter system are often left to depend on chance, circumstance, and the willingness of individual residents to intervene.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-triangle-exclamation"></i> Public Safety and Community Impact</summary>
-      <div class="issue-accordion-content">
-        <p>Managed intake is not solely an animal welfare issue. It is also a public safety issue for Gwinnett County residents.</p>
-        <p>When more animals remain in the community, residents are more likely to encounter stray, frightened, injured, or unconfined animals. Loose dogs can create traffic hazards, cause vehicle accidents, injure other pets, and in some cases pose a risk to people. Stray animals may also spread parasites and disease or create ongoing concerns for neighborhoods, parks, schools, and businesses.</p>
-        <p>The impact extends beyond individual incidents. As animals continue to remain in the community and reproduce, the number of stray and unwanted animals grows. This creates additional strain on Animal Control, rescue organizations, veterinarians, and residents while making it increasingly difficult for Gwinnett County to get ahead of the pet overpopulation problem.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-triangle-exclamation"></i> Public Safety and Community Impact</summary>
+            <div class="issue-accordion-content">
+                <p>Managed intake is not solely an animal welfare issue. It is also a public safety issue for Gwinnett County residents.</p>
+                <p>When more animals remain in the community, residents are more likely to encounter stray, frightened, injured, or unconfined animals. Loose dogs can create traffic hazards, cause vehicle accidents, injure other pets, and in some cases pose a risk to people. Stray animals may also spread parasites and disease or create ongoing concerns for neighborhoods, parks, schools, and businesses.</p>
+                <p>The impact extends beyond individual incidents. As animals continue to remain in the community and reproduce, the number of stray and unwanted animals grows. This creates additional strain on Animal Control, rescue organizations, veterinarians, and residents while making it increasingly difficult for Gwinnett County to get ahead of the pet overpopulation problem.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-house-chimney"></i> The Burden Shifts to Residents and Rescues</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett County's managed intake system shifts much of the responsibility for animal care from the shelter to residents, volunteers, and rescue organizations.</p>
-        <p>Residents who find stray animals are often expected to house them, search for owners, arrange veterinary care, transport them to appointments, and coordinate placement options. Residents who can no longer care for their own pets may find themselves with few realistic alternatives when shelter assistance is unavailable.</p>
-        <p>Many people are willing to help, but not everyone has the financial resources, housing situation, time, transportation, or experience necessary to safely care for an unfamiliar animal. As a result, individuals are often placed in difficult situations where they must choose between taking responsibility for an animal themselves or leaving the animal without assistance.</p>
-        <p>Rescue organizations are frequently asked to absorb animals that Gwinnett County Animal Shelter cannot accept. However, rescues face many of the same challenges as the shelter, including limited foster homes, veterinary shortages, financial constraints, and volunteer burnout. While rescues play a vital role in animal welfare, they cannot replace the function of a municipal shelter or serve as the county's primary safety net.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-house-chimney"></i> The Burden Shifts to Residents and Rescues</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett County's managed intake system shifts much of the responsibility for animal care from the shelter to residents, volunteers, and rescue organizations.</p>
+                <p>Residents who find stray animals are often expected to house them, search for owners, arrange veterinary care, transport them to appointments, and coordinate placement options. Residents who can no longer care for their own pets may find themselves with few realistic alternatives when shelter assistance is unavailable.</p>
+                <p>Many people are willing to help, but not everyone has the financial resources, housing situation, time, transportation, or experience necessary to safely care for an unfamiliar animal. As a result, individuals are often placed in difficult situations where they must choose between taking responsibility for an animal themselves or leaving the animal without assistance.</p>
+                <p>Rescue organizations are frequently asked to absorb animals that Gwinnett County Animal Shelter cannot accept. However, rescues face many of the same challenges as the shelter, including limited foster homes, veterinary shortages, financial constraints, and volunteer burnout. While rescues play a vital role in animal welfare, they cannot replace the function of a municipal shelter or serve as the county's primary safety net.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-magnifying-glass-chart"></i> Reduced Transparency and Accountability</summary>
-      <div class="issue-accordion-content">
-        <p>One of the most significant concerns surrounding managed intake is that animals denied entry into the shelter system often disappear from public reporting.</p>
-        <p>Gwinnett County Animal Shelter publicly reports outcomes for animals that enter the shelter system. However, the outcomes of animals that are denied intake, placed on waiting lists, instructed to remain in the community, or never admitted are largely unknown.</p>
-        <p>As a result, shelter statistics may show lower intake numbers, lower kennel populations, improved live release rates, and reduced euthanasia rates without reflecting the full number of animals that needed assistance. The public can see what happens to animals that enter the shelter, but often has little visibility into what happens to those that never receive shelter services in the first place.</p>
-        <p>Without tracking those outcomes, it is impossible to accurately measure the true impact of managed intake on animal welfare within Gwinnett County.</p>
-      </div>
-    </details>
-  </div>
+        <details>
+            <summary><i class="fa-solid fa-magnifying-glass-chart"></i> Reduced Transparency and Accountability</summary>
+            <div class="issue-accordion-content">
+                <p>One of the most significant concerns surrounding managed intake is that animals denied entry into the shelter system often disappear from public reporting.</p>
+                <p>Gwinnett County Animal Shelter publicly reports outcomes for animals that enter the shelter system. However, the outcomes of animals that are denied intake, placed on waiting lists, instructed to remain in the community, or never admitted are largely unknown.</p>
+                <p>As a result, shelter statistics may show lower intake numbers, lower kennel populations, improved live release rates, and reduced euthanasia rates without reflecting the full number of animals that needed assistance. The public can see what happens to animals that enter the shelter, but often has little visibility into what happens to those that never receive shelter services in the first place.</p>
+                <p>Without tracking those outcomes, it is impossible to accurately measure the true impact of managed intake on animal welfare within Gwinnett County.</p>
+            </div>
+        </details>
+    </div>
 </section>
 
 <section class="content-card issue-data-section">
-  <h2>The Gwinnett County Reality</h2>
-  <p>The impact of managed intake can be seen in Gwinnett County's own data.</p>
+    <h2>The Gwinnett County Reality</h2>
+    <p>The impact of managed intake can be seen in Gwinnett County's own data.</p>
 
-  <div class="managed-stat-grid">
-    <div class="home-card managed-stat-card">
-      <span>444</span>
-      <p>Owner Surrender Requests</p>
+    <div class="managed-stat-grid">
+        <div class="home-card managed-stat-card">
+            <span>444</span>
+            <p>Owner Surrender Requests</p>
+        </div>
+        <div class="home-card managed-stat-card">
+            <span>49</span>
+            <p>Accepted by Shelter</p>
+        </div>
+        <div class="home-card managed-stat-card">
+            <span>11%</span>
+            <p>Acceptance Rate</p>
+        </div>
     </div>
-    <div class="home-card managed-stat-card">
-      <span>49</span>
-      <p>Accepted by Shelter</p>
-    </div>
-    <div class="home-card managed-stat-card">
-      <span>11%</span>
-      <p>Acceptance Rate</p>
-    </div>
-  </div>
 
-  <p>During the first three months of 2026, Gwinnett County Animal Shelter received 444 owner surrender requests but accepted only 49 animals. Nearly 400 requests for assistance could not be accommodated.</p>
-  <p>For every animal that entered the shelter through owner surrender, many more remained in the community. Some may have remained safely in their homes. Others may have been successfully rehomed. However, some were likely abandoned, transferred informally through social media, surrendered without screening, left in unsafe situations, continued contributing to pet overpopulation through uncontrolled breeding, or simply remained without assistance.</p>
-  <p>The true outcomes of these animals are largely unknown because they are not routinely tracked or publicly reported.</p>
+    <p>During the first three months of 2026, Gwinnett County Animal Shelter received 444 owner surrender requests but accepted only 49 animals. Nearly 400 requests for assistance could not be accommodated.</p>
+    <p>For every animal that entered the shelter through owner surrender, many more remained in the community. Some may have remained safely in their homes. Others may have been successfully rehomed. However, some were likely abandoned, transferred informally through social media, surrendered without screening, left in unsafe situations, continued contributing to pet overpopulation through uncontrolled breeding, or simply remained without assistance.</p>
+    <p>The true outcomes of these animals are largely unknown because they are not routinely tracked or publicly reported.</p>
 
-  <div class="issue-pullquote">If hundreds of animals are unable to access shelter services each year, what happens to them?</div>
+    <div class="issue-pullquote">If hundreds of animals are unable to access shelter services each year, what happens to them?</div>
 </section>
 
 <section class="content-card recent-example-card">
-  <span class="section-label">A Recent Gwinnett Example</span>
-  <h2>The Dacula Case</h2>
-  <p>The consequences of managed intake can be seen in real-world situations throughout Gwinnett County. In June 2026, two stray dogs were reported roaming a Dacula neighborhood, including one that appeared injured. According to the original finder, the shelter was unable to respond due to overcrowding and capacity-related issues. The following day, one of the dogs was struck and killed by a vehicle.</p>
+    <span class="section-label">A Recent Gwinnett Example</span>
+    <h2>The Dacula Case</h2>
+    <p>The consequences of managed intake can be seen in real-world situations throughout Gwinnett County. In June 2026, two stray dogs were reported roaming a Dacula neighborhood, including one that appeared injured. According to the original finder, the shelter was unable to respond due to overcrowding and capacity-related issues. The following day, one of the dogs was struck and killed by a vehicle.</p>
 
-  <div class="issue-accordion">
-    <details>
-      <summary>Read Full Case Study</summary>
-      <div class="issue-accordion-content">
-        <p>The surviving dog remained loose for nearly two weeks before being secured by a local rescue organization after multiple residents and advocates attempted to help. When the rescue contacted the shelter, they were reportedly told the dog could not be accepted due to intake restrictions.</p>
-        <p>As a result, the rescue stepped in to provide care, including grooming, vaccinations, and coordinating placement with a foster and rescue partner. Notably, the organization that intervened was primarily a cat rescue, not a dog rescue.</p>
-        <p>The case illustrates a central concern with managed intake: when animals cannot access shelter services, responsibility often shifts to residents, volunteers, and rescue organizations, while animals remain exposed to injury, illness, traffic hazards, and other dangers within the community.</p>
-      </div>
-    </details>
-  </div>
+    <div class="issue-accordion">
+        <details>
+            <summary>Read Full Case Study</summary>
+            <div class="issue-accordion-content">
+                <p>The surviving dog remained loose for nearly two weeks before being secured by a local rescue organization after multiple residents and advocates attempted to help. When the rescue contacted the shelter, they were reportedly told the dog could not be accepted due to intake restrictions.</p>
+                <p>As a result, the rescue stepped in to provide care, including grooming, vaccinations, and coordinating placement with a foster and rescue partner. Notably, the organization that intervened was primarily a cat rescue, not a dog rescue.</p>
+                <p>The case illustrates a central concern with managed intake: when animals cannot access shelter services, responsibility often shifts to residents, volunteers, and rescue organizations, while animals remain exposed to injury, illness, traffic hazards, and other dangers within the community.</p>
+            </div>
+        </details>
+    </div>
 </section>
 
 <section class="home-section issue-overview-section">
-  <h2>The Solution</h2>
-  <p class="section-intro">Managed intake is not a solution to pet overpopulation. Gwinnett County needs a comprehensive approach focused on prevention, accountability, enforcement, short-term capacity, and transparency.</p>
+    <h2>The Solution</h2>
+    <p class="section-intro">Managed intake is not a solution to pet overpopulation. Gwinnett County needs a comprehensive approach focused on prevention, accountability, enforcement, short-term capacity, and transparency.</p>
 
-  <div class="issue-accordion solution-accordion">
-    <details>
-      <summary><i class="fa-solid fa-heart-circle-plus"></i> Invest in Prevention</summary>
-      <div class="issue-accordion-content">
-        <p>The most effective way to reduce shelter intake is to prevent unwanted litters before they occur.</p>
-        <p>Gwinnett County should significantly expand access to affordable spay and neuter services through voucher programs, mobile clinics, targeted assistance for low-income residents, and partnerships with nonprofit veterinary providers. Every unwanted litter prevented reduces future demand on Animal Control, Gwinnett County Animal Shelter, rescue organizations, and taxpayers.</p>
-        <p>Communities throughout Georgia have already demonstrated the value of investing in prevention. In 2026, DeKalb County approved more than $1.18 million annually to expand free spay/neuter services, mobile veterinary clinics, and community outreach through its partnership with LifeLine Animal Project. Cobb County has funded spay/neuter voucher programs to help residents access affordable services, while Fulton County has invested in community-based prevention programs that provide free and low-cost sterilization services, transportation assistance, and pet retention support. Walker County recently adopted a spay/neuter ordinance designed specifically to address pet overpopulation and shelter overcrowding.</p>
-        <p>These communities recognize that preventing unwanted litters is significantly more humane and cost-effective than managing the consequences after animals become homeless, abandoned, or enter an already overcrowded shelter system.</p>
-      </div>
-    </details>
+    <div class="issue-accordion solution-accordion">
+        <details>
+            <summary><i class="fa-solid fa-heart-circle-plus"></i> Invest in Prevention</summary>
+            <div class="issue-accordion-content">
+                <p>The most effective way to reduce shelter intake is to prevent unwanted litters before they occur.</p>
+                <p>Gwinnett County should significantly expand access to affordable spay and neuter services through voucher programs, mobile clinics, targeted assistance for low-income residents, and partnerships with nonprofit veterinary providers. Every unwanted litter prevented reduces future demand on Animal Control, Gwinnett County Animal Shelter, rescue organizations, and taxpayers.</p>
+                <p>Communities throughout Georgia have already demonstrated the value of investing in prevention. In 2026, DeKalb County approved more than $1.18 million annually to expand free spay/neuter services, mobile veterinary clinics, and community outreach through its partnership with LifeLine Animal Project. Cobb County has funded spay/neuter voucher programs to help residents access affordable services, while Fulton County has invested in community-based prevention programs that provide free and low-cost sterilization services, transportation assistance, and pet retention support. Walker County recently adopted a spay/neuter ordinance designed specifically to address pet overpopulation and shelter overcrowding.</p>
+                <p>These communities recognize that preventing unwanted litters is significantly more humane and cost-effective than managing the consequences after animals become homeless, abandoned, or enter an already overcrowded shelter system.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-store-slash"></i> Prohibit the Retail Sale of Commercially Bred Puppies and Kittens</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett County should prohibit the retail sale of commercially bred puppies and kittens in pet stores.</p>
-        <p>These ordinances are designed to reduce demand for animals sourced from large-scale commercial breeding operations while encouraging adoption through shelters and rescue organizations. Rather than allowing pet stores to sell commercially bred animals, stores may partner with shelters and rescues to showcase adoptable pets.</p>
-        <p>This is not a new concept. Similar humane pet sales laws have already been adopted by multiple Georgia jurisdictions, including the City of Atlanta, Sandy Springs, Forsyth County, Hall County, and Cherokee County.</p>
-        <p>More than a year ago, advocates asked Gwinnett County to consider a similar ordinance. To date, no action has been taken.</p>
-        <p>The rationale behind these laws is straightforward. While shelters and rescue organizations continue to struggle with overcrowding and pet overpopulation, commercially bred puppies and kittens continue to enter the marketplace. Humane pet sales ordinances seek to reduce that demand while promoting adoption-based alternatives.</p>
-        <p>When Sandy Springs adopted its ordinance, city leaders cited concerns about pet overpopulation, animal welfare, and the burden placed on shelters and rescue organizations. Those concerns remain relevant today. In many communities, shelter overcrowding, rescue fatigue, and pet overpopulation have become more severe in the years since these ordinances were first introduced.</p>
-        <p>A retail pet sales ban alone will not solve pet overpopulation. However, it is one proven tool that communities across Georgia have already implemented as part of a broader strategy focused on prevention, responsible pet ownership, and reducing the number of animals entering the shelter system.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-store-slash"></i> Prohibit the Retail Sale of Commercially Bred Puppies and Kittens</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett County should prohibit the retail sale of commercially bred puppies and kittens in pet stores.</p>
+                <p>These ordinances are designed to reduce demand for animals sourced from large-scale commercial breeding operations while encouraging adoption through shelters and rescue organizations. Rather than allowing pet stores to sell commercially bred animals, stores may partner with shelters and rescues to showcase adoptable pets.</p>
+                <p>This is not a new concept. Similar humane pet sales laws have already been adopted by multiple Georgia jurisdictions, including the City of Atlanta, Sandy Springs, Forsyth County, Hall County, and Cherokee County.</p>
+                <p>More than a year ago, advocates asked Gwinnett County to consider a similar ordinance. To date, no action has been taken.</p>
+                <p>The rationale behind these laws is straightforward. While shelters and rescue organizations continue to struggle with overcrowding and pet overpopulation, commercially bred puppies and kittens continue to enter the marketplace. Humane pet sales ordinances seek to reduce that demand while promoting adoption-based alternatives.</p>
+                <p>When Sandy Springs adopted its ordinance, city leaders cited concerns about pet overpopulation, animal welfare, and the burden placed on shelters and rescue organizations. Those concerns remain relevant today. In many communities, shelter overcrowding, rescue fatigue, and pet overpopulation have become more severe in the years since these ordinances were first introduced.</p>
+                <p>A retail pet sales ban alone will not solve pet overpopulation. However, it is one proven tool that communities across Georgia have already implemented as part of a broader strategy focused on prevention, responsible pet ownership, and reducing the number of animals entering the shelter system.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-clipboard-list"></i> Create Breeder Accountability</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett County cannot address pet overpopulation while allowing breeding activity to occur with little local oversight or accountability.</p>
-        <p>The county's current ordinance simply requires compliance with Georgia Department of Agriculture licensing requirements for breeders who are already required to be licensed. However, Gwinnett does not currently maintain a local litter registration system, breeder permit program, intact animal licensing requirement, or other mechanism that allows breeding activity to be tracked at the local level.</p>
-        <p>As a result, enforcement can be difficult. If the county cannot determine whether a litter is a first litter or a repeat litter, or whether an individual is regularly breeding animals for sale, there are limited tools available to identify patterns, investigate complaints, or measure the true impact of breeding activity on shelter intake.</p>
-        <p>Other communities have adopted additional accountability measures designed to address these challenges. DeKalb County established a Pet Litter Registry to create documentation and oversight of breeding activity. Walker County adopted a spay/neuter ordinance that requires dogs and cats over six months of age to be altered unless the owner qualifies for an exemption or obtains an unaltered animal license. Across the country, communities have implemented breeder permits, litter registration requirements, intact animal licensing programs, advertising disclosure requirements, and enhanced penalties for unlicensed breeding activity.</p>
-        <p>These approaches do not prohibit responsible ownership. Instead, they create accountability, improve enforcement, and help communities better understand the sources of pet overpopulation.</p>
-        <ul>
-          <li>Litter registration requirements</li>
-          <li>Breeder permits and recordkeeping requirements</li>
-          <li>Intact animal licensing programs</li>
-          <li>Advertising requirements that include permit or license numbers</li>
-          <li>Enhanced penalties for unlicensed breeding activity</li>
-          <li>Limits on repeat litters</li>
-          <li>Temporary restrictions on breeding activity during periods of severe shelter overcrowding</li>
-        </ul>
-        <p>In recent years, some communities have gone even further by proposing temporary breeding moratoriums until shelter populations, rescue capacity, and pet overpopulation levels return to manageable levels. While these proposals remain controversial, they reflect a growing recognition that communities cannot reduce pet overpopulation while simultaneously allowing a continuous influx of new litters into an already overwhelmed system.</p>
-        <p>Any discussion about pet overpopulation must include the role that breeding plays in adding new animals to the community. Communities cannot reduce shelter intake solely by restricting admissions while continuing to allow a steady influx of new litters without meaningful oversight, accountability, or intervention.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-clipboard-list"></i> Create Breeder Accountability</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett County cannot address pet overpopulation while allowing breeding activity to occur with little local oversight or accountability.</p>
+                <p>The county's current ordinance simply requires compliance with Georgia Department of Agriculture licensing requirements for breeders who are already required to be licensed. However, Gwinnett does not currently maintain a local litter registration system, breeder permit program, intact animal licensing requirement, or other mechanism that allows breeding activity to be tracked at the local level.</p>
+                <p>As a result, enforcement can be difficult. If the county cannot determine whether a litter is a first litter or a repeat litter, or whether an individual is regularly breeding animals for sale, there are limited tools available to identify patterns, investigate complaints, or measure the true impact of breeding activity on shelter intake.</p>
+                <p>Other communities have adopted additional accountability measures designed to address these challenges. DeKalb County established a Pet Litter Registry to create documentation and oversight of breeding activity. Walker County adopted a spay/neuter ordinance that requires dogs and cats over six months of age to be altered unless the owner qualifies for an exemption or obtains an unaltered animal license. Across the country, communities have implemented breeder permits, litter registration requirements, intact animal licensing programs, advertising disclosure requirements, and enhanced penalties for unlicensed breeding activity.</p>
+                <p>These approaches do not prohibit responsible ownership. Instead, they create accountability, improve enforcement, and help communities better understand the sources of pet overpopulation.</p>
+                <ul>
+                    <li>Litter registration requirements</li>
+                    <li>Breeder permits and recordkeeping requirements</li>
+                    <li>Intact animal licensing programs</li>
+                    <li>Advertising requirements that include permit or license numbers</li>
+                    <li>Enhanced penalties for unlicensed breeding activity</li>
+                    <li>Limits on repeat litters</li>
+                    <li>Temporary restrictions on breeding activity during periods of severe shelter overcrowding</li>
+                </ul>
+                <p>In recent years, some communities have gone even further by proposing temporary breeding moratoriums until shelter populations, rescue capacity, and pet overpopulation levels return to manageable levels. While these proposals remain controversial, they reflect a growing recognition that communities cannot reduce pet overpopulation while simultaneously allowing a continuous influx of new litters into an already overwhelmed system.</p>
+                <p>Any discussion about pet overpopulation must include the role that breeding plays in adding new animals to the community. Communities cannot reduce shelter intake solely by restricting admissions while continuing to allow a steady influx of new litters without meaningful oversight, accountability, or intervention.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-gavel"></i> Enforce Existing Laws</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett County must also enforce the animal laws already on the books.</p>
-        <p>Owner accountability cannot simply be a talking point. When ownership is known, animals are abandoned, pets repeatedly roam, neglect occurs, or illegal breeding activity is reported, there must be meaningful follow-up, citations, fines, and consequences.</p>
-        <p>This is especially important when an animal enters Gwinnett County Animal Shelter, ownership is identified through a microchip, tag, license, or other means, and the animal is never reclaimed. If the public is told that irresponsible owners are a primary cause of pet overpopulation, then the county must be able to demonstrate how those owners are held accountable when they are known. Otherwise, the burden shifts to taxpayers, rescue organizations, volunteers, foster homes, and the shelter system itself to absorb the consequences of those decisions.</p>
-        <p>Enforcement is not simply about punishment. It is about changing behavior and preventing future shelter intake. When owners know there are consequences for abandoning animals, failing to reclaim pets, allowing repeated roaming, neglecting basic care, or breeding animals in violation of local regulations, compliance improves. Effective enforcement helps reduce the number of animals entering the shelter system in the first place.</p>
-        <p>Enforcement efforts should also be transparent. Gwinnett County should publicly report data related to abandonment cases, owner reclaim rates, citations issued, repeat offenders, breeding-related investigations, and other animal ordinance violations. Without this information, residents have no way of knowing whether existing laws are being actively enforced or whether owner accountability is simply being discussed without measurable action.</p>
-        <p>A successful animal welfare strategy requires more than shelter operations alone. It requires a commitment to prevention, accountability, and enforcement. If irresponsible ownership contributes to pet overpopulation, then meaningful enforcement must be part of the solution.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-gavel"></i> Enforce Existing Laws</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett County must also enforce the animal laws already on the books.</p>
+                <p>Owner accountability cannot simply be a talking point. When ownership is known, animals are abandoned, pets repeatedly roam, neglect occurs, or illegal breeding activity is reported, there must be meaningful follow-up, citations, fines, and consequences.</p>
+                <p>This is especially important when an animal enters Gwinnett County Animal Shelter, ownership is identified through a microchip, tag, license, or other means, and the animal is never reclaimed. If the public is told that irresponsible owners are a primary cause of pet overpopulation, then the county must be able to demonstrate how those owners are held accountable when they are known. Otherwise, the burden shifts to taxpayers, rescue organizations, volunteers, foster homes, and the shelter system itself to absorb the consequences of those decisions.</p>
+                <p>Enforcement is not simply about punishment. It is about changing behavior and preventing future shelter intake. When owners know there are consequences for abandoning animals, failing to reclaim pets, allowing repeated roaming, neglecting basic care, or breeding animals in violation of local regulations, compliance improves. Effective enforcement helps reduce the number of animals entering the shelter system in the first place.</p>
+                <p>Enforcement efforts should also be transparent. Gwinnett County should publicly report data related to abandonment cases, owner reclaim rates, citations issued, repeat offenders, breeding-related investigations, and other animal ordinance violations. Without this information, residents have no way of knowing whether existing laws are being actively enforced or whether owner accountability is simply being discussed without measurable action.</p>
+                <p>A successful animal welfare strategy requires more than shelter operations alone. It requires a commitment to prevention, accountability, and enforcement. If irresponsible ownership contributes to pet overpopulation, then meaningful enforcement must be part of the solution.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-hand-holding-heart"></i> Build Short-Term Capacity</summary>
-      <div class="issue-accordion-content">
-        <p>Long-term prevention is essential, but animals need help today.</p>
-        <p>While expanded spay/neuter programs, breeder accountability measures, and stronger enforcement can reduce future shelter intake, those strategies take time to produce results. In the meantime, animals continue to be abandoned, surrendered, injured, lost, neglected, and displaced throughout Gwinnett County.</p>
-        <p>Gwinnett County should develop short-term solutions that allow more animals to receive assistance while broader prevention efforts are implemented. This could include emergency intake protocols, temporary animal housing, temporary boarding partnerships, overflow housing agreements, and stronger partnerships with rescue organizations.</p>
-        <p>The county should also evaluate whether existing shelter resources are being utilized as effectively as possible and identify opportunities to expand capacity through partnerships, staffing, foster recruitment, volunteer engagement, and community support programs. Neighboring shelters have demonstrated that volunteers, foster homes, and rescue partners can play a significant role in increasing lifesaving capacity when they are effectively recruited, trained, and supported.</p>
-        <p>Residents should not be told to release animals back into the community because the shelter lacks space. Nor should families in crisis be left without options when they can no longer safely care for a pet. A taxpayer-funded animal services system must have a plan for urgent cases, even during periods of overcrowding.</p>
-        <p>Managed intake may reduce the number of animals housed within the shelter, but it does not reduce the number of animals needing assistance throughout the community. Until long-term solutions begin reducing intake at its source, Gwinnett County must ensure that animals in need still have access to a reliable safety net.</p>
-      </div>
-    </details>
+        <details>
+            <summary><i class="fa-solid fa-hand-holding-heart"></i> Build Short-Term Capacity</summary>
+            <div class="issue-accordion-content">
+                <p>Long-term prevention is essential, but animals need help today.</p>
+                <p>While expanded spay/neuter programs, breeder accountability measures, and stronger enforcement can reduce future shelter intake, those strategies take time to produce results. In the meantime, animals continue to be abandoned, surrendered, injured, lost, neglected, and displaced throughout Gwinnett County.</p>
+                <p>Gwinnett County should develop short-term solutions that allow more animals to receive assistance while broader prevention efforts are implemented. This could include emergency intake protocols, temporary animal housing, temporary boarding partnerships, overflow housing agreements, and stronger partnerships with rescue organizations.</p>
+                <p>The county should also evaluate whether existing shelter resources are being utilized as effectively as possible and identify opportunities to expand capacity through partnerships, staffing, foster recruitment, volunteer engagement, and community support programs. Neighboring shelters have demonstrated that volunteers, foster homes, and rescue partners can play a significant role in increasing lifesaving capacity when they are effectively recruited, trained, and supported.</p>
+                <p>Residents should not be told to release animals back into the community because the shelter lacks space. Nor should families in crisis be left without options when they can no longer safely care for a pet. A taxpayer-funded animal services system must have a plan for urgent cases, even during periods of overcrowding.</p>
+                <p>Managed intake may reduce the number of animals housed within the shelter, but it does not reduce the number of animals needing assistance throughout the community. Until long-term solutions begin reducing intake at its source, Gwinnett County must ensure that animals in need still have access to a reliable safety net.</p>
+            </div>
+        </details>
 
-    <details>
-      <summary><i class="fa-solid fa-chart-line"></i> Improve Transparency</summary>
-      <div class="issue-accordion-content">
-        <p>Gwinnett County should publicly track and report not only the animals that enter the shelter system, but also the animals that are denied intake, waitlisted, referred elsewhere, or never admitted.</p>
-        <p>This reporting should include owner surrender requests, acceptance rates, reasons for denial, known-owner unreclaimed animals, abandonment cases, enforcement actions, citations issued, breeding-related complaints, and outcomes when available.</p>
-        <p>Transparency is essential for evaluating whether current policies are working. While Gwinnett County Animal Shelter publishes information about animals that enter the shelter system, residents have far less visibility into what happens to animals that are turned away, waitlisted, or referred elsewhere. Those animals do not simply disappear. They remain in the community, often with outcomes that are unknown and untracked.</p>
-        <p>Public reporting should allow residents, county leadership, and policymakers to understand the full scope of animal welfare challenges within Gwinnett County. If hundreds of animals are unable to access shelter services each year, the community deserves to know what happens next. How many are successfully rehomed? How many enter rescue programs? How many are reunited with owners? How many are abandoned, injured, or never accounted for?</p>
-        <p>Without this information, it is impossible to determine whether managed intake is truly reducing animal suffering and shelter overcrowding or simply shifting animals outside of the shelter's reporting system. Effective public policy requires complete and transparent data, not just statistics from animals that successfully enter the shelter.</p>
-      </div>
-    </details>
-  </div>
+        <details>
+            <summary><i class="fa-solid fa-chart-line"></i> Improve Transparency</summary>
+            <div class="issue-accordion-content">
+                <p>Gwinnett County should publicly track and report not only the animals that enter the shelter system, but also the animals that are denied intake, waitlisted, referred elsewhere, or never admitted.</p>
+                <p>This reporting should include owner surrender requests, acceptance rates, reasons for denial, known-owner unreclaimed animals, abandonment cases, enforcement actions, citations issued, breeding-related complaints, and outcomes when available.</p>
+                <p>Transparency is essential for evaluating whether current policies are working. While Gwinnett County Animal Shelter publishes information about animals that enter the shelter system, residents have far less visibility into what happens to animals that are turned away, waitlisted, or referred elsewhere. Those animals do not simply disappear. They remain in the community, often with outcomes that are unknown and untracked.</p>
+                <p>Public reporting should allow residents, county leadership, and policymakers to understand the full scope of animal welfare challenges within Gwinnett County. If hundreds of animals are unable to access shelter services each year, the community deserves to know what happens next. How many are successfully rehomed? How many enter rescue programs? How many are reunited with owners? How many are abandoned, injured, or never accounted for?</p>
+                <p>Without this information, it is impossible to determine whether managed intake is truly reducing animal suffering and shelter overcrowding or simply shifting animals outside of the shelter's reporting system. Effective public policy requires complete and transparent data, not just statistics from animals that successfully enter the shelter.</p>
+            </div>
+        </details>
+    </div>
 </section>
 
 <section class="difference-section managed-closing-section">
-  <div class="difference-content">
-    <h2>A Real Solution Addresses the Root Cause</h2>
-    <p>Managed intake addresses overcrowding inside the shelter. A real solution addresses why so many animals need help in the first place.</p>
-    <p>Until those root causes are addressed, restricting access to shelter services simply shifts the burden to residents, rescue organizations, volunteers, and the animals themselves.</p>
-    <a href="/contact-county-leadership/" class="btn">Contact County Leadership</a>
-  </div>
+    <div class="difference-content">
+        <h2>A Real Solution Addresses the Root Cause</h2>
+        <p>Managed intake addresses overcrowding inside the shelter. A real solution addresses why so many animals need help in the first place.</p>
+        <p>Until those root causes are addressed, restricting access to shelter services simply shifts the burden to residents, rescue organizations, volunteers, and the animals themselves.</p>
+        <a href="/contact-county-leadership/" class="btn">Contact County Leadership</a>
+    </div>
 </section>
