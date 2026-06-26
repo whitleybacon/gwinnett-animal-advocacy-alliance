@@ -3,6 +3,57 @@ layout: default
 title: Marshmallow
 ---
 
+.timeline-table {
+    padding: 0;
+    overflow: hidden;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 28px;
+    padding: 28px 32px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.timeline-row:last-child {
+    border-bottom: none;
+}
+
+.timeline-date {
+    color: #1C4072;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.timeline-details h3 {
+    margin: 0 0 8px;
+    color: #1C4072;
+}
+
+.timeline-details p {
+    margin-bottom: 8px;
+}
+
+.timeline-row-alert {
+    background: #fff5f5;
+    border-left: 6px solid #c62828;
+}
+
+.timeline-row-alert .timeline-date,
+.timeline-row-alert h3 {
+    color: #c62828;
+}
+
+@media (max-width: 768px) {
+    .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 24px;
+    }
+}
+
 <section class="page-hero"
     style="background-image: linear-gradient(90deg, rgba(28,64,114,.95) 0%, rgba(28,64,114,.72) 45%, rgba(28,64,114,.12) 100%), url('{{ site.baseurl }}/assets/marshmallow-hero.png');">
     <img class="page-hero-mobile-img" src="{{ site.baseurl }}/assets/marshmallow.jpg" alt="Marshmallow">
@@ -32,68 +83,52 @@ title: Marshmallow
 
     <h2>Medical Timeline</h2>
 
-    <div class="home-card">
+    <div class="home-card timeline-table">
 
-        <div class="timeline-entry">
-            <span class="timeline-date">June 26, 2025</span>
-            <h3>Shelter Intake</h3>
-            <p>Marshmallow entered Gwinnett County Animal Shelter after being found at Lions Club Park in Lilburn. Shelter records noted he had reportedly been living around the park for several months before being impounded.</p>
+        <div class="timeline-row">
+            <div class="timeline-date">June 26, 2025</div>
+            <div class="timeline-details">
+                <h3>Shelter Intake</h3>
+                <p>Marshmallow entered Gwinnett County Animal Shelter after being found at Lions Club Park in Lilburn. Shelter records noted he had reportedly been living around the park for several months before being impounded.</p>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="timeline-entry">
-            <span class="timeline-date">July 1, 2025</span>
-            <h3>Routine Neuter Surgery</h3>
-            <p>Marshmallow underwent a routine neuter procedure at the shelter.</p>
+        <div class="timeline-row">
+            <div class="timeline-date">July 1, 2025</div>
+            <div class="timeline-details">
+                <h3>Routine Neuter Surgery</h3>
+                <p>Marshmallow underwent a routine neuter procedure at the shelter.</p>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="timeline-entry timeline-alert">
-
-            <span class="timeline-date alert-date">July 2–7, 2025</span>
-
-            <h3>No Documented Veterinary Rechecks</h3>
-
-            <p>
-                The medical record contains <strong>no documented veterinary examinations or post-operative rechecks</strong> during the seven days following surgery.
-            </p>
-
+        <div class="timeline-row timeline-row-alert">
+            <div class="timeline-date">July 2–7, 2025</div>
+            <div class="timeline-details">
+                <h3>No Documented Veterinary Rechecks</h3>
+                <p>The medical record contains <strong>no documented veterinary examinations or post-operative rechecks</strong> during the seven days following surgery.</p>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="timeline-entry">
-            <span class="timeline-date">July 8, 2025</span>
-
-            <h3>Medical Emergency</h3>
-
-            <p>
-                Shelter staff reported Marshmallow had stopped eating, appeared lethargic, was bleeding from the surgical site, had severe swelling, appeared dehydrated, and was unable to walk without falling over.
-            </p>
-
-            <p>
-                Veterinary examination documented a severe post-operative infection with a guarded prognosis.
-            </p>
-
+        <div class="timeline-row">
+            <div class="timeline-date">July 8, 2025</div>
+            <div class="timeline-details">
+                <h3>Medical Emergency</h3>
+                <p>Shelter staff reported Marshmallow had stopped eating, appeared lethargic, was bleeding from the surgical site, had severe swelling, appeared dehydrated, and was unable to walk without falling over.</p>
+                <p>Veterinary examination documented a severe post-operative infection with a guarded prognosis.</p>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="timeline-entry">
-            <span class="timeline-date">July 12, 2025</span>
-
-            <h3>Outcome</h3>
-
-            <p>
-                Despite treatment, Marshmallow's condition continued to decline. He was humanely euthanized due to the severity of his infection.
-            </p>
-
+        <div class="timeline-row">
+            <div class="timeline-date">July 12, 2025</div>
+            <div class="timeline-details">
+                <h3>Outcome</h3>
+                <p>Despite treatment, Marshmallow's condition continued to decline. He was humanely euthanized due to the severity of his infection.</p>
+            </div>
         </div>
 
     </div>
 
+</section>
 </section>
 
 <section class="home-section">
