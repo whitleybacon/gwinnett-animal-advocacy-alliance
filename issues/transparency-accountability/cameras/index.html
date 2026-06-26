@@ -1,1 +1,280 @@
+---
+layout: default
+title: Camera Coverage & Accountability
+---
 
+<style>
+.camera-hero {
+    background:
+        linear-gradient(90deg, rgba(28,64,114,.88), rgba(28,64,114,.50), rgba(28,64,114,.08)),
+        url('/assets/camera-coverage-hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.camera-callout {
+    max-width: 1200px;
+    margin: 40px auto 50px;
+    padding: 34px 42px;
+    background: #fff5f5;
+    border-left: 6px solid #c62828;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+.camera-callout h2 {
+    color: #c62828;
+    margin: 0 0 12px;
+    font-size: 2rem;
+}
+
+.camera-callout p {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.camera-section {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.camera-section h2 {
+    color: var(--accent);
+    font-size: 2.3rem;
+    margin-bottom: 18px;
+}
+
+.camera-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.camera-proposal-card {
+    background: #f4f8fb;
+    border: 1px solid #dbe7f2;
+    border-radius: 12px;
+    padding: 34px;
+    margin-top: 20px;
+    max-width: 900px;
+}
+
+.proposal-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 14px 0;
+    border-bottom: 1px solid #dbe7f2;
+}
+
+.proposal-row:last-child {
+    border-bottom: none;
+}
+
+.proposal-label {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.proposal-row p {
+    margin: 0;
+}
+
+.camera-quote {
+    color: var(--accent);
+    font-weight: 800;
+    font-style: italic;
+}
+
+.why-camera-grid {
+    max-width: 1200px;
+}
+
+.why-camera-card .home-card-icon {
+    background: #c62828;
+}
+
+.solution-callout {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 28px 34px;
+    background: #f3f8f1;
+    border: 1px solid rgba(31,93,43,.22);
+    border-radius: 12px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.solution-icon {
+    flex: 0 0 72px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #1f5d2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.solution-callout p {
+    margin: 0;
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 700;
+}
+
+.camera-closing {
+    background:
+        linear-gradient(rgba(28,64,114,.82), rgba(28,64,114,.82)),
+        url('/assets/camera-coverage-closing.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.camera-closing .btn {
+    background: #c62828;
+}
+
+@media (max-width: 768px) {
+    .camera-hero {
+        background-image: none !important;
+    }
+
+    .camera-callout {
+        padding: 26px 22px;
+        margin: 30px auto 40px;
+    }
+
+    .camera-callout h2 {
+        font-size: 1.5rem;
+    }
+
+    .camera-section {
+        padding: 0;
+    }
+
+    .camera-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .proposal-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .camera-proposal-card {
+        padding: 24px;
+    }
+
+    .solution-callout {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+}
+</style>
+
+<section class="page-hero camera-hero">
+    <img class="page-hero-mobile-img" src="/assets/camera-coverage-hero-mobile.png" alt="Animal shelter kennel hallway with camera">
+    <div class="page-hero-content">
+        <h1>Camera Coverage & Accountability</h1>
+        <p>No cameras in animal housing areas, medical treatment areas, or euthanasia areas.</p>
+    </div>
+</section>
+
+<section class="camera-callout">
+    <h2>Critical areas are not currently covered by cameras.</h2>
+    <p>Animal housing areas, medical treatment areas, and euthanasia areas currently lack camera coverage, leaving some of the most sensitive shelter operations without objective video documentation.</p>
+</section>
+
+<section class="camera-section">
+    <h2>The Issue</h2>
+    <p>Video documentation is essential for accountability and transparency in animal shelter operations. Without cameras in the areas where animals are housed, treated, and euthanized, incidents occur without objective documentation.</p>
+    <p>This lack of coverage limits oversight, reduces public trust, and leaves animals, staff, volunteers, and the public without the full transparency they deserve.</p>
+</section>
+
+<section class="camera-section">
+    <h2>The April 2026 Camera Proposal</h2>
+
+    <div class="camera-proposal-card">
+        <div class="proposal-row">
+            <div class="proposal-label">Proposal:</div>
+            <p>AAC member Nahum proposed exploring additional camera coverage in animal housing areas.</p>
+        </div>
+
+        <div class="proposal-row">
+            <div class="proposal-label">Support:</div>
+            <p>Members Lauren and Gabrielle supported evaluating the idea.</p>
+        </div>
+
+        <div class="proposal-row">
+            <div class="proposal-label">Concerns Raised:</div>
+            <p>Member Jeanne questioned the effectiveness of cameras and trust in leadership. Member Gail raised budget concerns.</p>
+        </div>
+
+        <div class="proposal-row">
+            <div class="proposal-label">County Position:</div>
+            <p>Animal Welfare Director Katrina Helman stated twice that <span class="camera-quote">“the county has no interest in adding additional cameras.”</span></p>
+        </div>
+
+        <div class="proposal-row">
+            <div class="proposal-label">Result:</div>
+            <p>The proposal was tabled.</p>
+        </div>
+    </div>
+</section>
+
+<section class="home-section">
+    <h2>Why It Matters</h2>
+
+    <div class="home-card-grid three-across-cards why-camera-grid">
+        <div class="home-card why-camera-card">
+            <div class="home-card-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <h3>Documents Incidents</h3>
+            <p>Cameras provide objective documentation of events within the shelter when questions or concerns arise.</p>
+        </div>
+
+        <div class="home-card why-camera-card">
+            <div class="home-card-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <h3>Protects Animals, Staff, Volunteers & The Public</h3>
+            <p>Cameras can help ensure safety, support fair investigations, and reduce disputes about what occurred.</p>
+        </div>
+
+        <div class="home-card why-camera-card">
+            <div class="home-card-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3>Builds Public Trust</h3>
+            <p>Transparency strengthens confidence in shelter operations and shows a commitment to accountability.</p>
+        </div>
+    </div>
+</section>
+
+<section class="home-section">
+    <h2>The Solution</h2>
+
+    <div class="solution-callout">
+        <div class="solution-icon">
+            <i class="fa-solid fa-camera"></i>
+        </div>
+        <p>Gwinnett County should add camera coverage in animal housing, medical treatment, and euthanasia areas — or at minimum, formally evaluate cost, feasibility, and implementation options before dismissing the proposal.</p>
+    </div>
+</section>
+
+<section class="difference-section camera-closing">
+    <div class="difference-content">
+        <h2>Transparency Should Not Be Controversial.</h2>
+        <p>Cameras do not replace trust. They support accountability.</p>
+        <a href="#" class="btn">Watch the AAC Discussion</a>
+    </div>
+</section>
