@@ -132,12 +132,70 @@ title: Accessible Animal Services
     font-size: 1.25rem;
 }
 
-   .access-change-section {
-       background: #f6f9fd;
-       padding: 70px 24px;
-       border-radius: 0;
-       margin-top: 40px;
-   }
+.access-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.access-info-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    text-align: left;
+}
+
+.access-info-icon,
+.access-recommendation-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #eaf3fb;
+    color: #1C4072;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.access-info-card h3,
+.access-recommendation-card h3 {
+    color: #1C4072;
+    margin-top: 0;
+}
+
+.access-change-section {
+    background: #f6f9fd;
+    padding: 70px 24px;
+    margin-top: 40px;
+}
+
+.access-recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.access-recommendation-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    text-align: left;
+}
+
+.access-recommendation-icon {
+    margin-bottom: 1.25rem;
+}
 
 @media (max-width: 900px) {
     .county-data-grid {
@@ -162,6 +220,15 @@ title: Accessible Animal Services
 
     .issue-list li {
         font-size: 1rem;
+    }
+
+    .access-info-grid,
+    .access-recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .access-info-card {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -322,23 +389,27 @@ title: Accessible Animal Services
 <section class="home-section">
     <h2>Why Accessibility Matters</h2>
 
-    <div class="home-card-grid two-across">
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
+    <div class="access-info-grid">
+        <div class="access-info-card">
+            <div class="access-info-icon">
                 <i class="fa-solid fa-people-group"></i>
             </div>
-            <h3>Public Access Affects Shelter Flow</h3>
-            <p>Many residents who want to adopt, reclaim a lost pet, or access shelter services are unable to visit during standard weekday hours. Limited access can mean missed opportunities for families to meet animals, complete adoptions, or bring pets home before delays create additional barriers.</p>
-            <p>When more residents can access the shelter, animals have more opportunities to leave through adoption, reclaim, and other positive outcomes. Faster shelter turnover can help create available kennel space, which may reduce pressure on capacity and managed intake.</p>
+            <div>
+                <h3>Public Access Affects Shelter Flow</h3>
+                <p>Many residents who want to adopt, reclaim a lost pet, or access shelter services are unable to visit during standard weekday hours. Limited access can mean missed opportunities for families to meet animals, complete adoptions, or bring pets home before delays create additional barriers.</p>
+                <p>When more residents can access the shelter, animals have more opportunities to leave through adoption, reclaim, and other positive outcomes. Faster shelter turnover can help create available kennel space, which may reduce pressure on capacity and managed intake.</p>
+            </div>
         </div>
 
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
+        <div class="access-info-card">
+            <div class="access-info-icon">
                 <i class="fa-solid fa-heart-circle-check"></i>
             </div>
-            <h3>Every Available Opportunity Matters</h3>
-            <p>Accessible public hours are not a standalone solution to overcrowding. However, they are one important part of an efficient sheltering system. When a shelter is facing capacity challenges, every opportunity for an animal to leave safely matters.</p>
-            <p>Expanding public access does not guarantee more adoptions, but it gives more residents the opportunity to visit, meet animals, and adopt when it fits their schedules.</p>
+            <div>
+                <h3>Every Available Opportunity Matters</h3>
+                <p>Accessible public hours are not a standalone solution to overcrowding. However, they are one important part of an efficient sheltering system. When a shelter is facing capacity challenges, every opportunity for an animal to leave safely matters.</p>
+                <p>Expanding public access does not guarantee more adoptions, but it gives more residents the opportunity to visit, meet animals, and adopt when it fits their schedules.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -347,25 +418,25 @@ title: Accessible Animal Services
     <h2>What Should Change</h2>
     <p class="section-intro">Improving accessibility does not require rebuilding the shelter. Many improvements can be made by better measuring community demand, evaluating operating hours, and ensuring residents are aware of existing services.</p>
 
-    <div class="home-card-grid three-across-cards">
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
+    <div class="access-recommendation-grid">
+        <div class="access-recommendation-card">
+            <div class="access-recommendation-icon">
                 <i class="fa-solid fa-chart-simple"></i>
             </div>
             <h3>Better Measure Community Demand</h3>
             <p>Gwinnett County should measure more than when adoptions are completed. Tracking appointment requests, after-hours inquiries, scheduling barriers, and unmet demand would provide a clearer picture of whether current public hours meet community needs.</p>
         </div>
 
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
+        <div class="access-recommendation-card">
+            <div class="access-recommendation-icon">
                 <i class="fa-solid fa-clock"></i>
             </div>
             <h3>Improve Public Accessibility</h3>
             <p>Expanding evening adoption hours, evaluating Sunday availability, or shifting existing operating hours could improve access for working families. Existing evening hours should also be promoted more consistently so residents know they are available.</p>
         </div>
 
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
+        <div class="access-recommendation-card">
+            <div class="access-recommendation-icon">
                 <i class="fa-solid fa-house-medical-circle-check"></i>
             </div>
             <h3>Support Shelter Capacity</h3>
