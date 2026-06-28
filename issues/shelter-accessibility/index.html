@@ -151,27 +151,40 @@ title: Accessible Animal Services
 
 .access-info-icon,
 .access-recommendation-icon {
-    width: 52px;
-    height: 52px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     background: #eaf3fb;
     color: #1C4072;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem;
 }
 
 .access-info-card h3,
 .access-recommendation-card h3 {
     color: #1C4072;
+    text-align: center;
     margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.access-info-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.access-recommendation-card p {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.75;
 }
 
 .access-change-section {
     background: #f6f9fd;
-    padding: 70px 24px;
+    padding: 45px 24px 55px;
     margin-top: 40px;
 }
 
@@ -207,6 +220,11 @@ title: Accessible Animal Services
 
     .issue-list li {
         font-size: 1rem;
+    }
+
+   .access-info-grid,
+    .access-recommendation-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -369,7 +387,7 @@ title: Accessible Animal Services
     <div class="access-info-grid">
         <div class="access-info-card">
             <div class="access-info-icon">
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-people-group"></i>
             </div>
             <h3>Public Access Affects Shelter Flow</h3>
             <p>Many residents who want to adopt, reclaim a lost pet, or access shelter services are unable to visit during standard weekday hours. Limited access can mean missed opportunities for families to meet animals, complete adoptions, or bring pets home before delays create additional barriers.</p>
@@ -378,7 +396,7 @@ title: Accessible Animal Services
 
         <div class="access-info-card">
             <div class="access-info-icon">
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart-pulse"></i>
             </div>
             <h3>Every Available Opportunity Matters</h3>
             <p>Accessible public hours are not a standalone solution to overcrowding. However, they are one important part of an efficient sheltering system. When a shelter is facing capacity challenges, every opportunity for an animal to leave safely matters.</p>
@@ -410,7 +428,7 @@ title: Accessible Animal Services
 
         <div class="access-recommendation-card">
             <div class="access-recommendation-icon">
-                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-right-left"></i>
             </div>
             <h3>Support Shelter Capacity</h3>
             <p>Managed intake is often discussed as a capacity issue, but shelter flow is also part of the equation. Improving public accessibility creates more opportunities for adoption and reclaim, helping animals leave the shelter and making space for the next animal in need.</p>
