@@ -1,9 +1,27 @@
+---
+layout: default
+title: Accessible Animal Services
+---
+
+<style>
 /* ===========================================
-   ADOPTION BAR CHART
+   ACCESSIBLE SERVICES PAGE ONLY
 =========================================== */
+
+.county-data-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
+}
 
 .adoption-bar-chart {
     margin: 1.75rem 0;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.5rem;
 }
 
 .bar-row {
@@ -12,6 +30,10 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.bar-row:last-child {
+    margin-bottom: 0;
 }
 
 .bar-label {
@@ -28,7 +50,7 @@
 }
 
 .bar-fill {
-    background: linear-gradient(90deg, #2E8DCC, #1C4072);
+    background: #1C4072;
     height: 100%;
     border-radius: 50px;
 }
@@ -40,14 +62,106 @@
     font-size: 1rem;
 }
 
----
-layout: default
-title: Accessible Animal Services
----
+.hours-data-table {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.hours-data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+
+.hours-data-table thead {
+    background: #1C4072;
+    color: #fff;
+}
+
+.hours-data-table th,
+.hours-data-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #ececec;
+}
+
+.hours-data-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.hours-data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.small-note {
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.issue-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+}
+
+.issue-list li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.issue-list li:last-child {
+    margin-bottom: 0;
+}
+
+.issue-list li::before {
+    content: "\f057";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    color: #C62828;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .county-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bar-row {
+        grid-template-columns: 1fr;
+        gap: .35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bar-value {
+        text-align: left;
+    }
+
+    .hours-data-table th,
+    .hours-data-table td {
+        padding: 12px;
+        font-size: .95rem;
+    }
+
+    .issue-list li {
+        font-size: 1rem;
+    }
+}
+</style>
 
 <section class="page-hero"
     style="background-image: linear-gradient(90deg, rgba(28,64,114,.95) 0%, rgba(28,64,114,.78) 42%, rgba(28,64,114,.18) 100%), url('{{ site.baseurl }}/assets/accessible-services-hero.jpg');">
-    <img class="page-hero-mobile-img" src="{{ site.baseurl }}/assets/accessible-services-hero-mobile.jpg" alt="Resident holding a dog outside an animal shelter">
+    <img class="page-hero-mobile-img" src="{{ site.baseurl }}/assets/accessible-services-hero-mobile.jpg" alt="Resident with a dog outside an animal shelter">
     <div class="page-hero-content">
         <h1>Accessible Animal Services</h1>
         <p>Public shelter services should be available when residents can reasonably use them.</p>
@@ -149,7 +263,7 @@ title: Accessible Animal Services
             <h3>What This Data Does Not Tell Us</h3>
             <p>This chart only reflects residents who were able to visit during the shelter’s existing public adoption hours.</p>
 
-            <ul class="issue-list red-list">
+            <ul class="issue-list">
                 <li>It does not measure residents who could not visit because of work, family schedules, or Sunday closures.</li>
                 <li>It does not show how many people wanted evening or weekend access but never came because the shelter was closed.</li>
                 <li>It does not track unmet demand, such as calls, appointment requests, scheduling barriers, or residents who needed more flexible access.</li>
