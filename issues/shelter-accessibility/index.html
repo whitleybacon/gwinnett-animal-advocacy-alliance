@@ -16,6 +16,10 @@ title: Accessible Animal Services
     margin-top: 2rem;
 }
 
+/* ===========================================
+   ADOPTION BAR CHART
+=========================================== */
+
 .adoption-bar-chart {
     margin: 1.75rem 0;
     background: #fafafa;
@@ -62,6 +66,10 @@ title: Accessible Animal Services
     font-size: 1rem;
 }
 
+/* ===========================================
+   TABLE
+=========================================== */
+
 .hours-data-table {
     margin: 1.5rem 0;
     overflow-x: auto;
@@ -95,6 +103,10 @@ title: Accessible Animal Services
     border-bottom: none;
 }
 
+/* ===========================================
+   GENERAL
+=========================================== */
+
 .small-note {
     margin-top: 1rem;
     font-size: .9rem;
@@ -127,104 +139,149 @@ title: Accessible Animal Services
     font-weight: 900;
     position: absolute;
     left: 0;
-    top: 0.15rem;
+    top: .15rem;
     color: #C62828;
     font-size: 1.25rem;
 }
 
+/* ===========================================
+   WHY ACCESSIBILITY MATTERS
+=========================================== */
+
 .access-info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .access-info-card,
 .access-recommendation-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,.05);
-    text-align: left;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:2rem;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
 
 .access-info-icon,
-.access-recommendation-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: #eaf3fb;
-    color: #1C4072;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    margin: 0 auto 1.5rem;
+.access-recommendation-icon{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#eaf3fb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 1.5rem;
+}
+
+.access-info-icon i,
+.access-recommendation-icon i{
+    font-size:2rem;
+    color:#1C4072;
 }
 
 .access-info-card h3,
-.access-recommendation-card h3 {
-    color: #1C4072;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+.access-recommendation-card h3{
+    color:#1C4072;
+    text-align:center;
+    margin:0 0 1.5rem;
 }
 
-.access-info-card p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+.access-info-card p{
+    font-size:1.05rem;
+    line-height:1.8;
+    margin-bottom:1.25rem;
 }
 
-.access-recommendation-card p {
-    text-align: center;
-    font-size: 1.05rem;
-    line-height: 1.75;
+.access-info-card p:last-child{
+    margin-bottom:0;
 }
 
-.access-change-section {
-    background: #f6f9fd;
-    padding: 45px 24px 55px;
-    margin-top: 40px;
+/* ===========================================
+   WHAT SHOULD CHANGE
+=========================================== */
+
+.access-change-section{
+    background:#f6f9fd;
+    margin-top:40px;
+    padding:30px 24px 35px;
 }
 
-.access-recommendation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+.access-change-section h2{
+    margin-bottom:.75rem;
 }
 
-@media (max-width: 900px) {
+.access-change-section .section-intro{
+    max-width:850px;
+    margin:0 auto 2rem;
+}
+
+.access-recommendation-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+
+.access-recommendation-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.access-recommendation-card p{
+    text-align:center;
+    font-size:1.05rem;
+    line-height:1.75;
+    margin:0;
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width:900px){
+
     .county-data-grid,
     .access-info-grid,
-    .access-recommendation-grid {
-        grid-template-columns: 1fr;
+    .access-recommendation-grid{
+        grid-template-columns:1fr;
     }
 
-    .bar-row {
-        grid-template-columns: 1fr;
-        gap: .35rem;
-        margin-bottom: 1.5rem;
+    .bar-row{
+        grid-template-columns:1fr;
+        gap:.35rem;
+        margin-bottom:1.5rem;
     }
 
-    .bar-value {
-        text-align: left;
+    .bar-value{
+        text-align:left;
     }
 
     .hours-data-table th,
-    .hours-data-table td {
-        padding: 12px;
-        font-size: .95rem;
+    .hours-data-table td{
+        padding:12px;
+        font-size:.95rem;
     }
 
-    .issue-list li {
-        font-size: 1rem;
+    .issue-list li{
+        font-size:1rem;
     }
 
-   .access-info-grid,
-    .access-recommendation-grid {
-        grid-template-columns: 1fr;
+    .access-info-card,
+    .access-recommendation-card{
+        padding:1.75rem;
+    }
+
+    .access-info-icon,
+    .access-recommendation-icon{
+        width:64px;
+        height:64px;
+    }
+
+    .access-info-icon i,
+    .access-recommendation-icon i{
+        font-size:1.7rem;
     }
 }
 </style>
@@ -387,7 +444,7 @@ title: Accessible Animal Services
     <div class="access-info-grid">
         <div class="access-info-card">
             <div class="access-info-icon">
-                <i class="fa-solid fa-people-group"></i>
+               <i class="fa-solid fa-users"></i>
             </div>
             <h3>Public Access Affects Shelter Flow</h3>
             <p>Many residents who want to adopt, reclaim a lost pet, or access shelter services are unable to visit during standard weekday hours. Limited access can mean missed opportunities for families to meet animals, complete adoptions, or bring pets home before delays create additional barriers.</p>
@@ -428,7 +485,7 @@ title: Accessible Animal Services
 
         <div class="access-recommendation-card">
             <div class="access-recommendation-icon">
-                <i class="fa-solid fa-right-left"></i>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
             <h3>Support Shelter Capacity</h3>
             <p>Managed intake is often discussed as a capacity issue, but shelter flow is also part of the equation. Improving public accessibility creates more opportunities for adoption and reclaim, helping animals leave the shelter and making space for the next animal in need.</p>
