@@ -1,3 +1,45 @@
+/* ===========================================
+   ADOPTION BAR CHART
+=========================================== */
+
+.adoption-bar-chart {
+    margin: 1.75rem 0;
+}
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 170px 1fr 70px;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bar-label {
+    font-weight: 600;
+    color: #333;
+    font-size: .95rem;
+}
+
+.bar-track {
+    background: #edf2f7;
+    border-radius: 50px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    background: linear-gradient(90deg, #2E8DCC, #1C4072);
+    height: 100%;
+    border-radius: 50px;
+}
+
+.bar-value {
+    text-align: right;
+    font-weight: 700;
+    color: #2E8DCC;
+    font-size: 1rem;
+}
+
 ---
 layout: default
 title: Accessible Animal Services
@@ -57,50 +99,62 @@ title: Accessible Animal Services
     </div>
 </section>
 
-<section class="home-section">
+<section class="home-section county-data-section">
     <h2>What the County Reported</h2>
     <p class="section-intro">Gwinnett County has used adoption timing data to suggest there is limited need for expanded public adoption hours.</p>
 
-    <div class="form-card">
-        <h3>2025 Adoption Timing Data</h3>
-        <p>During an Animal Advisory Council meeting, Gwinnett County presented 2025 adoption timing data showing that the largest number of completed adoptions occurred between 11:00 a.m. and noon.</p>
+    <div class="county-data-grid">
+        <div class="form-card">
+            <h3>What the County Reported (2025)</h3>
+            <p>Gwinnett County shared adoption timing data and concluded that most adoptions occur between 11:00 a.m. and noon.</p>
 
-        <div class="hours-data-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time Period</th>
-                        <th>Completed Adoptions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>11:00 a.m. – Noon</td>
-                        <td>2,055</td>
-                    </tr>
-                    <tr>
-                        <td>1:00 p.m. – 3:00 p.m.</td>
-                        <td>1,278</td>
-                    </tr>
-                    <tr>
-                        <td>4:00 p.m.</td>
-                        <td>297</td>
-                    </tr>
-                    <tr>
-                        <td>5:00 p.m. / After Hours</td>
-                        <td>31</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="adoption-bar-chart">
+                <div class="bar-row">
+                    <div class="bar-label">11:00 a.m. – Noon</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <div class="bar-value">2,055</div>
+                </div>
+
+                <div class="bar-row">
+                    <div class="bar-label">1:00 p.m. – 3:00 p.m.</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 62%;"></div>
+                    </div>
+                    <div class="bar-value">1,278</div>
+                </div>
+
+                <div class="bar-row">
+                    <div class="bar-label">4:00 p.m.</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 14%;"></div>
+                    </div>
+                    <div class="bar-value">297</div>
+                </div>
+
+                <div class="bar-row">
+                    <div class="bar-label">5:00 p.m. / After Hours</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 2%;"></div>
+                    </div>
+                    <div class="bar-value">31</div>
+                </div>
+            </div>
+
+            <p class="small-note">Source: Gwinnett County Animal Advisory Council meeting, 2026. The after-hours category included Yappy Hour events and cases where an adopter arrived during standard public hours but the adoption was completed after 5:00 p.m.</p>
         </div>
 
-        <p class="small-note">The after-hours category included Yappy Hour events and cases where an adopter arrived during standard public hours but the adoption was completed after 5:00 p.m.</p>
-    </div>
+        <div class="form-card">
+            <h3>What This Data Does Not Tell Us</h3>
+            <p>This chart only reflects residents who were able to visit during the shelter’s existing public adoption hours.</p>
 
-    <div class="form-card">
-        <h3>What This Data Does Not Tell Us</h3>
-        <p>The County’s analysis measures when adoptions were completed by residents who were already able to visit during existing operating hours. It does not measure residents who wanted to visit after work, families who were only available on Sundays, or people who never came because they knew the shelter would be closed.</p>
-        <p>Usage during open hours is not the same as community demand. To understand whether public shelter services are truly accessible, Gwinnett County must look beyond completed adoptions and evaluate unmet demand, scheduling barriers, appointment requests, after-hours inquiries, and weekend access needs.</p>
+            <ul class="issue-list red-list">
+                <li>It does not measure residents who could not visit because of work, family schedules, or Sunday closures.</li>
+                <li>It does not show how many people wanted evening or weekend access but never came because the shelter was closed.</li>
+                <li>It does not track unmet demand, such as calls, appointment requests, scheduling barriers, or residents who needed more flexible access.</li>
+            </ul>
+        </div>
     </div>
 </section>
 
