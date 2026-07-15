@@ -1,11 +1,1004 @@
 ---
 layout: default
-title: Community Cats & TNR
+title: Community Cats & TNVR
 ---
 
-<section class="coming-soon-page">
-    <a href="/">
-        <img src="/assets/finding-its-voice-placeholder.png"
-             alt="This page is still finding its voice. Click to return home.">
-    </a>
+<style>
+    /* Community Cats page-specific styles */
+
+    .cat-page-section {
+        max-width: 1200px;
+        margin: 70px auto;
+    }
+
+    .cat-page-section h2 {
+        color: var(--accent);
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+
+    .cat-page-section > p,
+    .cat-section-intro {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.08rem;
+        line-height: 1.85;
+    }
+
+    .cat-section-intro {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .cat-highlight {
+        max-width: 1050px;
+        margin: 45px auto;
+        padding: 35px 40px;
+        background: #f3f8f1;
+        border-left: 6px solid #1f5d2b;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .cat-highlight-label {
+        display: block;
+        margin-bottom: 8px;
+        color: #1f5d2b;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .cat-highlight h2,
+    .cat-highlight h3 {
+        margin: 0 0 12px;
+        color: var(--accent);
+    }
+
+    .cat-highlight h2 {
+        font-size: 2.3rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .cat-highlight p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .tnvr-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+        max-width: 1100px;
+        margin: 35px auto 0;
+    }
+
+    .tnvr-step {
+        position: relative;
+        padding: 28px 22px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        text-align: center;
+    }
+
+    .tnvr-step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    .tnvr-step h3 {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 1.1rem;
+    }
+
+    .tnvr-step p {
+        margin: 0;
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 35px;
+    }
+
+    .benefit-card {
+        padding: 30px 25px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        text-align: center;
+    }
+
+    .benefit-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.7rem;
+    }
+
+    .benefit-card:nth-child(3n+1) .benefit-icon {
+        background: #2f7d32;
+    }
+
+    .benefit-card:nth-child(3n+2) .benefit-icon {
+        background: #2E8DCC;
+    }
+
+    .benefit-card:nth-child(3n+3) .benefit-icon {
+        background: #e88a1f;
+    }
+
+    .benefit-card h3 {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 1.15rem;
+    }
+
+    .benefit-card p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .program-panel {
+        max-width: 1100px;
+        margin: 35px auto 0;
+        padding: 40px;
+        background: #f7f9fb;
+        border: 1px solid #e1e7ec;
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .program-panel h3 {
+        margin: 0 0 15px;
+        color: var(--accent);
+        font-size: 1.5rem;
+    }
+
+    .program-panel > p {
+        margin: 0 0 28px;
+        font-size: 1.03rem;
+        line-height: 1.8;
+    }
+
+    .program-features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .program-feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    .program-feature i {
+        color: #1f5d2b;
+        font-size: 1.15rem;
+    }
+
+    .snapshot-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+        max-width: 950px;
+        margin: 35px auto 0;
+    }
+
+    .snapshot-card {
+        padding: 35px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 14px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        text-align: center;
+    }
+
+    .snapshot-card h3 {
+        margin: 0 0 22px;
+        color: var(--accent);
+        font-size: 1.6rem;
+    }
+
+    .snapshot-stat {
+        padding: 14px 0;
+        border-top: 1px solid #ececec;
+    }
+
+    .snapshot-stat:first-of-type {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .snapshot-number {
+        display: block;
+        color: #1f5d2b;
+        font-size: 2.4rem;
+        line-height: 1.1;
+        font-weight: 700;
+    }
+
+    .snapshot-label {
+        display: block;
+        margin-top: 7px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .cost-callout {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 25px;
+        align-items: center;
+        max-width: 1050px;
+        margin: 45px auto;
+        padding: 35px 40px;
+        background: #f7fbf6;
+        border: 1px solid rgba(31,93,43,0.28);
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .cost-callout-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: #1f5d2b;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .cost-callout h3 {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 1.5rem;
+    }
+
+    .cost-callout p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .improvement-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        max-width: 1100px;
+        margin: 35px auto 0;
+    }
+
+    .improvement-card {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 18px;
+        padding: 26px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .improvement-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #f3f8f1;
+        color: #1f5d2b;
+        font-size: 1.25rem;
+    }
+
+    .improvement-card h3 {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 1.1rem;
+    }
+
+    .improvement-card p {
+        margin: 0;
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .help-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 28px;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    .help-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 0;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .help-list i {
+        margin-top: 5px;
+        color: #1f5d2b;
+    }
+
+    .resource-links {
+        max-width: 950px;
+        margin: 30px auto 0;
+        padding: 28px 32px;
+        background: #f7f9fb;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .resource-links h3 {
+        margin: 0 0 15px;
+        color: var(--accent);
+    }
+
+    .resource-links ul {
+        margin: 0;
+        padding-left: 22px;
+    }
+
+    .resource-links li {
+        margin: 10px 0;
+    }
+
+    @media (max-width: 900px) {
+        .tnvr-steps,
+        .program-features {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .benefit-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cat-page-section {
+            margin: 45px auto;
+        }
+
+        .cat-page-section h2 {
+            font-size: 1.8rem;
+        }
+
+        .cat-page-section > p,
+        .cat-section-intro {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .cat-highlight {
+            margin: 32px 0;
+            padding: 26px 22px;
+        }
+
+        .cat-highlight h2 {
+            font-size: 1.7rem;
+        }
+
+        .tnvr-steps,
+        .benefit-grid,
+        .program-features,
+        .snapshot-grid,
+        .improvement-grid,
+        .help-list {
+            grid-template-columns: 1fr;
+        }
+
+        .program-panel {
+            padding: 26px 20px;
+        }
+
+        .snapshot-card {
+            padding: 28px 22px;
+        }
+
+        .snapshot-number {
+            font-size: 2rem;
+        }
+
+        .cost-callout {
+            grid-template-columns: 1fr;
+            padding: 28px 22px;
+            text-align: center;
+        }
+
+        .cost-callout-icon {
+            margin: 0 auto;
+        }
+
+        .improvement-card {
+            grid-template-columns: 48px 1fr;
+            padding: 22px 18px;
+        }
+
+        .improvement-icon {
+            width: 46px;
+            height: 46px;
+        }
+
+        .resource-links {
+            padding: 24px 20px;
+        }
+    }
+</style>
+
+<!-- Replace these two image paths with your optimized WebP filenames. -->
+<section
+    class="page-hero"
+    style="background-image: url('/assets/community-cats-hero-desktop.png');"
+>
+    <img
+        class="page-hero-mobile-img"
+        src="/assets/community-cats-hero-mobile.png"
+        alt="Community cats near a humane trap and feeding station"
+        width="900"
+        height="900"
+        fetchpriority="high"
+    >
+
+    <div class="page-hero-content">
+        <h1>Community Cats &amp; TNVR</h1>
+
+        <p>
+            A humane, evidence-based approach that improves animal welfare,
+            reduces shelter intake, and supports healthier neighborhoods.
+        </p>
+
+        <a href="#gwinnett-program" class="btn">
+            Explore Gwinnett's Program
+        </a>
+    </div>
+</section>
+
+<section class="cat-page-section" id="community-cats">
+    <h2>What Are Community Cats?</h2>
+
+    <p class="cat-section-intro">
+        Community cats are unowned, free-roaming outdoor cats that may be
+        friendly, unsocialized, or feral. They often live in family groups
+        called colonies and may rely on community caregivers for food,
+        shelter, safety, and medical support.
+    </p>
+
+    <div class="cat-highlight">
+        <span class="cat-highlight-label">The Local Need</span>
+
+        <h2>An estimated 50,000–70,000 community cats may live in Gwinnett County.</h2>
+
+        <p>
+            Without effective intervention, unsterilized cats continue
+            reproducing, increasing the number of kittens born outdoors and
+            placing additional pressure on shelters, rescue groups, caregivers,
+            and neighborhoods.
+        </p>
+    </div>
+</section>
+
+<section class="cat-page-section" id="how-tnvr-works">
+    <h2>How TNVR Works</h2>
+
+    <p class="cat-section-intro">
+        Trap-Neuter-Vaccinate-Return, commonly called TNVR, provides a humane
+        and structured way to manage outdoor cat populations.
+    </p>
+
+    <div class="tnvr-steps">
+        <div class="tnvr-step">
+            <div class="tnvr-step-number">1</div>
+            <h3>Trap</h3>
+            <p>
+                Cats are safely and humanely captured using appropriate
+                live traps.
+            </p>
+        </div>
+
+        <div class="tnvr-step">
+            <div class="tnvr-step-number">2</div>
+            <h3>Neuter</h3>
+            <p>
+                Each cat receives spay or neuter surgery to prevent future
+                litters.
+            </p>
+        </div>
+
+        <div class="tnvr-step">
+            <div class="tnvr-step-number">3</div>
+            <h3>Vaccinate</h3>
+            <p>
+                Cats receive important vaccinations, typically including
+                rabies protection.
+            </p>
+        </div>
+
+        <div class="tnvr-step">
+            <div class="tnvr-step-number">4</div>
+            <h3>Return</h3>
+            <p>
+                After recovery, cats are returned to their familiar outdoor
+                territory.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cat-page-section" id="benefits">
+    <h2>Benefits of TNVR</h2>
+
+    <p class="cat-section-intro">
+        Effective community cat programs benefit animals, residents,
+        neighborhoods, taxpayers, and the shelter system.
+    </p>
+
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-paw"></i>
+            </div>
+            <h3>Population Control</h3>
+            <p>
+                Sterilization prevents future litters and helps stabilize
+                outdoor cat populations over time.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Saves Animal Lives</h3>
+            <p>
+                Preventing unwanted litters reduces kitten suffering and
+                improves the health and welfare of existing colonies.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-house"></i>
+            </div>
+            <h3>Reduces Shelter Strain</h3>
+            <p>
+                Keeping healthy community cats out of shelters preserves
+                limited space and resources for animals requiring intervention.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>Reduces Public Costs</h3>
+            <p>
+                Preventing shelter admissions can reduce spending on housing,
+                feeding, staffing, and medical care.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-syringe"></i>
+            </div>
+            <h3>Supports Public Health</h3>
+            <p>
+                Rabies vaccination helps protect cats, residents, pets, and
+                the wider community.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">
+                <i class="fas fa-people-roof"></i>
+            </div>
+            <h3>Improves Coexistence</h3>
+            <p>
+                Sterilization reduces mating behaviors such as roaming,
+                fighting, spraying, and excessive noise.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cat-page-section" id="gwinnett-program">
+    <h2>Gwinnett County's Community Cat Program</h2>
+
+    <p class="cat-section-intro">
+        Gwinnett County offers free TNVR services for eligible community cats
+        through the Bill Atkinson Animal Welfare Center. Appointments are
+        offered on weekdays on a first-come, first-served basis, with limits
+        on the number of cats accepted each day and per household.
+    </p>
+
+    <div class="program-panel">
+        <h3>Each appointment includes:</h3>
+
+        <p>
+            Cats must be transported in individual humane traps. Residents
+            should confirm current appointment availability, eligibility,
+            drop-off instructions, and program requirements directly with
+            Gwinnett County before trapping.
+        </p>
+
+        <div class="program-features">
+            <div class="program-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Spay or Neuter</span>
+            </div>
+
+            <div class="program-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Rabies Vaccine</span>
+            </div>
+
+            <div class="program-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Microchip</span>
+            </div>
+
+            <div class="program-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Ear Tip</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cat-page-section" id="program-snapshot">
+    <h2>Program Snapshot</h2>
+
+    <p class="cat-section-intro">
+        County-reported figures show that Gwinnett's existing program is
+        providing an important service, while unused appointments suggest
+        opportunities for greater awareness, accessibility, and participation.
+    </p>
+
+    <div class="snapshot-grid">
+        <div class="snapshot-card">
+            <h3>2025</h3>
+
+            <div class="snapshot-stat">
+                <span class="snapshot-number">1,284</span>
+                <span class="snapshot-label">
+                    Community cats served
+                </span>
+            </div>
+
+            <div class="snapshot-stat">
+                <span class="snapshot-number">84%</span>
+                <span class="snapshot-label">
+                    Of available appointments utilized
+                </span>
+            </div>
+        </div>
+
+        <div class="snapshot-card">
+            <h3>First Quarter 2026</h3>
+
+            <div class="snapshot-stat">
+                <span class="snapshot-number">208</span>
+                <span class="snapshot-label">
+                    Appointments used out of 320 available
+                </span>
+            </div>
+
+            <div class="snapshot-stat">
+                <span class="snapshot-number">65%</span>
+                <span class="snapshot-label">
+                    Of available appointments utilized
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cost-callout">
+        <div class="cost-callout-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+
+        <div>
+            <h3>Prevention can reduce shelter demand and public expense.</h3>
+
+            <p>
+                Gwinnett County reported 2,492 cat admissions in 2025.
+                Every shelter admission requires staff time, housing, food,
+                supplies, and often medical care. Expanding TNVR can help
+                prevent future litters and reduce avoidable shelter admissions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cat-page-section" id="opportunities">
+    <h2>Opportunities to Strengthen the Program</h2>
+
+    <p class="cat-section-intro">
+        Gwinnett County already has an important foundation in place.
+        Practical improvements could make the program easier to use and help
+        more community cats receive timely services.
+    </p>
+
+    <div class="improvement-grid">
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+
+            <div>
+                <h3>Expand Scheduling Options</h3>
+                <p>
+                    Additional scheduling flexibility or alternative
+                    drop-off arrangements could improve access for working
+                    residents.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+
+            <div>
+                <h3>Increase Public Education</h3>
+                <p>
+                    Coordinated outreach could help residents understand TNVR,
+                    locate available services, and learn how to participate.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+
+            <div>
+                <h3>Support Community Caregivers</h3>
+                <p>
+                    Caregivers and volunteers need clear guidance, reliable
+                    communication, and practical support to manage colonies
+                    successfully.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-box-open"></i>
+            </div>
+
+            <div>
+                <h3>Increase Access to Humane Traps</h3>
+                <p>
+                    Expanded trap-loan programs could remove one of the most
+                    common barriers to participating in TNVR.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-cat"></i>
+            </div>
+
+            <div>
+                <h3>Accommodate Larger Colonies</h3>
+                <p>
+                    Flexible or higher-capacity appointments could help
+                    residents working with larger colonies address them more
+                    efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-handshake"></i>
+            </div>
+
+            <div>
+                <h3>Expand Volunteer Partnerships</h3>
+                <p>
+                    Partnerships with experienced trappers, caregivers,
+                    rescues, and volunteers could increase the program's reach
+                    and effectiveness.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-map-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Focus Eligibility on Where the Cats Live</h3>
+                <p>
+                    Some experienced volunteers live outside Gwinnett but trap
+                    cats located inside the county. Exploring ways to work with
+                    them could help more Gwinnett cats receive services.
+                </p>
+            </div>
+        </div>
+
+        <div class="improvement-card">
+            <div class="improvement-icon">
+                <i class="fas fa-chart-column"></i>
+            </div>
+
+            <div>
+                <h3>Track and Share Outcomes</h3>
+                <p>
+                    Regular reporting on available appointments, utilization,
+                    neighborhoods served, and program outcomes can help guide
+                    future improvements.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cat-page-section" id="why-it-matters">
+    <div class="cat-highlight">
+        <span class="cat-highlight-label">Why This Matters</span>
+
+        <h2>Preventing future litters is one of the most effective ways to reduce suffering.</h2>
+
+        <p>
+            Unsterilized community cats account for a substantial share of
+            kittens born each year. Many outdoor kittens do not survive, while
+            others enter shelters or require intervention from already
+            stretched rescue organizations and volunteers. Humane prevention
+            benefits cats, residents, neighborhoods, and the county as a whole.
+        </p>
+    </div>
+</section>
+
+<section class="cat-page-section" id="how-to-help">
+    <h2>How You Can Help</h2>
+
+    <p class="cat-section-intro">
+        Community cat management depends on informed residents, dedicated
+        caregivers, volunteers, rescue partners, and accessible public
+        services.
+    </p>
+
+    <ul class="help-list">
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Learn how TNVR works and share accurate information.</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Help community caregivers access humane traps and transportation.</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Volunteer with a local community cat or rescue organization.</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Share information about Gwinnett County's available program.</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Support responsible colony care, vaccination, and monitoring.</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check-circle"></i>
+            <span>Advocate for accessible, well-supported TNVR resources.</span>
+        </li>
+    </ul>
+
+    <div class="center-button">
+        <a
+            href="https://www.gwinnettcounty.com/government/departments/community-services/animal-welfare/return-to-community-cat-program"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Visit Gwinnett County's Program
+        </a>
+    </div>
+
+    <div class="resource-links">
+        <h3>Additional Resources</h3>
+
+        <ul>
+            <li>
+                <a
+                    href="https://bestfriends.org/pet-care-resources/caring-community-cats"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Best Friends Animal Society: Caring for Community Cats
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://humanepro.org/sites/default/files/documents/humaneworld-guide-managing-community-cats-final-singlepgs_3-14-2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Humane World for Animals: Guide to Managing Community Cats
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.gwinnettcounty.com/government/departments/community-services/animal-welfare/return-to-community-cat-program"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Gwinnett County Return to Community Cat Program
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="difference-section">
+    <div class="difference-content">
+        <h2>Humane Solutions Require Community Support</h2>
+
+        <p>
+            Expanding access to TNVR can prevent suffering, reduce future
+            shelter intake, support healthier neighborhoods, and create better
+            outcomes for community cats throughout Gwinnett County.
+        </p>
+
+        <a href="/take-action/" class="btn">Take Action</a>
+    </div>
 </section>
