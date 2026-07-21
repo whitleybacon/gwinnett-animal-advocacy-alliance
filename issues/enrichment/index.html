@@ -1,1 +1,803 @@
+---
+layout: default
+title: Independent Canine Staff Enrichment Audit
+---
 
+<style>
+/* =========================================================
+   INDEPENDENT CANINE STAFF ENRICHMENT AUDIT
+   Only styles not already available in default.html
+========================================================= */
+
+/* Hero image only — sizing, content and mobile behavior
+   already come from .page-hero in default.html */
+.audit-hero {
+    background-image:
+        url('{{ site.baseurl }}/assets/canine-enrichment-audit-hero.png');
+}
+
+/* Keep the issue-alert heading aligned like your mockup */
+.audit-alert h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+/* Three headline findings */
+.audit-stat {
+    display: block;
+    color: #1f5d2b;
+    font-size: 3.4rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.audit-stat-card {
+    padding: 34px 28px;
+}
+
+.audit-stat-card .home-card-icon {
+    background: #2f7d32;
+}
+
+/* Why This Matters */
+.audit-text {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.audit-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.audit-question {
+    max-width: 1000px;
+    margin: 32px auto 0;
+    padding: 26px 30px;
+    background: #fff5f5;
+    border-left: 6px solid #c62828;
+    border-radius: 12px;
+    color: #c62828;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.65;
+    box-sizing: border-box;
+}
+
+/* Length-of-stay comparison */
+.audit-los-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 35px auto 0;
+}
+
+.audit-los-item {
+    padding: 5px 38px 20px;
+    text-align: center;
+    border-right: 1px solid #e5e5e5;
+}
+
+.audit-los-item:last-child {
+    border-right: none;
+}
+
+.audit-los-heading {
+    min-height: 62px;
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.audit-los-heading small {
+    display: block;
+    font-size: .82rem;
+}
+
+/* Calendar graphic */
+.audit-calendar {
+    --calendar-color: #d6a000;
+
+    width: 135px;
+    height: 120px;
+    position: relative;
+    margin: 20px auto 22px;
+    border: 3px solid var(--calendar-color);
+    border-radius: 10px;
+    overflow: visible;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.audit-calendar.orange {
+    --calendar-color: #f36c00;
+}
+
+.audit-calendar.red {
+    --calendar-color: #c62828;
+}
+
+.audit-calendar-top {
+    height: 27px;
+    background: var(--calendar-color);
+    border-radius: 6px 6px 0 0;
+}
+
+.audit-calendar-rings {
+    position: absolute;
+    top: -12px;
+    left: 26px;
+    right: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.audit-calendar-rings span {
+    width: 5px;
+    height: 23px;
+    border-radius: 4px;
+    background: #111;
+}
+
+.audit-calendar-days {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 14px 12px 12px;
+}
+
+.audit-calendar-days span {
+    height: 13px;
+    border: 1px solid #d9dde2;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.audit-calendar-days span.active {
+    border-color: var(--calendar-color);
+    background: var(--calendar-color);
+}
+
+.audit-los-number {
+    display: block;
+    color: var(--calendar-color);
+    font-size: 3.8rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.audit-los-total {
+    display: block;
+    margin-top: 8px;
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.audit-los-percent {
+    display: block;
+    margin-top: 4px;
+    color: var(--calendar-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.audit-los-result {
+    margin: 18px 0 0;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.audit-los-result strong {
+    color: #c62828;
+}
+
+/* Scope the colors to the whole LOS item */
+.audit-los-item.emerging {
+    --calendar-color: #d6a000;
+}
+
+.audit-los-item.high {
+    --calendar-color: #f36c00;
+}
+
+.audit-los-item.critical {
+    --calendar-color: #c62828;
+}
+
+/* Resource cards */
+.audit-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+}
+
+.audit-resource-card {
+    align-items: center;
+    justify-content: center;
+}
+
+.audit-resource-card .home-card-icon {
+    background: #1C4072;
+}
+
+.audit-resource-card p {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add breathing room between major sections */
+.audit-section {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .audit-hero {
+        background-image: none !important;
+    }
+
+    .audit-alert h2 {
+        text-align: center;
+    }
+
+    .audit-stat {
+        font-size: 2.8rem;
+    }
+
+    .audit-question {
+        margin-top: 24px;
+        padding: 22px;
+        font-size: 1rem;
+    }
+
+    .audit-los-grid,
+    .audit-resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audit-los-item {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px 42px;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+        box-sizing: border-box;
+    }
+
+    .audit-los-item:last-child {
+        border-bottom: none;
+    }
+
+    .audit-los-heading {
+        min-height: 0;
+    }
+
+    .audit-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+</style>
+
+<!-- ======================================================
+     MOBILE HERO IMAGE
+======================================================= -->
+
+<img
+    class="page-hero-mobile-img"
+    src="{{ site.baseurl }}/assets/canine-enrichment-audit-hero-mobile.png"
+    alt="Black and white shelter dog sitting beside a kennel"
+>
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="page-hero audit-hero">
+    <div class="page-hero-content">
+        <h1>Independent Canine Staff Enrichment Audit</h1>
+
+        <p>
+            May 2026 · Official Staff Enrichment Records
+        </p>
+
+        <p>
+            An independent review of official staff enrichment records from
+            Gwinnett County Animal Welfare &amp; Enforcement.
+        </p>
+    </div>
+</section>
+
+<!-- ======================================================
+     INDEPENDENT AUDIT ALERT
+======================================================= -->
+
+<section class="home-section">
+    <div class="issue-alert audit-alert">
+        <h2>Independent Audit</h2>
+
+        <p>
+            This audit independently reconciled official May 2026 staff
+            enrichment records for <strong>415 dogs</strong>, verifying the
+            shelter population, shelter exits, shelter care-days, and every
+            documented staff enrichment activity.
+        </p>
+    </div>
+</section>
+
+<!-- ======================================================
+     WHAT THE AUDIT FOUND
+======================================================= -->
+
+<section class="home-section audit-section">
+    <h2>What the Audit Found</h2>
+
+    <p class="section-intro">
+        The audit reviewed official May 2026 staff enrichment records for
+        415 dogs physically housed at the shelter.
+    </p>
+
+    <div class="home-card-grid three-across-cards">
+
+        <!-- 4.3% -->
+        <div class="home-card audit-stat-card">
+            <div class="home-card-icon icon-green">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+
+            <span class="audit-stat">4.3%</span>
+
+            <h3>Systemic Daily Deficit</h3>
+
+            <p>
+                Only <strong>4.3%</strong> of shelter care-days included
+                documented enrichment. Statistically, a dog housed in the
+                Gwinnett shelter on any given day had a
+                <strong>95.7% chance</strong> of receiving
+                <strong>no documented enrichment</strong>.
+            </p>
+        </div>
+
+        <!-- 92.1% -->
+        <div class="home-card audit-stat-card">
+            <div class="home-card-icon icon-green">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <span class="audit-stat">92.1%</span>
+
+            <h3>Early Confinement Gap</h3>
+
+            <p>
+                <strong>199 of 216 dogs</strong> housed between 2 and 13 days
+                received zero documented enrichment during this critical
+                intake window.
+            </p>
+        </div>
+
+        <!-- 62%+ -->
+        <div class="home-card audit-stat-card">
+            <div class="home-card-icon icon-green">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <span class="audit-stat">62%+</span>
+
+            <h3>Single Point of Failure</h3>
+
+            <p>
+                More than 62% of all documented enrichment in May was recorded
+                by a single employee, highlighting a severe operational
+                bottleneck and dependency on one staff member.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     WHY THIS MATTERS
+======================================================= -->
+
+<section class="content-card audit-section">
+    <h2 style="
+        color:var(--accent);
+        font-size:2.5rem;
+        text-align:center;
+        margin-bottom:20px;
+    ">
+        Why This Matters
+    </h2>
+
+    <div class="audit-text">
+        <p>
+            Recognized shelter medicine guidance identifies regular physical
+            activity, mental stimulation, and positive human interaction as
+            essential components of behavioral health during confinement.
+            Enrichment is not optional—it helps reduce stress, frustration,
+            and behavioral deterioration.
+        </p>
+
+        <p>
+            Shelter leadership has frequently cited behavioral decline as a
+            primary factor in euthanasia decisions.
+        </p>
+    </div>
+
+    <div class="audit-question">
+        If documented enrichment was absent for the vast majority of shelter
+        care-days, are dogs receiving the behavioral support necessary to
+        prevent the very decline later cited as justification for euthanasia?
+    </div>
+</section>
+
+<!-- ======================================================
+     ENRICHMENT BY LENGTH OF STAY
+======================================================= -->
+
+<section class="home-section audit-section">
+    <h2>Enrichment by Length of Stay</h2>
+
+    <p class="section-intro">
+        The audit examined all 415 dogs based on the total number of days they
+        were physically housed in the shelter during May 2026.
+    </p>
+
+    <div class="audit-los-grid">
+
+        <!-- 2–13 DAYS -->
+        <div class="audit-los-item emerging">
+            <div class="audit-los-heading">
+                2–13 Days
+                <small>Early Confinement</small>
+            </div>
+
+            <div class="audit-calendar">
+                <div class="audit-calendar-rings">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="audit-calendar-top"></div>
+
+                <div class="audit-calendar-days">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <span class="audit-los-number">199</span>
+            <span class="audit-los-total">of 216 dogs</span>
+            <span class="audit-los-percent">92.1%</span>
+
+            <p class="audit-los-result">
+                received <strong>zero</strong><br>
+                documented enrichment.
+            </p>
+        </div>
+
+        <!-- 14–29 DAYS -->
+        <div class="audit-los-item high">
+            <div class="audit-los-heading">
+                14–29 Days
+                <small>Longer Stay</small>
+            </div>
+
+            <div class="audit-calendar orange">
+                <div class="audit-calendar-rings">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="audit-calendar-top"></div>
+
+                <div class="audit-calendar-days">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <span class="audit-los-number">40</span>
+            <span class="audit-los-total">of 68 dogs</span>
+            <span class="audit-los-percent">58.8%</span>
+
+            <p class="audit-los-result">
+                received <strong>zero</strong><br>
+                documented enrichment.
+            </p>
+        </div>
+
+        <!-- 30+ DAYS -->
+        <div class="audit-los-item critical">
+            <div class="audit-los-heading">
+                30+ Days
+                <small>Longest Stay</small>
+            </div>
+
+            <div class="audit-calendar red">
+                <div class="audit-calendar-rings">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="audit-calendar-top"></div>
+
+                <div class="audit-calendar-days">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="active"></span>
+
+                    <span></span>
+                    <span></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                </div>
+            </div>
+
+            <span class="audit-los-number">25</span>
+            <span class="audit-los-total">of 63 dogs</span>
+            <span class="audit-los-percent">39.7%</span>
+
+            <p class="audit-los-result">
+                received <strong>zero</strong><br>
+                documented enrichment.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     DOCUMENTATION QUALITY
+======================================================= -->
+
+<section class="home-section audit-section">
+    <h2>Documentation Quality</h2>
+
+    <p class="section-intro">
+        Forensic reconciliation identified recurring data-quality issues that
+        significantly complicated independent verification and limited
+        effective administrative oversight.
+    </p>
+
+    <div class="form-card">
+        <details>
+            <summary>Incorrect Animal IDs</summary>
+
+            <p>
+                Some enrichment pages were created using incorrect Animal IDs,
+                requiring manual review to determine the correct dog and
+                associated record.
+            </p>
+        </details>
+
+        <details>
+            <summary>Blank or Incomplete Entries</summary>
+
+            <p>
+                Some pages listed dogs but contained no staff initials,
+                activity selection, date, or other confirmation that enrichment
+                occurred.
+            </p>
+        </details>
+
+        <details>
+            <summary>Inconsistent Documentation</summary>
+
+            <p>
+                Staff used different abbreviations, symbols, date formats, and
+                levels of detail, making the records difficult to compare and
+                aggregate consistently.
+            </p>
+        </details>
+
+        <details>
+            <summary>Duplicate or Inconsistent Log Sheets</summary>
+
+            <p>
+                Duplicate records, legacy forms, and pages that did not match
+                the May 2026 format required additional reconciliation before
+                the information could be analyzed.
+            </p>
+        </details>
+    </div>
+</section>
+
+<!-- ======================================================
+     WHAT NEEDS TO CHANGE
+======================================================= -->
+
+<section class="home-section audit-section">
+    <h2>What Needs to Change</h2>
+
+    <p class="section-intro">
+        The audit identified practical opportunities to strengthen behavioral
+        care, documentation, performance measurement, and accountability.
+    </p>
+
+    <div class="form-card">
+        <details>
+            <summary>Make Enrichment a Measurable Standard</summary>
+
+            <ul>
+                <li>Track documented enrichment daily by individual dog.</li>
+                <li>Establish expectations for frequency and consistency.</li>
+                <li>Review performance through routine quality assurance.</li>
+                <li>
+                    Measure care over the entire shelter stay—not only total
+                    activity counts.
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Distribute Responsibility Across Staff</summary>
+
+            <ul>
+                <li>Build a team-based enrichment model.</li>
+                <li>Define staff responsibilities clearly.</li>
+                <li>Avoid operational dependency on one employee.</li>
+                <li>Include trained volunteers where appropriate.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Prioritize Dogs Most at Risk</summary>
+
+            <ul>
+                <li>Identify dogs approaching extended confinement.</li>
+                <li>
+                    Flag dogs with no enrichment documented in recent days.
+                </li>
+                <li>Create enhanced plans for long-stay dogs.</li>
+                <li>
+                    Prioritize enrichment based on individual behavioral needs.
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Improve Documentation and Transparency</summary>
+
+            <ul>
+                <li>
+                    Replace handwritten logs with a structured digital system.
+                </li>
+                <li>
+                    Capture the dog, date, activity, and staff or volunteer
+                    involved.
+                </li>
+                <li>
+                    Standardize terminology and documentation requirements.
+                </li>
+                <li>
+                    Publish meaningful enrichment performance metrics.
+                </li>
+            </ul>
+        </details>
+    </div>
+</section>
+
+<!-- ======================================================
+     AUDIT RESOURCES
+======================================================= -->
+
+<section class="home-section audit-section">
+    <h2>Audit Resources</h2>
+
+    <p class="section-intro">
+        Review the complete audit and the official records and supporting
+        analysis used to produce the findings.
+    </p>
+
+    <div class="audit-resource-grid">
+
+        <div class="home-card audit-resource-card">
+            <div class="home-card-icon icon-blue">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <h3>Complete Audit Report</h3>
+
+            <p>
+                View the full findings, methodology, scope, data-quality
+                observations, and recommendations.
+            </p>
+
+            <a
+                href="REPLACE-WITH-AUDIT-PDF-URL"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Download Full Audit Report
+            </a>
+        </div>
+
+        <div class="home-card audit-resource-card">
+            <div class="home-card-icon icon-green">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+
+            <h3>Supporting Documents &amp; Data</h3>
+
+            <p>
+                Review the supporting workbook, methodology materials, data
+                tables, and official source records.
+            </p>
+
+            <a
+                href="REPLACE-WITH-GOOGLE-DRIVE-URL"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Open Supporting Documents
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======================================================
+     CLOSING
+======================================================= -->
+
+<section class="difference-section">
+    <div class="difference-content">
+        <h2>
+            Better Enrichment. Healthier Dogs. Greater Accountability.
+        </h2>
+
+        <p>
+            Gwinnett County has an opportunity to use meaningful documentation,
+            measurable standards, and evidence-based behavioral care to improve
+            outcomes for dogs in the shelter.
+        </p>
+
+        <a
+            href="{{ site.baseurl }}/county-leadership/"
+            class="btn"
+        >
+            Contact County Leadership
+        </a>
+    </div>
+</section>
