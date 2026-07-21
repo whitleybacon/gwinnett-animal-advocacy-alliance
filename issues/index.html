@@ -2,6 +2,20 @@
 layout: default
 title: Issues & Advocacy
 ---
+
+<style>
+    .two-across-centered {
+        grid-template-columns: repeat(2, minmax(280px, 380px));
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .two-across-centered {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
 <section class="home-section">
     <h2>Issues &amp; Advocacy</h2>
 
@@ -56,7 +70,9 @@ title: Issues & Advocacy
 
             <span>Learn More →</span>
         </a>
+    </div>
 
+    <div class="home-card-grid four-across" style="margin-top: 24px;">
         <a href="/issues/community-cats-tnr/" class="home-card">
             <div class="home-card-icon icon-green">
                 <i class="fas fa-cat"></i>
@@ -101,53 +117,75 @@ title: Issues & Advocacy
 
             <span>Learn More →</span>
         </a>
+
+        <a href="/issues/canine-enrichment/" class="home-card">
+            <div class="home-card-icon icon-green">
+                <i class="fas fa-dog"></i>
+            </div>
+
+            <h3>Canine Enrichment</h3>
+
+            <p>
+                Examining whether dogs receive consistent staff enrichment,
+                behavioral support, and meaningful documentation throughout
+                their shelter stay.
+            </p>
+
+            <span>Learn More →</span>
+        </a>
     </div>
 </section>
 
 <section class="home-section">
     <h2>Additional Priorities</h2>
+
     <p class="section-intro">
-        Animal welfare extends beyond shelter intake numbers. We support efforts that improve quality of life, increase lifesaving capacity, and create sustainable solutions.
+        Animal welfare extends beyond shelter intake numbers. We support
+        efforts that improve quality of life, increase lifesaving capacity,
+        and create sustainable solutions.
     </p>
 
-    <div class="home-card-grid three-across-cards">
-
+    <div class="home-card-grid two-across-centered">
         <div class="home-card">
-    <div class="home-card-icon icon-green">
-            <i class="fas fa-paw"></i>
-        </div>
-        <h3>Spay, Neuter & Prevention</h3>
-        <p>
-            Affordable spay/neuter services, microchipping, and community support
-            can reduce shelter intake and help families keep their pets.
-        </p>
-    </div>
-
-        <div class="home-card">
-            <div class="home-card-icon icon-blue">
-                <i class="fas fa-heart"></i>
+            <div class="home-card-icon icon-green">
+                <i class="fas fa-paw"></i>
             </div>
-            <h3>Shelter Enrichment</h3>
-            <p>Mental stimulation, exercise, and positive human interaction help reduce stress and improve quality of life.</p>
+
+            <h3>Spay, Neuter &amp; Prevention</h3>
+
+            <p>
+                Affordable spay/neuter services, microchipping, and community
+                support can reduce shelter intake and help families keep their
+                pets.
+            </p>
         </div>
 
         <div class="home-card">
             <div class="home-card-icon icon-orange">
                 <i class="fas fa-home"></i>
             </div>
-            <h3>Foster & Rescue Partnerships</h3>
-            <p>Strong partnerships expand lifesaving capacity and create additional pathways for animals in need.</p>
-        </div>
 
+            <h3>Foster &amp; Rescue Partnerships</h3>
+
+            <p>
+                Strong partnerships expand lifesaving capacity and create
+                additional pathways for animals in need.
+            </p>
+        </div>
     </div>
 </section>
 
 <section class="difference-section">
     <div class="difference-content">
         <h2>Creating Change Takes Community Support</h2>
+
         <p>
-            Meaningful progress happens when residents stay informed, speak up, and support practical solutions. Learn about the issues, share your voice, and help us advocate for better outcomes for animals in Gwinnett County.
+            Meaningful progress happens when residents stay informed, speak
+            up, and support practical solutions. Learn about the issues, share
+            your voice, and help us advocate for better outcomes for animals
+            in Gwinnett County.
         </p>
+
         <a href="/take-action/" class="btn">Take Action</a>
     </div>
 </section>
