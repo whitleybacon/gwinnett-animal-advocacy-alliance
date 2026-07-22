@@ -293,169 +293,120 @@ title: Get Involved
 </section>
 
 
-<!-- HIDDEN GOOGLE FORM SUBMISSION TARGET -->
+<!-- Hidden iframe -->
 
 <iframe
     name="stay_connected_iframe"
     id="stay_connected_iframe"
-    style="display: none;"
-    title="Stay Connected form submission">
+    style="display:none;"
+    title="Stay Connected">
 </iframe>
 
+<script>
+let stayConnectedSubmitted = false;
+</script>
 
-<!-- STAY CONNECTED -->
+<form
+    class="stay-connected-form"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
+    method="POST"
+    target="stay_connected_iframe"
+    onsubmit="stayConnectedSubmitted=true;">
 
-<section class="home-section stay-connected-section">
+    <div class="stay-connected-fields">
 
-    <div class="stay-connected-box" id="stay-connected-wrapper">
-
-        <div class="stay-connected-heading">
-
-            <div class="stay-connected-icon" aria-hidden="true">
-                <i class="fas fa-envelope"></i>
-            </div>
-
-            <div>
-                <h2>Stay Connected with GAAA</h2>
-
-                <p>
-                    Never miss an important meeting, advocacy update, volunteer
-                    opportunity, or community event. Join our email list to
-                    stay informed and help improve animal welfare in Gwinnett
-                    County.
-                </p>
-            </div>
-
-        </div>
-
-            <form
-                class="stay-connected-form"
-                action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
-                method="POST"
-                target="stay_connected_iframe"
-                onsubmit="stayConnectedSubmitted = true;">
-    
-                <div class="stay-connected-field">
-        <label for="stay-connected-email">
-            Email Address *
-        </label>
-    
-        <input
-            type="email"
-            id="stay-connected-email"
-            name="entry.1773177730"
-            autocomplete="email"
-            required>
-    </div>
-
-
-           <label class="stay-connected-consent">
+        <!-- Full Name -->
+        <div class="stay-connected-field">
+            <label for="stay-connected-name">
+                Full Name *
+            </label>
 
             <input
-                type="checkbox"
-                name="entry.1779736562"
-                value="I agree"
+                type="text"
+                id="stay-connected-name"
+                name="entry.1692632741"
+                autocomplete="name"
                 required>
-        
-            <span>
-                I agree to receive occasional email updates from
-                Gwinnett Animal Advocacy Alliance. I understand I may
-                unsubscribe at any time.
-            </span>
-        
-        </label>
+        </div>
 
+        <!-- Email -->
+        <div class="stay-connected-field">
+            <label for="stay-connected-email">
+                Email Address *
+            </label>
 
-            <p class="stay-connected-submit">
-                <button type="submit" class="btn">
-                    Stay Connected
-                </button>
-            </p>
-
-
-            <p class="stay-connected-privacy">
-                Your information will only be used to send GAAA updates and
-                will not be sold or shared for marketing purposes.
-            </p>
-
-        </form>
+            <input
+                type="email"
+                id="stay-connected-email"
+                name="entry.1773177730"
+                autocomplete="email"
+                required>
+        </div>
 
     </div>
 
-</section>
+    <!-- Consent -->
 
+    <label class="stay-connected-consent">
 
-<!-- EVERY ACTION MATTERS -->
+        <input
+            type="checkbox"
+            name="entry.1779736562"
+            value="I agree"
+            required>
 
-<section class="difference-section">
+        <span>
+            I agree to receive occasional email updates from
+            Gwinnett Animal Advocacy Alliance. I understand I may
+            unsubscribe at any time.
+        </span>
 
-    <div class="difference-content">
+    </label>
 
-        <h2>Every Action Matters</h2>
+    <p class="stay-connected-submit">
+        <button type="submit" class="btn">
+            Stay Connected
+        </button>
+    </p>
 
-        <p>
-            Animal welfare advocacy depends on community involvement. Showing
-            up, asking questions, sharing information, and supporting humane
-            solutions all help create meaningful change for animals in
-            Gwinnett County.
-        </p>
+    <p class="stay-connected-privacy">
+        Your information will only be used to send GAAA updates and
+        will never be sold or shared.
+    </p>
 
-        <a href="/get-involved/join-our-team/" class="btn">
-            Join Our Team
-        </a>
-
-    </div>
-
-</section>
-
+</form>
 
 <script>
-    let stayConnectedSubmitted = false;
+document.getElementById("stay_connected_iframe").addEventListener("load", function () {
 
-    const stayConnectedIframe =
-        document.getElementById('stay_connected_iframe');
+    if (!stayConnectedSubmitted) return;
 
-    stayConnectedIframe.addEventListener('load', function () {
-        if (!stayConnectedSubmitted) {
-            return;
-        }
+    document.getElementById("stay-connected-wrapper").innerHTML = `
+        <div class="stay-connected-success">
 
-        const wrapper =
-            document.getElementById('stay-connected-wrapper');
-
-        wrapper.innerHTML = `
-            <div class="stay-connected-success">
-
-                <div class="stay-connected-success-icon" aria-hidden="true">
-                    <i class="fas fa-check"></i>
-                </div>
-
-                <h3>Thank You for Staying Connected!</h3>
-
-                <p>
-                    You're now part of the
-                    <strong>Gwinnett Animal Advocacy Alliance</strong>
-                    community.
-                </p>
-
-                <p>
-                    We'll send occasional updates about advocacy efforts,
-                    public meetings, volunteer opportunities, community
-                    events, and important animal welfare news.
-                </p>
-
-                <p>
-                    <strong>
-                        Every voice matters. Every action makes a difference.
-                    </strong>
-                </p>
-
+            <div class="stay-connected-success-icon">
+                <i class="fas fa-check"></i>
             </div>
-        `;
 
-        wrapper.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    });
+            <h3>Thank You for Staying Connected!</h3>
+
+            <p>
+                You're now part of the
+                <strong>Gwinnett Animal Advocacy Alliance</strong>
+                community.
+            </p>
+
+            <p>
+                We'll keep you informed about advocacy efforts,
+                public meetings, volunteer opportunities,
+                community events, and important animal welfare updates.
+            </p>
+
+            <p>
+                <strong>Every voice matters. Every action makes a difference.</strong>
+            </p>
+
+        </div>
+    `;
+});
 </script>
