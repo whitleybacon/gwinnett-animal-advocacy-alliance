@@ -3,84 +3,478 @@ layout: default
 title: Get Involved
 ---
 
+<style>
+    /* =========================================================
+       STAY CONNECTED FORM
+       Page-specific styles
+       ========================================================= */
+
+    .stay-connected-section {
+        margin-top: 20px;
+    }
+
+    .stay-connected-box {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 44px 48px;
+        border: 1px solid #bcd8ee;
+        border-radius: 16px;
+        background:
+            linear-gradient(
+                135deg,
+                #f8fcff 0%,
+                #edf7fd 100%
+            );
+        box-shadow: 0 5px 16px rgba(28, 64, 114, .08);
+    }
+
+    .stay-connected-heading {
+        display: grid;
+        grid-template-columns: 78px 1fr;
+        gap: 24px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .stay-connected-icon {
+        width: 76px;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--light);
+        color: #fff;
+        font-size: 1.8rem;
+        box-shadow: 0 7px 18px rgba(28, 64, 114, .18);
+    }
+
+    .stay-connected-heading h2 {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 2.15rem;
+        text-align: left;
+    }
+
+    .stay-connected-heading p {
+        margin: 0;
+        color: var(--primary);
+        font-size: 1.06rem;
+        line-height: 1.7;
+    }
+
+    .stay-connected-form {
+        margin: 0;
+    }
+
+    .stay-connected-fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .stay-connected-field label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .stay-connected-field input {
+        width: 100%;
+        min-height: 50px;
+        padding: 12px 14px;
+        border: 1px solid #b9cbd9;
+        border-radius: 7px;
+        background: #fff;
+        color: var(--primary);
+        font-family: inherit;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .stay-connected-field input:focus {
+        border-color: var(--light);
+        outline: 3px solid rgba(46, 141, 204, .16);
+    }
+
+    .stay-connected-consent {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        margin: 24px 0;
+        padding: 18px 20px;
+        border: 1px solid #d7e5ef;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, .75);
+        cursor: pointer;
+    }
+
+    .stay-connected-consent input {
+        width: 19px;
+        height: 19px;
+        flex: 0 0 auto;
+        margin: 3px 0 0;
+        accent-color: var(--light);
+    }
+
+    .stay-connected-consent span {
+        color: var(--primary);
+        font-size: .97rem;
+        line-height: 1.65;
+    }
+
+    .stay-connected-submit {
+        margin: 0;
+        text-align: center;
+    }
+
+    .stay-connected-submit .btn {
+        min-width: 190px;
+        cursor: pointer;
+    }
+
+    .stay-connected-privacy {
+        margin: 18px 0 0;
+        color: #5f6b76;
+        font-size: .88rem;
+        line-height: 1.55;
+        text-align: center;
+    }
+
+    .stay-connected-success {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .stay-connected-success-icon {
+        width: 72px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        background: #2f8f4e;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    .stay-connected-success h3 {
+        margin: 0 0 14px;
+        color: var(--accent);
+        font-size: 1.8rem;
+    }
+
+    .stay-connected-success p {
+        margin: 0 auto 12px;
+        color: var(--primary);
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .stay-connected-success strong {
+        color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+        .stay-connected-box {
+            padding: 30px 22px;
+        }
+
+        .stay-connected-heading {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .stay-connected-icon {
+            width: 66px;
+            height: 66px;
+            font-size: 1.55rem;
+        }
+
+        .stay-connected-heading h2 {
+            font-size: 1.75rem;
+        }
+
+        .stay-connected-heading p {
+            font-size: 1rem;
+        }
+
+        .stay-connected-fields {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .stay-connected-consent {
+            padding: 16px;
+        }
+
+        .stay-connected-submit .btn {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<!-- GET INVOLVED OPTIONS -->
+
 <section class="home-section">
+
     <h2>Get Involved</h2>
-    <p class="section-intro">There are many ways to support animals in Gwinnett County — from volunteering at the shelter to attending public meetings and helping with advocacy efforts.</p>
+
+    <p class="section-intro">
+        There are many ways to support animals in Gwinnett County—from
+        volunteering at the shelter to attending public meetings and helping
+        with advocacy efforts.
+    </p>
 
     <div class="home-card-grid three-across-cards">
 
         <a href="/get-involved/volunteer-shelter/" class="home-card">
-            <div class="home-card-icon icon-blue"><i class="fas fa-hand-holding-heart"></i></div>
+
+            <div class="home-card-icon icon-blue">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+
             <h3>Volunteer at the Shelter</h3>
-            <p>Learn how to support animals directly through approved volunteer opportunities at the Gwinnett County Animal Shelter.</p>
+
+            <p>
+                Learn how to support animals directly through approved
+                volunteer opportunities at the Gwinnett County Animal Shelter.
+            </p>
+
             <span>Learn More</span>
+
         </a>
+
 
         <a href="/get-involved/council-meetings/" class="home-card">
-            <div class="home-card-icon icon-green"><i class="fas fa-users"></i></div>
+
+            <div class="home-card-icon icon-green">
+                <i class="fas fa-users"></i>
+            </div>
+
             <h3>Attend Council Meetings</h3>
-            <p>Public meetings are an important way to stay informed, ask questions, and show county leaders that animal welfare matters.</p>
+
+            <p>
+                Public meetings are an important way to stay informed, ask
+                questions, and show county leaders that animal welfare matters.
+            </p>
+
             <span>Learn More</span>
+
         </a>
+
 
         <a href="/get-involved/join-our-team/" class="home-card">
-            <div class="home-card-icon icon-orange"><i class="fas fa-paw"></i></div>
+
+            <div class="home-card-icon icon-orange">
+                <i class="fas fa-paw"></i>
+            </div>
+
             <h3>Join Our Team</h3>
-            <p>Interested in helping with advocacy, outreach, research, resources, or community education? We would love to hear from you.</p>
+
+            <p>
+                Interested in helping with advocacy, outreach, research,
+                resources, or community education? We would love to hear
+                from you.
+            </p>
+
             <span>Join Us</span>
+
         </a>
 
     </div>
+
 </section>
 
-<!-- Hidden iframe to prevent page redirection -->
-<iframe name="signup_iframe" id="signup_iframe" style="display:none;" onload="if(signupSubmitted) { document.getElementById('signup-form-wrapper').innerHTML = '<h3>Thank you for signing up! Stay tuned for updates.</h3>'; }"></iframe>
 
-<script type="text/javascript">var signupSubmitted=false;</script>
+<!-- HIDDEN GOOGLE FORM SUBMISSION TARGET -->
 
-<!-- Visual Wrapper for your Form -->
-<div id="signup-form-wrapper" style="max-width: 500px; margin: 20px 0; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
-  <h2>Get Involved</h2>
-  
-  <form action="https://docs.google.com/forms/d/1F0sJFrGsQEfVezJj-8e25q59-Q6gzj0LOw2fxoBzSvw/formResponse" method="POST" target="signup_iframe" onsubmit="signupSubmitted=true;">
-    
-    <!-- Name Field -->
-    <div style="margin-bottom: 15px;">
-      <label style="display:block; margin-bottom: 5px;">Full Name</label>
-      <input type="text" name="entry.806560026" required style="width:100%; padding:8px; box-sizing:border-box;">
+<iframe
+    name="stay_connected_iframe"
+    id="stay_connected_iframe"
+    style="display: none;"
+    title="Stay Connected form submission">
+</iframe>
+
+
+<!-- STAY CONNECTED -->
+
+<section class="home-section stay-connected-section">
+
+    <div class="stay-connected-box" id="stay-connected-wrapper">
+
+        <div class="stay-connected-heading">
+
+            <div class="stay-connected-icon" aria-hidden="true">
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <div>
+                <h2>Stay Connected with GAAA</h2>
+
+                <p>
+                    Never miss an important meeting, advocacy update, volunteer
+                    opportunity, or community event. Join our email list to
+                    stay informed and help improve animal welfare in Gwinnett
+                    County.
+                </p>
+            </div>
+
+        </div>
+
+
+        <form
+            class="stay-connected-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
+            method="POST"
+            target="stay_connected_iframe"
+            onsubmit="stayConnectedSubmitted = true;">
+
+            <div class="stay-connected-fields">
+
+                <div class="stay-connected-field">
+                    <label for="stay-connected-name">
+                        Full Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="stay-connected-name"
+                        name="entry.1692632741"
+                        autocomplete="name"
+                        required>
+                </div>
+
+
+                <div class="stay-connected-field">
+                    <label for="stay-connected-email">
+                        Email Address *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="stay-connected-email"
+                        name="emailAddress"
+                        autocomplete="email"
+                        required>
+                </div>
+
+            </div>
+
+
+            <label class="stay-connected-consent">
+
+                <input
+                    type="checkbox"
+                    name="entry.1779736562"
+                    value="I agree"
+                    required>
+
+                <span>
+                    I agree to receive occasional email updates from Gwinnett
+                    Animal Advocacy Alliance. I understand I may unsubscribe
+                    at any time.
+                </span>
+
+            </label>
+
+
+            <p class="stay-connected-submit">
+                <button type="submit" class="btn">
+                    Stay Connected
+                </button>
+            </p>
+
+
+            <p class="stay-connected-privacy">
+                Your information will only be used to send GAAA updates and
+                will not be sold or shared for marketing purposes.
+            </p>
+
+        </form>
+
     </div>
 
-    <!-- Email Field -->
-    <div style="margin-bottom: 15px;">
-      <label style="display:block; margin-bottom: 5px;">Email Address</label>
-      <input type="email" name="entry.1702724720" required style="width:100%; padding:8px; box-sizing:border-box;">
-    </div>
+</section>
 
-    <!-- Checkboxes (Sharing the same entry name attribute) -->
-    <div style="margin-bottom: 20px;">
-      <label style="display:block; margin-bottom: 5px;">I want to sign up for:</label>
-      
-      <label style="display:flex; align-items: center; gap: 10px; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-        <input type="checkbox" name="entry.2042765645" value="General Updates" style="margin: 0; width: auto; height: auto;"><span>General Updates</span>
-      </label>
-      
-      <label style="display:flex; align-items: center; gap: 10px; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-        <input type="checkbox" name="entry.2042765645" value="Attending the Rally" style="margin: 0; width: auto; height: auto;"><span>Attending the Rally</span>
-      </label>
-    </div>
 
-    <!-- Submit Button -->
-    <button type="submit" style="padding: 10px 20px; background-color: #007bc2; color: white; border: none; border-radius: 4px; cursor: pointer;">
-      Submit Signup
-    </button>
-    
-  </form>
-</div>
+<!-- EVERY ACTION MATTERS -->
 
 <section class="difference-section">
+
     <div class="difference-content">
+
         <h2>Every Action Matters</h2>
-        <p>Animal welfare advocacy depends on community involvement. Showing up, asking questions, sharing information, and supporting humane solutions all help create meaningful change for animals in Gwinnett County.</p>
-        <a href="/contact/" class="btn">Contact Us</a>
+
+        <p>
+            Animal welfare advocacy depends on community involvement. Showing
+            up, asking questions, sharing information, and supporting humane
+            solutions all help create meaningful change for animals in
+            Gwinnett County.
+        </p>
+
+        <a href="/get-involved/join-our-team/" class="btn">
+            Join Our Team
+        </a>
+
     </div>
+
 </section>
+
+
+<script>
+    let stayConnectedSubmitted = false;
+
+    const stayConnectedIframe =
+        document.getElementById('stay_connected_iframe');
+
+    stayConnectedIframe.addEventListener('load', function () {
+        if (!stayConnectedSubmitted) {
+            return;
+        }
+
+        const wrapper =
+            document.getElementById('stay-connected-wrapper');
+
+        wrapper.innerHTML = `
+            <div class="stay-connected-success">
+
+                <div class="stay-connected-success-icon" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                </div>
+
+                <h3>Thank You for Staying Connected!</h3>
+
+                <p>
+                    You're now part of the
+                    <strong>Gwinnett Animal Advocacy Alliance</strong>
+                    community.
+                </p>
+
+                <p>
+                    We'll send occasional updates about advocacy efforts,
+                    public meetings, volunteer opportunities, community
+                    events, and important animal welfare news.
+                </p>
+
+                <p>
+                    <strong>
+                        Every voice matters. Every action makes a difference.
+                    </strong>
+                </p>
+
+            </div>
+        `;
+
+        wrapper.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    });
+</script>
