@@ -1,8 +1,11 @@
 <footer class="site-footer">
+
     <div class="footer-content">
 
         <div class="footer-brand">
-            <img src="/assets/GAAA Logo_White Inside.png" alt="GAAA Logo">
+            <img
+                src="/assets/GAAA Logo_White Inside.png"
+                alt="Gwinnett Animal Advocacy Alliance logo">
         </div>
 
         <div class="footer-column">
@@ -36,30 +39,108 @@
             <h3>Connect With Us</h3>
 
             <div class="footer-social-icons">
-                <a href="https://www.facebook.com/gwinnettanimaladvocacyalliance"
-                   target="_blank"
-                   aria-label="Facebook">
+                <a
+                    href="https://www.facebook.com/gwinnettanimaladvocacyalliance"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a href="https://www.instagram.com/gwinnettanimaladvocacyalliance/"
-                   target="_blank"
-                   aria-label="Instagram">
+                <a
+                    href="https://www.instagram.com/gwinnettanimaladvocacyalliance/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
 
-            <p>Follow us for updates, action alerts, and opportunities to advocate for animals in Gwinnett County.</p>
+            <p>
+                Follow us for updates, action alerts, and opportunities to
+                advocate for animals in Gwinnett County.
+            </p>
         </div>
 
     </div>
 
+
+    <!-- STAY CONNECTED RIBBON -->
+
+    <iframe
+        name="newsletter_iframe"
+        id="newsletter_iframe"
+        class="newsletter-hidden-iframe"
+        title="Email signup submission">
+    </iframe>
+
+    <div class="footer-newsletter-ribbon">
+
+        <div
+            class="footer-newsletter-inner"
+            id="newsletter-wrapper">
+
+            <div class="footer-newsletter-copy">
+
+                <h3>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    Stay Connected with GAAA
+                </h3>
+
+                <p>
+                    Receive occasional updates about public meetings, advocacy
+                    efforts, volunteer opportunities, community events, and
+                    important animal welfare news.
+                </p>
+
+            </div>
+
+            <form
+                class="footer-newsletter-form"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
+                method="POST"
+                target="newsletter_iframe"
+                onsubmit="newsletterSubmitted = true;">
+
+                <label class="sr-only" for="newsletter-email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    name="entry.1773177730"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required>
+
+                <button type="submit">
+                    Stay Connected
+                </button>
+
+            </form>
+
+            <p class="footer-newsletter-note">
+                We respect your inbox. You may unsubscribe at any time.
+            </p>
+
+        </div>
+
+    </div>
+
+
     <div class="footer-bottom">
-        <p>&copy; 2026 Gwinnett Animal Advocacy Alliance. All rights reserved.</p>
+
+        <p>
+            &copy; 2026 Gwinnett Animal Advocacy Alliance.
+            All rights reserved.
+        </p>
 
         <div class="footer-bottom-links">
             <a href="/privacy-policy/">Privacy Policy</a>
             <a href="/terms/">Terms of Use</a>
         </div>
+
     </div>
+
 </footer>
