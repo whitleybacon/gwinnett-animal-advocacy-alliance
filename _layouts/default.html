@@ -1020,6 +1020,69 @@
         body.newsletter-popup-open {
             overflow: hidden;
         }
+
+        /* ==========================================
+           AUDIT DOWNLOAD SECTION
+        ========================================== */
+        
+        .audit-banner {
+        
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .audit-banner .alert-banner-content {
+        
+            flex: 1;
+            text-align: center;
+        }
+        
+        .audit-download-btn {
+        
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        
+            margin-top: 32px;
+            padding: 18px 42px;
+        
+            background: var(--accent);
+            color: #fff;
+        
+            border-radius: 12px;
+        
+            font-size: 1.15rem;
+            font-weight: 700;
+        
+            text-decoration: none;
+        
+            transition: all .25s ease;
+        }
+        
+        .audit-download-btn:hover {
+        
+            background: #16345d;
+        
+            transform: translateY(-2px);
+        
+            box-shadow: 0 8px 20px rgba(0,0,0,.15);
+        }
+        
+        .audit-file-info {
+        
+            margin-top: 12px;
+        
+            font-size: .95rem;
+        
+            color: #666;
+        }
+        
+        .audit-download-btn i {
+        
+            font-size: 1.2rem;
+        }
         
         @media (max-width: 768px) {
             .newsletter-popup {
