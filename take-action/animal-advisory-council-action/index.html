@@ -25,10 +25,6 @@ permalink: /animal-advisory-council-action/
             preserve specialized expertise, and protect the independence of
             Gwinnett’s Animal Advisory Council.
         </p>
-
-        <a href="#send-email" class="btn">
-            Send an Email
-        </a>
     </div>
 </section>
 
@@ -284,29 +280,30 @@ Organization: ${organization || 'N/A'}`;
         'Ben.Ku@gwinnettcounty.com'
     ].join(',');
 
+    const cc = encodeURIComponent(
+        'gwinnettanimalshelteradvocates@gmail.com'
+    );
+
     const subject = encodeURIComponent(
         'Please Amend the Animal Advisory Council Ordinance'
     );
 
     const body = encodeURIComponent(fullMessage);
 
+    // Google Analytics Event
     if (typeof gtag === 'function') {
-        gtag('event', 'email_draft_click', {
-            event_category: 'Engagement',
-            event_label: 'Animal Advisory Council Action Email'
+        gtag('event', 'advocacy_email_opened', {
+            campaign: 'animal_advisory_council'
         });
     }
 
     window.location.href =
-        `mailto:${recipients}?subject=${subject}&body=${body}`;
+        `mailto:${recipients}?cc=${cc}&subject=${subject}&body=${body}`;
 }
 </script>
 
 <!-- Google Analytics Base Tracking Script -->
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-JZ67TN4SJR"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ67TN4SJR"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
