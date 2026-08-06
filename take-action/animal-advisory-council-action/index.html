@@ -251,22 +251,44 @@ Respectfully,
             — OR —
         </p>
 
-         <p style="margin-top:15px; font-size:0.95rem; color:#666; line-height:1.6;">
+        <p style="margin-top:15px; font-size:0.95rem; color:#666; line-height:1.6;">
             <strong>Having trouble opening the email?</strong><br>
-            Click <strong>Copy Complete Email</strong> to copy the recipients, CC, subject line, and message, then paste everything into Gmail, Outlook, or your preferred email application.
+            Create a new email using the information below, then click
+            <strong>Copy Email Message</strong> to copy the message body.
         </p>
-        
+
+        <div class="advocacy-highlight" style="margin-top:20px; text-align:left;">
+            <p>
+                <strong>To:</strong><br>
+                Nicole.Hendrickson@gwinnettcounty.com;<br>
+                Jasper.Watkins@gwinnettcounty.com;<br>
+                Kirkland.Carden@gwinnettcounty.com;<br>
+                Matthew.Holtkamp@gwinnettcounty.com;<br>
+                Ben.Ku@gwinnettcounty.com
+            </p>
+
+            <p>
+                <strong>CC:</strong><br>
+                gwinnettanimalshelteradvocates@gmail.com
+            </p>
+
+            <p>
+                <strong>Subject:</strong><br>
+                Please Amend the Animal Advisory Council Ordinance
+            </p>
+        </div>
+
         <button
             type="button"
             class="btn btn-secondary"
-            onclick="copyEmail()"
+            onclick="copyMessage()"
         >
-            📋 Copy Complete Email
+            📋 Copy Email Message
         </button>
-        
+
         <p style="margin-top:15px; font-size:0.9rem; color:#666; line-height:1.6;">
-            <strong>Note:</strong> Gwinnett Animal Advocacy Alliance will be copied on your email so we can measure community participation. You may remove the CC before sending if you prefer.
-</p>
+            <strong>Note:</strong> Please CC Gwinnett Animal Advocacy Alliance so we can measure community participation. You may remove the CC before sending if you prefer.
+        </p>
 
     </form>
 
@@ -320,7 +342,7 @@ Organization: ${organization || 'N/A'}`;
         `mailto:${recipients}?cc=${cc}&subject=${subject}&body=${body}`;
 }
 
-function copyEmail() {
+function copyMessage() {
     const name = document.getElementById('name').value.trim();
     const city = document.getElementById('city').value.trim();
     const organization = document.getElementById('organization').value.trim();
@@ -331,35 +353,24 @@ function copyEmail() {
         return;
     }
 
-    const emailText =
-`TO:
-Nicole.Hendrickson@gwinnettcounty.com
-Jasper.Watkins@gwinnettcounty.com
-Kirkland.Carden@gwinnettcounty.com
-Matthew.Holtkamp@gwinnettcounty.com
-Ben.Ku@gwinnettcounty.com
-
-CC:
-gwinnettanimalshelteradvocates@gmail.com
-
-SUBJECT:
-Please Amend the Animal Advisory Council Ordinance
-
-${message}
+    const messageText =
+`${message}
 
 ---------------------------------
 Name: ${name}
 City / State: ${city || 'Not Provided'}
 Organization: ${organization || 'N/A'}`;
 
-    navigator.clipboard.writeText(emailText)
+    navigator.clipboard.writeText(messageText)
         .then(() => {
             alert(
-                "The complete email has been copied. Paste it into Gmail, Outlook, or your preferred email program."
+                "The email message has been copied. Paste it into the body of your email."
             );
         })
         .catch(() => {
-            alert("Unable to copy automatically. Please select and copy the email manually.");
+            alert(
+                "Unable to copy automatically. Please select and copy the message manually."
+            );
         });
 
     if (typeof gtag === 'function') {
@@ -383,4 +394,3 @@ function gtag() {
 gtag('js', new Date());
 gtag('config', 'G-JZ67TN4SJR');
 </script>
-
