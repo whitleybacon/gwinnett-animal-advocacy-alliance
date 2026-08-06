@@ -171,14 +171,14 @@ permalink: /animal-advisory-council-action/
         </div>
 
         <div class="form-group">
-            <label for="city">City / District: (Required)</label>
+           <label for="city">City / State (Optional):</label>
 
             <input
                 type="text"
                 id="city"
                 name="city"
-                placeholder="Your City or Commission District"
-                required
+                placeholder="Example: Lilburn, GA"
+            >
             >
         </div>
 
@@ -259,17 +259,17 @@ function sendComment() {
     const organization = document.getElementById('organization').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    if (!name || !city) {
-        alert("Please complete all required fields.");
+    if (!name) {
+        alert("Please enter your name.");
         return;
     }
 
-    const fullMessage =
+const fullMessage =
 `${message}
 
 ---------------------------------
 Name: ${name}
-City / District: ${city}
+City / State: ${city || 'Not Provided'}
 Organization: ${organization || 'N/A'}`;
 
     const recipients = [
