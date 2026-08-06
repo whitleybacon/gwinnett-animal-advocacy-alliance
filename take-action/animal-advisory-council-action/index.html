@@ -179,7 +179,6 @@ permalink: /animal-advisory-council-action/
                 name="city"
                 placeholder="Example: Lilburn, GA"
             >
-            >
         </div>
 
         <div class="form-group">
@@ -239,14 +238,35 @@ Respectfully,
             </textarea>
         </div>
 
-        <button
+       <button
             type="button"
             class="btn"
             id="openEmailButton"
             onclick="sendComment()"
         >
-            Open Email Draft
+            ✉️ Open Email Draft
         </button>
+        
+        <p style="margin:18px 0 10px; font-weight:600; color:#666;">
+            — OR —
+        </p>
+        
+        <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="copyEmail()"
+        >
+            📋 Copy Complete Email
+        </button>
+        
+        <p style="margin-top:15px; font-size:0.95rem; color:#666; line-height:1.6;">
+            <strong>Having trouble opening the email?</strong><br>
+            Click <strong>Copy Complete Email</strong> to copy the recipients, CC, subject line, and message, then paste everything into Gmail, Outlook, or your preferred email application.
+        </p>
+        
+        <p style="margin-top:15px; font-size:0.9rem; color:#666; line-height:1.6;">
+            <strong>Note:</strong> Gwinnett Animal Advocacy Alliance will be copied on your email so we can measure community participation. You may remove the CC before sending if you prefer.
+</p>
 
     </form>
 
@@ -264,7 +284,7 @@ function sendComment() {
         return;
     }
 
-const fullMessage =
+    const fullMessage =
 `${message}
 
 ---------------------------------
@@ -290,7 +310,6 @@ Organization: ${organization || 'N/A'}`;
 
     const body = encodeURIComponent(fullMessage);
 
-    // Google Analytics Event
     if (typeof gtag === 'function') {
         gtag('event', 'advocacy_email_opened', {
             campaign: 'animal_advisory_council'
@@ -299,6 +318,55 @@ Organization: ${organization || 'N/A'}`;
 
     window.location.href =
         `mailto:${recipients}?cc=${cc}&subject=${subject}&body=${body}`;
+}
+
+function copyEmail() {
+    const name = document.getElementById('name').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const organization = document.getElementById('organization').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    const emailText =
+`TO:
+Nicole.Hendrickson@gwinnettcounty.com
+Jasper.Watkins@gwinnettcounty.com
+Kirkland.Carden@gwinnettcounty.com
+Matthew.Holtkamp@gwinnettcounty.com
+Ben.Ku@gwinnettcounty.com
+
+CC:
+gwinnettanimalshelteradvocates@gmail.com
+
+SUBJECT:
+Please Amend the Animal Advisory Council Ordinance
+
+${message}
+
+---------------------------------
+Name: ${name}
+City / State: ${city || 'Not Provided'}
+Organization: ${organization || 'N/A'}`;
+
+    navigator.clipboard.writeText(emailText)
+        .then(() => {
+            alert(
+                "The complete email has been copied. Paste it into Gmail, Outlook, or your preferred email program."
+            );
+        })
+        .catch(() => {
+            alert("Unable to copy automatically. Please select and copy the email manually.");
+        });
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'advocacy_email_copied', {
+            campaign: 'animal_advisory_council'
+        });
+    }
 }
 </script>
 
