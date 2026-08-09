@@ -3,6 +3,102 @@ layout: default
 title: Contact County Leadership
 ---
 
+<style>
+    /* =========================================================
+       2026 ELECTION CALLOUT
+       ========================================================= */
+
+    .leadership-election-callout {
+        max-width: 1200px;
+        margin: 28px auto 10px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .leadership-election-inner {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        align-items: stretch;
+        overflow: hidden;
+        border: 1px solid #d8e5ee;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #f4f9fd 0%, #ffffff 65%, #f8fbf7 100%);
+        box-shadow: 0 6px 20px rgba(28,64,114,.09);
+    }
+
+    .leadership-election-image {
+        min-height: 250px;
+        background-image: url('/assets/election-2026-hero-mobile.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .leadership-election-content {
+        padding: 32px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .leadership-election-label {
+        display: block;
+        margin-bottom: 8px;
+        color: #1f5d2b;
+        font-size: .82rem;
+        font-weight: 700;
+        letter-spacing: .07em;
+        text-transform: uppercase;
+    }
+
+    .leadership-election-content h2 {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .leadership-election-content p {
+        margin: 0 0 20px;
+        max-width: 820px;
+        line-height: 1.75;
+    }
+
+    .leadership-election-content .btn {
+        width: fit-content;
+    }
+
+    @media (max-width: 768px) {
+        .leadership-election-callout {
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .leadership-election-inner {
+            grid-template-columns: 1fr;
+            border-radius: 12px;
+        }
+
+        .leadership-election-image {
+            min-height: 0;
+            aspect-ratio: 1 / 1;
+        }
+
+        .leadership-election-content {
+            padding: 26px 22px 28px;
+        }
+
+        .leadership-election-content h2 {
+            font-size: 1.6rem;
+        }
+
+        .leadership-election-content .btn {
+            width: auto;
+        }
+    }
+</style>
+
+
+
 <img class="page-hero-mobile-img"
      src="{{ site.baseurl }}/assets/contact-leadership-hero-mobile-square.png"
      alt="Dog and cat for Contact County Leadership page">
@@ -33,6 +129,45 @@ title: Contact County Leadership
         </p>
     </div>
 </section>
+
+
+<!-- 2026 ELECTION CALLOUT -->
+
+<section class="leadership-election-callout">
+
+    <div class="leadership-election-inner">
+
+        <div
+            class="leadership-election-image"
+            role="img"
+            aria-label="Dog and cat with voting signs and American flag">
+        </div>
+
+        <div class="leadership-election-content">
+
+            <span class="leadership-election-label">
+                2026 County Commission Election
+            </span>
+
+            <h2>Districts 2 and 4 Are on the Ballot</h2>
+
+            <p>
+                Two seats on the Gwinnett County Board of Commissioners are being
+                decided in 2026. Visit GAAA's Election Hub to meet the candidates,
+                review the Candidate Survey and Animal Welfare Candidate Pledge,
+                and follow candidate participation and responses.
+            </p>
+
+            <a href="/election-2026/" class="btn">
+                View the 2026 Election Hub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <section class="jump-section">
     <h2>Jump to a Section</h2>
