@@ -1,1 +1,518 @@
+---
+layout: default
+title: 2026 Gwinnett County Commissioner Animal Welfare Candidate Survey
+permalink: /2026-candidate-survey/
+---
 
+<style>
+/* =========================================================
+   2026 CANDIDATE SURVEY PAGE
+   Uses existing default.html design system + a few page-only styles
+   ========================================================= */
+
+.candidate-survey-page .page-hero {
+    background-image: url('/assets/candidate-survey-hero.webp');
+    background-position: center;
+}
+
+.candidate-survey-page .page-hero-content {
+    max-width: 670px;
+}
+
+.candidate-survey-page .page-hero-content h1 {
+    font-size: 4.4rem;
+}
+
+.candidate-survey-page .hero-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.candidate-survey-page .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+}
+
+.candidate-survey-page .hero-actions .btn {
+    background: #fff;
+    color: var(--accent);
+}
+
+.candidate-survey-page .hero-actions .btn:hover {
+    background: #edf7fd;
+}
+
+.candidate-survey-page .survey-status-banner {
+    max-width: 1180px;
+    margin: 0 auto 60px;
+}
+
+.candidate-survey-page .survey-status-banner .alert-banner-content h2 {
+    color: var(--accent);
+}
+
+.candidate-survey-page .survey-status-banner .alert-banner-label {
+    color: #2f7d32;
+}
+
+.candidate-survey-page .survey-status-banner .alert-banner-icon {
+    background: var(--accent);
+}
+
+.candidate-survey-page .survey-intro {
+    max-width: 1050px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.candidate-survey-page .survey-intro h2 {
+    color: var(--accent);
+    font-size: 2.7rem;
+    margin-bottom: 18px;
+}
+
+.candidate-survey-page .survey-intro p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+
+.candidate-survey-page .survey-topic-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.candidate-survey-page .survey-topic-grid .home-card {
+    text-align: left;
+}
+
+.candidate-survey-page .survey-topic-grid .home-card-icon {
+    margin-left: 0;
+}
+
+.candidate-survey-page .survey-topic-grid .home-card h3 {
+    font-size: 1.15rem;
+}
+
+.candidate-survey-page .survey-topic-grid ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--primary);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+.candidate-survey-page .survey-download-banner {
+    max-width: 1180px;
+    margin: 70px auto;
+}
+
+.candidate-survey-page .survey-download-banner .alert-banner-content {
+    text-align: left;
+}
+
+.candidate-survey-page .survey-download-banner .alert-banner-content h2 {
+    color: var(--accent);
+}
+
+.candidate-survey-page .survey-download-banner .alert-banner-icon {
+    background: #2E8DCC;
+}
+
+.candidate-survey-page .survey-download-banner .btn {
+    white-space: nowrap;
+}
+
+.candidate-survey-page .method-section {
+    max-width: 1180px;
+    margin: 70px auto;
+    padding: 58px 56px;
+    background: #f6f9f5;
+    border: 1px solid rgba(31,93,43,.12);
+    border-radius: 12px;
+}
+
+.candidate-survey-page .method-section h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2.35rem;
+    text-align: center;
+}
+
+.candidate-survey-page .method-section > p {
+    max-width: 960px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 1.04rem;
+    line-height: 1.8;
+}
+
+.candidate-survey-page .method-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.candidate-survey-page .method-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 25px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.candidate-survey-page .method-card i {
+    color: var(--light);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.candidate-survey-page .method-card h3 {
+    margin: 0 0 10px;
+    color: var(--accent);
+}
+
+.candidate-survey-page .method-card p {
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.7;
+}
+
+.candidate-survey-page .results-section {
+    max-width: 1180px;
+    margin: 70px auto;
+}
+
+.candidate-survey-page .results-section h2 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.candidate-survey-page .results-section .section-intro {
+    max-width: 900px;
+}
+
+.candidate-survey-page .district-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.candidate-survey-page .district-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    padding: 30px;
+}
+
+.candidate-survey-page .district-card h3 {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 1.45rem;
+}
+
+.candidate-survey-page .district-card p {
+    margin: 12px 0 0;
+}
+
+.candidate-survey-page .result-key {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.candidate-survey-page .result-key .status-badge {
+    min-width: 0;
+    font-size: .78rem;
+    padding: 8px 14px;
+}
+
+.candidate-survey-page .accountability-section {
+    max-width: 1180px;
+    margin: 70px auto 40px;
+    padding: 58px 48px;
+    border-radius: 12px;
+    background: var(--accent);
+    text-align: center;
+}
+
+.candidate-survey-page .accountability-section h2,
+.candidate-survey-page .accountability-section p {
+    color: #fff;
+}
+
+.candidate-survey-page .accountability-section h2 {
+    margin: 0 0 16px;
+    font-size: 2.4rem;
+}
+
+.candidate-survey-page .accountability-section p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 1000px) {
+    .candidate-survey-page .survey-topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .candidate-survey-page .page-hero-mobile-img {
+        margin-top: 0;
+    }
+
+    .candidate-survey-page .page-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .candidate-survey-page .hero-eyebrow {
+        color: var(--light);
+        font-size: .8rem;
+    }
+
+    .candidate-survey-page .hero-actions {
+        display: block;
+    }
+
+    .candidate-survey-page .hero-actions .btn {
+        background: var(--accent);
+        color: #fff;
+        margin: 14px 0 0;
+    }
+
+    .candidate-survey-page .survey-status-banner,
+    .candidate-survey-page .survey-download-banner,
+    .candidate-survey-page .method-section,
+    .candidate-survey-page .results-section,
+    .candidate-survey-page .accountability-section {
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    .candidate-survey-page .survey-intro {
+        margin-bottom: 42px;
+        text-align: left;
+    }
+
+    .candidate-survey-page .survey-intro h2,
+    .candidate-survey-page .results-section h2 {
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .candidate-survey-page .survey-topic-grid,
+    .candidate-survey-page .method-grid,
+    .candidate-survey-page .district-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .candidate-survey-page .method-section {
+        padding: 34px 22px;
+    }
+
+    .candidate-survey-page .method-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .candidate-survey-page .survey-download-banner .alert-banner-content {
+        text-align: left;
+    }
+
+    .candidate-survey-page .accountability-section {
+        padding: 38px 24px;
+    }
+
+    .candidate-survey-page .accountability-section h2 {
+        font-size: 1.8rem;
+    }
+}
+</style>
+
+<div class="candidate-survey-page">
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <img
+            class="page-hero-mobile-img"
+            src="/assets/candidate-survey-hero-mobile.webp"
+            alt="Dog and cat outside a Gwinnett County civic building beside a Vote sign">
+
+        <div class="page-hero-content">
+            <span class="hero-eyebrow">2026 Gwinnett County Elections</span>
+            <h1>Animal Welfare Candidate Survey</h1>
+            <p>Where do the candidates for Gwinnett County Commissioner stand on the animal-welfare issues affecting our community?</p>
+
+            <div class="hero-actions">
+                <a class="btn" href="/assets/2026-gwinnett-commissioner-animal-welfare-candidate-survey.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i> Read the Full Survey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="alert-banner survey-status-banner">
+        <div class="alert-banner-icon">
+            <i class="fas fa-check-to-slot"></i>
+        </div>
+        <div class="alert-banner-content">
+            <span class="alert-banner-label">Candidate Survey Underway</span>
+            <h2>Responses Due August 21, 2026</h2>
+            <p>GAAA is inviting candidates for Gwinnett County Board of Commissioners Districts 2 and 4 to complete our 2026 Animal Welfare Candidate Survey. Candidate responses will be published here after the response deadline.</p>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="survey-intro">
+        <h2>Animal welfare decisions are made at the ballot box, too.</h2>
+        <p>Decisions made by the Gwinnett County Board of Commissioners directly affect shelter operations, animal care, public safety and enforcement, funding, prevention programs, oversight, infrastructure and long-term animal-welfare priorities.</p>
+        <p>GAAA created this survey to give voters more than campaign talking points. Candidates are being asked where they stand on specific policies and what actions they would support if elected.</p>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="home-section">
+        <h2>What We're Asking Candidates</h2>
+        <p class="section-intro">The 68-question survey addresses the major policy, funding and oversight decisions that shape animal welfare in Gwinnett County.</p>
+
+        <div class="home-card-grid survey-topic-grid">
+            <div class="home-card">
+                <div class="home-card-icon icon-blue">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+                <h3>Oversight & Accountability</h3>
+                <ul>
+                    <li>Animal Advisory Council independence</li>
+                    <li>Citizen representation</li>
+                    <li>Transparency and public records</li>
+                    <li>Independent review and cameras</li>
+                </ul>
+            </div>
+
+            <div class="home-card">
+                <div class="home-card-icon icon-green">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <h3>Humane Care & Lifesaving</h3>
+                <ul>
+                    <li>Enrichment and behavioral welfare</li>
+                    <li>Veterinary and in-house medical care</li>
+                    <li>Euthanasia safeguards</li>
+                    <li>Rescue, foster and adoption opportunities</li>
+                </ul>
+            </div>
+
+            <div class="home-card">
+                <div class="home-card-icon icon-orange">
+                    <i class="fas fa-shield-dog"></i>
+                </div>
+                <h3>Prevention & Protection</h3>
+                <ul>
+                    <li>Spay/neuter and TNVR</li>
+                    <li>Breeding and retail pet sales</li>
+                    <li>Owner retention and reunification</li>
+                    <li>Animal-protection ordinances and enforcement</li>
+                </ul>
+            </div>
+
+            <div class="home-card">
+                <div class="home-card-icon icon-blue">
+                    <i class="fas fa-people-group"></i>
+                </div>
+                <h3>Capacity, Community & Resources</h3>
+                <ul>
+                    <li>Open intake and shelter capacity</li>
+                    <li>Emergency overflow planning</li>
+                    <li>Volunteer and rescue partnerships</li>
+                    <li>Budget priorities and performance measures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF DOWNLOAD -->
+    <section class="alert-banner survey-download-banner">
+        <div class="alert-banner-icon">
+            <i class="fas fa-file-lines"></i>
+        </div>
+        <div class="alert-banner-content">
+            <span class="alert-banner-label">Read It for Yourself</span>
+            <h2>See exactly what candidates are being asked.</h2>
+            <p>The public reference copy includes the survey background, all 68 questions and supporting reference links so Gwinnett voters can review the same issues candidates receive.</p>
+        </div>
+        <a class="btn alert-banner-button" href="/assets/2026-gwinnett-commissioner-animal-welfare-candidate-survey.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-download"></i> View Survey PDF
+        </a>
+    </section>
+
+    <!-- HOW DEVELOPED -->
+    <section class="method-section">
+        <h2>Built Around Gwinnett's Actual Animal-Welfare Issues</h2>
+        <p>This is not a generic candidate questionnaire. GAAA developed the 2026 survey from the issues we have researched, documented and advocated on in Gwinnett County.</p>
+
+        <div class="method-grid">
+            <div class="method-card">
+                <i class="fas fa-folder-open"></i>
+                <h3>Records & Data</h3>
+                <p>County records, shelter data, medical records, contracts, investigations and operational information help establish the factual basis for many of the questions.</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fas fa-chart-column"></i>
+                <h3>Independent Analysis</h3>
+                <p>GAAA's audits and issue analyses examine areas such as enrichment, managed intake, veterinary care, volunteer engagement, community cats and oversight.</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fas fa-comments"></i>
+                <h3>Community Experience</h3>
+                <p>Feedback from residents, volunteers, advocates, rescue partners and others helps identify where policies and practices affect animals and the people trying to help them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results-section" id="candidate-results">
+        <h2>Candidate Responses & Results</h2>
+        <p class="section-intro">All candidates for the applicable Gwinnett County Commissioner seats are being given an opportunity to participate. Responses will be posted here after the survey deadline.</p>
+
+        <div class="district-grid">
+            <div class="district-card">
+                <span class="status-badge badge-blue">Results Coming Soon</span>
+                <h3>Commission District 2</h3>
+                <p>Candidate participation and full survey responses will be published here after August 21.</p>
+            </div>
+
+            <div class="district-card">
+                <span class="status-badge badge-blue">Results Coming Soon</span>
+                <h3>Commission District 4</h3>
+                <p>Candidate participation and full survey responses will be published here after August 21.</p>
+            </div>
+        </div>
+
+        <div class="result-key" aria-label="Candidate survey result status key">
+            <span class="status-badge badge-green">Survey Completed</span>
+            <span class="status-badge badge-red">No Response</span>
+        </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="accountability-section">
+        <h2>Voters deserve to know where candidates stand before Election Day.</h2>
+        <p>Animal welfare requires decisions about policy, budgets, oversight, enforcement and County priorities. Publishing candidate responses creates a public record voters can use now — and a record residents can return to after the election.</p>
+    </section>
+
+</div>
