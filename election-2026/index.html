@@ -1,1 +1,578 @@
+---
+layout: default
+title: 2026 Election
+permalink: /election-2026/
+---
 
+<style>
+  .election-page {
+    --election-gold: #d3a13a;
+    --election-soft: #f7fbff;
+    --election-green: #2f7d32;
+    --election-orange: #e88a1f;
+  }
+
+  .election-page .page-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(12,48,91,.98) 0%,
+        rgba(18,57,104,.97) 28%,
+        rgba(28,64,114,.80) 42%,
+        rgba(28,64,114,.28) 57%,
+        rgba(28,64,114,0) 72%
+      ),
+      url('/assets/election-2026-hero.webp');
+    background-position: center;
+  }
+
+  .election-page .page-hero-content {
+    max-width: 650px;
+  }
+
+  .election-page .page-hero-content h1 {
+    font-size: 4.6rem;
+    margin-bottom: 22px;
+  }
+
+  .election-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .election-intro {
+    max-width: 1080px;
+    margin: 55px auto 45px;
+    text-align: center;
+  }
+
+  .election-intro h2 {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-size: 2.6rem;
+  }
+
+  .election-intro p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .election-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 65px;
+  }
+
+  .election-resource-grid .home-card {
+    text-align: left;
+  }
+
+  .election-resource-grid .results-coming-soon {
+    cursor: default;
+  }
+
+  .election-resource-grid .results-coming-soon:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
+
+  .election-resource-grid .results-coming-soon span {
+    color: #7a858f;
+  }
+
+  .candidate-section {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+  }
+
+  .candidate-section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .candidate-section-header .section-label {
+    text-align: center;
+  }
+
+  .candidate-section-header h2 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 2.35rem;
+  }
+
+  .candidate-section-header p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+
+  .candidate-race {
+    margin-top: 42px;
+  }
+
+  .candidate-race-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #edf1f4;
+  }
+
+  .candidate-race-title span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .candidate-race-title h3 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 1.55rem;
+  }
+
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 26px;
+  }
+
+  .candidate-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  }
+
+  .candidate-photo {
+    width: 190px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  .candidate-card h4 {
+    margin: 0 0 3px;
+    color: var(--accent);
+    font-size: 1.45rem;
+  }
+
+  .candidate-party {
+    margin: 0 0 16px;
+    color: #66717c;
+    font-size: .92rem;
+    font-weight: 600;
+  }
+
+  .candidate-status {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #ececec;
+  }
+
+  .candidate-status-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 8px 0;
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
+  .candidate-status-row i {
+    width: 18px;
+    margin-top: 3px;
+    color: var(--light);
+  }
+
+  .candidate-status-row.warning i {
+    color: var(--election-orange);
+  }
+
+  .candidate-status-row strong {
+    color: var(--accent);
+  }
+
+  .candidate-note {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    background: #fff8ed;
+    border-left: 4px solid var(--election-orange);
+    border-radius: 6px;
+    font-size: .85rem;
+    line-height: 1.55;
+  }
+
+  .candidate-actions {
+    margin-top: 16px;
+  }
+
+  .candidate-actions a {
+    display: inline-block;
+    font-size: .9rem;
+  }
+
+  .survey-callout {
+    max-width: 1200px;
+    margin: 65px auto;
+  }
+
+  .survey-callout .alert-banner {
+    background: #edf7fd;
+    border-color: rgba(46,141,204,.35);
+  }
+
+  .survey-callout .alert-banner-icon,
+  .survey-callout .alert-banner-button {
+    background: var(--accent);
+  }
+
+  .survey-callout .alert-banner-label,
+  .survey-callout .alert-banner-content h2 {
+    color: var(--accent);
+  }
+
+  .accountability-section {
+    max-width: 1100px;
+    margin: 65px auto;
+    padding: 42px 44px;
+    background: #f7fbf6;
+    border: 1px solid rgba(31,93,43,.2);
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .accountability-section h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2.2rem;
+  }
+
+  .accountability-section p {
+    line-height: 1.8;
+  }
+
+  .election-note {
+    max-width: 1050px;
+    margin: 0 auto 40px;
+    color: #6b7680;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .candidate-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .election-page .page-hero-mobile-img {
+      content: url('/assets/election-2026-hero-mobile.webp');
+    }
+
+    .election-page .page-hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .election-kicker {
+      color: var(--accent);
+    }
+
+    .election-intro {
+      margin: 35px auto 30px;
+    }
+
+    .election-intro h2,
+    .candidate-section-header h2,
+    .accountability-section h2 {
+      font-size: 1.7rem;
+    }
+
+    .election-resource-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .candidate-card {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .candidate-photo {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 4px;
+    }
+
+    .candidate-card-content {
+      text-align: left;
+    }
+
+    .survey-callout,
+    .accountability-section {
+      margin: 45px auto;
+    }
+
+    .accountability-section {
+      padding: 28px 22px;
+    }
+  }
+</style>
+
+<div class="election-page">
+
+  <section class="page-hero">
+    <img
+      class="page-hero-mobile-img"
+      src="/assets/election-2026-hero-mobile.webp"
+      alt="Dog and cat with voting signs and American flag">
+
+    <div class="page-hero-content">
+      <span class="election-kicker">Gwinnett County • 2026 Election</span>
+      <h1>Animal Welfare &amp; the 2026 Election</h1>
+      <p>
+        Learn where candidates for the Gwinnett County Board of Commissioners
+        stand on the policies, oversight and funding decisions that affect
+        animals throughout our community.
+      </p>
+    </div>
+  </section>
+
+  <section class="election-intro">
+    <span class="section-label">Voter Information</span>
+    <h2>Animal welfare decisions are made at the ballot box, too.</h2>
+    <p>
+      Gwinnett County Commissioners help shape the policies, budgets, oversight,
+      enforcement priorities and long-term investments that affect animals both
+      inside the County shelter and throughout the broader community. GAAA's 2026
+      election project is designed to give voters clear, public information about
+      where candidates stand before Election Day.
+    </p>
+  </section>
+
+  <section class="election-resource-grid">
+
+    <a class="home-card" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+      <div class="home-card-icon icon-blue">
+        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Survey</h3>
+      <p>
+        Review the same public preview of the detailed animal-welfare survey
+        provided to candidates, including background information, questions and
+        supporting references.
+      </p>
+      <span>Preview the full survey →</span>
+    </a>
+
+    <a class="home-card" href="/election-2026/candidate-pledge/">
+      <div class="home-card-icon icon-orange">
+        <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Pledge</h3>
+      <p>
+        Read the commitments candidates are being asked to make on transparency,
+        oversight, humane care, prevention and measurable action.
+      </p>
+      <span>Read the pledge →</span>
+    </a>
+
+    <div class="home-card results-coming-soon" aria-label="Candidate results coming soon">
+      <div class="home-card-icon icon-green">
+        <i class="fas fa-chart-bar" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Results</h3>
+      <p>
+        Survey responses, pledge status and candidate participation information
+        will be published as the 2026 election project progresses.
+      </p>
+      <span>Results coming soon</span>
+    </div>
+
+  </section>
+
+  <section class="candidate-section">
+    <div class="candidate-section-header">
+      <span class="section-label">Candidates on the Ballot</span>
+      <h2>Gwinnett County Board of Commissioners</h2>
+      <p>
+        GAAA is providing the same Candidate Survey and Animal Welfare Candidate
+        Pledge to candidates in the District 2 and District 4 races whenever
+        verified campaign contact information is available.
+      </p>
+    </div>
+
+    <div class="candidate-race">
+      <div class="candidate-race-title">
+        <span>2</span>
+        <h3>District 2</h3>
+      </div>
+
+      <div class="candidate-grid">
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
+          <div class="candidate-card-content">
+            <h4>Ben Ku</h4>
+            <p class="candidate-party">District 2 Candidate</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/rodolfo-ochoa.jpg" alt="Rodolfo Ochoa">
+          <div class="candidate-card-content">
+            <h4>Rodolfo Ochoa</h4>
+            <p class="candidate-party">District 2 Candidate</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row warning">
+                <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Not sent — verified campaign contact information not located</div>
+              </div>
+              <div class="candidate-status-row warning">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Not yet delivered</div>
+              </div>
+            </div>
+
+            <p class="candidate-note">
+              GAAA has not yet been able to locate verified public campaign
+              contact information for this candidate. If verified contact
+              information becomes available, the candidate will be provided the
+              same survey and opportunity to participate.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="candidate-race">
+      <div class="candidate-race-title">
+        <span>4</span>
+        <h3>District 4</h3>
+      </div>
+
+      <div class="candidate-grid">
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/matthew-holtkamp.jpg" alt="Matthew Holtkamp">
+          <div class="candidate-card-content">
+            <h4>Matthew Holtkamp</h4>
+            <p class="candidate-party">District 4 Candidate</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/ben-culberson.jpg" alt="Benjamin Culberson">
+          <div class="candidate-card-content">
+            <h4>Benjamin Culberson</h4>
+            <p class="candidate-party">District 4 Candidate</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="survey-callout">
+    <div class="alert-banner">
+      <div class="alert-banner-icon">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+      </div>
+
+      <div class="alert-banner-content">
+        <span class="alert-banner-label">See What Candidates Are Being Asked</span>
+        <h2>Review the Full Candidate Survey</h2>
+        <p>
+          The public preview includes the same section background information,
+          questions and supporting reference links candidates can review before
+          submitting their final responses.
+        </p>
+      </div>
+
+      <a
+        class="btn alert-banner-button"
+        href="https://form.jotform.com/262203851957158"
+        target="_blank"
+        rel="noopener noreferrer">
+        Preview Survey
+      </a>
+    </div>
+  </section>
+
+  <section class="accountability-section">
+    <span class="section-label">After the Election</span>
+    <h2>A Public Record of What Candidates Said</h2>
+    <p>
+      The purpose of this project is not only to help residents make informed
+      decisions before Election Day. Candidate responses and signed pledges can
+      also create a public record that residents can revisit after the election
+      to evaluate whether stated positions and commitments translate into action.
+    </p>
+  </section>
+
+  <p class="election-note">
+    Participation in GAAA's Candidate Survey or signing the Animal Welfare
+    Candidate Pledge does not constitute an endorsement by Gwinnett Animal
+    Advocacy Alliance. Candidate responses will be presented without changing
+    the substance of their answers.
+  </p>
+
+</div>
