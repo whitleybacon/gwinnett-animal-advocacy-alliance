@@ -103,15 +103,19 @@ permalink: /election-2026/candidate-pledge/
     gap: 24px;
     margin: 0 auto 50px;
     max-width: 1200px;
-}
+  }
 
-.pledge-card {
+  .pledge-card {
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 14px;
     padding: 34px 38px;
     box-shadow: 0 4px 14px rgba(0,0,0,.05);
-}
+  }
+
+  .pledge-card.full {
+    grid-column: 1 / -1;
+  }
 
   .pledge-card-top {
     display: flex;
@@ -267,7 +271,7 @@ permalink: /election-2026/candidate-pledge/
 
   @media (max-width: 768px) {
     .pledge-page .page-hero-mobile-img {
-      content: url('/assets/candidate-pledge-hero-mobile.webp');
+      content: url('/assets/candidate-pledge-hero-mobile.png');
     }
 
     .pledge-page .page-hero-content h1 {
@@ -343,6 +347,7 @@ permalink: /election-2026/candidate-pledge/
       alt="Candidate pledge document with a pen in a civic setting">
 
     <div class="page-hero-content">
+      <div class="election-breadcrumb">
         <a href="/election-2026/">2026 Election</a>
         <span aria-hidden="true"> › </span>
         Candidate Pledge
@@ -585,27 +590,22 @@ permalink: /election-2026/candidate-pledge/
 
   <section class="pledge-sign-section">
     <span class="section-label">For Candidates</span>
-    <h2>Ready to Make the Commitment?</h2>
+    <h2>The Candidate Pledge</h2>
     <p>
-      Candidates for the Gwinnett County Board of Commissioners may sign the
-      GAAA 2026 Animal Welfare Candidate Pledge to publicly affirm these
-      commitments to voters.
+      Candidates receiving the 2026 GAAA Candidate Survey will also receive a
+      copy of the Animal Welfare Candidate Pledge. Candidates may sign and return
+      the pledge to publicly affirm their commitment to the principles outlined above.
     </p>
     <p>
-      Signing the pledge is separate from completing the GAAA Candidate Survey.
-      Candidates are encouraged to do both so voters can review their detailed
-      positions as well as their broader commitment to action.
+      Completing the Candidate Survey and signing the Candidate Pledge are separate
+      opportunities for candidates to communicate their positions and commitments
+      to Gwinnett County voters.
     </p>
 
     <div class="pledge-sign-actions">
-      <a class="btn gold" href="mailto:gwinnettanimalshelteradvocates@gmail.com?subject=2026%20GAAA%20Candidate%20Pledge">
-        <i class="fas fa-pen-fancy" aria-hidden="true"></i>
-        Contact GAAA to Sign
-      </a>
-
       <a class="btn secondary" href="/election-2026/candidate-survey/">
         <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-        View Candidate Survey
+        View the Candidate Survey
       </a>
     </div>
   </section>
