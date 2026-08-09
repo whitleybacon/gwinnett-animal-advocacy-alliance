@@ -3,6 +3,177 @@ layout: default
 title: Home
 ---
 
+<style>
+    /* =========================================================
+       2026 ELECTION SPOTLIGHT
+       ========================================================= */
+
+    .election-spotlight {
+        max-width: 1400px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .election-spotlight-inner {
+        display: grid;
+        grid-template-columns: minmax(360px, .9fr) minmax(0, 1.35fr);
+        align-items: stretch;
+        overflow: hidden;
+        border: 1px solid #d8e5ee;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #f4f9fd 0%, #ffffff 58%, #f8fbf7 100%);
+        box-shadow: 0 10px 30px rgba(28,64,114,.10);
+    }
+
+    .election-spotlight-image {
+        min-height: 440px;
+        background:
+            linear-gradient(rgba(28,64,114,.06), rgba(28,64,114,.06)),
+            url('/assets/election-2026-hero-mobile.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .election-spotlight-content {
+        padding: 52px 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .election-spotlight-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        width: fit-content;
+        margin-bottom: 14px;
+        color: #1f5d2b;
+        font-size: .9rem;
+        font-weight: 700;
+        letter-spacing: .07em;
+        text-transform: uppercase;
+    }
+
+    .election-spotlight-label i {
+        color: #2E8DCC;
+    }
+
+    .election-spotlight h2 {
+        margin: 0 0 18px;
+        color: var(--accent);
+        font-size: 3rem;
+        line-height: 1.08;
+    }
+
+    .election-spotlight-lead {
+        margin: 0 0 14px;
+        color: var(--primary);
+        font-size: 1.08rem;
+        line-height: 1.8;
+    }
+
+    .election-spotlight-highlight {
+        margin: 4px 0 26px;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .election-spotlight-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+    }
+
+    .election-spotlight-actions .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        margin: 0;
+    }
+
+    .election-spotlight-actions .btn-secondary {
+        background: #2E8DCC;
+    }
+
+    .election-spotlight-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        margin-top: 24px;
+        padding-top: 22px;
+        border-top: 1px solid #dce6ed;
+    }
+
+    .election-spotlight-links a {
+        font-size: .92rem;
+        font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+        .election-spotlight-inner {
+            grid-template-columns: 1fr;
+        }
+
+        .election-spotlight-image {
+            min-height: 0;
+            aspect-ratio: 1 / 1;
+        }
+
+        .election-spotlight-content {
+            padding: 36px 30px;
+        }
+
+        .election-spotlight h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .election-spotlight {
+            padding: 0;
+            margin-bottom: 42px;
+        }
+
+        .election-spotlight-inner {
+            border-radius: 12px;
+        }
+
+        .election-spotlight-content {
+            padding: 28px 22px 30px;
+        }
+
+        .election-spotlight h2 {
+            font-size: 1.8rem;
+        }
+
+        .election-spotlight-lead,
+        .election-spotlight-highlight {
+            font-size: 1rem;
+        }
+
+        .election-spotlight-actions {
+            flex-direction: column;
+        }
+
+        .election-spotlight-actions .btn {
+            width: auto;
+            max-width: none;
+        }
+
+        .election-spotlight-links {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+</style>
+
+
+
 <!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){
@@ -106,6 +277,77 @@ title: Home
         >
             Send an Email
         </a>
+
+    </div>
+
+</section>
+
+
+<!-- 2026 ELECTION SPOTLIGHT -->
+
+<section class="election-spotlight">
+
+    <div class="election-spotlight-inner">
+
+        <div
+            class="election-spotlight-image"
+            role="img"
+            aria-label="Dog and cat with voting signs and American flag">
+        </div>
+
+        <div class="election-spotlight-content">
+
+            <span class="election-spotlight-label">
+                <i class="fas fa-check-to-slot" aria-hidden="true"></i>
+                2026 Gwinnett County Election
+            </span>
+
+            <h2>
+                Where Do the Candidates Stand on Animal Welfare?
+            </h2>
+
+            <p class="election-spotlight-lead">
+                GAAA is asking candidates for the Gwinnett County Board of Commissioners
+                to go beyond campaign talking points and tell voters where they stand on
+                the policies, oversight, funding and leadership decisions that directly
+                affect animals across our county.
+            </p>
+
+            <p class="election-spotlight-highlight">
+                Follow the District 2 and District 4 races, review our Candidate Survey
+                and Animal Welfare Candidate Pledge, and see candidate responses as they
+                become available.
+            </p>
+
+            <div class="election-spotlight-actions">
+
+                <a href="/election-2026/" class="btn">
+                    <i class="fas fa-person-booth" aria-hidden="true"></i>
+                    Visit the 2026 Election Hub
+                </a>
+
+                <a
+                    href="https://form.jotform.com/262203851957158"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                    Preview the Candidate Survey
+                </a>
+
+            </div>
+
+            <div class="election-spotlight-links">
+                <a href="/election-2026/candidate-pledge/">
+                    Read the Candidate Pledge →
+                </a>
+
+                <span style="color:#7a858f;font-size:.92rem;font-weight:700;">
+                    Candidate Results — Coming Soon
+                </span>
+            </div>
+
+        </div>
 
     </div>
 
