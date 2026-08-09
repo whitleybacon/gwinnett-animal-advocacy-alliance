@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2026 Gwinnett County Commissioner Animal Welfare Candidate Survey
-permalink: /2026-candidate-survey/
+permalink: /election-2026/candidate-survey/
 ---
 
 <style>
@@ -11,7 +11,7 @@ permalink: /2026-candidate-survey/
    ========================================================= */
 
 .candidate-survey-page .page-hero {
-    background-image: url('/assets/candidate-survey-hero.webp');
+    background-image: url('/assets/candidate-survey-hero.jpg');
     background-position: center;
 }
 
@@ -340,6 +340,28 @@ permalink: /2026-candidate-survey/
         font-size: 1.8rem;
     }
 }
+
+    .survey-breadcrumb{
+        margin-bottom:18px;
+        font-size:.95rem;
+        font-weight:600;
+        color:rgba(255,255,255,.88);
+    }
+    .survey-breadcrumb a{
+        color:#fff;
+        text-decoration:underline;
+        text-underline-offset:3px;
+    }
+    @media (max-width:768px){
+        .survey-breadcrumb{
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+        .survey-breadcrumb a{
+            color:var(--accent);
+        }
+    }
+
 </style>
 
 <div class="candidate-survey-page">
@@ -348,10 +370,11 @@ permalink: /2026-candidate-survey/
     <section class="page-hero">
         <img
             class="page-hero-mobile-img"
-            src="/assets/candidate-survey-hero-mobile.webp"
+            src="/assets/candidate-survey-hero-mobile.jpg"
             alt="Dog and cat outside a Gwinnett County civic building beside a Vote sign">
 
         <div class="page-hero-content">
+            <div class="survey-breadcrumb"><a href="/election-2026/">2026 Election</a> <span aria-hidden="true">›</span> Candidate Survey</div>
             <span class="hero-eyebrow">2026 Gwinnett County Elections</span>
             <h1>Animal Welfare Candidate Survey</h1>
             <p>Where do the candidates for Gwinnett County Commissioner stand on the animal-welfare issues affecting our community?</p>
