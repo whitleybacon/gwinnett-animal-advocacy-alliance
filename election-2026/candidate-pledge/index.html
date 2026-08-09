@@ -47,6 +47,18 @@ permalink: /election-2026/candidate-pledge/
     max-width: 610px;
   }
 
+  .election-breadcrumb {
+    margin-bottom: 16px;
+    font-size: .95rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.9);
+  }
+
+  .election-breadcrumb a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 
   .pledge-intro {
     max-width: 1050px;
@@ -249,6 +261,19 @@ permalink: /election-2026/candidate-pledge/
     margin-top: 0;
   }
 
+  .pledge-related .results-coming-soon {
+    cursor: default;
+  }
+
+  .pledge-related .results-coming-soon:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .pledge-related .results-coming-soon span {
+    color: #7a858f;
+  }
+
   .pledge-note {
     max-width: 1000px;
     margin: 0 auto 35px;
@@ -266,7 +291,12 @@ permalink: /election-2026/candidate-pledge/
       font-size: 2rem;
     }
 
-    .pledge-kicker {
+    .pledge-kicker,
+    .election-breadcrumb {
+      color: var(--accent);
+    }
+
+    .election-breadcrumb a {
       color: var(--accent);
     }
 
@@ -614,6 +644,7 @@ permalink: /election-2026/candidate-pledge/
     <h2>Learn More Before You Vote</h2>
 
     <div class="home-card-grid three-across-cards">
+
       <a class="home-card" href="/election-2026/candidate-survey/">
         <div class="home-card-icon icon-blue">
           <i class="fas fa-clipboard-list" aria-hidden="true"></i>
@@ -626,6 +657,7 @@ permalink: /election-2026/candidate-pledge/
         <span>View the survey →</span>
       </a>
 
+      <div class="home-card results-coming-soon" aria-label="Survey Results coming soon">
         <div class="home-card-icon icon-green">
           <i class="fas fa-chart-bar" aria-hidden="true"></i>
         </div>
@@ -634,19 +666,8 @@ permalink: /election-2026/candidate-pledge/
           Candidate responses and participation status will be published after
           the response deadline.
         </p>
-        <span>Results coming soon →</span>
-      
-      <!-- <a class="home-card" href="/election-2026/results/">
-        <div class="home-card-icon icon-green">
-          <i class="fas fa-chart-bar" aria-hidden="true"></i>
-        </div>
-        <h3>Survey Results</h3>
-        <p>
-          Candidate responses and participation status will be published after
-          the response deadline.
-        </p>
-        <span>Results coming soon →</span>
-      </a> -->
+        <span>Results coming soon</span>
+      </div>
 
       <a class="home-card" href="/election-2026/">
         <div class="home-card-icon icon-orange">
@@ -659,6 +680,7 @@ permalink: /election-2026/candidate-pledge/
         </p>
         <span>Visit election hub →</span>
       </a>
+
     </div>
   </section>
 
