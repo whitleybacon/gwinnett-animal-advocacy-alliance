@@ -439,15 +439,6 @@ permalink: /election-2026/candidate-survey/
     padding: 18px 12px 14px;
 }
 
-.candidate-survey-page .positions-table thead .district-group-row th {
-    background: var(--accent);
-    color: #fff;
-    padding: 10px 12px;
-    font-size: .86rem;
-    font-weight: 800;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-}
 
 
 .candidate-survey-page .positions-table thead .candidate-photo-row th:first-child {
@@ -462,6 +453,66 @@ permalink: /election-2026/candidate-survey/
     border-radius: 10px;
     margin: 0 auto 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row th {
+    background: #fff;
+    color: var(--accent);
+    padding: 16px 12px 12px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row th:not(.matrix-logo-cell) {
+    text-align: center !important;
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-candidate-name,
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-candidate-meta {
+    width: 100%;
+    text-align: center;
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-no-response,
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-not-delivered,
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-response-received {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row .matrix-logo-cell {
+    background: #fff;
+    padding: 14px 18px;
+    vertical-align: middle;
+}
+
+.candidate-survey-page .matrix-logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.candidate-survey-page .positions-table thead .district-band-row th {
+    background: var(--accent);
+    color: #fff;
+    padding: 11px 12px;
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.candidate-survey-page .positions-table thead .district-band-row .survey-topic-band {
+    text-align: left;
+    padding-left: 16px;
+}
+
+.candidate-survey-page .positions-table thead .candidate-logo-row th,
+.candidate-survey-page .positions-table thead .district-band-row th {
+    border-bottom: 1px solid #e8edf1;
 }
 
 .candidate-survey-page .matrix-candidate-name {
@@ -850,13 +901,13 @@ permalink: /election-2026/candidate-survey/
                 </colgroup>
 
                 <thead>
-                    <tr class="district-group-row">
-                        <th class="survey-topic-head" scope="col" rowspan="2">Survey Topic</th>
-                        <th colspan="2" scope="colgroup">District 2</th>
-                        <th colspan="2" scope="colgroup">District 4</th>
-                    </tr>
-
-                    <tr class="candidate-photo-row">
+                    <tr class="candidate-logo-row">
+                        <th class="matrix-logo-cell" scope="col">
+                            <img
+                                class="matrix-logo"
+                                src="/assets/GAAA Logo_White Inside.png"
+                                alt="Gwinnett Animal Advocacy Alliance">
+                        </th>
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
                             <span class="matrix-candidate-name">Ben Ku</span>
@@ -893,6 +944,12 @@ permalink: /election-2026/candidate-survey/
                                 Response Received
                             </span>
                         </th>
+                    </tr>
+
+                    <tr class="district-band-row">
+                        <th class="survey-topic-band" scope="col">Survey Topics</th>
+                        <th colspan="2" scope="colgroup">District 2</th>
+                        <th colspan="2" scope="colgroup">District 4</th>
                     </tr>
                 </thead>
                 <tbody>
