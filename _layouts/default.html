@@ -1,2389 +1,683 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6N5C4F1NJC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-6N5C4F1NJC');
-    </script>
-        
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>{{ page.title }} | GAAA</title>
-
-    <style>
-        :root {
-            --primary: #4E5964;
-            --accent: #1C4072;
-            --light: #2E8DCC;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Montserrat', -apple-system, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: var(--primary);
-            background-color: var(--white);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .site-header {
-            width: 100%;
-            background: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: relative;
-            z-index: 1000;
-        }
-
-        .site-header nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 80px;
-            width: auto;
-            display: block;
-            margin: 0;
-            border-radius: 0;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--accent);
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 1rem auto;
-            border-radius: 8px;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--light);
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin: 0;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            font-weight: 600;
-            font-size: 1.05rem;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 100%;
-            width: 100%;
-            height: 14px;
-        }
-        
-        .submenu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            list-style: none;
-            padding: 10px 0;
-            margin: 0;
-            min-width: 260px;
-            border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            z-index: 1001;
-        }
-        
-        .dropdown:hover .submenu {
-            display: block;
-        }
-
-        .submenu a {
-            display: block;
-            padding: 12px 18px;
-            color: var(--accent);
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-
-        .submenu a:hover {
-            background: #f3f8f1;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        textarea {
-            min-height: 140px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .email-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white !important;
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            margin: 10px 0;
-        }
-
-        .page-hero {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto 40px;
-            height: 600px;
-            border-radius: 12px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .page-hero-content {
-            max-width: 700px;
-            padding: 70px;
-            color: white;
-        }
-
-        .page-hero-content h1,
-        .page-hero-content p {
-            color: white;
-        }
-
-        .page-hero-content h1 {
-            font-size: 5rem;
-            line-height: 1;
-            margin-bottom: 25px;
-        }
-
-        .page-hero-content p {
-            font-size: 1.25rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .page-hero-mobile-img {
-            display: none;
-        }
-
-        .jump-section {
-            margin: 40px 0 60px;
-            text-align: center;
-        }
-
-        .jump-section h2,
-        .contact-section h2 {
-            color: var(--accent);
-        }
-
-        .jump-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin: 24px auto 0;
-            max-width: 900px;
-        }
-
-        .jump-card,
-        .profile-card,
-        .home-card {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-
-        .jump-card {
-            padding: 20px;
-            text-align: left;
-        }
-
-        .jump-card i {
-            color: #1f5d2b;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .jump-card span {
-            display: block;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .jump-card small {
-            color: var(--primary);
-        }
-
-        .contact-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .contact-section > p,
-        .contact-section > h2 {
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .profile-grid {
-            display: grid;
-            gap: 20px;
-            margin-top: 30px;
-            width: 100%;
-        }
-
-        .profile-grid.five-across {
-            grid-template-columns: repeat(5, minmax(220px, 1fr));
-        }
-
-        .profile-grid.three-across {
-            grid-template-columns: repeat(3, 320px);
-            justify-content: center;
-            gap: 24px;
-        }
-
-        .profile-card {
-            min-width: 0;
-            padding: 16px;
-            text-align: left;
-        }
-
-        .profile-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 8px;
-            margin: 0 0 14px 0;
-        }
-
-        .profile-card h3 {
-            color: var(--accent);
-            margin: 0 0 4px 0;
-            font-size: 1.05rem;
-        }
-
-        .profile-card p {
-            font-size: 0.85rem;
-            margin: 8px 0;
-        }
-
-        .profile-card i {
-            color: #1f5d2b;
-            margin-right: 6px;
-        }
-
-        .profile-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.85rem;
-        }
-
-        .three-column-grid {
-            display: grid;
-            grid-template-columns: 1fr 320px 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .council-table {
-            max-width: 1200px;
-            margin: 30px auto 0;
-            border: 1px solid #e5e5e5;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: left;
-        }
-        
-        .council-table div {
-            display: grid;
-            grid-template-columns: 1.3fr 1fr 1.4fr 1.5fr 1fr;
-        }
-
-        .council-table span,
-        .council-table strong {
-            padding: 12px 16px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .council-table div:first-child {
-            background: #f7f7f7;
-            color: var(--accent);
-        }
-
-        /* Alert Banner */
-
-        .alert-banner {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            padding: 34px 48px;
-            background: #f7fbf6;
-            border: 1px solid rgba(31, 93, 43, 0.35);
-            border-radius: 12px;
-            box-shadow: 0 4px 14px rgba(0,0,0,.06);
-        }
-        
-        .alert-banner-icon {
-            flex: 0 0 86px;
-            width: 86px;
-            height: 86px;
-            border-radius: 50%;
-            background: #1f5d2b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 2.3rem;
-        }
-        
-        .alert-banner-content {
-            flex: 1;
-        }
-        
-        .alert-banner-label,
-        .section-label {
-            display: block;
-            color: #1f5d2b;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        
-        .alert-banner-content h2 {
-            margin: 0 0 10px;
-            color: #1f5d2b;
-            font-size: 2rem;
-        }
-        
-        .alert-banner-content p {
-            margin: 0;
-        }
-        
-        .alert-banner-button {
-            flex-shrink: 0;
-            background: #1f5d2b;
-        }
-
-        /* Home Sections */
-
-        .home-section {
-            max-width: 1400px;
-            margin: 0 auto 50px;
-            padding: 0 20px;
-        }
-        
-        .home-section h2 {
-            text-align: center;
-            color: var(--accent);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .home-section p{
-            font-size:1.08rem;
-            line-height:1.85;
-        }
-        
-        .section-intro {
-            max-width: 1000px;
-            margin: 0 auto 35px;
-            text-align: center;
-        }
-        
-        .home-card-grid {
-            display: grid;
-            gap: 24px;
-        }
-        
-        .home-card-grid.four-across {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        
-        .home-card-grid.three-across-cards {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        .home-card {
-            padding: 28px 24px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .home-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,.08);
-        }
-        
-        .home-card-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 18px;
-            color: #fff;
-            font-size: 1.8rem;
-        }
-        
-        .icon-orange {
-            background: #e88a1f;
-        }
-        
-        .icon-green {
-            background: #2f7d32;
-        }
-        
-        .icon-blue {
-            background: #2E8DCC;
-        }
-        
-        .home-card h3 {
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-        
-        .home-card p {
-            margin: 0 0 20px;
-            font-size: .95rem;
-            line-height: 1.6;
-        }
-        
-        .home-card span {
-            margin-top: auto;
-            color: var(--light);
-            font-weight: 700;
-        }
-
-        /* Fix What's New badges */
-
-        .home-card .status-badge {
-            align-self: flex-start;
-            width: auto;
-            margin: 0 0 18px;
-            padding: 6px 13px;
-            color: #fff;
-            line-height: 1;
-        }
-
-        .whats-new-section .home-card {
-            text-align: left;
-        }
-        
-        .whats-new-section .story-link {
-            margin-top: auto;
-            align-self: flex-start;
-        }
-        
-        .center-button {
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        /* Difference Section */
-
-       .difference-section {
-            max-width: 1400px;
-            margin: 50px auto 0;
-            padding: 40px 40px;
-            border-radius: 12px;
-            background:
-                linear-gradient(
-                    rgba(28,64,114,.72),
-                    rgba(28,64,114,.72)
-                ),
-                url('/assets/difference-bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .difference-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .difference-content h2,
-        .difference-content > p {
-            color: white;
-        }
-        
-        .difference-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 18px;
-        }
-        
-        .difference-content > p {
-            max-width: 1200px;
-            margin: 0 auto 25px;
-        }
-
-        /* Who We Are */
-
-      .who-we-are-section {
-            max-width: 1400px;
-            margin: 80px auto;
-            padding: 70px;
-            background: #f6f9f5;
-            border: 1px solid rgba(31,93,43,.12);
-            border-radius: 12px;
-        }
-
-        .who-we-are-text {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .who-we-are-text h2 {
-            color: var(--accent);
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .who-we-are-text p {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            margin-bottom: 22px;
-        }
-
-        .who-we-are-text p:last-of-type {
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .content-card {
-            max-width: 1400px;
-            margin: 70px auto;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        
-        .about-story-grid {
-            display: grid;
-            grid-template-columns: 1fr 320px 1fr;
-            gap: 36px;
-            align-items: center;
-        }
-        
-        .about-story-grid h2 {
-            color: var(--accent);
-            font-size: 1.7rem;
-            line-height: 1.25;
-            margin-top: 0;
-        }
-        
-        .about-story-grid p {
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-        
-        .about-story-image img {
-            width: 100%;
-            max-width: 320px;
-            margin: 0 auto;
-            border-radius: 12px;
-        }
-        
-        .why-we-exist-section {
-            max-width: 1400px;
-            margin: 70px auto;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        
-        .why-we-exist-bg {
-            background-size: cover;
-            background-position: center;
-            border-radius: 16px;
-            border: 1px solid #d7e2d8;
-            padding: 80px 30px;
-        }
-        
-        .why-we-exist-content {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 50px;
-            border-radius: 14px;
-            background: rgba(255,255,255,.86);
-            text-align: center;
-        }
-        
-        .why-we-exist-content h2 {
-            color: var(--accent);
-            font-size: 3.2rem;
-            line-height: 1.1;
-            margin: 0 0 28px;
-        }
-        
-        .why-we-exist-list p {
-            font-size: 1.15rem;
-            margin: 20px 0;
-            color: #4f5963;
-        }
-        
-        .why-we-exist-list i {
-            color: var(--accent);
-            margin-right: 12px;
-            width: 24px;
-        }
-        
-        .why-we-exist-final {
-            margin-top: 32px;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #1f5d2b;
-        }
-
-
-        /* =========================================================
-           FOOTER EMAIL RIBBON
-           ========================================================= */
-
-        .newsletter-hidden-iframe {
-            display: none;
-        }
-
-        .footer-newsletter-ribbon {
-            border-top: 1px solid #d8e5ee;
-            background: #edf7fd;
-        }
-
-        .footer-newsletter-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 22px 20px;
-            display: grid;
-            grid-template-columns: minmax(0, 1.25fr) minmax(360px, .75fr);
-            gap: 8px 38px;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .footer-newsletter-copy h3 {
-            margin: 0 0 5px;
-            color: var(--accent);
-            font-size: 1.25rem;
-            line-height: 1.3;
-        }
-
-        .footer-newsletter-copy h3 i {
-            margin-right: 8px;
-            color: var(--light);
-        }
-
-        .footer-newsletter-copy p {
-            margin: 0;
-            color: var(--primary);
-            font-size: .88rem;
-            line-height: 1.55;
-        }
-
-        .footer-newsletter-form {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .footer-newsletter-form input {
-            width: 100%;
-            min-height: 44px;
-            margin: 0;
-            padding: 10px 13px;
-            border: 1px solid #b7cddd;
-            border-radius: 6px;
-            background: #fff;
-            font-family: inherit;
-            font-size: .92rem;
-            box-sizing: border-box;
-        }
-
-        .footer-newsletter-form input:focus {
-            border-color: var(--light);
-            outline: 3px solid rgba(46, 141, 204, .15);
-        }
-
-        .footer-newsletter-form button {
-            width: auto;
-            min-height: 44px;
-            padding: 10px 18px;
-            border: 0;
-            border-radius: 6px;
-            background: var(--light);
-            color: #fff;
-            font-family: inherit;
-            font-size: .9rem;
-            font-weight: 700;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .footer-newsletter-form button:hover {
-            background: var(--accent);
-        }
-
-        .footer-newsletter-note {
-            grid-column: 2;
-            margin: 0;
-            color: #697681;
-            font-size: .72rem;
-            line-height: 1.4;
-        }
-
-        .footer-newsletter-success {
-            grid-column: 1 / -1;
-            padding: 7px 0;
-            text-align: center;
-        }
-
-        .footer-newsletter-success h3 {
-            margin: 0 0 5px;
-            color: var(--accent);
-            font-size: 1.25rem;
-        }
-
-        .footer-newsletter-success p {
-            margin: 0;
-            color: var(--primary);
-            font-size: .9rem;
-        }
-
-        .footer-newsletter-success i {
-            margin-right: 6px;
-            color: #2f7d32;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        /* =========================================================
-           NEWSLETTER POPUP
-           ========================================================= */
-        
-        .newsletter-popup {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background: rgba(15, 30, 48, .68);
-        }
-        
-        .newsletter-popup.is-visible {
-            display: flex;
-        }
-        
-        .newsletter-popup-content {
-            position: relative;
-            width: 100%;
-            max-width: 520px;
-            max-height: calc(100vh - 40px);
-            overflow-y: auto;
-            padding: 38px 38px 32px;
-            box-sizing: border-box;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 20px 55px rgba(0, 0, 0, .28);
-            text-align: center;
-        }
-        
-        .newsletter-close {
-            position: absolute;
-            top: 12px;
-            right: 14px;
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            border: 0;
-            background: transparent;
-            color: #68737d;
-            font-family: inherit;
-            font-size: 2rem;
-            line-height: 1;
-            cursor: pointer;
-        }
-        
-        .newsletter-close:hover {
-            color: var(--accent);
-        }
-        
-        .popup-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 68px;
-            height: 68px;
-            margin: 0 auto 18px;
-            border-radius: 50%;
-            background: #edf7fd;
-            color: var(--light);
-            font-size: 1.8rem;
-        }
-        
-        .newsletter-popup-content h2 {
-            margin: 0 0 12px;
-            color: var(--accent);
-            font-size: 2rem;
-            line-height: 1.25;
-        }
-        
-        .newsletter-popup-content > p {
-            margin: 0 0 15px;
-            color: var(--primary);
-            font-size: 1rem;
-            line-height: 1.65;
-        }
-        
-        .newsletter-popup-content ul {
-            width: fit-content;
-            margin: 0 auto 24px;
-            padding-left: 22px;
-            color: var(--primary);
-            text-align: left;
-            line-height: 1.8;
-        }
-        
-        .popup-newsletter-form {
-            margin: 0;
-        }
-        
-        .popup-newsletter-form input[type="email"] {
-            width: 100%;
-            min-height: 50px;
-            margin: 0 0 12px;
-            padding: 12px 14px;
-            box-sizing: border-box;
-            border: 1px solid #b7cddd;
-            border-radius: 7px;
-            background: #fff;
-            color: var(--primary);
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        
-        .popup-newsletter-form input[type="email"]:focus {
-            border-color: var(--light);
-            outline: 3px solid rgba(46, 141, 204, .15);
-        }
-        
-        .popup-newsletter-form button {
-            width: 100%;
-            min-height: 50px;
-            padding: 12px 20px;
-            border: 0;
-            border-radius: 7px;
-            background: var(--accent);
-            color: #fff;
-            font-family: inherit;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        
-        .popup-newsletter-form button:hover {
-            background: var(--light);
-        }
-        
-        .newsletter-dismiss {
-            display: inline-block;
-            margin-top: 16px;
-            color: #68737d;
-            font-size: .9rem;
-            font-weight: 600;
-        }
-        
-        .newsletter-dismiss:hover {
-            color: var(--accent);
-        }
-        
-        .popup-privacy {
-            margin: 13px 0 0 !important;
-            color: #68737d !important;
-            font-size: .78rem !important;
-            line-height: 1.5 !important;
-        }
-        
-        .popup-newsletter-success {
-            padding: 18px 4px 8px;
-            text-align: center;
-        }
-        
-        .popup-newsletter-success i {
-            margin-bottom: 14px;
-            color: #2f7d32;
-            font-size: 3rem;
-        }
-        
-        .popup-newsletter-success h2 {
-            margin-bottom: 12px;
-        }
-        
-        .popup-newsletter-success p {
-            margin: 0;
-            color: var(--primary);
-            line-height: 1.7;
-        }
-        
-        body.newsletter-popup-open {
-            overflow: hidden;
-        }
-
-        /* ==========================================
-           AUDIT DOWNLOAD SECTION
-        ========================================== */
-        
-        .audit-banner {
-        
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .audit-banner .alert-banner-content {
-        
-            flex: 1;
-            text-align: center;
-        }
-        
-        .audit-download-btn {
-        
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        
-            margin-top: 32px;
-            padding: 18px 42px;
-        
-            background: var(--accent);
-            color: #fff;
-        
-            border-radius: 12px;
-        
-            font-size: 1.15rem;
-            font-weight: 700;
-        
-            text-decoration: none;
-        
-            transition: all .25s ease;
-        }
-        
-        .audit-download-btn:hover {
-        
-            background: #16345d;
-        
-            transform: translateY(-2px);
-        
-            box-shadow: 0 8px 20px rgba(0,0,0,.15);
-        }
-        
-        .audit-file-info {
-        
-            margin-top: 12px;
-        
-            font-size: .95rem;
-        
-            color: #666;
-        }
-        
-        .audit-download-btn i {
-        
-            font-size: 1.2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .newsletter-popup {
-                padding: 16px;
-            }
-        
-            .newsletter-popup-content {
-                max-height: calc(100vh - 32px);
-                padding: 34px 22px 26px;
-                border-radius: 12px;
-            }
-        
-            .newsletter-popup-content h2 {
-                font-size: 1.6rem;
-            }
-        
-            .newsletter-popup-content ul {
-                margin-bottom: 20px;
-            }
-        
-            .newsletter-close {
-                width: 36px;
-                height: 36px;
-                font-size: 1.8rem;
-            }
-        }
-        
-        /* Footer */
-
-        .site-footer {
-            background: #fff;
-            border-top: 1px solid #e5e5e5;
-            margin-top: 0px;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 36px 20px;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr 1.4fr 1fr 1.2fr;
-            gap: 34px;
-        }
-        
-        .footer-brand img {
-            width: 160px;
-            margin: 0 0 14px;
-            border-radius: 0;
-        }
-        
-        .footer-brand p,
-        .footer-social p {
-            margin: 0;
-            color: var(--accent);
-            font-size: .95rem;
-            line-height: 1.5;
-        }
-        
-        .footer-column h3 {
-            color: var(--accent);
-            font-size: 1rem;
-            margin: 0 0 12px;
-        }
-        
-        .footer-column a {
-            display: block;
-            color: var(--accent);
-            font-size: .9rem;
-            font-weight: 500;
-            margin-bottom: 7px;
-        }
-        
-        .footer-column a:hover {
-            color: var(--light);
-        }
-        
-        .footer-social-icons {
-            display: flex;
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-        
-        .footer-social-icons a {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-        }
-        
-        .footer-social-icons a:nth-child(2) {
-            background: #f3f8f1;
-            color: #1f5d2b;
-            border: 1px solid rgba(31,93,43,.35);
-        }
-        
-        .footer-bottom {
-            background: var(--accent);
-            color: #fff;
-            padding: 14px 20px;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        
-        .footer-bottom p {
-            margin: 0;
-            font-size: .8rem;
-        }
-        
-        .footer-bottom a {
-            color: #fff;
-            font-size: .8rem;
-            font-weight: 500;
-        }
-        
-        .footer-bottom-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .coming-soon-page {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        
-        .coming-soon-page img {
-            width: 100%;
-            border-radius: 18px;
-            display: block;
-        }
-
-        .volunteer-form-section {
-            max-width: 1200px;
-        }
-        
-        .volunteer-form {
-            margin-top: 30px;
-        }
-        
-        .form-card {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,.06);
-            padding: 30px;
-            margin-bottom: 26px;
-        }
-        
-        .form-card h3 {
-            color: var(--accent);
-            margin-top: 0;
-            margin-bottom: 18px;
-        }
-        
-        .form-grid.two-column {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px 24px;
-        }
-        
-        .form-card label {
-            display: block;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .form-card input,
-        .form-card textarea,
-        .form-card select {
-            margin-bottom: 18px;
-        }
-        
-        .form-card input[type="checkbox"],
-        .form-card input[type="radio"] {
-            width: auto;
-            margin: 0 8px 0 0;
-        }
-        
-        .form-card details {
-            border: 1px solid #e5e5e5;
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin-bottom: 12px;
-            background: #f9fbf8;
-        }
-        
-        .form-card summary {
-            cursor: pointer;
-            color: var(--accent);
-            font-weight: 700;
-        }
-        
-        .form-card details label {
-            color: var(--primary);
-            font-weight: 500;
-            margin: 12px 0 0;
-        }
-        
-        .checkbox-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px 30px;
-            margin-bottom: 20px;
-        }
-        
-        .radio-row,
-        .radio-list {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-        }
-        
-        .radio-list {
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .form-note,
-        .form-privacy {
-            font-size: .95rem;
-        }
-        
-        .form-privacy {
-            text-align: center;
-            color: var(--primary);
-        }
-
-        .issue-chart {
-            max-width: 1200px;
-            margin: 0 auto 3rem;
-        }
-        
-        .issue-chart img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .issue-alert {
-            background: #fff5f5;
-            border-left: 6px solid #c62828;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-        }
-        
-        .issue-alert h2 {
-            color: #c62828;
-            margin-bottom: 1rem;
-        }
-        
-        .issue-alert ul {
-            margin: 0;
-            padding-left: 1.25rem;
-        }
-
-        .medical-timeline{
-            background:#fff;
-            border:1px solid #e5e5e5;
-            border-radius:14px;
-            overflow:hidden;
-            box-shadow:0 4px 12px rgba(0,0,0,.05);
-        }
-        
-        .timeline-item{
-            display:grid;
-            grid-template-columns:260px 1fr;
-            border-bottom:1px solid #ececec;
-        }
-        
-        .timeline-item:last-child{
-            border-bottom:none;
-        }
-        
-        .timeline-left{
-            display:flex;
-            align-items:center;
-            gap:20px;
-            padding:28px;
-            border-right:1px solid #ececec;
-        }
-        
-        .timeline-icon{
-            width:62px;
-            height:62px;
-            border-radius:50%;
-            background:#1C4072;
-            color:#fff;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:1.4rem;
-            flex-shrink:0;
-        }
-        
-        .timeline-date strong{
-            display:block;
-            color:#1C4072;
-            font-size:1.35rem;
-        }
-        
-        .timeline-date span{
-            display:block;
-            margin-top:8px;
-            color:#4E5964;
-            font-style:italic;
-        }
-        
-        .timeline-content{
-            padding:28px 34px;
-        }
-        
-        .timeline-content h3{
-            margin-top:0;
-            color:#1C4072;
-        }
-        
-        .timeline-content hr{
-            border:none;
-            border-top:1px dashed #ddd;
-            margin:18px 0;
-        }
-        
-        .timeline-item.alert{
-            background:#fff8f8;
-            border-left:6px solid #c62828;
-        }
-        
-        .timeline-item.alert .timeline-icon{
-            background:#c62828;
-        }
-        
-        .timeline-item.alert .timeline-date strong,
-        .timeline-item.alert .timeline-content h3{
-            color:#c62828;
-        }
-
-   .case-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-            gap:20px;
-            margin-top:30px;
-        }
-        
-        .case-card-small{
-            display:flex;
-            gap:18px;
-            align-items:center;
-            background:#fff;
-            border:1px solid #e5e5e5;
-            border-radius:14px;
-            padding:16px;
-            text-decoration:none;
-            color:inherit;
-            transition:.25s;
-            box-shadow:0 4px 14px rgba(0,0,0,.05);
-        }
-        
-        .case-card-small:hover{
-            transform:translateY(-4px);
-            box-shadow:0 10px 24px rgba(0,0,0,.12);
-        }
-        
-        .case-card-small img{
-            width:95px;
-            height:95px;
-            object-fit:cover;
-            border-radius:10px;
-            flex-shrink:0;
-        }
-        
-        .case-card-small h3{
-            margin:0 0 8px;
-            color:#1C4072;
-            font-size:1.2rem;
-        }
-        
-        .case-card-small p{
-            margin:0 0 10px;
-            font-size:.95rem;
-            color:#4E5964;
-            line-height:1.5;
-        }
-        
-        .case-card-small span{
-            color:#2E8DCC;
-            font-weight:600;
-        }
-
-        .home-card img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            object-position: center;
-            margin: 0 0 18px;
-            border-radius: 10px;
-        }
-
-      .status-badge-wrapper {
-            text-align: center;
-            margin-bottom: 0px;
-        }
-        
-        .status-badge {
-            display: inline-block;
-            min-width: 180px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            color: #fff;
-        }
-        
-        .badge-blue{
-            background:#2E8DCC;
-        }
-        
-        .badge-green{
-            background:#2D8A4B;
-        }
-        
-        .badge-orange{
-            background:#D9822B;
-        }
-        
-        .badge-red{
-            background:#C0392B;
-        }
-        
-        .badge-purple{
-            background:#6C4AB6;
-        }
-        
-        @media (max-width: 768px) {
-
-            .footer-newsletter-inner {
-                grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 22px 20px;
-            }
-
-            .footer-newsletter-copy {
-                text-align: center;
-            }
-
-            .footer-newsletter-form {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-newsletter-form button {
-                width: 100%;
-            }
-
-            .footer-newsletter-note {
-                grid-column: 1;
-                text-align: center;
-            }
-
-            .site-header nav {
-                padding: 0.75rem 1rem;
-            }
-
-            .home-card img {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-            }
-
-            .btn {
-                display: block;
-                width: fit-content;
-                max-width: calc(100% - 32px);
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-                white-space: normal;
-                line-height: 1.3;
-            }
-
-            .logo img {
-                height: 60px;
-            }
-
-            .menu-toggle {
-                display: block;
-                width: auto;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                padding: 20px 28px;
-                box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-                box-sizing: border-box;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                width: 100%;
-                border-bottom: 1px solid #eaeaea;
-            }
-
-            .nav-links a {
-                display: block;
-                font-size: 1.25rem;
-                padding: 16px 0;
-                color: var(--accent);
-            }
-
-            .submenu {
-                display: block;
-                position: static;
-                box-shadow: none;
-                border-radius: 0;
-                min-width: auto;
-                padding: 0 0 10px 18px;
-            }
-
-            .submenu a {
-                font-size: 1rem;
-                padding: 8px 0;
-                color: var(--light);
-            }
-
-            .container {
-                padding: 1rem;
-                max-width: 100%;
-            }
-
-            h1, h2 {
-                font-size: 1.6rem;
-                line-height: 1.3;
-            }
-
-            p {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-
-            textarea {
-                min-height: 120px;
-                font-size: 0.95rem;
-            }
-
-            .btn,
-            button {
-                width: 100%;
-                font-size: 1rem;
-                padding: 14px;
-            }
-
-            .page-hero {
-                background-image: none !important;
-                height: auto;
-                width: 100%;
-                margin-left: 0;
-                display: block;
-                margin-bottom: 20px;
-            }
-
-            .page-hero-mobile-img {
-                display: block;
-                width: 100%;
-                height: auto;
-                margin-bottom: 20px;
-                border-radius: 8px;
-            }
-
-            .page-hero-content {
-                background: white;
-                color: var(--primary);
-                padding: 0;
-                max-width: 100%;
-            }
-
-            .page-hero-content h1,
-            .page-hero-content p {
-                color: var(--primary);
-            }
-
-            .page-hero-content h1 {
-                font-size: 2rem;
-                line-height: 1.2;
-            }
-
-            .page-hero-content p {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-
-            .page-hero .btn {
-                width: auto;
-                display: inline-block;
-            }
-
-            .jump-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-grid.five-across,
-            .profile-grid.three-across {
-                display: flex;
-                overflow-x: auto;
-                gap: 18px;
-                padding: 10px 16px 20px;
-                scroll-snap-type: x mandatory;
-            }
-
-            .profile-card {
-                flex: 0 0 82%;
-                scroll-snap-align: center;
-            }
-
-            .profile-card img {
-                aspect-ratio: 1 / 1;
-                height: auto;
-                object-fit: cover;
-            }
-
-            .three-column-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        
-            .three-column-grid img {
-                max-width: 280px;
-                margin: 0 auto;
-            }
-            .contact-section {
-                padding: 40px 0;
-            }
-
-            .council-table {
-                overflow-x: auto;
-            }
-            
-            .council-table div {
-                min-width: 850px;
-            }
-
-            .alert-banner {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 28px;
-            }
-        
-            .alert-banner-icon {
-                width: 68px;
-                height: 68px;
-                flex-basis: 68px;
-                font-size: 1.8rem;
-            }
-        
-            .alert-banner-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .home-section {
-                max-width: 100%;
-                margin: 0 auto 36px;
-                padding: 0;
-            }
-            
-            .home-section h2 {
-                font-size: 1.7rem;
-                line-height: 1.2;
-                margin-bottom: 12px;
-            }
-            
-            .section-intro {
-                font-size: .95rem;
-                margin: 0 auto 24px;
-                padding: 0 4px;
-            }
-            
-            .home-card-grid,
-            .home-card-grid.four-across,
-            .home-card-grid.three-across-cards {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            
-            .home-card {
-                padding: 24px 20px;
-            }
-            
-            .home-card-icon {
-                width: 58px;
-                height: 58px;
-                font-size: 1.5rem;
-                margin-bottom: 14px;
-            }
-            
-            .home-card h3 {
-                font-size: 1.1rem;
-            }
-            
-            .home-card p {
-                font-size: .95rem;
-            }
-            
-            .center-button .btn {
-                width: auto;
-                display: inline-block;
-            }
-
-            .difference-section {
-                margin-top: 35px;
-                padding: 36px 16px;
-                background-position: center right;
-            }
-        
-            .difference-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .who-we-are-section {
-                margin: 50px auto;
-                padding: 32px 24px;
-            }
-
-            .content-card,
-            .why-we-exist-section {
-                margin: 42px auto;
-                padding: 0;
-            }
-        
-            .about-story-grid {
-                grid-template-columns: 1fr 360px 1fr;
-                gap: 28px;
-                text-align: left;
-            }
-        
-            .about-story-grid h2 {
-                font-size: 1.6rem;
-            }
-        
-            .about-story-image {
-                order: -1;
-            }
-        
-            .about-story-image img {
-                max-width: 260px;
-            }
-        
-            .why-we-exist-bg {
-                padding: 90px 40px;
-                border-radius: 12px;
-            }
-        
-            .why-we-exist-content {
-                padding: 32px 22px;
-            }
-        
-            .why-we-exist-content h2 {
-                font-size: 2.2rem;
-            }
-        
-            .why-we-exist-list p {
-                font-size: 1rem;
-                text-align: left;
-                color:#4E5964;
-            }
-
-             .content-card {
-                margin: 32px auto;
-                padding: 0 20px;
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-        
-            .about-story-grid {
-                display: flex !important;
-                flex-direction: column;
-                gap: 26px;
-                text-align: left;
-            }
-        
-            .about-story-grid > div {
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-        
-            .about-story-image {
-                order: 2;
-                text-align: center;
-            }
-        
-            .about-story-grid > div:first-child {
-                order: 1;
-            }
-        
-            .about-story-grid > div:last-child {
-                order: 3;
-            }
-        
-            .about-story-image img {
-                display: block;
-                width: 100%;
-                max-width: 280px;
-                margin: 0 auto;
-                border-radius: 12px;
-            }
-        
-            .about-story-grid h2 {
-                font-size: 1.8rem;
-                line-height: 1.25;
-                margin: 0 0 14px;
-            }
-        
-            .about-story-grid p {
-                font-size: 1rem;
-                line-height: 1.7;
-                margin-bottom: 16px;
-            }
-
-            .form-card {
-                padding: 22px;
-            }
-        
-            .form-grid.two-column,
-            .checkbox-grid {
-                grid-template-columns: 1fr;
-            }
-        
-            .radio-row {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .site-footer {
-                margin-top: 40px;
-            }
-        
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 24px;
-                padding: 32px 20px;
-            }
-        
-            .footer-brand img {
-                width: 170px;
-            }
-        
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-        
-            .footer-bottom-links {
-                gap: 24px;
-            }
-
-             .timeline-item{
-                grid-template-columns:1fr;
-            }
-        
-            .timeline-left{
-                border-right:none;
-                border-bottom:1px solid #ececec;
-            }
-
-    </style> 
-</head>
-
-<body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v25.0&appId=APP_ID"></script>
-
-    {% include navigation.html %}
-
-    <div class="container">
-        {{ content }}
+---
+layout: default
+title: 2026 Election
+permalink: /election-2026/
+---
+
+<style>
+  .election-page {
+    --election-gold: #d3a13a;
+    --election-soft: #f7fbff;
+    --election-green: #2f7d32;
+    --election-orange: #e88a1f;
+  }
+
+  .election-page .page-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(12,48,91,.98) 0%,
+        rgba(18,57,104,.97) 28%,
+        rgba(28,64,114,.80) 42%,
+        rgba(28,64,114,.28) 57%,
+        rgba(28,64,114,0) 72%
+      ),
+      url('/assets/election-2026-hero.png');
+    background-position: center;
+  }
+
+  .election-page .page-hero-content {
+    max-width: 650px;
+  }
+
+  .election-page .page-hero-content h1 {
+    font-size: 4.6rem;
+    margin-bottom: 22px;
+  }
+
+  .election-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .election-intro {
+    max-width: 1080px;
+    margin: 55px auto 45px;
+    text-align: center;
+  }
+
+  .election-intro h2 {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-size: 2.6rem;
+  }
+
+  .election-intro p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .election-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 65px;
+  }
+
+  .election-resource-grid .home-card {
+    text-align: left;
+  }
+
+  .election-resource-grid .results-coming-soon {
+    cursor: default;
+  }
+
+  .election-resource-grid .results-coming-soon:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
+
+  .election-resource-grid .results-coming-soon span {
+    color: #7a858f;
+  }
+
+
+  /* Candidate participation / results */
+  .candidate-results-summary{max-width:1200px;margin:0 auto 65px}
+  .candidate-results-header{max-width:950px;margin:0 auto 28px;text-align:center}
+  .candidate-results-header h2{margin:0 0 12px;color:var(--accent);font-size:2.35rem}
+  .candidate-results-header p{margin:0 auto;line-height:1.75}
+  .results-count{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px auto 30px}
+  .results-count span{display:inline-flex;align-items:center;justify-content:center;padding:9px 15px;border-radius:999px;font-size:.86rem;font-weight:700}
+  .count-response{background:#edf7ee;color:#246b2a;border:1px solid #b9dcbc}
+  .count-no-response{background:#fff1f1;color:#a12626;border:1px solid #edc0c0}
+  .count-not-delivered{background:#f2f4f6;color:#616c76;border:1px solid #d7dde2}
+  .candidate-results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .candidate-results-race{overflow:hidden;border:1px solid #dfe6eb;border-radius:14px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .candidate-results-race h3{margin:0;padding:15px 20px;background:#f5f8fb;border-bottom:1px solid #e3e8ec;color:var(--accent);font-size:1.2rem}
+  .candidate-result-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px 20px;border-bottom:1px solid #edf0f2}
+  .candidate-result-row:last-child{border-bottom:0}
+  .candidate-result-name{color:var(--accent);font-weight:700}
+  .candidate-result-name small{display:block;margin-top:2px;color:#6b7680;font-size:.78rem;font-weight:600}
+  .result-status{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;font-size:.76rem;font-weight:800;white-space:nowrap}
+  .result-status.response{background:#edf7ee;color:#246b2a}
+  .result-status.no-response{background:#fff1f1;color:#a12626}
+  .result-status.not-delivered{background:#f2f4f6;color:#616c76}
+  .results-method{margin:24px 0 0;padding:18px 20px;background:#f7fbff;border-left:4px solid var(--light);border-radius:8px;font-size:.9rem;line-height:1.65}
+  .results-method strong{color:var(--accent)}
+
+  .candidate-section {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+  }
+
+  .candidate-section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .candidate-section-header .section-label {
+    text-align: center;
+  }
+
+  .candidate-section-header h2 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 2.35rem;
+  }
+
+  .candidate-section-header p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+
+  .candidate-race {
+    margin-top: 42px;
+  }
+
+  .candidate-race-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #edf1f4;
+  }
+
+  .candidate-race-title span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .candidate-race-title h3 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 1.55rem;
+  }
+
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 26px;
+  }
+
+  .candidate-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  }
+
+  .candidate-photo {
+    width: 190px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  .candidate-card h4 {
+    margin: 0 0 3px;
+    color: var(--accent);
+    font-size: 1.45rem;
+  }
+
+  .candidate-party {
+    margin: 0 0 16px;
+    color: #66717c;
+    font-size: .92rem;
+    font-weight: 600;
+  }
+
+  .candidate-status {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #ececec;
+  }
+
+  .candidate-status-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 8px 0;
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
+  .candidate-status-row i {
+    width: 18px;
+    margin-top: 3px;
+    color: var(--light);
+  }
+
+  .candidate-status-row.warning i {
+    color: var(--election-orange);
+  }
+
+  .candidate-status-row strong {
+    color: var(--accent);
+  }
+
+  .candidate-note {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    background: #fff8ed;
+    border-left: 4px solid var(--election-orange);
+    border-radius: 6px;
+    font-size: .85rem;
+    line-height: 1.55;
+  }
+
+  .candidate-actions {
+    margin-top: 16px;
+  }
+
+  .candidate-actions a {
+    display: inline-block;
+    font-size: .9rem;
+  }
+
+  .survey-callout {
+    max-width: 1200px;
+    margin: 65px auto;
+  }
+
+  .survey-callout .alert-banner {
+    background: #edf7fd;
+    border-color: rgba(46,141,204,.35);
+  }
+
+  .survey-callout .alert-banner-icon,
+  .survey-callout .alert-banner-button {
+    background: var(--accent);
+  }
+
+  .survey-callout .alert-banner-label,
+  .survey-callout .alert-banner-content h2 {
+    color: var(--accent);
+  }
+
+  .accountability-section {
+    max-width: 1100px;
+    margin: 65px auto;
+    padding: 42px 44px;
+    background: #f7fbf6;
+    border: 1px solid rgba(31,93,43,.2);
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .accountability-section h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2.2rem;
+  }
+
+  .accountability-section p {
+    line-height: 1.8;
+  }
+
+  .election-note {
+    max-width: 1050px;
+    margin: 0 auto 40px;
+    color: #6b7680;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .candidate-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .election-page .page-hero-mobile-img {
+      content: url('/assets/election-2026-hero-mobile.png');
+    }
+
+    .election-page .page-hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .election-kicker {
+      color: var(--accent);
+    }
+
+    .election-intro {
+      margin: 35px auto 30px;
+    }
+
+    .election-intro h2,
+    .candidate-section-header h2,
+    .accountability-section h2 {
+      font-size: 1.7rem;
+    }
+
+    .election-resource-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .candidate-results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .candidate-result-row {
+      grid-template-columns: 1fr;
+      gap: 9px;
+      align-items: start;
+    }
+
+    .result-status {
+      width: fit-content;
+      white-space: normal;
+    }
+
+    .candidate-card {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .candidate-photo {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 4px;
+    }
+
+    .candidate-card-content {
+      text-align: left;
+    }
+
+    .survey-callout,
+    .accountability-section {
+      margin: 45px auto;
+    }
+
+    .accountability-section {
+      padding: 28px 22px;
+    }
+  }
+</style>
+
+<div class="election-page">
+
+  <section class="page-hero">
+    <img
+      class="page-hero-mobile-img"
+      src="/assets/election-2026-hero-mobile.png"
+      alt="Dog and cat with voting signs and American flag">
+
+    <div class="page-hero-content">
+      <span class="election-kicker">Gwinnett County • 2026 Election</span>
+      <h1>Animal Welfare &amp; the 2026 Election</h1>
+      <p>
+        Learn where candidates for the Gwinnett County Board of Commissioners
+        stand on the policies, oversight and funding decisions that affect
+        animals throughout our community.
+      </p>
+    </div>
+  </section>
+
+  <section class="election-intro">
+      <h2>Your 2026 Animal Welfare Election Guide</h2>
+  
+      <p>
+          The 2026 election will determine who represents Districts 2 and 4
+          on the Gwinnett County Board of Commissioners.
+      </p>
+  
+      <p>
+          GAAA created this Election Hub to bring our election-related resources
+          together in one place. The August 21 Candidate Survey response deadline has
+          now passed, and candidate responses, nonresponses and participation are being
+          documented here so Gwinnett voters can see who chose to put their animal-welfare
+          positions on the public record.
+      </p>
+  
+      <p>
+          <strong>
+              Our goal is simple: give voters clear, accessible information before
+              they cast their ballots.
+          </strong>
+      </p>
+  </section>
+
+  <section class="election-resource-grid">
+
+    <a class="home-card" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+      <div class="home-card-icon icon-blue">
+        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Survey</h3>
+      <p>
+        Review the same public preview of the detailed animal-welfare survey
+        provided to candidates, including background information, questions and
+        supporting references.
+      </p>
+      <span>Preview the full survey →</span>
+    </a>
+
+    <a class="home-card" href="/election-2026/candidate-pledge/">
+      <div class="home-card-icon icon-orange">
+        <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Pledge</h3>
+      <p>
+        Read the commitments candidates are being asked to make on transparency,
+        oversight, humane care, prevention and measurable action.
+      </p>
+      <span>Read the pledge →</span>
+    </a>
+
+    <a class="home-card" href="#candidate-results">
+      <div class="home-card-icon icon-green">
+        <i class="fas fa-chart-bar" aria-hidden="true"></i>
+      </div>
+      <h3>Candidate Results</h3>
+      <p>
+        The August 21 deadline has passed. See which candidates submitted the
+        Candidate Survey, which did not respond, and which candidate GAAA was
+        unable to reach before the deadline.
+      </p>
+      <span>View candidate participation →</span>
+    </a>
+
+  </section>
+
+
+  <section class="candidate-results-summary" id="candidate-results">
+    <div class="candidate-results-header">
+      <span class="section-label">2026 Candidate Participation</span>
+      <h2>The Response Deadline Has Passed</h2>
+      <p>
+        Candidates were given the same survey, supporting information, deadline
+        and opportunity to explain their positions. Participation itself is part
+        of the public record.
+      </p>
+      <div class="results-count">
+        <span class="count-response">1 Response Received</span>
+        <span class="count-no-response">2 No Responses</span>
+        <span class="count-not-delivered">1 Not Delivered</span>
+      </div>
     </div>
 
-    {% include footer.html %}
+    <div class="candidate-results-grid">
+      <div class="candidate-results-race">
+        <h3>District 2</h3>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Ben Ku<small>Incumbent</small></div>
+          <span class="result-status no-response"><i class="fas fa-circle-xmark"></i>No Response</span>
+        </div>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Rodolfo Ochoa</div>
+          <span class="result-status not-delivered"><i class="fas fa-circle-minus"></i>Not Delivered</span>
+        </div>
+      </div>
 
+      <div class="candidate-results-race">
+        <h3>District 4</h3>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Matthew Holtkamp<small>Incumbent</small></div>
+          <span class="result-status no-response"><i class="fas fa-circle-xmark"></i>No Response</span>
+        </div>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Benjamin Culberson</div>
+          <span class="result-status response"><i class="fas fa-circle-check"></i>Response Received</span>
+        </div>
+      </div>
+    </div>
 
-    <!-- =========================================================
-         NEWSLETTER POPUP
-    ========================================================== -->
+    <div class="results-method">
+      <strong>No Response</strong> means the candidate received the Candidate Survey
+      and supporting materials but did not submit a response by the August 21, 2026
+      deadline. <strong>Not Delivered</strong> means GAAA was unable to locate verified
+      campaign contact information before the deadline and therefore could not provide
+      the candidate the survey. Rodolfo Ochoa is not classified as a candidate who
+      failed to respond.
+    </div>
+  </section>
 
-    <div
-        id="newsletter-popup"
-        class="newsletter-popup"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="newsletter-popup-title"
-        aria-hidden="true">
+  <section class="candidate-section">
+    <div class="candidate-section-header">
+      <span class="section-label">Candidates on the Ballot</span>
+      <h2>Gwinnett County Board of Commissioners</h2>
+      <p>
+        GAAA is providing the same Candidate Survey and Animal Welfare Candidate
+        Pledge to candidates in the District 2 and District 4 races whenever
+        verified campaign contact information is available.
+      </p>
+    </div>
 
-        <div class="newsletter-popup-content">
+    <div class="candidate-race">
+      <div class="candidate-race-title">
+        <span>2</span>
+        <h3>District 2</h3>
+      </div>
 
-            <button
-                type="button"
-                id="newsletter-close"
-                class="newsletter-close"
-                aria-label="Close email signup">
-                &times;
-            </button>
+      <div class="candidate-grid">
 
-            <div id="popup-newsletter-wrapper">
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
+          <div class="candidate-card-content">
+            <h4>Ben Ku</h4>
+           <p class="candidate-party">District 2 Candidate • Incumbent</p>
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-                <i
-                    class="fas fa-envelope-open-text popup-icon"
-                    aria-hidden="true">
-                </i>
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/rodolfo-ochoa.jpg" alt="Rodolfo Ochoa">
+          <div class="candidate-card-content">
+            <h4>Rodolfo Ochoa</h4>
+            <p class="candidate-party">District 2 Candidate</p>
 
-                <h2 id="newsletter-popup-title">
-                    Stay Connected with GAAA
-                </h2>
-
-                <p>
-                    Receive occasional updates about:
-                </p>
-
-                <ul>
-                    <li>Public meetings</li>
-                    <li>Advocacy alerts</li>
-                    <li>Volunteer opportunities</li>
-                    <li>Community events</li>
-                </ul>
-
-                <iframe
-                    name="popup_newsletter_iframe"
-                    id="popup_newsletter_iframe"
-                    style="display: none;"
-                    title="Popup email signup submission">
-                </iframe>
-
-                <form
-                    id="popup-newsletter-form"
-                    class="popup-newsletter-form"
-                    action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
-                    method="POST"
-                    target="popup_newsletter_iframe">
-
-                    <input
-                        type="hidden"
-                        name="entry.1692632741"
-                        value="Website Popup Subscriber">
-
-                    <input
-                        type="hidden"
-                        name="entry.1779736562"
-                        value="I agree">
-
-                    <label class="sr-only" for="popup-newsletter-email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="popup-newsletter-email"
-                        name="entry.1773177730"
-                        placeholder="Enter your email address"
-                        autocomplete="email"
-                        required>
-
-                    <button type="submit">
-                        Stay Connected
-                    </button>
-
-                </form>
-
-                <p class="popup-privacy">
-                    We respect your inbox. You may unsubscribe at any time.
-                </p>
-
-                <a
-                    href="#"
-                    id="newsletter-dismiss"
-                    class="newsletter-dismiss">
-                    No thanks
-                </a>
-
+            <div class="candidate-status">
+              <div class="candidate-status-row warning">
+                <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Not sent — verified campaign contact information not located</div>
+              </div>
+              <div class="candidate-status-row warning">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Not yet delivered</div>
+              </div>
             </div>
 
-        </div>
+            <p class="candidate-note">
+              GAAA has not yet been able to locate verified public campaign
+              contact information for this candidate. If verified contact
+              information becomes available, the candidate will be provided the
+              same survey and opportunity to participate.
+            </p>
+          </div>
+        </article>
 
+      </div>
     </div>
 
-
-    <script>
-        /* =========================================================
-           MOBILE NAVIGATION
-           ========================================================= */
-
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-        }
-
-
-        /* =========================================================
-           SHARED NEWSLETTER STORAGE
-           ========================================================= */
-
-        const newsletterStorageKeys = {
-            subscribed: 'gaaaNewsletterSubscribed',
-            dismissedAt: 'gaaaNewsletterDismissedAt'
-        };
-
-        function getNewsletterStorage(key) {
-            try {
-                return localStorage.getItem(key);
-            } catch (error) {
-                return null;
-            }
-        }
-
-        function setNewsletterStorage(key, value) {
-            try {
-                localStorage.setItem(key, value);
-            } catch (error) {
-                /* Continue normally if storage is unavailable. */
-            }
-        }
-
-
-        /* =========================================================
-           FOOTER EMAIL SIGNUP
-           ========================================================= */
-
-        let newsletterSubmitted = false;
-
-        const newsletterIframe =
-            document.getElementById('newsletter_iframe');
-
-        const footerNewsletterForm =
-            document.querySelector('.footer-newsletter-form');
-
-        if (footerNewsletterForm) {
-            footerNewsletterForm.addEventListener('submit', function () {
-                newsletterSubmitted = true;
-            });
-        }
-
-        if (newsletterIframe) {
-            newsletterIframe.addEventListener('load', function () {
-                if (!newsletterSubmitted) {
-                    return;
-                }
-
-                newsletterSubmitted = false;
-
-                setNewsletterStorage(
-                    newsletterStorageKeys.subscribed,
-                    'true'
-                );
-
-                const newsletterWrapper =
-                    document.getElementById('newsletter-wrapper');
-
-                if (newsletterWrapper) {
-                    newsletterWrapper.innerHTML = `
-                        <div class="footer-newsletter-success">
-                            <h3>
-                                <i
-                                    class="fas fa-check-circle"
-                                    aria-hidden="true">
-                                </i>
-                                Thank You for Staying Connected!
-                            </h3>
-
-                            <p>
-                                You're now subscribed to GAAA updates about
-                                meetings, advocacy efforts, volunteer
-                                opportunities, and important animal welfare
-                                news.
-                            </p>
-                        </div>
-                    `;
-                }
-
-                closeNewsletterPopup(false);
-            });
-        }
-
-
-        /* =========================================================
-           NEWSLETTER POPUP
-           ========================================================= */
-
-        const newsletterPopup =
-            document.getElementById('newsletter-popup');
-
-        const newsletterClose =
-            document.getElementById('newsletter-close');
-
-        const newsletterDismiss =
-            document.getElementById('newsletter-dismiss');
-
-        const popupNewsletterForm =
-            document.getElementById('popup-newsletter-form');
-
-        const popupNewsletterIframe =
-            document.getElementById('popup_newsletter_iframe');
-
-        const popupNewsletterWrapper =
-            document.getElementById('popup-newsletter-wrapper');
-
-        let popupNewsletterSubmitted = false;
-
-        const sevenDaysInMilliseconds =
-            7 * 24 * 60 * 60 * 1000;
-
-
-        function openNewsletterPopup() {
-            if (!newsletterPopup) {
-                return;
-            }
-
-            newsletterPopup.classList.add('is-visible');
-            newsletterPopup.setAttribute('aria-hidden', 'false');
-            document.body.classList.add('newsletter-popup-open');
-
-            const popupEmail =
-                document.getElementById('popup-newsletter-email');
-
-            if (popupEmail) {
-                window.setTimeout(function () {
-                    popupEmail.focus();
-                }, 100);
-            }
-        }
-
-
-        function closeNewsletterPopup(rememberDismissal) {
-            if (!newsletterPopup) {
-                return;
-            }
-
-            newsletterPopup.classList.remove('is-visible');
-            newsletterPopup.setAttribute('aria-hidden', 'true');
-            document.body.classList.remove('newsletter-popup-open');
-
-            if (rememberDismissal) {
-                setNewsletterStorage(
-                    newsletterStorageKeys.dismissedAt,
-                    Date.now().toString()
-                );
-            }
-        }
-
-
-        function shouldShowNewsletterPopup() {
-            const alreadySubscribed =
-                getNewsletterStorage(
-                    newsletterStorageKeys.subscribed
-                );
-
-            if (alreadySubscribed === 'true') {
-                return false;
-            }
-
-            const dismissedAtValue =
-                getNewsletterStorage(
-                    newsletterStorageKeys.dismissedAt
-                );
-
-            if (!dismissedAtValue) {
-                return true;
-            }
-
-            const dismissedAt =
-                Number(dismissedAtValue);
-
-            if (!Number.isFinite(dismissedAt)) {
-                return true;
-            }
-
-            return (
-                Date.now() - dismissedAt
-                >= sevenDaysInMilliseconds
-            );
-        }
-
-
-        if (newsletterClose) {
-            newsletterClose.addEventListener('click', function () {
-                closeNewsletterPopup(true);
-            });
-        }
-
-
-        if (newsletterDismiss) {
-            newsletterDismiss.addEventListener('click', function (event) {
-                event.preventDefault();
-                closeNewsletterPopup(true);
-            });
-        }
-
-
-        if (newsletterPopup) {
-            newsletterPopup.addEventListener('click', function (event) {
-                if (event.target === newsletterPopup) {
-                    closeNewsletterPopup(true);
-                }
-            });
-        }
-
-
-        document.addEventListener('keydown', function (event) {
-            if (
-                event.key === 'Escape'
-                && newsletterPopup
-                && newsletterPopup.classList.contains('is-visible')
-            ) {
-                closeNewsletterPopup(true);
-            }
-        });
-
-
-        if (popupNewsletterForm) {
-            popupNewsletterForm.addEventListener('submit', function () {
-                popupNewsletterSubmitted = true;
-            });
-        }
-
-
-        if (popupNewsletterIframe) {
-            popupNewsletterIframe.addEventListener('load', function () {
-                if (!popupNewsletterSubmitted) {
-                    return;
-                }
-
-                popupNewsletterSubmitted = false;
-
-                setNewsletterStorage(
-                    newsletterStorageKeys.subscribed,
-                    'true'
-                );
-
-                if (popupNewsletterWrapper) {
-                    popupNewsletterWrapper.innerHTML = `
-                        <div class="popup-newsletter-success">
-
-                            <i
-                                class="fas fa-check-circle"
-                                aria-hidden="true">
-                            </i>
-
-                            <h2>
-                                Thank You for Staying Connected!
-                            </h2>
-
-                            <p>
-                                You're now subscribed to GAAA updates about
-                                meetings, advocacy efforts, volunteer
-                                opportunities, community events, and important
-                                animal welfare news.
-                            </p>
-
-                        </div>
-                    `;
-                }
-
-                window.setTimeout(function () {
-                    closeNewsletterPopup(false);
-                }, 2500);
-            });
-        }
-
-
-        if (newsletterPopup && shouldShowNewsletterPopup()) {
-            window.setTimeout(function () {
-                if (shouldShowNewsletterPopup()) {
-                    openNewsletterPopup();
-                }
-            }, 10000);
-        }
-    </script>
-
-</body>
-</html>
+    <div class="candidate-race">
+      <div class="candidate-race-title">
+        <span>4</span>
+        <h3>District 4</h3>
+      </div>
+
+      <div class="candidate-grid">
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/matthew-holtkamp.jpg" alt="Matthew Holtkamp">
+          <div class="candidate-card-content">
+            <h4>Matthew Holtkamp</h4>
+            <p class="candidate-party">District 4 Candidate • Incumbent</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="candidate-card">
+          <img class="candidate-photo" src="/assets/ben-culberson.jpg" alt="Benjamin Culberson">
+          <div class="candidate-card-content">
+            <h4>Benjamin Culberson</h4>
+            <p class="candidate-party">District 4 Candidate</p>
+
+            <div class="candidate-status">
+              <div class="candidate-status-row">
+                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                <div><strong>Candidate Survey:</strong> Survey sent</div>
+              </div>
+              <div class="candidate-status-row">
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+                <div><strong>Candidate Pledge:</strong> Pending</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="survey-callout">
+    <div class="alert-banner">
+      <div class="alert-banner-icon">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+      </div>
+
+      <div class="alert-banner-content">
+        <span class="alert-banner-label">See What Candidates Are Being Asked</span>
+        <h2>Review the Full Candidate Survey</h2>
+        <p>
+          The public preview includes the same section background information,
+          questions and supporting reference links candidates can review before
+          submitting their final responses.
+        </p>
+      </div>
+
+      <a
+        class="btn alert-banner-button"
+        href="https://form.jotform.com/262203851957158"
+        target="_blank"
+        rel="noopener noreferrer">
+        Preview Survey
+      </a>
+    </div>
+  </section>
+
+  <section class="accountability-section">
+    <span class="section-label">After the Election</span>
+    <h2>A Public Record of What Candidates Said</h2>
+    <p>
+      The purpose of this project is not only to help residents make informed
+      decisions before Election Day. Candidate responses and signed pledges can
+      also create a public record that residents can revisit after the election
+      to evaluate whether stated positions and commitments translate into action.
+    </p>
+  </section>
+
+  <p class="election-note">
+    Participation in GAAA's Candidate Survey or signing the Animal Welfare
+    Candidate Pledge does not constitute an endorsement by Gwinnett Animal
+    Advocacy Alliance. Candidate responses will be presented without changing
+    the substance of their answers.
+  </p>
+
+</div>
