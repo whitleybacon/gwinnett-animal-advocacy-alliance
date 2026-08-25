@@ -87,6 +87,31 @@ permalink: /election-2026/
     color: #7a858f;
   }
 
+
+  /* Candidate participation / results */
+  .candidate-results-summary{max-width:1200px;margin:0 auto 65px}
+  .candidate-results-header{max-width:950px;margin:0 auto 28px;text-align:center}
+  .candidate-results-header h2{margin:0 0 12px;color:var(--accent);font-size:2.35rem}
+  .candidate-results-header p{margin:0 auto;line-height:1.75}
+  .results-count{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px auto 30px}
+  .results-count span{display:inline-flex;align-items:center;justify-content:center;padding:9px 15px;border-radius:999px;font-size:.86rem;font-weight:700}
+  .count-response{background:#edf7ee;color:#246b2a;border:1px solid #b9dcbc}
+  .count-no-response{background:#fff1f1;color:#a12626;border:1px solid #edc0c0}
+  .count-not-delivered{background:#f2f4f6;color:#616c76;border:1px solid #d7dde2}
+  .candidate-results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .candidate-results-race{overflow:hidden;border:1px solid #dfe6eb;border-radius:14px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .candidate-results-race h3{margin:0;padding:15px 20px;background:#f5f8fb;border-bottom:1px solid #e3e8ec;color:var(--accent);font-size:1.2rem}
+  .candidate-result-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px 20px;border-bottom:1px solid #edf0f2}
+  .candidate-result-row:last-child{border-bottom:0}
+  .candidate-result-name{color:var(--accent);font-weight:700}
+  .candidate-result-name small{display:block;margin-top:2px;color:#6b7680;font-size:.78rem;font-weight:600}
+  .result-status{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;font-size:.76rem;font-weight:800;white-space:nowrap}
+  .result-status.response{background:#edf7ee;color:#246b2a}
+  .result-status.no-response{background:#fff1f1;color:#a12626}
+  .result-status.not-delivered{background:#f2f4f6;color:#616c76}
+  .results-method{margin:24px 0 0;padding:18px 20px;background:#f7fbff;border-left:4px solid var(--light);border-radius:8px;font-size:.9rem;line-height:1.65}
+  .results-method strong{color:var(--accent)}
+
   .candidate-section {
     max-width: 1200px;
     margin: 0 auto 70px;
@@ -316,6 +341,21 @@ permalink: /election-2026/
       margin-bottom: 45px;
     }
 
+    .candidate-results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .candidate-result-row {
+      grid-template-columns: 1fr;
+      gap: 9px;
+      align-items: start;
+    }
+
+    .result-status {
+      width: fit-content;
+      white-space: normal;
+    }
+
     .candidate-card {
       grid-template-columns: 1fr;
       padding: 20px;
@@ -371,10 +411,10 @@ permalink: /election-2026/
   
       <p>
           GAAA created this Election Hub to bring our election-related resources
-          together in one place. Here, Gwinnett voters can learn about the candidates,
-          review the questions candidates were asked, follow Candidate Pledge
-          participation, and — as responses are received — compare where candidates
-          stand on issues affecting animals and residents across our county.
+          together in one place. The August 21 Candidate Survey response deadline has
+          now passed, and candidate responses, nonresponses and participation are being
+          documented here so Gwinnett voters can see who chose to put their animal-welfare
+          positions on the public record.
       </p>
   
       <p>
@@ -412,18 +452,72 @@ permalink: /election-2026/
       <span>Read the pledge →</span>
     </a>
 
-    <div class="home-card results-coming-soon" aria-label="Candidate results coming soon">
+    <a class="home-card" href="#candidate-results">
       <div class="home-card-icon icon-green">
         <i class="fas fa-chart-bar" aria-hidden="true"></i>
       </div>
       <h3>Candidate Results</h3>
       <p>
-        Survey responses, pledge status and candidate participation information
-        will be published as the 2026 election project progresses.
+        The August 21 deadline has passed. See which candidates submitted the
+        Candidate Survey, which did not respond, and which candidate GAAA was
+        unable to reach before the deadline.
       </p>
-      <span>Results coming soon</span>
+      <span>View candidate participation →</span>
+    </a>
+
+  </section>
+
+
+  <section class="candidate-results-summary" id="candidate-results">
+    <div class="candidate-results-header">
+      <span class="section-label">2026 Candidate Participation</span>
+      <h2>The Response Deadline Has Passed</h2>
+      <p>
+        Candidates were given the same survey, supporting information, deadline
+        and opportunity to explain their positions. Participation itself is part
+        of the public record.
+      </p>
+      <div class="results-count">
+        <span class="count-response">1 Response Received</span>
+        <span class="count-no-response">2 No Responses</span>
+        <span class="count-not-delivered">1 Not Delivered</span>
+      </div>
     </div>
 
+    <div class="candidate-results-grid">
+      <div class="candidate-results-race">
+        <h3>District 2</h3>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Ben Ku<small>Incumbent</small></div>
+          <span class="result-status no-response"><i class="fas fa-circle-xmark"></i>No Response</span>
+        </div>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Rodolfo Ochoa</div>
+          <span class="result-status not-delivered"><i class="fas fa-circle-minus"></i>Not Delivered</span>
+        </div>
+      </div>
+
+      <div class="candidate-results-race">
+        <h3>District 4</h3>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Matthew Holtkamp<small>Incumbent</small></div>
+          <span class="result-status no-response"><i class="fas fa-circle-xmark"></i>No Response</span>
+        </div>
+        <div class="candidate-result-row">
+          <div class="candidate-result-name">Benjamin Culberson</div>
+          <span class="result-status response"><i class="fas fa-circle-check"></i>Response Received</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-method">
+      <strong>No Response</strong> means the candidate received the Candidate Survey
+      and supporting materials but did not submit a response by the August 21, 2026
+      deadline. <strong>Not Delivered</strong> means GAAA was unable to locate verified
+      campaign contact information before the deadline and therefore could not provide
+      the candidate the survey. Rodolfo Ochoa is not classified as a candidate who
+      failed to respond.
+    </div>
   </section>
 
   <section class="candidate-section">
