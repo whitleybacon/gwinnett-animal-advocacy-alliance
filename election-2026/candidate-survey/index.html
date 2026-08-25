@@ -411,6 +411,63 @@ permalink: /election-2026/candidate-survey/
     padding: 18px 12px 14px;
 }
 
+.candidate-survey-page .positions-table thead .district-group-row th {
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 12px;
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.candidate-survey-page .positions-table thead .district-group-row .scorecard-corner {
+    background: #f5f8fb;
+    color: var(--accent);
+    border-bottom: 0;
+}
+
+.candidate-survey-page .scorecard-title {
+    display: flex;
+    min-height: 142px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px 18px;
+    text-align: left;
+}
+
+.candidate-survey-page .scorecard-title .eyebrow {
+    color: var(--election-green);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.candidate-survey-page .scorecard-title strong {
+    display: block;
+    margin-top: 5px;
+    color: var(--accent);
+    font-size: 1.18rem;
+    line-height: 1.15;
+}
+
+.candidate-survey-page .scorecard-title small {
+    display: block;
+    margin-top: 6px;
+    color: #6b7680;
+    font-size: .72rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.candidate-survey-page .positions-table thead .candidate-photo-row .scorecard-corner-cell {
+    background: #f5f8fb;
+    padding: 0;
+}
+
+
 .candidate-survey-page .positions-table thead .candidate-photo-row th:first-child {
     background: #f5f8fb;
 }
@@ -803,12 +860,24 @@ permalink: /election-2026/candidate-survey/
         <div class="positions-table-wrap">
             <table class="positions-table">
                 <thead>
+                    <tr class="district-group-row">
+                        <th class="scorecard-corner" aria-hidden="true"></th>
+                        <th colspan="2" scope="colgroup">District 2</th>
+                        <th colspan="2" scope="colgroup">District 4</th>
+                    </tr>
+
                     <tr class="candidate-photo-row">
-                        <th aria-hidden="true"></th>
+                        <th class="scorecard-corner-cell" scope="col">
+                            <div class="scorecard-title">
+                                <span class="eyebrow">2026 GAAA</span>
+                                <strong>Candidate<br>Positions</strong>
+                                <small>Animal Welfare Survey</small>
+                            </div>
+                        </th>
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
                             <span class="matrix-candidate-name">Ben Ku</span>
-                            <span class="matrix-candidate-meta">District 2 • Incumbent</span>
+                            <span class="matrix-candidate-meta">Incumbent</span>
                             <span class="matrix-no-response">
                                 <i class="fas fa-circle-xmark" aria-hidden="true"></i>
                                 No Response
@@ -817,7 +886,7 @@ permalink: /election-2026/candidate-survey/
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/rodolfo-ochoa.jpg" alt="Rodolfo Ochoa">
                             <span class="matrix-candidate-name">Rodolfo Ochoa</span>
-                            <span class="matrix-candidate-meta">District 2</span>
+                            <span class="matrix-candidate-meta">Candidate</span>
                             <span class="matrix-not-delivered">
                                 <i class="fas fa-circle-minus" aria-hidden="true"></i>
                                 Not Delivered
@@ -826,7 +895,7 @@ permalink: /election-2026/candidate-survey/
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/matthew-holtkamp.jpg" alt="Matthew Holtkamp">
                             <span class="matrix-candidate-name">Matthew Holtkamp</span>
-                            <span class="matrix-candidate-meta">District 4 • Incumbent</span>
+                            <span class="matrix-candidate-meta">Incumbent</span>
                             <span class="matrix-no-response">
                                 <i class="fas fa-circle-xmark" aria-hidden="true"></i>
                                 No Response
@@ -835,13 +904,14 @@ permalink: /election-2026/candidate-survey/
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/ben-culberson.jpg" alt="Benjamin Culberson">
                             <span class="matrix-candidate-name">Benjamin Culberson</span>
-                            <span class="matrix-candidate-meta">District 4</span>
+                            <span class="matrix-candidate-meta">Candidate</span>
                             <span class="matrix-response-received">
                                 <i class="fas fa-circle-check" aria-hidden="true"></i>
                                 Response Received
                             </span>
                         </th>
                     </tr>
+
                     <tr class="topic-heading-row">
                         <th scope="col">Survey Topic</th>
                         <th scope="col">Position</th>
