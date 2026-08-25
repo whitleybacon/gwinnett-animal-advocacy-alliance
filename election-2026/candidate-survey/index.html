@@ -343,20 +343,6 @@ permalink: /election-2026/candidate-survey/
 }
 .candidate-survey-page .legend-support .legend-swatch { background: #2f7d32; }
 
-.candidate-survey-page .legend-qualified {
-    background: #fff8ed;
-    color: #9a5a10;
-    border: 1px solid #efd2a6;
-}
-.candidate-survey-page .legend-qualified .legend-swatch { background: #d3a13a; }
-
-.candidate-survey-page .legend-oppose {
-    background: #fff1f1;
-    color: #a12626;
-    border: 1px solid #edc0c0;
-}
-.candidate-survey-page .legend-oppose .legend-swatch { background: #b02a2a; }
-
 .candidate-survey-page .legend-no-response {
     background: #fff1f1;
     color: #a12626;
@@ -419,6 +405,78 @@ permalink: /election-2026/candidate-survey/
     line-height: 1.35;
 }
 
+.candidate-survey-page .positions-table thead .candidate-photo-row th {
+    background: #fff;
+    color: var(--accent);
+    padding: 18px 12px 14px;
+}
+
+.candidate-survey-page .positions-table thead .candidate-photo-row th:first-child {
+    background: #f5f8fb;
+}
+
+.candidate-survey-page .matrix-candidate-photo {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.candidate-survey-page .matrix-candidate-name {
+    display: block;
+    color: var(--accent);
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.candidate-survey-page .matrix-candidate-meta {
+    display: block;
+    margin-top: 3px;
+    color: #6b7680;
+    font-size: .72rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.candidate-survey-page .matrix-no-response,
+.candidate-survey-page .matrix-response-received,
+.candidate-survey-page .matrix-not-delivered {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: .68rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.candidate-survey-page .matrix-no-response {
+    background: #fff1f1;
+    color: #a12626;
+}
+
+.candidate-survey-page .matrix-response-received {
+    background: #edf7ee;
+    color: #246b2a;
+}
+
+.candidate-survey-page .matrix-not-delivered {
+    background: #f2f4f6;
+    color: #616c76;
+}
+
+.candidate-survey-page .positions-table thead .topic-heading-row th {
+    background: var(--accent);
+    color: #fff;
+}
+
+
 .candidate-survey-page .positions-table thead th:first-child {
     text-align: left;
     width: 31%;
@@ -450,16 +508,6 @@ permalink: /election-2026/candidate-survey/
 .candidate-survey-page .position-support {
     background: #e8f5e9;
     color: #246b2a;
-}
-
-.candidate-survey-page .position-qualified {
-    background: #fff2cf;
-    color: #8b5e00;
-}
-
-.candidate-survey-page .position-oppose {
-    background: #fde8e8;
-    color: #a12626;
 }
 
 .candidate-survey-page .position-no-response {
@@ -736,16 +784,15 @@ permalink: /election-2026/candidate-survey/
         <span class="section-label" style="text-align:center;">Candidate Positions</span>
         <h2>Animal Welfare Positions at a Glance</h2>
         <p class="section-intro">
-            This comparison summarizes candidate responses by major survey topic.
-            It is designed as a quick-reference guide; voters can review the full
-            survey and each candidate's complete answers for additional context.
+            This comparison shows candidate participation and summarizes submitted
+            positions by major survey topic. Candidates who received the survey but
+            did not respond are identified directly in the chart.
         </p>
 
         <div class="position-legend" aria-label="Candidate position legend">
             <span class="legend-item legend-support">
                 <span class="legend-swatch"></span> Supports
-            </span>
-            <span class="legend-item legend-no-response">
+            </span>            <span class="legend-item legend-no-response">
                 <span class="legend-swatch"></span> No Response
             </span>
             <span class="legend-item legend-not-delivered">
@@ -756,24 +803,51 @@ permalink: /election-2026/candidate-survey/
         <div class="positions-table-wrap">
             <table class="positions-table">
                 <thead>
-                    <tr>
+                    <tr class="candidate-photo-row">
+                        <th aria-hidden="true"></th>
+                        <th scope="col">
+                            <img class="matrix-candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
+                            <span class="matrix-candidate-name">Ben Ku</span>
+                            <span class="matrix-candidate-meta">District 2 • Incumbent</span>
+                            <span class="matrix-no-response">
+                                <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+                                No Response
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <img class="matrix-candidate-photo" src="/assets/rodolfo-ochoa.jpg" alt="Rodolfo Ochoa">
+                            <span class="matrix-candidate-name">Rodolfo Ochoa</span>
+                            <span class="matrix-candidate-meta">District 2</span>
+                            <span class="matrix-not-delivered">
+                                <i class="fas fa-circle-minus" aria-hidden="true"></i>
+                                Not Delivered
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <img class="matrix-candidate-photo" src="/assets/matthew-holtkamp.jpg" alt="Matthew Holtkamp">
+                            <span class="matrix-candidate-name">Matthew Holtkamp</span>
+                            <span class="matrix-candidate-meta">District 4 • Incumbent</span>
+                            <span class="matrix-no-response">
+                                <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+                                No Response
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <img class="matrix-candidate-photo" src="/assets/ben-culberson.jpg" alt="Benjamin Culberson">
+                            <span class="matrix-candidate-name">Benjamin Culberson</span>
+                            <span class="matrix-candidate-meta">District 4</span>
+                            <span class="matrix-response-received">
+                                <i class="fas fa-circle-check" aria-hidden="true"></i>
+                                Response Received
+                            </span>
+                        </th>
+                    </tr>
+                    <tr class="topic-heading-row">
                         <th scope="col">Survey Topic</th>
-                        <th scope="col" class="candidate-head">
-                            Ben Ku
-                            <small>District 2 • Incumbent</small>
-                        </th>
-                        <th scope="col" class="candidate-head">
-                            Rodolfo Ochoa
-                            <small>District 2</small>
-                        </th>
-                        <th scope="col" class="candidate-head">
-                            Matthew Holtkamp
-                            <small>District 4 • Incumbent</small>
-                        </th>
-                        <th scope="col" class="candidate-head">
-                            Benjamin Culberson
-                            <small>District 4</small>
-                        </th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Position</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -861,10 +935,8 @@ permalink: /election-2026/candidate-survey/
         <div class="positions-note">
             <strong>How this summary works:</strong> A topic is marked
             <strong>Supports</strong> when the candidate supported the substantive
-            questions within that survey section. <strong>Qualified / Mixed</strong>
-            and <strong>Does Not Support</strong> are available for candidates whose
-            answers differ across a topic or oppose a proposal. <strong>No Response</strong>
-            means the candidate received the survey but did not submit it by the deadline.
+            questions within that survey section. <strong>No Response</strong> means
+            the candidate received the survey but did not submit it by the deadline.
             <strong>Not Delivered</strong> means GAAA was unable to provide the survey
             because verified campaign contact information was not located before the deadline.
         </div>
@@ -983,87 +1055,6 @@ permalink: /election-2026/candidate-survey/
         </div>
     </section>
 
-
-    <!-- RESULTS -->
-    <section class="results-section" id="candidate-results">
-        <h2>Candidate Responses &amp; Participation</h2>
-        <p class="section-intro">
-            Candidates were given the same survey, supporting information, deadline and
-            opportunity to explain their positions. The results below document who chose
-            to put their animal-welfare positions on the public record.
-        </p>
-
-        <div class="district-grid">
-
-            <div class="district-card">
-                <span class="status-badge badge-red">District 2</span>
-                <h3>Commission District 2</h3>
-
-                <div class="candidate-result-list">
-                    <div class="candidate-result-item">
-                        <div class="candidate-result-name">
-                            Ben Ku
-                            <small>Incumbent</small>
-                        </div>
-                        <span class="candidate-result-status no-response">
-                            <i class="fas fa-circle-xmark" aria-hidden="true"></i>
-                            No Response
-                        </span>
-                    </div>
-
-                    <div class="candidate-result-item">
-                        <div class="candidate-result-name">Rodolfo Ochoa</div>
-                        <span class="candidate-result-status not-delivered">
-                            <i class="fas fa-circle-minus" aria-hidden="true"></i>
-                            Not Delivered
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="district-card">
-                <span class="status-badge badge-green">District 4</span>
-                <h3>Commission District 4</h3>
-
-                <div class="candidate-result-list">
-                    <div class="candidate-result-item">
-                        <div class="candidate-result-name">
-                            Matthew Holtkamp
-                            <small>Incumbent</small>
-                        </div>
-                        <span class="candidate-result-status no-response">
-                            <i class="fas fa-circle-xmark" aria-hidden="true"></i>
-                            No Response
-                        </span>
-                    </div>
-
-                    <div class="candidate-result-item">
-                        <div class="candidate-result-name">Benjamin Culberson</div>
-                        <span class="candidate-result-status received">
-                            <i class="fas fa-circle-check" aria-hidden="true"></i>
-                            Response Received
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="results-note">
-            <strong>No Response</strong> means the candidate received the Candidate Survey
-            and supporting materials but did not submit a response by the August 21, 2026
-            deadline. <strong>Not Delivered</strong> means GAAA was unable to locate verified
-            campaign contact information before the deadline and therefore could not provide
-            the candidate the survey. Rodolfo Ochoa is not classified as a candidate who
-            failed to respond.
-        </div>
-
-        <div class="center-button">
-            <a class="btn" href="/election-2026/#candidate-results">
-                View Candidate Participation on the Election Hub
-            </a>
-        </div>
-    </section>
 
     <!-- FINAL -->
     <section class="accountability-section">
