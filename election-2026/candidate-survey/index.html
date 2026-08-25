@@ -375,8 +375,9 @@ permalink: /election-2026/candidate-survey/
 
 .candidate-survey-page .positions-table {
     width: 100%;
-    min-width: 900px;
+    min-width: 980px;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .candidate-survey-page .positions-table th,
@@ -387,6 +388,33 @@ permalink: /election-2026/candidate-survey/
     text-align: center;
     vertical-align: middle;
 }
+
+.candidate-survey-page .positions-table col.topic-col {
+    width: 30%;
+}
+
+.candidate-survey-page .positions-table col.candidate-col {
+    width: 17.5%;
+}
+
+.candidate-survey-page .positions-table thead .survey-topic-head {
+    background: var(--accent);
+    color: #fff;
+    text-align: left;
+    padding: 18px 16px;
+    font-size: .95rem;
+    font-weight: 800;
+    vertical-align: middle;
+}
+
+.candidate-survey-page .positions-table thead .candidate-photo-row th {
+    min-height: 0;
+}
+
+.candidate-survey-page .positions-table thead .district-group-row th {
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
 
 .candidate-survey-page .positions-table tr:last-child th,
 .candidate-survey-page .positions-table tr:last-child td {
@@ -419,52 +447,6 @@ permalink: /election-2026/candidate-survey/
     font-weight: 800;
     letter-spacing: .06em;
     text-transform: uppercase;
-}
-
-.candidate-survey-page .positions-table thead .district-group-row .scorecard-corner {
-    background: #f5f8fb;
-    color: var(--accent);
-    border-bottom: 0;
-}
-
-.candidate-survey-page .scorecard-title {
-    display: flex;
-    min-height: 142px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 16px 18px;
-    text-align: left;
-}
-
-.candidate-survey-page .scorecard-title .eyebrow {
-    color: var(--election-green);
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.candidate-survey-page .scorecard-title strong {
-    display: block;
-    margin-top: 5px;
-    color: var(--accent);
-    font-size: 1.18rem;
-    line-height: 1.15;
-}
-
-.candidate-survey-page .scorecard-title small {
-    display: block;
-    margin-top: 6px;
-    color: #6b7680;
-    font-size: .72rem;
-    font-weight: 600;
-    line-height: 1.35;
-}
-
-.candidate-survey-page .positions-table thead .candidate-photo-row .scorecard-corner-cell {
-    background: #f5f8fb;
-    padding: 0;
 }
 
 
@@ -859,21 +841,22 @@ permalink: /election-2026/candidate-survey/
 
         <div class="positions-table-wrap">
             <table class="positions-table">
+                <colgroup>
+                    <col class="topic-col">
+                    <col class="candidate-col">
+                    <col class="candidate-col">
+                    <col class="candidate-col">
+                    <col class="candidate-col">
+                </colgroup>
+
                 <thead>
                     <tr class="district-group-row">
-                        <th class="scorecard-corner" aria-hidden="true"></th>
+                        <th class="survey-topic-head" scope="col" rowspan="2">Survey Topic</th>
                         <th colspan="2" scope="colgroup">District 2</th>
                         <th colspan="2" scope="colgroup">District 4</th>
                     </tr>
 
                     <tr class="candidate-photo-row">
-                        <th class="scorecard-corner-cell" scope="col">
-                            <div class="scorecard-title">
-                                <span class="eyebrow">2026 GAAA</span>
-                                <strong>Candidate<br>Positions</strong>
-                                <small>Animal Welfare Survey</small>
-                            </div>
-                        </th>
                         <th scope="col">
                             <img class="matrix-candidate-photo" src="/assets/ben-ku.jpg" alt="Ben Ku">
                             <span class="matrix-candidate-name">Ben Ku</span>
@@ -910,14 +893,6 @@ permalink: /election-2026/candidate-survey/
                                 Response Received
                             </span>
                         </th>
-                    </tr>
-
-                    <tr class="topic-heading-row">
-                        <th scope="col">Survey Topic</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Position</th>
                     </tr>
                 </thead>
                 <tbody>
