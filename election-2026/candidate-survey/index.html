@@ -183,6 +183,117 @@ permalink: /election-2026/candidate-survey/
     line-height: 1.7;
 }
 
+
+.candidate-survey-page .deadline-summary {
+    max-width: 900px;
+    margin: 22px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.candidate-survey-page .deadline-summary span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.candidate-survey-page .deadline-summary .received {
+    background: #edf7ee;
+    color: #246b2a;
+    border: 1px solid #b9dcbc;
+}
+
+.candidate-survey-page .deadline-summary .no-response {
+    background: #fff1f1;
+    color: #a12626;
+    border: 1px solid #edc0c0;
+}
+
+.candidate-survey-page .deadline-summary .not-delivered {
+    background: #f2f4f6;
+    color: #616c76;
+    border: 1px solid #d7dde2;
+}
+
+.candidate-survey-page .candidate-result-list {
+    margin-top: 18px;
+    border-top: 1px solid #edf0f2;
+}
+
+.candidate-survey-page .candidate-result-item {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 16px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.candidate-survey-page .candidate-result-item:last-child {
+    border-bottom: 0;
+}
+
+.candidate-survey-page .candidate-result-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.candidate-survey-page .candidate-result-name small {
+    display: block;
+    margin-top: 2px;
+    color: #6b7680;
+    font-size: .78rem;
+    font-weight: 600;
+}
+
+.candidate-survey-page .candidate-result-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: .76rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.candidate-survey-page .candidate-result-status.received {
+    background: #edf7ee;
+    color: #246b2a;
+}
+
+.candidate-survey-page .candidate-result-status.no-response {
+    background: #fff1f1;
+    color: #a12626;
+}
+
+.candidate-survey-page .candidate-result-status.not-delivered {
+    background: #f2f4f6;
+    color: #616c76;
+}
+
+.candidate-survey-page .results-note {
+    max-width: 980px;
+    margin: 26px auto 0;
+    padding: 18px 20px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 8px;
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
+.candidate-survey-page .results-note strong {
+    color: var(--accent);
+}
+
+
 .candidate-survey-page .results-section {
     max-width: 1180px;
     margin: 70px auto;
@@ -320,6 +431,18 @@ permalink: /election-2026/candidate-survey/
         grid-template-columns: 1fr;
     }
 
+
+    .candidate-survey-page .candidate-result-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        align-items: start;
+    }
+
+    .candidate-survey-page .candidate-result-status {
+        width: fit-content;
+        white-space: normal;
+    }
+
     .candidate-survey-page .method-section {
         padding: 34px 22px;
     }
@@ -379,7 +502,7 @@ permalink: /election-2026/candidate-survey/
             <p>Where do the candidates for Gwinnett County Commissioner stand on the animal-welfare issues affecting our community?</p>
 
             <div class="hero-actions">
-                <a class="btn" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+                <a class="btn" href="https://form.jotform.com/GwinnettAdvocates/preview-2026-candidate-survey" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-file-pdf"></i> Read the Full Survey
                 </a>
             </div>
@@ -389,12 +512,21 @@ permalink: /election-2026/candidate-survey/
     <!-- STATUS -->
     <section class="alert-banner survey-status-banner">
         <div class="alert-banner-icon">
-            <i class="fas fa-check-to-slot"></i>
+            <i class="fas fa-chart-bar"></i>
         </div>
         <div class="alert-banner-content">
-            <span class="alert-banner-label">Candidate Survey Underway</span>
-            <h2>Responses Due August 21, 2026</h2>
-            <p>GAAA is inviting candidates for Gwinnett County Board of Commissioners Districts 2 and 4 to complete our 2026 Animal Welfare Candidate Survey. Candidate responses will be published here after the response deadline.</p>
+            <span class="alert-banner-label">Candidate Survey Results</span>
+            <h2>The August 21 Response Deadline Has Passed</h2>
+            <p>
+                One candidate submitted the survey by the deadline. Two candidates who
+                received the survey did not submit responses, and one candidate could
+                not be reached because verified campaign contact information was not located.
+            </p>
+            <div class="deadline-summary" aria-label="Candidate survey participation summary">
+                <span class="received">1 Response Received</span>
+                <span class="no-response">2 No Responses</span>
+                <span class="not-delivered">1 Not Delivered</span>
+            </div>
         </div>
     </section>
 
@@ -476,10 +608,10 @@ permalink: /election-2026/candidate-survey/
         </div>
         <div class="alert-banner-content">
             <span class="alert-banner-label">Read It for Yourself</span>
-            <h2>See exactly what candidates are being asked.</h2>
-            <p>The public reference copy includes the survey background, all 68 questions and supporting reference links so Gwinnett voters can review the same issues candidates receive.</p>
+            <h2>See exactly what candidates were asked.</h2>
+            <p>The public reference copy includes the survey background, all 68 questions and supporting reference links so Gwinnett voters can review the same issues candidates were provided.</p>
         </div>
-        <a class="btn alert-banner-button" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+        <a class="btn alert-banner-button" href="https://form.jotform.com/GwinnettAdvocates/preview-2026-candidate-survey" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-download"></i> View Survey
         </a>
     </section>
@@ -512,33 +644,95 @@ permalink: /election-2026/candidate-survey/
 
     <!-- RESULTS -->
     <section class="results-section" id="candidate-results">
-        <h2>Candidate Responses & Results</h2>
-        <p class="section-intro">All candidates for the applicable Gwinnett County Commissioner seats are being given an opportunity to participate. Responses will be posted here after the survey deadline.</p>
+        <h2>Candidate Responses &amp; Participation</h2>
+        <p class="section-intro">
+            Candidates were given the same survey, supporting information, deadline and
+            opportunity to explain their positions. The results below document who chose
+            to put their animal-welfare positions on the public record.
+        </p>
 
         <div class="district-grid">
+
             <div class="district-card">
-                <span class="status-badge badge-blue">Results Coming Soon</span>
+                <span class="status-badge badge-red">District 2</span>
                 <h3>Commission District 2</h3>
-                <p>Candidate participation and full survey responses will be published here after August 21.</p>
+
+                <div class="candidate-result-list">
+                    <div class="candidate-result-item">
+                        <div class="candidate-result-name">
+                            Ben Ku
+                            <small>Incumbent</small>
+                        </div>
+                        <span class="candidate-result-status no-response">
+                            <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+                            No Response
+                        </span>
+                    </div>
+
+                    <div class="candidate-result-item">
+                        <div class="candidate-result-name">Rodolfo Ochoa</div>
+                        <span class="candidate-result-status not-delivered">
+                            <i class="fas fa-circle-minus" aria-hidden="true"></i>
+                            Not Delivered
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div class="district-card">
-                <span class="status-badge badge-blue">Results Coming Soon</span>
+                <span class="status-badge badge-green">District 4</span>
                 <h3>Commission District 4</h3>
-                <p>Candidate participation and full survey responses will be published here after August 21.</p>
+
+                <div class="candidate-result-list">
+                    <div class="candidate-result-item">
+                        <div class="candidate-result-name">
+                            Matthew Holtkamp
+                            <small>Incumbent</small>
+                        </div>
+                        <span class="candidate-result-status no-response">
+                            <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+                            No Response
+                        </span>
+                    </div>
+
+                    <div class="candidate-result-item">
+                        <div class="candidate-result-name">Benjamin Culberson</div>
+                        <span class="candidate-result-status received">
+                            <i class="fas fa-circle-check" aria-hidden="true"></i>
+                            Response Received
+                        </span>
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <div class="result-key" aria-label="Candidate survey result status key">
-            <span class="status-badge badge-green">Survey Completed</span>
-            <span class="status-badge badge-red">No Response</span>
+        <div class="results-note">
+            <strong>No Response</strong> means the candidate received the Candidate Survey
+            and supporting materials but did not submit a response by the August 21, 2026
+            deadline. <strong>Not Delivered</strong> means GAAA was unable to locate verified
+            campaign contact information before the deadline and therefore could not provide
+            the candidate the survey. Rodolfo Ochoa is not classified as a candidate who
+            failed to respond.
+        </div>
+
+        <div class="center-button">
+            <a class="btn" href="/election-2026/#candidate-results">
+                View Candidate Participation on the Election Hub
+            </a>
         </div>
     </section>
 
     <!-- FINAL -->
     <section class="accountability-section">
-        <h2>Voters deserve to know where candidates stand before Election Day.</h2>
-        <p>Animal welfare requires decisions about policy, budgets, oversight, enforcement and County priorities. Publishing candidate responses creates a public record voters can use now — and a record residents can return to after the election.</p>
+        <h2>Candidate participation is part of the public record.</h2>
+        <p>
+            Candidates were not required to agree with GAAA's positions. They were asked
+            to tell voters where they stand and were given opportunities throughout the
+            survey to explain their views. Responses — and decisions not to respond —
+            will remain publicly documented so residents can revisit the record during
+            and after the election.
+        </p>
     </section>
 
 </div>
