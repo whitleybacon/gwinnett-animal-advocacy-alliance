@@ -1,1 +1,1027 @@
+---
+layout: default
+title: Benjamin Culberson — 2026 Animal Welfare Candidate Survey Response
+permalink: /election-2026/candidate-responses/benjamin-culberson/
+---
 
+<style>
+  .candidate-response-page {
+    --response-green: #2f7d32;
+    --response-green-soft: #edf7ee;
+    --response-blue-soft: #f4f8fc;
+    --response-border: #dfe6eb;
+  }
+
+  .candidate-response-page .response-hero {
+    max-width: 1180px;
+    margin: 42px auto 38px;
+    padding: 34px 38px;
+    display: grid;
+    grid-template-columns: 190px minmax(0,1fr);
+    gap: 34px;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--response-border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  }
+
+  .candidate-response-page .response-headshot {
+    width: 190px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+  }
+
+  .candidate-response-page .response-kicker {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--response-green);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .candidate-response-page .response-hero h1 {
+    margin: 0 0 7px;
+    color: var(--accent);
+    font-size: 3rem;
+    line-height: 1.08;
+  }
+
+  .candidate-response-page .candidate-meta {
+    margin: 0 0 18px;
+    color: #66717c;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .candidate-response-page .received-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 17px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--response-green-soft);
+    color: #246b2a;
+    font-size: .82rem;
+    font-weight: 800;
+  }
+
+  .candidate-response-page .response-hero p {
+    max-width: 760px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .candidate-response-page .response-nav {
+    max-width: 1180px;
+    margin: 0 auto 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .candidate-response-page .response-nav a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .candidate-response-page .expand-controls {
+    display: flex;
+    gap: 9px;
+  }
+
+  .candidate-response-page .expand-controls button {
+    appearance: none;
+    border: 1px solid #cfd8df;
+    background: #fff;
+    color: var(--accent);
+    border-radius: 6px;
+    padding: 8px 11px;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .candidate-response-page .response-intro {
+    max-width: 1050px;
+    margin: 0 auto 34px;
+    text-align: center;
+  }
+
+  .candidate-response-page .response-intro h2 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 2.25rem;
+  }
+
+  .candidate-response-page .response-intro p {
+    margin: 0;
+    color: #5f6b76;
+    line-height: 1.7;
+  }
+
+  .candidate-response-page .response-list {
+    max-width: 1180px;
+    margin: 0 auto 55px;
+  }
+
+  .candidate-response-page .response-section {
+    margin: 0 0 14px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--response-border);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.035);
+  }
+
+  .candidate-response-page .response-section summary {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 48px minmax(0,1fr) auto 18px;
+    gap: 14px;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .candidate-response-page .response-section summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .candidate-response-page .section-number {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: .78rem;
+    letter-spacing: .04em;
+  }
+
+  .candidate-response-page .section-title {
+    font-size: 1.08rem;
+  }
+
+  .candidate-response-page .section-count {
+    color: #7a858f;
+    font-size: .78rem;
+    font-weight: 700;
+  }
+
+  .candidate-response-page .response-section summary i {
+    transition: transform .2s ease;
+  }
+
+  .candidate-response-page .response-section[open] summary {
+    background: var(--response-blue-soft);
+    border-bottom: 1px solid var(--response-border);
+  }
+
+  .candidate-response-page .response-section[open] summary i {
+    transform: rotate(180deg);
+  }
+
+  .candidate-response-page .response-section-body {
+    padding: 0 26px;
+  }
+
+  .candidate-response-page .response-item {
+    padding: 27px 0;
+    border-bottom: 1px solid #e8edf1;
+  }
+
+  .candidate-response-page .response-item:last-of-type {
+    border-bottom: 0;
+  }
+
+  .candidate-response-page .question-number {
+    margin-bottom: 7px;
+    color: var(--response-green);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .candidate-response-page .response-item h3 {
+    max-width: 990px;
+    margin: 0 0 15px;
+    color: var(--accent);
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .candidate-response-page .candidate-response {
+    max-width: 930px;
+    padding: 14px 16px;
+    border-radius: 7px;
+  }
+
+  .candidate-response-page .candidate-response .response-label {
+    margin-bottom: 5px;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .candidate-response-page .candidate-response .response-value {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .candidate-response-page .candidate-response p {
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .candidate-response-page .candidate-response p + p {
+    margin-top: 10px;
+  }
+
+  .candidate-response-page .response-support {
+    background: var(--response-green-soft);
+    border-left: 4px solid var(--response-green);
+    color: #246b2a;
+  }
+
+  .candidate-response-page .response-direct {
+    background: #eef6fb;
+    border-left: 4px solid var(--light);
+    color: var(--accent);
+  }
+
+  .candidate-response-page .response-written {
+    background: #f7f9fb;
+    border-left: 4px solid var(--accent);
+    color: #424f5b;
+  }
+
+  .candidate-response-page .response-followup {
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px solid rgba(0,0,0,.08);
+    font-size: .88rem;
+    font-weight: 600;
+  }
+
+  .candidate-response-page .additional-comments {
+    margin: 20px 0 26px;
+    padding: 13px 15px;
+    background: #fafbfc;
+    border: 1px solid #e7ebee;
+    border-radius: 7px;
+    color: #66717c;
+    font-size: .86rem;
+  }
+
+  .candidate-response-page .additional-comments strong {
+    color: var(--accent);
+  }
+
+  .candidate-response-page .additional-comments span {
+    margin-left: 4px;
+  }
+
+  .candidate-response-page .response-note {
+    max-width: 1050px;
+    margin: 0 auto 55px;
+    padding: 22px 24px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 8px;
+    color: #53606c;
+    line-height: 1.7;
+  }
+
+  .candidate-response-page .response-note strong {
+    color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .candidate-response-page .response-hero {
+      margin-top: 28px;
+      padding: 24px 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .candidate-response-page .response-headshot {
+      width: 150px;
+    }
+
+    .candidate-response-page .response-hero h1 {
+      font-size: 2.05rem;
+    }
+
+    .candidate-response-page .response-nav {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .candidate-response-page .response-intro {
+      text-align: left;
+    }
+
+    .candidate-response-page .response-intro h2 {
+      font-size: 1.7rem;
+    }
+
+    .candidate-response-page .response-section summary {
+      grid-template-columns: 42px minmax(0,1fr) 16px;
+      gap: 10px;
+      padding: 15px 14px;
+    }
+
+    .candidate-response-page .section-count {
+      display: none;
+    }
+
+    .candidate-response-page .section-number {
+      width: 38px;
+      height: 38px;
+    }
+
+    .candidate-response-page .response-section-body {
+      padding: 0 18px;
+    }
+  }
+</style>
+
+<div class="candidate-response-page">
+
+  <section class="response-hero">
+    <img class="response-headshot" src="/assets/ben-culberson.jpg" alt="Benjamin Culberson">
+    <div>
+      <span class="response-kicker">2026 Candidate Survey Response</span>
+      <h1>Benjamin Culberson</h1>
+      <p class="candidate-meta">Gwinnett County Commission • District 4 Candidate</p>
+      <span class="received-badge">
+        <i class="fas fa-circle-check" aria-hidden="true"></i>
+        Response Received August 21, 2026
+      </span>
+      <p>
+        Benjamin Culberson completed Gwinnett Animal Advocacy Alliance’s 2026
+        Animal Welfare Candidate Survey. His responses are presented below as submitted.
+      </p>
+    </div>
+  </section>
+
+  <div class="response-nav">
+    <a href="/election-2026/">← Back to 2026 Election Hub</a>
+    <div class="expand-controls">
+      <button type="button" id="expand-all">Expand all</button>
+      <button type="button" id="collapse-all">Collapse all</button>
+    </div>
+  </div>
+
+  <section class="response-intro">
+    <span class="section-label">Complete Survey Response</span>
+    <h2>Benjamin Culberson’s Answers</h2>
+    <p>
+      Select any subject below to review every question and response from that section
+      of the 2026 Animal Welfare Candidate Survey.
+    </p>
+  </section>
+
+  <div class="response-list">
+    
+      <details class="response-section" open>
+        <summary>
+          <span class="section-number">01</span>
+          <span class="section-title">About the Candidate</span>
+          <span class="section-count">6 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-1">
+            <div class="question-number">Question 1</div>
+            <h3>Please provide your first and last name.</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">Benjamin Culberson</div></div>
+          </div>
+        
+          <div class="response-item" id="question-2">
+            <div class="question-number">Question 2</div>
+            <h3>Which Gwinnett County Board of Commissioners seat are you seeking?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">District 4</div></div>
+          </div>
+        
+          <div class="response-item" id="question-3">
+            <div class="question-number">Question 3</div>
+            <h3>What is the primary reason you are running for the Gwinnett County Board of Commissioners?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">As a public servant, student leader, and non-profit consultant, I&#x27;m running for County Commission District 4 to bring new, present leadership to Gwinnett.</div></div>
+          </div>
+        
+          <div class="response-item" id="question-4">
+            <div class="question-number">Question 4</div>
+            <h3>Prior to receiving this questionnaire, have you had any personal or professional interaction with Gwinnett County Animal Welfare &amp; Enforcement or the Bill Atkinson Animal Welfare Center?</h3>
+            <div class="candidate-response response-direct"><div class="response-label">Response</div><div class="response-value">No</div><div class="response-followup">Follow-up response: N/A</div></div>
+          </div>
+        
+          <div class="response-item" id="question-5">
+            <div class="question-number">Question 5</div>
+            <h3>Prior to receiving this questionnaire, how familiar were you with current animal-welfare issues in Gwinnett County?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">Slightly familiar</div></div>
+          </div>
+        
+          <div class="response-item" id="question-6">
+            <div class="question-number">Question 6</div>
+            <h3>Based on your current knowledge, what do you believe are the most significant animal-welfare challenges facing Gwinnett County, and why?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><p>Volunteer recruitment: the time and effort committed by volunteers should be respected with swift intake processes, fair and adequate training, and proper representation.</p><p>Animal intake: we need to ensure Gwinnett County animal care centers are properly supplied to ensure public safety goals are reached and the best interest of the animals is kept in mind.</p></div>
+          </div>
+        
+          
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">02</span>
+          <span class="section-title">Governance, Independent Oversight &amp; Citizen Representation</span>
+          <span class="section-count">6 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-7">
+            <div class="question-number">Question 7</div>
+            <h3>Do you support restoring individual Commissioner-appointed community representatives to the Gwinnett Animal Advisory Council while retaining the professional expertise included in the new Council structure?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-8">
+            <div class="question-number">Question 8</div>
+            <h3>Do you believe the Director of Gwinnett Animal Welfare &amp; Enforcement should serve as chairperson of the Animal Advisory Council, which is responsible for advising on animal-welfare matters involving the department?</h3>
+            <div class="candidate-response response-direct"><div class="response-label">Response</div><div class="response-value">No</div></div>
+          </div>
+        
+          <div class="response-item" id="question-9">
+            <div class="question-number">Question 9</div>
+            <h3>Do you believe members of the Animal Advisory Council should be empowered to independently review information, ask questions, request records and data, raise concerns, and make recommendations regarding Animal Welfare &amp; Enforcement operations, even when their conclusions or recommendations differ from those of department staff or County leadership?</h3>
+            <div class="candidate-response response-direct"><div class="response-label">Response</div><div class="response-value">Yes</div></div>
+          </div>
+        
+          <div class="response-item" id="question-10">
+            <div class="question-number">Question 10</div>
+            <h3>Members of the Animal Advisory Council may need access to County records and data in order to evaluate animal-welfare issues, understand department operations, and make informed recommendations. When Council members request records reasonably necessary to perform their official advisory responsibilities, do you believe they should be required to personally pay Open Records Act fees to obtain those records?</h3>
+            <div class="candidate-response response-direct"><div class="response-label">Response</div><div class="response-value">No</div></div>
+          </div>
+        
+          <div class="response-item" id="question-11">
+            <div class="question-number">Question 11</div>
+            <h3>When the Animal Advisory Council makes a formal recommendation to the Board of Commissioners or County administration, do you support requiring a documented response indicating whether the recommendation will be accepted, rejected, or further evaluated, along with the rationale for that decision?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-12">
+            <div class="question-number">Question 12</div>
+            <h3>When concerns about a County department are supported by public records, operational data, employee reports, audits, or other credible evidence, what responsibility do you believe members of the Board of Commissioners have to independently evaluate those concerns rather than relying solely on information provided by the department involved?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">The Board of Commissioners have a duty to act when concerns about a county department are brought up by anyone.</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">03</span>
+          <span class="section-title">Transparency, Accountability &amp; Independent Review</span>
+          <span class="section-count">9 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-13">
+            <div class="question-number">Question 13</div>
+            <h3>Camera Coverage: Do you support appropriate camera coverage in areas of the Bill Atkinson Animal Welfare Center where animals are housed, handled, medically treated, and euthanized, with appropriate policies governing access, privacy, and record retention?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-14">
+            <div class="question-number">Question 14</div>
+            <h3>Investigation of Serious Complaints: When credible allegations involving animal mistreatment, violations of animal-welfare regulations, or serious employee misconduct are reported within Animal Welfare &amp; Enforcement, do you support requiring a documented and impartial investigation with findings based on available evidence?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-15">
+            <div class="question-number">Question 15</div>
+            <h3>Employee Accountability: When an investigation substantiates that a County employee has mistreated an animal, violated an animal-welfare regulation, or committed other serious misconduct involving animals in County custody, do you support meaningful disciplinary action proportionate to the severity and circumstances of the violation?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-16">
+            <div class="question-number">Question 16</div>
+            <h3>Corrective Action and Follow-Through: When an investigation identifies policy failures, training deficiencies, workplace-culture concerns, or other systemic problems within a County department, do you support requiring a documented corrective-action plan and subsequent review to determine whether corrective measures were implemented and sustained?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-17">
+            <div class="question-number">Question 17</div>
+            <h3>Protection for Those Who Raise Concerns: Do you support policies that protect County employees, volunteers, Animal Advisory Council members, and others from retaliation when they raise legitimate animal-welfare, workplace, regulatory, or operational concerns in good faith?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-18">
+            <div class="question-number">Question 18</div>
+            <h3>Transparency Regarding Serious Complaints: While recognizing legitimate employee privacy and personnel protections, do you support greater public transparency regarding serious complaints involving the treatment of animals in County custody, including whether a complaint was investigated, whether allegations were substantiated, and whether corrective action was taken?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-19">
+            <div class="question-number">Question 19</div>
+            <h3>Independent Comprehensive Review or Audit: Do you support an independent, comprehensive review or audit of Gwinnett Animal Welfare &amp; Enforcement&#x27;s operations, policies, animal-care practices, staffing and training, medical services, euthanasia practices, enforcement, community programs, and performance outcomes?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-20">
+            <div class="question-number">Question 20</div>
+            <h3>Public Findings and Implementation: If such a review is conducted, do you support making its findings and recommendations publicly available and requiring the County to formally respond to the recommendations and report on implementation progress?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-21">
+            <div class="question-number">Question 21</div>
+            <h3>Operational and Performance Transparency: Do you support requiring Gwinnett Animal Welfare &amp; Enforcement to regularly publish meaningful operational and outcome data that allows Commissioners and the public to evaluate shelter performance and identify trends over time?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">04</span>
+          <span class="section-title">Shelter Animal Care, Enrichment &amp; Behavioral Welfare</span>
+          <span class="section-count">6 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-22">
+            <div class="question-number">Question 22</div>
+            <h3>Minimum Standards for Enrichment and Exercise: Do you support establishing measurable minimum standards for appropriate exercise, enrichment, social interaction, and meaningful out-of-kennel activity for animals in County custody, based on the individual animal&#x27;s health, behavior, and needs?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-23">
+            <div class="question-number">Question 23</div>
+            <h3>Documentation and Accountability for Daily Care: Do you support requiring consistent documentation of enrichment, exercise, and other meaningful out-of-kennel activity so that shelter management, Commissioners, and appropriate oversight bodies can evaluate whether established standards are being met?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-24">
+            <div class="question-number">Question 24</div>
+            <h3>Behavioral Assessments and Euthanasia Decisions: When a dog is being considered for euthanasia primarily because of behavioral concerns, do you support requiring a documented behavioral evaluation that considers, when available and appropriate, the animal&#x27;s history, observations from multiple qualified sources, behavior outside of the kennel environment, the potential effects of kennel stress or barrier reactivity, and reassessment before a final decision is made?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-25">
+            <div class="question-number">Question 25</div>
+            <h3>Qualified Behavioral Expertise and Staff Training: Do you support providing sufficient training and access to qualified animal-behavior expertise to help shelter staff accurately assess behavior, recognize the effects of fear and kennel stress, implement appropriate behavior-support plans, and reduce preventable behavioral deterioration during an animal&#x27;s stay?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-26">
+            <div class="question-number">Question 26</div>
+            <h3>Individualized Care for Long-Stay and At-Risk Animals: Animals experiencing extended shelter stays or showing signs of increasing fear, stress, or behavioral deterioration may require additional intervention. Do you support requiring individualized care or intervention plans for long-stay animals and animals showing significant signs of behavioral deterioration, which may include increased enrichment, exercise, foster placement, behavior support, medical evaluation, or other appropriate interventions?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-27">
+            <div class="question-number">Question 27</div>
+            <h3>Monitoring Shelter Animal Welfare: Beyond traditional outcome measures such as intake, adoption, and euthanasia numbers, do you support regularly evaluating and reporting measures related to the quality of life of animals while they are in County custody, including indicators such as enrichment, exercise, length of stay, and behavioral deterioration?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">05</span>
+          <span class="section-title">Veterinary &amp; Medical Care</span>
+          <span class="section-count">5 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-28">
+            <div class="question-number">Question 28</div>
+            <h3>Minimum Standards for Medical Care: Do you support establishing and enforcing measurable minimum standards for veterinary care of animals in County custody, including timely medical assessment, treatment, administration and documentation of prescribed medications, appropriate monitoring and reassessment, and escalation of care when an animal&#x27;s condition does not improve or worsens?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-29">
+            <div class="question-number">Question 29</div>
+            <h3>Emergency and After-Hours Veterinary Care: When an animal in County custody experiences a medical emergency or requires care beyond what can be provided at the shelter, do you support ensuring that staff have clear protocols and sufficient authority and resources to obtain timely emergency or specialty veterinary care based on the animal&#x27;s medical needs?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-30">
+            <div class="question-number">Question 30</div>
+            <h3>Veterinary Contract Oversight and Accountability: When Gwinnett County contracts with an outside veterinary provider, do you support requiring measurable performance standards and routine compliance review to determine whether contracted services - including medical rounds, treatment, documentation, follow-up care, and other contractual responsibilities - are being provided as required?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-31">
+            <div class="question-number">Question 31</div>
+            <h3>Independent Review of Veterinary Performance: Do you support periodic review of the quality and effectiveness of veterinary services by an appropriately qualified party independent of the veterinary contractor, including review of medical records, treatment protocols, outcomes, and compliance with established standards?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-32">
+            <div class="question-number">Question 32</div>
+            <h3>In-House Veterinary Care: Do you support Gwinnett County establishing and funding permanent in-house veterinary positions, including veterinarians and veterinary technicians, to provide routine medical care and oversight for animals in County custody, while continuing to use outside veterinary providers for specialty, emergency, or additional services when needed?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">06</span>
+          <span class="section-title">Euthanasia, Rescue Opportunities &amp; Lifesaving Decisions</span>
+          <span class="section-count">7 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-33">
+            <div class="question-number">Question 33</div>
+            <h3>Advance Notice / Last Call: Do you support a written policy requiring meaningful advance public and rescue notification before non-emergency euthanasia whenever circumstances permit, providing a reasonable opportunity for adoption, foster, or rescue placement?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-34">
+            <div class="question-number">Question 34</div>
+            <h3>Social Media Notification for At-Risk Animals: When an animal is at risk of non-emergency euthanasia, do you support requiring Animal Welfare &amp; Enforcement to actively and prominently notify the public through its current social media channels, including a new or clearly identifiable post that communicates the animal&#x27;s at-risk status and the timeframe for action, rather than relying solely on updates to older posts or existing animal listings?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-35">
+            <div class="question-number">Question 35</div>
+            <h3>Rescue, Foster or Adoption Interest and Extensions: When a qualified rescue, foster, or adopter is actively working to save an animal scheduled for euthanasia, do you support requiring the County to provide a reasonable extension to complete the placement when kennel space is available, rather than proceeding with euthanasia, unless the animal is experiencing severe medical suffering requiring immediate humane euthanasia or presents an immediate and serious public-safety risk?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-36">
+            <div class="question-number">Question 36</div>
+            <h3>Euthanasia Decision-Making and Safeguards: Before a non-emergency euthanasia decision is made, do you support requiring a documented review of the animal&#x27;s complete history and circumstances - including prior behavior and observations, changes in behavior during shelter confinement, medical status, length of stay, enrichment and out-of-kennel opportunities, foster or volunteer observations when available, interventions attempted, and available rescue, foster or adoption options - rather than relying primarily on recent negative behavioral observations?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-37">
+            <div class="question-number">Question 37</div>
+            <h3>Shelter Capacity and Euthanasia Risk: When the shelter is operating at or near capacity, do you support requiring proactive measures to reduce euthanasia risk, including expanded adoption promotion, rescue outreach, foster placement, temporary overflow capacity, and other reasonable lifesaving alternatives before animals become at risk of euthanasia?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-38">
+            <div class="question-number">Question 38</div>
+            <h3>Public Reporting of Euthanasia Outcomes: Do you support regular public reporting of euthanasia outcomes that includes the number of animals euthanized, the primary recorded reason for each euthanasia, and contributing circumstances - including shelter overcrowding or capacity pressures when applicable - so the public and Commissioners can accurately understand the factors influencing euthanasia outcomes?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-39">
+            <div class="question-number">Question 39</div>
+            <h3>Review of Euthanasia Trends and Contributing Factors: Do you support requiring Animal Welfare &amp; Enforcement and County leadership to periodically review euthanasia trends, including not only the recorded reason for euthanasia but also potential contributing factors such as shelter population, length of stay, behavioral deterioration, medical needs, staffing and resource limitations, and availability of rescue, foster, or other placement options?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">07</span>
+          <span class="section-title">Open Intake, Shelter Capacity &amp; the County Safety Net</span>
+          <span class="section-count">5 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-40">
+            <div class="question-number">Question 40</div>
+            <h3>Open-Intake Shelter: Gwinnett County Animal Welfare &amp; Enforcement currently operates as a managed-intake shelter, meaning access to shelter intake may be restricted or delayed. Do you support transitioning to an open-intake public shelter that accepts stray, abandoned, and owner-surrendered animals needing County shelter services, rather than restricting or denying intake in ways that may leave animals without safe placement and shift animal-welfare and public-safety risks back into the community?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-41">
+            <div class="question-number">Question 41</div>
+            <h3>Prevention Without Restricting Access: Do you support investing in programs that reduce unnecessary shelter intake - including owner-retention assistance, pet reunification, foster and rescue partnerships, and other prevention resources - while maintaining access to County shelter services for animals that need them?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-42">
+            <div class="question-number">Question 42</div>
+            <h3>Emergency and Capacity Contingency Planning: Do you support requiring Gwinnett County to maintain a proactive capacity plan for periods when the shelter approaches or exceeds normal capacity, including access to temporary or emergency overflow housing, expanded foster placement, rescue outreach, adoption promotion, reunification efforts, and other appropriate strategies so animals can continue to receive safe care without restricting intake or unnecessarily euthanizing animals?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-43">
+            <div class="question-number">Question 43</div>
+            <h3>Long-Term Shelter Capacity and Infrastructure: Do you support a comprehensive assessment of whether the Bill Atkinson Animal Welfare Center&#x27;s current capacity and infrastructure are sufficient to meet Gwinnett County&#x27;s present and projected needs, including appropriate animal housing, medical and isolation space, enrichment and exercise areas, and other operational needs?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-44">
+            <div class="question-number">Question 44</div>
+            <h3>Expanding Shelter Capacity: If the existing facility does not provide sufficient capacity to appropriately serve Gwinnett County&#x27;s animal population, do you support investing in additional capacity - including expansion of the existing shelter, development of an additional shelter facility, permanent or emergency overflow capacity, or other necessary infrastructure - rather than relying on restricted intake or euthanasia to address insufficient space?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">08</span>
+          <span class="section-title">Prevention, Population Control &amp; Responsible Pet Ownership</span>
+          <span class="section-count">6 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-45">
+            <div class="question-number">Question 45</div>
+            <h3>Accessible and Affordable Spay/Neuter: Do you support Gwinnett County funding and expanding accessible, affordable spay/neuter programs for residents, including targeted programs for communities and animal populations contributing disproportionately to shelter intake?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-46">
+            <div class="question-number">Question 46</div>
+            <h3>Irresponsible and Backyard Breeding: Do you support strengthening Gwinnett County ordinances and enforcement strategies to address irresponsible and backyard breeding that contributes to unwanted litters, animal neglect, and shelter intake?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-47">
+            <div class="question-number">Question 47</div>
+            <h3>Retail Sale of Commercially Bred Animals: Do you support prohibiting the retail sale of dogs, cats, and rabbits sourced from commercial breeders while allowing pet stores to partner with legitimate animal shelters and rescue organizations to offer animals for adoption?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-48">
+            <div class="question-number">Question 48</div>
+            <h3>Community Cats and TNR: Do you support expanding Gwinnett County&#x27;s Trap-Neuter-Return (TNR) and community-cat programs, including increasing access to available TNR services and addressing barriers that result in County-funded TNR capacity going unused while community need exists?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-49">
+            <div class="question-number">Question 49</div>
+            <h3>Lost-Pet Reunification and Microchipping: Do you support expanding pet-identification, microchipping, and field-reunification initiatives that help lost animals return directly to their families and reduce unnecessary shelter intake?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-50">
+            <div class="question-number">Question 50</div>
+            <h3>Owner Retention and Surrender Prevention Resources: Do you support investing in owner-retention and surrender-prevention programs that address solvable reasons animals are surrendered - such as temporary financial hardship, access to veterinary care, pet food, or behavioral assistance - while maintaining access to the County shelter when surrender remains necessary?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">09</span>
+          <span class="section-title">Animal Protection Ordinances &amp; Enforcement</span>
+          <span class="section-count">4 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-51">
+            <div class="question-number">Question 51</div>
+            <h3>Strengthening Animal-Protection Ordinances: Do you support reviewing and strengthening Gwinnett County&#x27;s animal-protection ordinances when existing laws are inadequate to address animal neglect, cruelty, abandonment, unsafe confinement, or other conditions that threaten animal welfare or public safety?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-52">
+            <div class="question-number">Question 52</div>
+            <h3>Protection from Extreme Weather and Unsafe Conditions: Do you support strengthening and enforcing County standards requiring animals kept outdoors to have adequate protection from extreme heat and cold and access to appropriate shelter, water, and other necessities necessary to protect their health and safety?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-53">
+            <div class="question-number">Question 53</div>
+            <h3>Consistent Enforcement and Follow-Up: Do you support requiring consistent enforcement of animal-welfare laws and ordinances, including appropriate documentation, investigation, follow-up, and corrective or enforcement action when violations are identified?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-54">
+            <div class="question-number">Question 54</div>
+            <h3>Animal Enforcement Staffing, Training &amp; Resources: Do you support providing Animal Welfare &amp; Enforcement with sufficient staffing, training, equipment, and other resources necessary to investigate complaints, enforce animal-protection laws, respond to animal-related public-safety concerns, and provide appropriate follow-up?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">10</span>
+          <span class="section-title">Volunteers, Foster &amp; Rescue Partnerships, and Community Access</span>
+          <span class="section-count">7 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-55">
+            <div class="question-number">Question 55</div>
+            <h3>Volunteer Program Barriers: Do you support reviewing and reforming Gwinnett&#x27;s volunteer program to reduce unnecessary barriers to participation, including lengthy orientation wait times and service-hour requirements that delay volunteers from participating in programs or providing meaningful assistance?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-56">
+            <div class="question-number">Question 56</div>
+            <h3>Competency-Based Volunteer Opportunities: Do you support developing volunteer training and qualification requirements based primarily on demonstrated competency and safety rather than arbitrary service-hour thresholds before trained volunteers can participate in activities such as dog walking, enrichment, socialization, animal promotion, and Dog Day Out?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-57">
+            <div class="question-number">Question 57</div>
+            <h3>Volunteer Culture and Treatment: Do you support establishing clear standards requiring volunteers to be treated professionally and respectfully as community partners, with constructive feedback and concerns welcomed rather than discouraged?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-58">
+            <div class="question-number">Question 58</div>
+            <h3>Protection from Retaliation: Do you support policies protecting volunteers from retaliation, removal, restriction of animal access, or other adverse treatment solely because they raise legitimate concerns, provide constructive criticism, or advocate in good faith for animals in County custody?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-59">
+            <div class="question-number">Question 59</div>
+            <h3>Volunteer Recruitment, Retention and Utilization: Do you support establishing measurable goals for volunteer recruitment, retention, hours contributed, and meaningful utilization, with regular evaluation and corrective action when participation or retention indicates that the volunteer program is not effectively engaging the community?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-60">
+            <div class="question-number">Question 60</div>
+            <h3>Foster and Rescue Partnerships: Do you support expanding and adequately resourcing foster and rescue partnerships, including reducing unnecessary administrative barriers, improving communication and coordination, and increasing opportunities for animals to leave the shelter through foster or qualified rescue placement?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-61">
+            <div class="question-number">Question 61</div>
+            <h3>Shelter Hours and Community Access: Do you support expanding shelter hours to provide meaningful evening and weekend access for residents to adopt and reclaim animals, volunteer, foster, and participate in other shelter programs?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          
+          <div class="additional-comments">
+            <strong>Additional Comments / Explanation:</strong>
+            <span>No additional comments.</span>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="response-section">
+        <summary>
+          <span class="section-number">11</span>
+          <span class="section-title">Budget Accountability, Performance &amp; Commissioner Leadership</span>
+          <span class="section-count">7 questions</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="response-section-body">
+          
+          <div class="response-item" id="question-62">
+            <div class="question-number">Question 62</div>
+            <h3>Animal Welfare as a County Budget Priority: Do you support making animal welfare a meaningful County budget priority and providing appropriate funding for veterinary care, accessible spay/neuter programs, TNR and community-cat programs, other prevention initiatives, Animal Enforcement, enrichment, staffing, shelter capacity and infrastructure, volunteer and foster programs, technology, and other programs demonstrated to improve animal-welfare outcomes?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-63">
+            <div class="question-number">Question 63</div>
+            <h3>Performance Measures and Public Accountability: Do you support requiring major County-funded animal-welfare programs and initiatives to have measurable objectives, meaningful performance measures, and publicly reported results so Commissioners and residents can determine whether taxpayer-funded programs are achieving their intended outcomes?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-64">
+            <div class="question-number">Question 64</div>
+            <h3>Commissioner Review of Animal-Welfare Performance: Do you support regular review by the Board of Commissioners of key animal-welfare performance measures, including shelter intake and outcomes, euthanasia and contributing circumstances, length of stay, shelter population and capacity, medical care, enrichment, volunteer participation, prevention programs, enforcement activity, and other indicators necessary to identify emerging problems and evaluate performance?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-65">
+            <div class="question-number">Question 65</div>
+            <h3>Responding to Documented Concerns: When residents, employees, volunteers, advisory bodies, professionals, or community organizations provide credible documentation, data, or recommendations identifying potential animal-welfare problems, do you commit to ensuring those concerns receive acknowledgment, appropriate evaluation, and a substantive response rather than being ignored or referred back to the department without meaningful follow-up?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-66">
+            <div class="question-number">Question 66</div>
+            <h3>Commissioner Responsibility for Oversight: Do you agree that members of the Board of Commissioners have an independent responsibility to oversee Gwinnett&#x27;s animal-welfare system, ask difficult questions, examine evidence and data, and pursue corrective action when credible information indicates that policies, programs, leadership, or practices are failing to adequately protect animals or serve residents?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-67">
+            <div class="question-number">Question 67</div>
+            <h3>Commitment to Act: If evidence demonstrates that an animal-welfare policy, program, practice, or use of County resources is not producing acceptable outcomes, do you commit to using your authority as a Commissioner - including policy, budget, oversight, and legislative authority - to pursue meaningful and measurable improvements?</h3>
+            <div class="candidate-response response-support"><div class="response-label">Response</div><div class="response-value"><i class="fas fa-circle-check" aria-hidden="true"></i> Support</div></div>
+          </div>
+        
+          <div class="response-item" id="question-68">
+            <div class="question-number">Question 68</div>
+            <h3>Your Animal Welfare Priorities: What animal-welfare issue or issues do you believe Gwinnett County should prioritize during your term that were not adequately addressed in this survey, and what actions would you propose?</h3>
+            <div class="candidate-response response-written"><div class="response-label">Benjamin Culberson’s Response</div><div class="response-value">All areas covered.</div></div>
+          </div>
+        
+          
+        </div>
+      </details>
+    
+  </div>
+
+  <div class="response-note">
+    <strong>About this response:</strong> Benjamin Culberson’s responses are presented
+    as submitted. Formatting has been adapted for readability, but the substance of his
+    answers has not been changed. Participation in GAAA’s Candidate Survey does not
+    constitute an endorsement by Gwinnett Animal Advocacy Alliance.
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.candidate-response-page details.response-section');
+  const expand = document.getElementById('expand-all');
+  const collapse = document.getElementById('collapse-all');
+
+  if (expand) {
+    expand.addEventListener('click', function () {
+      sections.forEach(section => section.open = true);
+    });
+  }
+
+  if (collapse) {
+    collapse.addEventListener('click', function () {
+      sections.forEach(section => section.open = false);
+    });
+  }
+});
+</script>
