@@ -47,7 +47,7 @@ permalink: /election-2026/
 
   .election-intro {
     max-width: 1240px;
-    margin: 42px auto 28px;
+    margin: 40px auto 26px;
     text-align: center;
   }
 
@@ -63,92 +63,6 @@ permalink: /election-2026/
     margin-right: auto;
     font-size: 1.04rem;
     line-height: 1.7;
-  }
-
-
-
-  .candidate-status-explainer {
-    margin-top: 22px;
-  }
-
-  .candidate-status-explainer .status-definition {
-    display: block;
-    margin: 0;
-    line-height: 1.65;
-  }
-
-  .candidate-status-explainer .status-definition + .status-definition {
-    margin-top: 7px;
-  }
-
-
-  .candidate-results-banner {
-    max-width: 1200px;
-    margin: 34px auto 0;
-    padding: 30px 34px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    background: #eef7fc;
-    border: 1px solid #b9d9ee;
-    border-left: 5px solid #2d98d4;
-    border-radius: 10px;
-  }
-
-  .candidate-results-banner .banner-copy {
-    flex: 1;
-  }
-
-  .candidate-results-banner .section-label {
-    margin-bottom: 5px;
-  }
-
-  .candidate-results-banner h2 {
-    margin: 0 0 8px;
-    color: var(--accent);
-    font-size: 2rem;
-  }
-
-  .candidate-results-banner p {
-    margin: 0;
-    color: #596775;
-    line-height: 1.65;
-  }
-
-  .candidate-results-banner .results-button {
-    flex: 0 0 auto;
-    display: inline-block;
-    padding: 13px 20px;
-    background: var(--accent);
-    color: #fff;
-    border-radius: 6px;
-    font-weight: 800;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .candidate-results-banner .results-button:hover {
-    opacity: .92;
-  }
-
-  .election-resource-heading {
-    max-width: 1200px;
-    margin: 60px auto 22px;
-    text-align: center;
-  }
-
-  .election-resource-heading h2 {
-    margin: 0 0 8px;
-    color: var(--accent);
-    font-size: 2rem;
-  }
-
-  .election-resource-heading p {
-    max-width: 850px;
-    margin: 0 auto;
-    color: #66717c;
-    line-height: 1.65;
   }
 
   .election-resource-grid {
@@ -186,17 +100,139 @@ permalink: /election-2026/
   .results-method{margin:24px 0 0;padding:18px 20px;background:#f7fbff;border-left:4px solid var(--light);border-radius:8px;font-size:.9rem;line-height:1.65}
   .results-method strong{color:var(--accent)}
 
+
+  .status-explainer {
+    max-width: 1200px;
+    margin: 22px auto 0;
+    padding: 15px 18px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 7px;
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  .status-explainer p {
+    margin: 0;
+  }
+
+  .status-explainer p + p {
+    margin-top: 6px;
+  }
+
+  .status-explainer strong {
+    color: var(--accent);
+  }
+
+  /* Candidate results CTA */
+  .candidate-results-cta {
+    max-width: 1200px;
+    margin: 34px auto 0;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: var(--accent);
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .candidate-results-cta .section-label,
+  .candidate-results-cta h2,
+  .candidate-results-cta p {
+    color: #fff;
+  }
+
+  .candidate-results-cta .section-label {
+    margin-bottom: 4px;
+    opacity: .88;
+  }
+
+  .candidate-results-cta h2 {
+    margin: 0 0 7px;
+    font-size: 1.95rem;
+  }
+
+  .candidate-results-cta p {
+    margin: 0;
+    max-width: 760px;
+    line-height: 1.6;
+    opacity: .92;
+  }
+
+  .candidate-results-cta .results-button {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 12px 18px;
+    background: #fff;
+    color: var(--accent);
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .candidate-results-cta .results-button:hover {
+    background: #edf7fd;
+  }
+
+  /* Two-card resource area */
+  .election-resource-heading {
+    max-width: 900px;
+    margin: 50px auto 20px;
+    text-align: center;
+  }
+
+  .election-resource-heading h2 {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 2rem;
+  }
+
+  .election-resource-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #66717c;
+    line-height: 1.65;
+  }
+
+  .election-resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 820px;
+    gap: 24px;
+    margin: 0 auto 58px;
+  }
+
+  .election-resource-grid .home-card {
+    min-height: 260px;
+  }
+
   .candidate-section {
     max-width: 1200px;
     margin: 0 auto 70px;
   }
 
+  .candidate-section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
   .candidate-section-header .section-label {
     text-align: center;
   }
 
+  .candidate-section-header h2 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 2.35rem;
+  }
 
+  .candidate-section-header p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
 
   .candidate-section-header .results-count {
     margin-bottom: 18px;
@@ -218,14 +254,22 @@ permalink: /election-2026/
   .candidate-race-title {
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #edf1f4;
+    justify-content: center;
+    margin: 0 0 18px;
+    padding: 14px 18px;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
   }
+
   .candidate-race-title h3 {
     margin: 0;
-    color: var(--accent);
-    font-size: 1.55rem;
+    color: #fff;
+    font-size: 1.12rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
   }
 
   .candidate-grid {
@@ -388,6 +432,24 @@ permalink: /election-2026/
   }
 
   @media (max-width: 768px) {
+    .candidate-results-cta {
+      margin-top: 26px;
+      padding: 24px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .candidate-results-cta h2 {
+      font-size: 1.6rem;
+    }
+
+    .candidate-results-cta .results-button {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      white-space: normal;
+    }
+
     .election-page .page-hero-mobile-img {
       content: url('/assets/election-2026-hero-mobile.png');
     }
@@ -405,7 +467,7 @@ permalink: /election-2026/
     }
 
     .election-intro h2,
-    .election-resource-heading h2,
+    .candidate-section-header h2,
     .accountability-section h2 {
       font-size: 1.7rem;
     }
@@ -463,36 +525,16 @@ permalink: /election-2026/
 
   <section class="election-intro">
     <h2>Your 2026 Animal Welfare Election Guide</h2>
-
     <p>
       The 2026 election will determine who represents Districts 2 and 4 on the
       Gwinnett County Board of Commissioners. Explore candidate participation,
       survey responses and pledge commitments to see where candidates stand on
       animal-welfare issues before casting your ballot.
     </p>
-
-    <p>
-      <strong>Our goal is simple: give voters clear, accessible information before
-      they cast their ballots.</strong>
-    </p>
+    <p><strong>Our goal is simple: give voters clear, accessible information before they cast their ballots.</strong></p>
   </section>
 
   <section class="candidate-section">
-    <div class="candidate-section-header" id="candidate-results">
-      <span class="section-label">2026 Candidate Participation</span>
-      <h2>The Response Deadline Has Passed</h2>
-      <p>
-        One candidate responded, two candidates did not respond, and one candidate
-        could not be reached because verified campaign contact information was not located.
-      </p>
-
-      <div class="results-count" aria-label="Candidate survey participation summary">
-        <span class="count-response">1 Response Received</span>
-        <span class="count-no-response">2 No Responses</span>
-        <span class="count-not-delivered">1 Not Delivered</span>
-      </div>
-    </div>
-
     <div class="candidate-race">
       <div class="candidate-race-title">
         <h3>DISTRICT 2</h3>
@@ -611,19 +653,15 @@ permalink: /election-2026/
 
       </div>
     </div>
-
-    <div class="results-method">
-      <strong>No Response</strong> means the candidate received the Candidate Survey
-      and supporting materials but did not submit a response by the August 21, 2026
-      deadline. <strong>Not Delivered</strong> means GAAA was unable to locate verified
-      campaign contact information before the deadline and therefore could not provide
-      the candidate the survey. Rodolfo Ochoa is not classified as a candidate who
-      failed to respond.
+    <div class="status-explainer">
+      <p><strong>No Response:</strong> Candidate received the Candidate Survey and supporting materials but did not submit a response by the August 21, 2026 deadline.</p>
+      <p><strong>Not Delivered:</strong> GAAA was unable to locate verified campaign contact information before the deadline and therefore could not provide the survey. Rodolfo Ochoa is not classified as a candidate who failed to respond.</p>
     </div>
   </section>
 
-  <section class="candidate-results-banner">
-    <div class="banner-copy">
+
+  <section class="candidate-results-cta">
+    <div>
       <span class="section-label">Candidate Survey Results</span>
       <h2>See Where the Candidates Stand</h2>
       <p>
@@ -640,14 +678,13 @@ permalink: /election-2026/
     <span class="section-label">Explore the 2026 Election Project</span>
     <h2>Survey &amp; Candidate Pledge</h2>
     <p>
-      Review the questions candidates were asked and read the Animal Welfare
-      Candidate Pledge provided to candidates.
+      Review the questions candidates were asked and the Animal Welfare Candidate
+      Pledge provided to candidates.
     </p>
   </section>
 
-   <section class="election-resource-grid">
-
-    <a class="home-card" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+  <section class="election-resource-grid">
+    <a class="home-card" href="https://form.jotform.com/GwinnettAdvocates/preview-2026-candidate-survey" target="_blank" rel="noopener noreferrer">
       <div class="home-card-icon icon-blue">
         <i class="fas fa-clipboard-list" aria-hidden="true"></i>
       </div>
@@ -670,7 +707,6 @@ permalink: /election-2026/
       </p>
       <span>View Pledge →</span>
     </a>
-
   </section>
 
   <section class="accountability-section">
