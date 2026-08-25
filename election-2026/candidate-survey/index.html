@@ -294,6 +294,206 @@ permalink: /election-2026/candidate-survey/
 }
 
 
+
+.candidate-survey-page .positions-section {
+    max-width: 1180px;
+    margin: 70px auto;
+}
+
+.candidate-survey-page .positions-section h2 {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.candidate-survey-page .positions-section .section-intro {
+    max-width: 920px;
+}
+
+.candidate-survey-page .position-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 26px;
+}
+
+.candidate-survey-page .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.candidate-survey-page .legend-swatch {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    flex: 0 0 13px;
+}
+
+.candidate-survey-page .legend-support {
+    background: #edf7ee;
+    color: #246b2a;
+    border: 1px solid #b9dcbc;
+}
+.candidate-survey-page .legend-support .legend-swatch { background: #2f7d32; }
+
+.candidate-survey-page .legend-qualified {
+    background: #fff8ed;
+    color: #9a5a10;
+    border: 1px solid #efd2a6;
+}
+.candidate-survey-page .legend-qualified .legend-swatch { background: #d3a13a; }
+
+.candidate-survey-page .legend-oppose {
+    background: #fff1f1;
+    color: #a12626;
+    border: 1px solid #edc0c0;
+}
+.candidate-survey-page .legend-oppose .legend-swatch { background: #b02a2a; }
+
+.candidate-survey-page .legend-no-response {
+    background: #f2f4f6;
+    color: #616c76;
+    border: 1px solid #d7dde2;
+}
+.candidate-survey-page .legend-no-response .legend-swatch { background: #8a949d; }
+
+.candidate-survey-page .legend-not-delivered {
+    background: #f7f8f9;
+    color: #7a858f;
+    border: 1px dashed #cfd6dc;
+}
+.candidate-survey-page .legend-not-delivered .legend-swatch {
+    background: repeating-linear-gradient(
+        135deg,
+        #d8dde2 0,
+        #d8dde2 4px,
+        #f7f8f9 4px,
+        #f7f8f9 8px
+    );
+}
+
+.candidate-survey-page .positions-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #dfe6eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+    background: #fff;
+}
+
+.candidate-survey-page .positions-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.candidate-survey-page .positions-table th,
+.candidate-survey-page .positions-table td {
+    border-right: 1px solid #e8edf1;
+    border-bottom: 1px solid #e8edf1;
+    padding: 14px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.candidate-survey-page .positions-table tr:last-child th,
+.candidate-survey-page .positions-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.candidate-survey-page .positions-table th:last-child,
+.candidate-survey-page .positions-table td:last-child {
+    border-right: 0;
+}
+
+.candidate-survey-page .positions-table thead th {
+    background: var(--accent);
+    color: #fff;
+    font-size: .9rem;
+    line-height: 1.35;
+}
+
+.candidate-survey-page .positions-table thead th:first-child {
+    text-align: left;
+    width: 31%;
+}
+
+.candidate-survey-page .positions-table .candidate-head small {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255,255,255,.78);
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.candidate-survey-page .positions-table tbody th {
+    background: #f5f8fb;
+    color: var(--accent);
+    text-align: left;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.candidate-survey-page .position-cell {
+    font-size: .76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.candidate-survey-page .position-support {
+    background: #e8f5e9;
+    color: #246b2a;
+}
+
+.candidate-survey-page .position-qualified {
+    background: #fff2cf;
+    color: #8b5e00;
+}
+
+.candidate-survey-page .position-oppose {
+    background: #fde8e8;
+    color: #a12626;
+}
+
+.candidate-survey-page .position-no-response {
+    background: #edf0f2;
+    color: #6e7881;
+}
+
+.candidate-survey-page .position-not-delivered {
+    color: #7a858f;
+    background: repeating-linear-gradient(
+        135deg,
+        #f3f5f6 0,
+        #f3f5f6 8px,
+        #e7ebee 8px,
+        #e7ebee 16px
+    );
+}
+
+.candidate-survey-page .positions-note {
+    max-width: 1000px;
+    margin: 22px auto 0;
+    padding: 17px 20px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 8px;
+    font-size: .88rem;
+    line-height: 1.65;
+}
+
+.candidate-survey-page .positions-note strong {
+    color: var(--accent);
+}
+
+
 .candidate-survey-page .results-section {
     max-width: 1180px;
     margin: 70px auto;
@@ -420,7 +620,8 @@ permalink: /election-2026/candidate-survey/
     }
 
     .candidate-survey-page .survey-intro h2,
-    .candidate-survey-page .results-section h2 {
+    .candidate-survey-page .results-section h2,
+    .candidate-survey-page .positions-section h2 {
         font-size: 1.8rem;
         text-align: left;
     }
@@ -641,6 +842,153 @@ permalink: /election-2026/candidate-survey/
             </div>
         </div>
     </section>
+
+
+    <!-- CANDIDATE POSITIONS AT A GLANCE -->
+    <section class="positions-section" id="candidate-positions">
+        <span class="section-label" style="text-align:center;">Candidate Positions</span>
+        <h2>Animal Welfare Positions at a Glance</h2>
+        <p class="section-intro">
+            This comparison summarizes candidate responses by major survey topic.
+            It is designed as a quick-reference guide; voters can review the full
+            survey and each candidate's complete answers for additional context.
+        </p>
+
+        <div class="position-legend" aria-label="Candidate position legend">
+            <span class="legend-item legend-support">
+                <span class="legend-swatch"></span> Supports
+            </span>
+            <span class="legend-item legend-qualified">
+                <span class="legend-swatch"></span> Qualified / Mixed
+            </span>
+            <span class="legend-item legend-oppose">
+                <span class="legend-swatch"></span> Does Not Support
+            </span>
+            <span class="legend-item legend-no-response">
+                <span class="legend-swatch"></span> No Response
+            </span>
+            <span class="legend-item legend-not-delivered">
+                <span class="legend-swatch"></span> Not Delivered
+            </span>
+        </div>
+
+        <div class="positions-table-wrap">
+            <table class="positions-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Survey Topic</th>
+                        <th scope="col" class="candidate-head">
+                            Ben Ku
+                            <small>District 2 • Incumbent</small>
+                        </th>
+                        <th scope="col" class="candidate-head">
+                            Rodolfo Ochoa
+                            <small>District 2</small>
+                        </th>
+                        <th scope="col" class="candidate-head">
+                            Matthew Holtkamp
+                            <small>District 4 • Incumbent</small>
+                        </th>
+                        <th scope="col" class="candidate-head">
+                            Benjamin Culberson
+                            <small>District 4</small>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Independent Oversight &amp; Community Voice</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Transparency, Investigations &amp; Accountability</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Independent Review, Public Data &amp; Cameras</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Humane Care, Enrichment &amp; Behavioral Welfare</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Veterinary Care &amp; In-House Medical Capacity</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Euthanasia Safeguards &amp; Lifesaving</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Open Intake, Capacity &amp; Infrastructure</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prevention, Spay/Neuter, TNR &amp; Community Programs</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Animal Protection Laws &amp; Enforcement</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Volunteer, Foster, Rescue &amp; Community Access</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Budget Priorities &amp; Commissioner Responsibility</th>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-not-delivered">Not Delivered</td>
+                        <td class="position-cell position-no-response">No Response</td>
+                        <td class="position-cell position-support">Supports</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="positions-note">
+            <strong>How this summary works:</strong> A topic is marked
+            <strong>Supports</strong> when the candidate supported the substantive
+            questions within that survey section. <strong>Qualified / Mixed</strong>
+            and <strong>Does Not Support</strong> are available for candidates whose
+            answers differ across a topic or oppose a proposal. <strong>No Response</strong>
+            means the candidate received the survey but did not submit it by the deadline.
+            <strong>Not Delivered</strong> means GAAA was unable to provide the survey
+            because verified campaign contact information was not located before the deadline.
+        </div>
+    </section>
+
 
     <!-- RESULTS -->
     <section class="results-section" id="candidate-results">
