@@ -1,1 +1,291 @@
+---
+layout: default
+title: Event Sign-In
+---
 
+<section class="contact-section event-signin-section">
+
+    <div class="event-signin-header">
+        <div class="event-signin-icon">
+            <i class="fas fa-paw" aria-hidden="true"></i>
+        </div>
+
+        <h1>Thanks for Joining Us!</h1>
+
+        <p>
+            We’re glad you’re here. Please take a moment to sign in so we can
+            keep you updated on Gwinnett Animal Advocacy Alliance news,
+            upcoming events, and important animal welfare updates.
+        </p>
+    </div>
+
+
+    <iframe
+        name="event_signup_iframe"
+        id="event_signup_iframe"
+        style="display:none;"
+        title="Event sign-in submission">
+    </iframe>
+
+
+    <div class="form-card event-signin-card" id="event-signin-wrapper">
+
+        <form
+            id="event-signin-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdRxoFEJOSs-IupXw_srB-iHqF7GZT-Qz9IaVrs8fxtthx09g/formResponse"
+            method="POST"
+            target="event_signup_iframe">
+
+            <!-- Source -->
+            <input
+                type="hidden"
+                name="entry.1692632741"
+                value="Event Sign-In">
+
+            <!-- Email consent -->
+            <input
+                type="hidden"
+                name="entry.1779736562"
+                value="I agree">
+
+
+            <div class="form-grid two-column">
+
+                <div>
+                    <label for="event-first-name">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="event-first-name"
+                        name="FIRST_NAME_ENTRY_ID"
+                        autocomplete="given-name"
+                        required>
+                </div>
+
+
+                <div>
+                    <label for="event-last-name">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="event-last-name"
+                        name="LAST_NAME_ENTRY_ID"
+                        autocomplete="family-name"
+                        required>
+                </div>
+
+            </div>
+
+
+            <label for="event-email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="event-email"
+                name="entry.1773177730"
+                autocomplete="email"
+                required>
+
+
+            <label class="event-consent">
+                <input
+                    type="checkbox"
+                    id="event-consent"
+                    required>
+
+                <span>
+                    I agree to receive occasional email updates from
+                    Gwinnett Animal Advocacy Alliance.
+                </span>
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn event-signin-button">
+                Sign In
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div
+        id="event-signin-success"
+        class="form-card event-signin-success"
+        style="display:none;">
+
+        <i class="fas fa-circle-check" aria-hidden="true"></i>
+
+        <h2>You’re All Signed In!</h2>
+
+        <p>
+            Thank you for joining us and supporting better outcomes
+            for animals in Gwinnett County.
+        </p>
+
+    </div>
+
+</section>
+
+
+<style>
+
+.event-signin-section {
+    max-width: 760px;
+}
+
+.event-signin-header {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.event-signin-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #edf7fd;
+    color: var(--light);
+    font-size: 2rem;
+}
+
+.event-signin-header h1 {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+.event-signin-header p {
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.event-signin-card {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 34px;
+}
+
+.event-signin-card input {
+    font-size: 1rem;
+    min-height: 48px;
+}
+
+.event-consent {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 4px 0 24px !important;
+    color: var(--primary) !important;
+    font-size: .88rem;
+    font-weight: 500 !important;
+    line-height: 1.55;
+}
+
+.event-consent input {
+    width: auto !important;
+    min-height: auto;
+    margin: 5px 0 0 !important;
+    flex-shrink: 0;
+}
+
+.event-signin-button {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.event-signin-success {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    text-align: center;
+}
+
+.event-signin-success > i {
+    margin-bottom: 16px;
+    color: #2f7d32;
+    font-size: 3.2rem;
+}
+
+.event-signin-success h2 {
+    margin: 0 0 12px;
+    color: var(--accent);
+}
+
+.event-signin-success p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+@media (max-width: 768px) {
+
+    .event-signin-header h1 {
+        font-size: 2rem;
+    }
+
+    .event-signin-header p {
+        font-size: 1rem;
+    }
+
+    .event-signin-card {
+        padding: 24px 20px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const form = document.getElementById('event-signin-form');
+    const iframe = document.getElementById('event_signup_iframe');
+    const wrapper = document.getElementById('event-signin-wrapper');
+    const success = document.getElementById('event-signin-success');
+
+    let submitted = false;
+
+    form.addEventListener('submit', function () {
+        submitted = true;
+    });
+
+    iframe.addEventListener('load', function () {
+
+        if (!submitted) {
+            return;
+        }
+
+        wrapper.style.display = 'none';
+        success.style.display = 'block';
+
+        success.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+    });
+
+});
+
+</script>
