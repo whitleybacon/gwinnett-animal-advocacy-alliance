@@ -233,6 +233,7 @@ permalink: /election-2026/candidate-pledge/
     border: 1px solid #e5e5e5;
     border-radius: 14px;
     box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    text-align: left;
   }
 
   .signer-card h3 {
@@ -242,10 +243,77 @@ permalink: /election-2026/candidate-pledge/
 
   .signer-card p {
     margin: 0;
+    line-height: 1.6;
   }
 
-  .status-badge.badge-pending {
-    background: #6b7785;
+  .signer-card p + p {
+    margin-top: 12px;
+  }
+
+  .signer-card .candidate-entry + .candidate-entry {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .signer-card .candidate-entry h4 {
+    color: var(--accent);
+    font-size: 1.12rem;
+    margin: 0 0 10px;
+  }
+
+  .signer-card .candidate-entry a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .pledge-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: .78rem;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .pledge-status.signed {
+    background: #edf7ee;
+    color: #246b2a;
+    border: 1px solid #b9dcbc;
+  }
+
+  .pledge-status.not-returned {
+    background: #f2f4f6;
+    color: #56616c;
+    border: 1px solid #d7dde2;
+  }
+
+  .pledge-status.not-delivered {
+    background: #fff8ed;
+    color: #8c570b;
+    border: 1px solid #ead8a7;
+  }
+
+  .pledge-method {
+    max-width: 1200px;
+    margin: 24px auto 0;
+    padding: 18px 20px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 8px;
+    text-align: left;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .pledge-method p {
+    margin: 0;
+  }
+
+  .pledge-method p + p {
+    margin-top: 10px;
   }
 
   .pledge-related {
@@ -261,25 +329,13 @@ permalink: /election-2026/candidate-pledge/
     margin-top: 0;
   }
 
-  .pledge-related .results-coming-soon {
-    cursor: default;
-  }
-
-  .pledge-related .results-coming-soon:hover {
-    transform: none;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  }
-
-  .pledge-related .results-coming-soon span {
-    color: #7a858f;
-  }
-
   .pledge-note {
     max-width: 1000px;
     margin: 0 auto 35px;
     color: #66717c;
     font-size: .9rem;
     text-align: center;
+    line-height: 1.7;
   }
 
   @media (max-width: 768px) {
@@ -348,40 +404,70 @@ permalink: /election-2026/candidate-pledge/
     .pledge-sign-actions .btn {
       width: auto;
     }
+
+    .signer-card {
+      padding: 24px 20px;
+    }
   }
 </style>
 
 <div class="pledge-page">
 
+  <!-- HERO -->
+
   <section class="page-hero">
+
     <img
       class="page-hero-mobile-img"
       src="/assets/candidate-pledge-hero-mobile.png"
       alt="Candidate pledge document with a pen in a civic setting">
 
     <div class="page-hero-content">
-      <span class="pledge-kicker">2026 Gwinnett County Election</span>
+
+      <span class="pledge-kicker">
+        2026 Gwinnett County Election
+      </span>
+
       <h1>Animal Welfare Candidate Pledge</h1>
+
       <p>
         A commitment to transparent leadership, independent oversight,
         humane care and measurable action for Gwinnett County's animals
         and residents.
       </p>
+
     </div>
+
   </section>
 
+
+  <!-- INTRODUCTION -->
+
   <section class="pledge-intro">
-    <span class="section-label">More Than a Campaign Promise</span>
-    <h2>Supporting animal welfare is easy to say. Meaningful change requires action.</h2>
+
+    <span class="section-label">
+      More Than a Campaign Promise
+    </span>
+
+    <h2>
+      Supporting animal welfare is easy to say.
+      Meaningful change requires action.
+    </h2>
+
     <p>
       The GAAA 2026 Animal Welfare Candidate Pledge asks candidates for the
       Gwinnett County Board of Commissioners to make clear, public commitments
       on the policies, oversight, funding and leadership decisions that directly
       affect animals throughout our community.
     </p>
+
   </section>
 
+
+  <!-- PLEDGE LEAD -->
+
   <div class="pledge-lead">
+
     <p>
       <strong>By signing the GAAA Animal Welfare Candidate Pledge,</strong>
       I commit to using my position on the Gwinnett County Board of Commissioners
@@ -389,29 +475,47 @@ permalink: /election-2026/candidate-pledge/
       to ensure that animals entrusted to Gwinnett County receive the care and
       protection they deserve.
     </p>
+
   </div>
 
+
+  <!-- SEVEN PLEDGE COMMITMENTS -->
+
   <section class="pledge-section">
+
     <div class="pledge-grid">
 
+      <!-- COMMITMENT 1 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">1</div>
           <h3>Independent Oversight &amp; Community Voice</h3>
         </div>
+
         <p>
           I will support meaningful citizen and animal-advocate representation and an
           Animal Advisory Council that can independently ask questions, review information,
           request records and data, make recommendations, and advise the Board without
           interference or retaliation.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 2 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">2</div>
-          <h3>Accountability, Transparency &amp; Protection for Those Who Speak Up</h3>
+          <h3>
+            Accountability, Transparency &amp;
+            Protection for Those Who Speak Up
+          </h3>
         </div>
+
         <p>
           I will hold Animal Welfare leadership and employees to meaningful standards of
           professionalism, animal care, regulatory compliance and accountability; seek
@@ -419,13 +523,19 @@ permalink: /election-2026/candidate-pledge/
           up on corrective action; and support protections for employees, volunteers,
           Council members and others who raise legitimate concerns in good faith.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 3 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">3</div>
           <h3>Independent Review &amp; Objective Oversight</h3>
         </div>
+
         <p>
           I will support a comprehensive independent operational audit and/or independent
           task force to evaluate Gwinnett's animal-welfare system, with measurable
@@ -434,13 +544,19 @@ permalink: /election-2026/candidate-pledge/
           to protect animals and employees and provide objective evidence when incidents
           or complaints occur.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 4 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">4</div>
           <h3>Stronger Animal Protection Laws &amp; Enforcement</h3>
         </div>
+
         <p>
           I will support stronger measures addressing irresponsible and backyard breeding;
           prohibiting retail sales of dogs, cats and rabbits from commercial breeding
@@ -449,13 +565,19 @@ permalink: /election-2026/candidate-pledge/
           resources. Enforcement should be fair, consistent and focused on improving animal
           and community welfare.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 5 -->
+
       <article class="pledge-card full">
+
         <div class="pledge-card-top">
           <div class="pledge-number">5</div>
           <h3>Prevention, Humane Care, Open Intake &amp; Lifesaving</h3>
         </div>
+
         <p>
           I will support prevention and lifesaving strategies including accessible
           spay/neuter, expanded TNR and community-cat programs, owner-retention resources,
@@ -467,13 +589,19 @@ permalink: /election-2026/candidate-pledge/
           while investing in prevention, partnerships, overflow capacity and infrastructure
           needed to safely care for animals and reduce unnecessary euthanasia.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 6 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">6</div>
           <h3>Public Data, Responsiveness &amp; Budget Accountability</h3>
         </div>
+
         <p>
           I will support meaningful public reporting of shelter outcomes, euthanasia,
           length of stay, capacity, medical care, enrichment, volunteer participation,
@@ -483,13 +611,19 @@ permalink: /election-2026/candidate-pledge/
           should have measurable objectives, publicly reported results and meaningful
           oversight.
         </p>
+
       </article>
 
+
+      <!-- COMMITMENT 7 -->
+
       <article class="pledge-card">
+
         <div class="pledge-card-top">
           <div class="pledge-number">7</div>
           <h3>Leadership &amp; A Commitment to Act</h3>
         </div>
+
         <p>
           I recognize animal welfare as a County-government responsibility. I will listen
           to residents, advocates, volunteers, employees, professionals and advisory bodies;
@@ -498,19 +632,28 @@ permalink: /election-2026/candidate-pledge/
           animals or residents, I will use the authority of the office to pursue meaningful,
           measurable change — even when that requires challenging the status quo.
         </p>
+
       </article>
 
     </div>
+
   </section>
 
+
+  <!-- FOR CANDIDATES -->
+
   <section class="pledge-sign-section">
+
     <span class="section-label">For Candidates</span>
+
     <h2>The Candidate Pledge</h2>
+
     <p>
       Candidates receiving the 2026 GAAA Candidate Survey will also receive a
       copy of the Animal Welfare Candidate Pledge. Candidates may sign and return
       the pledge to publicly affirm their commitment to the principles outlined above.
     </p>
+
     <p>
       Completing the Candidate Survey and signing the Candidate Pledge are separate
       opportunities for candidates to communicate their positions and commitments
@@ -518,84 +661,260 @@ permalink: /election-2026/candidate-pledge/
     </p>
 
     <div class="pledge-sign-actions">
-      <a class="btn secondary" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+
+      <a
+        class="btn secondary"
+        href="https://form.jotform.com/262203851957158"
+        target="_blank"
+        rel="noopener noreferrer">
+
         <i class="fas fa-clipboard-list" aria-hidden="true"></i>
         View the Candidate Survey
+
       </a>
+
     </div>
+
   </section>
 
+
+  <!-- CANDIDATE PLEDGE STATUS -->
+
   <section class="pledge-signers">
-    <span class="section-label">Candidate Participation</span>
+
+    <span class="section-label">
+      Candidate Participation
+    </span>
+
     <h2>Who Has Signed the Pledge?</h2>
+
     <p class="section-intro">
-      Candidate pledge status will be published here as signed pledges are received.
+      The following records show pledge participation
+      for candidates in the 2026 Gwinnett County
+      Board of Commissioners District 2 and District 4 races.
     </p>
 
     <div class="signer-grid">
-      <div class="signer-card">
-        <span class="status-badge badge-pending">Coming Soon</span>
-        <h3>District 2</h3>
-        <p>Candidate pledge status will be posted here.</p>
-      </div>
+
+      <!-- DISTRICT 2 -->
 
       <div class="signer-card">
-        <span class="status-badge badge-pending">Coming Soon</span>
-        <h3>District 4</h3>
-        <p>Candidate pledge status will be posted here.</p>
+
+        <h3>District 2</h3>
+
+        <div class="candidate-entry">
+
+          <h4>Ben Ku</h4>
+
+          <span class="pledge-status not-returned">
+            Not Returned by Deadline
+          </span>
+
+          <p>
+            GAAA did not receive a signed pledge
+            by the deadline.
+          </p>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <h4>Rodolfo Ochoa</h4>
+
+          <span class="pledge-status not-delivered">
+            Not Delivered
+          </span>
+
+          <p>
+            GAAA was unable to locate verified public
+            campaign contact information before the deadline.
+            The pledge was not delivered.
+          </p>
+
+        </div>
+
       </div>
+
+
+      <!-- DISTRICT 4 -->
+
+      <div class="signer-card">
+
+        <h3>District 4</h3>
+
+        <div class="candidate-entry">
+
+          <h4>Matthew Holtkamp</h4>
+
+          <span class="pledge-status not-returned">
+            Not Returned by Deadline
+          </span>
+
+          <p>
+            GAAA did not receive a signed pledge
+            by the deadline.
+          </p>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <h4>Benjamin Culberson</h4>
+
+          <span class="pledge-status signed">
+            Signed September 11, 2026
+          </span>
+
+          <p>
+            Benjamin Culberson signed GAAA's 2026
+            Animal Welfare Candidate Pledge
+            on September 11, 2026.
+          </p>
+
+          <p>
+            He also submitted his Candidate Survey
+            response on August 21, 2026.
+          </p>
+
+          <a href="/election-2026/culberson/">
+            Read His Survey Response &rarr;
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
+
+
+    <!-- STATUS EXPLANATION -->
+
+    <div class="pledge-method">
+
+      <p>
+        <strong>Signed:</strong>
+        GAAA received a signed Candidate Pledge
+        from the candidate.
+      </p>
+
+      <p>
+        <strong>Not Returned by Deadline:</strong>
+        GAAA did not receive a signed pledge from
+        the candidate by the established deadline.
+        This status describes participation as of that deadline.
+      </p>
+
+      <p>
+        <strong>Not Delivered:</strong>
+        GAAA was unable to locate verified campaign
+        contact information before the deadline,
+        so the pledge could not be provided to the candidate.
+        This is not classified as a failure to respond.
+      </p>
+
+    </div>
+
   </section>
 
+
+  <!-- RELATED ELECTION RESOURCES -->
+
   <section class="pledge-related home-section">
-    <span class="section-label" style="text-align:center;">2026 Election Resources</span>
-    <h2>Learn More Before You Vote</h2>
+
+    <span
+      class="section-label"
+      style="text-align:center;">
+
+      2026 Election Resources
+
+    </span>
+
+    <h2>Explore the Election Information</h2>
 
     <div class="home-card-grid three-across-cards">
 
-      <a class="home-card" href="https://form.jotform.com/262203851957158" target="_blank" rel="noopener noreferrer">
+      <!-- SURVEY -->
+
+      <a
+        class="home-card"
+        href="https://form.jotform.com/262203851957158"
+        target="_blank"
+        rel="noopener noreferrer">
+
         <div class="home-card-icon icon-blue">
           <i class="fas fa-clipboard-list" aria-hidden="true"></i>
         </div>
+
         <h3>Candidate Survey</h3>
+
         <p>
-          See the detailed questions GAAA is asking candidates about animal
-          welfare, County oversight, shelter operations and more.
+          See the detailed questions GAAA asked candidates
+          about animal welfare, County oversight,
+          shelter operations and more.
         </p>
+
         <span>View the survey →</span>
+
       </a>
 
-      <div class="home-card results-coming-soon" aria-label="Survey Results coming soon">
+
+      <!-- RESULTS -->
+
+      <a
+        class="home-card"
+        href="/election-2026/candidate-survey/#candidate-positions">
+
         <div class="home-card-icon icon-green">
           <i class="fas fa-chart-bar" aria-hidden="true"></i>
         </div>
-        <h3>Survey Results</h3>
-        <p>
-          Candidate responses and participation status will be published after
-          the response deadline.
-        </p>
-        <span>Results coming soon</span>
-      </div>
 
-      <a class="home-card" href="/election-2026/">
+        <h3>Survey Results</h3>
+
+        <p>
+          Review candidate participation and the
+          survey positions published by GAAA.
+        </p>
+
+        <span>View survey results →</span>
+
+      </a>
+
+
+      <!-- ELECTION HUB -->
+
+      <a
+        class="home-card"
+        href="/election-2026/">
+
         <div class="home-card-icon icon-orange">
           <i class="fas fa-check-to-slot" aria-hidden="true"></i>
         </div>
+
         <h3>2026 Election Hub</h3>
+
         <p>
-          Visit GAAA's election hub for voter information, survey updates,
-          candidate commitments and results.
+          Visit GAAA's election hub for candidate
+          participation, survey responses,
+          and pledge commitments.
         </p>
+
         <span>Visit election hub →</span>
+
       </a>
 
     </div>
+
   </section>
 
+
+  <!-- NON-ENDORSEMENT NOTE -->
+
   <p class="pledge-note">
-    GAAA's candidate survey, candidate pledge and any future candidate ratings or
-    endorsements are separate processes. Signing the pledge does not by itself
-    constitute an endorsement by Gwinnett Animal Advocacy Alliance.
+    Participation in GAAA's Candidate Survey or signing
+    the Animal Welfare Candidate Pledge does not constitute
+    an endorsement by Gwinnett Animal Advocacy Alliance.
+    Candidate participation records are provided for
+    public information.
   </p>
 
 </div>
