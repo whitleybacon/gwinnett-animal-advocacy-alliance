@@ -114,6 +114,74 @@ title: Home
         font-weight: 700;
     }
 
+    /* =========================================================
+       HOMEPAGE UPDATES AND BLOG
+       ========================================================= */
+
+    .homepage-update-note {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: .9rem;
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+    .homepage-blog-intro {
+        max-width: 850px;
+        margin: 0 auto 28px;
+        text-align: center;
+        line-height: 1.75;
+    }
+
+    .homepage-blog-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homepage-blog-card .story-link {
+        margin-top: auto;
+        padding-top: 16px;
+    }
+
+    .homepage-blog-card .blog-topic {
+        display: inline-block;
+        align-self: flex-start;
+        margin-bottom: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: #edf4fa;
+        color: #1C4072;
+        font-size: .75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+    }
+
+    .homepage-blog-card .blog-topic.satire {
+        background: #fff0ed;
+        color: #923025;
+    }
+
+    .homepage-blog-card p {
+        line-height: 1.7;
+    }
+
+    .homepage-blog-link {
+        text-align: center;
+        margin: 30px 0 0;
+    }
+
+    .homepage-council-link {
+        display: inline-block;
+        margin-top: 12px;
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
     @media (max-width: 900px) {
         .election-spotlight-inner {
             grid-template-columns: 1fr;
@@ -173,8 +241,8 @@ title: Home
 </style>
 
 
+<!-- GOOGLE TAG MANAGER -->
 
-<!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){
     w[l]=w[l]||[];
@@ -191,10 +259,12 @@ title: Home
     j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
 
     f.parentNode.insertBefore(j,f);
+
 })(window,document,'script','dataLayer','GTM-K39Q688P');
 </script>
-<!-- End Google Tag Manager -->
 
+
+<!-- MOBILE HERO IMAGE -->
 
 <img
     class="page-hero-mobile-img"
@@ -202,6 +272,8 @@ title: Home
     alt="Dog and cat representing animal advocacy in Gwinnett County, Georgia"
 >
 
+
+<!-- HERO -->
 
 <section
     class="page-hero"
@@ -216,7 +288,8 @@ title: Home
         url('/assets/home-hero.png');"
 >
 
-    <!-- Google Tag Manager (noscript) -->
+    <!-- GOOGLE TAG MANAGER NOSCRIPT -->
+
     <noscript>
         <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K39Q688P"
@@ -225,7 +298,6 @@ title: Home
             style="display:none;visibility:hidden"
         ></iframe>
     </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div class="page-hero-content">
 
@@ -242,7 +314,9 @@ title: Home
 </section>
 
 
-<!-- CURRENT ACTION ALERT -->
+<!-- =========================================================
+     CURRENT ACTION ALERT
+     ========================================================= -->
 
 <section class="home-section">
 
@@ -255,7 +329,7 @@ title: Home
         <div class="alert-banner-content">
 
             <span class="alert-banner-label">
-                Urgent Action Alert
+                Animal Advisory Council
             </span>
 
             <h2>
@@ -263,11 +337,19 @@ title: Home
             </h2>
 
             <p>
-                Ask the Gwinnett County Board of Commissioners to amend the new
-                Animal Advisory Council ordinance by restoring district-based
-                citizen representation, retaining specialized seats, and allowing
-                Council members to elect their own leadership.
+                GAAA is asking the Gwinnett County Board of Commissioners
+                to amend the restructured Animal Advisory Council ordinance
+                by restoring district-based citizen representation,
+                retaining specialized seats, and allowing Council members
+                to elect their own leadership.
             </p>
+
+            <a
+                href="/get-involved/council-meetings/"
+                class="homepage-council-link"
+            >
+                Learn About the Council Changes &rarr;
+            </a>
 
         </div>
 
@@ -275,7 +357,7 @@ title: Home
             href="/animal-advisory-council-action/"
             class="btn alert-banner-button"
         >
-            Send an Email
+            View GAAA's Action Page
         </a>
 
     </div>
@@ -283,7 +365,9 @@ title: Home
 </section>
 
 
-<!-- 2026 ELECTION SPOTLIGHT -->
+<!-- =========================================================
+     2026 ELECTION SPOTLIGHT
+     ========================================================= -->
 
 <section class="election-spotlight">
 
@@ -298,7 +382,9 @@ title: Home
         <div class="election-spotlight-content">
 
             <span class="election-spotlight-label">
-                <i class="fas fa-check-to-slot" aria-hidden="true"></i>
+                <i
+                    class="fas fa-check-to-slot"
+                    aria-hidden="true"></i>
                 2026 Gwinnett County Election
             </span>
 
@@ -307,44 +393,56 @@ title: Home
             </h2>
 
             <p class="election-spotlight-lead">
-                GAAA is asking candidates for the Gwinnett County Board of Commissioners
-                to go beyond campaign talking points and tell voters where they stand on
-                the policies, oversight, funding and leadership decisions that directly
-                affect animals across our county.
+                Explore GAAA's published Candidate Survey responses,
+                participation records, and Animal Welfare Candidate
+                Pledge for the Gwinnett County Board of Commissioners
+                District 2 and District 4 races.
             </p>
 
             <p class="election-spotlight-highlight">
-                Follow the District 2 and District 4 races, review our Candidate Survey
-                and Animal Welfare Candidate Pledge, and see candidate responses as they
-                become available.
+                Benjamin Culberson submitted a Candidate Survey response
+                on August 21, 2026, and signed the Animal Welfare
+                Candidate Pledge on September 11, 2026.
+                Review the records for all four candidates
+                in the Election Hub.
             </p>
 
             <div class="election-spotlight-actions">
 
                 <a href="/election-2026/" class="btn">
-                    <i class="fas fa-person-booth" aria-hidden="true"></i>
+
+                    <i
+                        class="fas fa-person-booth"
+                        aria-hidden="true"></i>
+
                     Visit the 2026 Election Hub
+
                 </a>
 
                 <a
-                    href="https://form.jotform.com/262203851957158"
-                    class="btn btn-secondary"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                    Preview the Candidate Survey
+                    href="/election-2026/candidate-survey/#candidate-positions"
+                    class="btn btn-secondary">
+
+                    <i
+                        class="fas fa-clipboard-list"
+                        aria-hidden="true"></i>
+
+                    View Survey Responses
+
                 </a>
 
             </div>
 
             <div class="election-spotlight-links">
+
                 <a href="/election-2026/candidate-pledge/">
-                    Read the Candidate Pledge →
+                    Candidate Pledge &amp; Signing Status &rarr;
                 </a>
 
-                <span style="color:#7a858f;font-size:.92rem;font-weight:700;">
-                    Candidate Results — Coming Soon
-                </span>
+                <a href="/election-2026/culberson/">
+                    Benjamin Culberson's Survey Response &rarr;
+                </a>
+
             </div>
 
         </div>
@@ -354,20 +452,54 @@ title: Home
 </section>
 
 
-<!-- WHAT'S NEW -->
+<!-- =========================================================
+     WHAT'S NEW
+     ========================================================= -->
 
 <section class="home-section whats-new-section">
 
     <h2>What's New</h2>
 
     <p class="section-intro">
-        Stay informed about our latest advocacy efforts, research, meetings,
-        and opportunities to help improve animal welfare in Gwinnett County.
-        (Updated August 6, 2026)
+        Explore GAAA's recent reporting, council updates,
+        and ongoing animal welfare work in Gwinnett County.
     </p>
 
-
     <div class="home-card-grid three-across-cards">
+
+        <!-- PUBLIC RECORDS ARTICLE -->
+
+        <div class="home-card">
+
+            <div class="status-badge-wrapper">
+
+                <span class="status-badge badge-blue">
+                    PUBLIC RECORDS
+                </span>
+
+            </div>
+
+            <h3>
+                A Commissioner Requested the County's Position
+                in Writing. Where Is It?
+            </h3>
+
+            <p>
+                Read GAAA's account of public-records requests
+                concerning a commissioner's request for the
+                county's written position, including what
+                was produced, what was withheld, and the
+                questions that remain unanswered.
+            </p>
+
+            <a
+                href="/blog/open-records-written-response.html"
+                class="story-link"
+            >
+                Read the Article &rarr;
+            </a>
+
+        </div>
 
 
         <!-- ANIMAL ADVISORY COUNCIL -->
@@ -375,9 +507,11 @@ title: Home
         <div class="home-card">
 
             <div class="status-badge-wrapper">
+
                 <span class="status-badge badge-orange">
-                    URGENT UPDATE
+                    COUNCIL UPDATE
                 </span>
+
             </div>
 
             <h3>
@@ -385,80 +519,51 @@ title: Home
             </h3>
 
             <p>
-                The Board of Commissioners dissolved the existing seven-member
-                Council and replaced it with a five-member structure that
-                eliminates guaranteed district representation and gives County
-                administration a greater role in the Council’s membership and
-                leadership.
+                On August 4, 2026, the Board of Commissioners
+                replaced the former seven-member Council with
+                a five-member structure. Learn about the
+                membership changes, GAAA's concerns, and
+                where to find official meeting information.
             </p>
 
             <a
-                href="/animal-advisory-council-action/"
+                href="/get-involved/council-meetings/"
                 class="story-link"
             >
-                Learn More &amp; Take Action &rarr;
-            </a>
-
-        </div>
-
-        <!-- ENRICHMENT AUDIT -->
-
-        <div class="home-card">
-
-            <div class="status-badge-wrapper">
-                <span class="status-badge badge-blue">
-                    LATEST REPORT
-                </span>
-            </div>
-
-            <h3>May 2026 Enrichment Audit Released</h3>
-
-            <p>
-                Our independent forensic review analyzed documented staff
-                enrichment for every dog housed during May 2026, providing
-                the first comprehensive look at enrichment practices inside
-                Gwinnett County Animal Shelter.
-            </p>
-
-            <a
-                href="{{ site.baseurl }}/issues/enrichment/"
-                class="story-link"
-            >
-                View the Findings &rarr;
+                Read the Council Update &rarr;
             </a>
 
         </div>
 
 
-        <!-- ASPEN KURANDA BED FUNDRAISER -->
+        <!-- BLOG LAUNCH -->
 
         <div class="home-card">
 
             <div class="status-badge-wrapper">
+
                 <span class="status-badge badge-green">
-                    COMMUNITY FUNDRAISER
+                    GAAA BLOG
                 </span>
+
             </div>
 
             <h3>
-                Help Provide Kuranda Beds in Aspen’s Memory
+                Explore Our New Blog
             </h3>
 
             <p>
-                After losing her beloved yellow Lab, Aspen, one of our followers
-                created a fundraiser to provide raised Kuranda beds for dogs at
-                the Gwinnett Animal Shelter. Every donation helps give a shelter
-                dog a more comfortable place to rest while waiting for a forever
-                home.
+                Our blog brings together animal welfare reporting,
+                advocacy updates, commentary, and resources.
+                Read the three-part Human Problem series,
+                our public-records article, and more.
             </p>
 
             <a
-                href="https://gofundme.com/bedsfordogs26"
+                href="/blog/"
                 class="story-link"
-                target="_blank"
-                rel="noopener noreferrer"
             >
-                Support the Fundraiser &rarr;
+                Explore the Blog &rarr;
             </a>
 
         </div>
@@ -468,7 +573,125 @@ title: Home
 </section>
 
 
-<!-- ISSUES AND ADVOCACY -->
+<!-- =========================================================
+     FROM THE GAAA BLOG
+     ========================================================= -->
+
+<section class="home-section">
+
+    <h2>From the GAAA Blog</h2>
+
+    <p class="homepage-blog-intro">
+        Explore articles about animal welfare, public accountability,
+        and the issues affecting animals and residents in
+        Gwinnett County.
+    </p>
+
+    <div class="home-card-grid three-across-cards">
+
+        <!-- HUMAN PROBLEM PART 1 -->
+
+        <div class="home-card homepage-blog-card">
+
+            <span class="blog-topic">
+                Animal Welfare Series
+            </span>
+
+            <h3>
+                The Human Problem: Who Is Responsible
+                for Gwinnett's Animal Welfare Crisis?
+            </h3>
+
+            <p>
+                Part 1 examines shared responsibility
+                for pet overpopulation and animal welfare,
+                including the roles of pet owners, residents,
+                shelter leadership, and county government.
+            </p>
+
+            <a
+                href="/blog/human-problem-part-1.html"
+                class="story-link"
+            >
+                Read Part 1 &rarr;
+            </a>
+
+        </div>
+
+
+        <!-- HUMAN PROBLEM PART 2 -->
+
+        <div class="home-card homepage-blog-card">
+
+            <span class="blog-topic">
+                Animal Welfare Series
+            </span>
+
+            <h3>
+                The County Can Only Do So Much:
+                A Question of Resources and Priorities
+            </h3>
+
+            <p>
+                Part 2 explores the questions surrounding
+                available resources, community participation,
+                and county decisions affecting animal welfare.
+            </p>
+
+            <a
+                href="/blog/human-problem-part-2.html"
+                class="story-link"
+            >
+                Read Part 2 &rarr;
+            </a>
+
+        </div>
+
+
+        <!-- HUMAN PROBLEM PART 3 -->
+
+        <div class="home-card homepage-blog-card">
+
+            <span class="blog-topic">
+                Animal Welfare Series
+            </span>
+
+            <h3>
+                The County Doesn't Have the Money:
+                A Question of Priorities
+            </h3>
+
+            <p>
+                Part 3 examines questions about funding,
+                prevention, shelter infrastructure,
+                and long-term animal welfare priorities.
+            </p>
+
+            <a
+                href="/blog/human-problem-part-3.html"
+                class="story-link"
+            >
+                Read Part 3 &rarr;
+            </a>
+
+        </div>
+
+    </div>
+
+    <p class="homepage-blog-link">
+
+        <a href="/blog/" class="btn">
+            Explore All Blog Articles &rarr;
+        </a>
+
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     ISSUES AND ADVOCACY
+     ========================================================= -->
 
 <section class="home-section">
 
@@ -480,11 +703,11 @@ title: Home
         and support meaningful community engagement.
     </p>
 
-
-    <!-- FIRST ROW: 3 CARDS -->
+    <!-- FIRST ROW -->
 
     <div class="home-card-grid three-across-cards">
 
+        <!-- MANAGED INTAKE -->
 
         <a href="/issues/managed-intake/" class="home-card">
 
@@ -495,14 +718,17 @@ title: Home
             <h3>Managed Intake</h3>
 
             <p>
-                Understanding intake restrictions, shelter capacity challenges,
-                pet overpopulation, and their impact on animals and residents.
+                Understanding intake restrictions, shelter capacity
+                challenges, pet overpopulation, and their impact
+                on animals and residents.
             </p>
 
             <span>Learn More →</span>
 
         </a>
 
+
+        <!-- MEDICAL CARE -->
 
         <a href="/issues/medical-care/" class="home-card">
 
@@ -513,14 +739,17 @@ title: Home
             <h3>Medical Care</h3>
 
             <p>
-                Examining concerns involving delayed care, medical monitoring,
-                documentation, and accountability.
+                Examining concerns involving delayed care,
+                medical monitoring, documentation,
+                and accountability.
             </p>
 
             <span>Learn More →</span>
 
         </a>
 
+
+        <!-- CAMERAS -->
 
         <a href="/issues/cameras/" class="home-card">
 
@@ -531,8 +760,8 @@ title: Home
             <h3>Camera Coverage</h3>
 
             <p>
-                Advocating for public cameras to improve transparency,
-                accountability, and public trust.
+                Advocating for public cameras to improve
+                transparency, accountability, and public trust.
             </p>
 
             <span>Learn More →</span>
@@ -542,15 +771,17 @@ title: Home
     </div>
 
 
-    <!-- SECOND ROW: 4 CARDS -->
+    <!-- SECOND ROW -->
 
     <div
         class="home-card-grid four-across"
-        style="margin-top:24px;"
-    >
+        style="margin-top:24px;">
 
+        <!-- COMMUNITY CATS -->
 
-        <a href="/issues/community-cats-tnr/" class="home-card">
+        <a
+            href="/issues/community-cats-tnr/"
+            class="home-card">
 
             <div class="home-card-icon icon-green">
                 <i class="fas fa-cat"></i>
@@ -559,8 +790,8 @@ title: Home
             <h3>Community Cats &amp; TNR</h3>
 
             <p>
-                Supporting humane, evidence-based approaches to managing
-                community cat populations.
+                Supporting humane, evidence-based approaches
+                to managing community cat populations.
             </p>
 
             <span>Learn More →</span>
@@ -568,7 +799,11 @@ title: Home
         </a>
 
 
-        <a href="/issues/shelter-accessibility/" class="home-card">
+        <!-- ACCESSIBILITY -->
+
+        <a
+            href="/issues/shelter-accessibility/"
+            class="home-card">
 
             <div class="home-card-icon icon-orange">
                 <i class="fas fa-door-open"></i>
@@ -577,8 +812,9 @@ title: Home
             <h3>Accessible Animal Services</h3>
 
             <p>
-                Examining whether public shelter services are available when
-                residents can reasonably use them.
+                Examining whether public shelter services
+                are available when residents can
+                reasonably use them.
             </p>
 
             <span>Learn More →</span>
@@ -586,7 +822,11 @@ title: Home
         </a>
 
 
-        <a href="/issues/volunteer-engagement/" class="home-card">
+        <!-- VOLUNTEERING -->
+
+        <a
+            href="/issues/volunteer-engagement/"
+            class="home-card">
 
             <div class="home-card-icon icon-blue">
                 <i class="fas fa-users"></i>
@@ -595,14 +835,17 @@ title: Home
             <h3>Volunteer Engagement</h3>
 
             <p>
-                Addressing barriers to volunteering, public engagement,
-                and lifesaving community support.
+                Addressing barriers to volunteering,
+                public engagement, and lifesaving
+                community support.
             </p>
 
             <span>Learn More →</span>
 
         </a>
 
+
+        <!-- ENRICHMENT -->
 
         <a href="/issues/enrichment/" class="home-card">
 
@@ -613,8 +856,9 @@ title: Home
             <h3>Canine Enrichment</h3>
 
             <p>
-                Examining whether dogs receive consistent staff enrichment,
-                behavioral support, and meaningful documentation throughout
+                Examining whether dogs receive consistent
+                staff enrichment, behavioral support,
+                and meaningful documentation throughout
                 their shelter stay.
             </p>
 
@@ -636,93 +880,9 @@ title: Home
 </section>
 
 
-<!--
-<section class="home-section">
-
-    <h2>Animals Needing Immediate Help</h2>
-
-    <p class="section-intro">
-        Some animals need urgent community support, advocacy, foster placement,
-        rescue commitment, or adoption help.
-    </p>
-
-    <div class="profile-grid three-across">
-
-        <div class="profile-card">
-            <img
-                src="/assets/urgent-animal-1.jpg"
-                alt="Urgent animal needing help"
-            >
-
-            <h3>Featured Animal</h3>
-
-            <p>
-                Short description or deadline information can go here.
-            </p>
-
-            <a
-                href="/urgent-animals/"
-                class="profile-link"
-            >
-                View Details
-            </a>
-        </div>
-
-        <div class="profile-card">
-            <img
-                src="/assets/urgent-animal-2.jpg"
-                alt="Urgent animal needing help"
-            >
-
-            <h3>Featured Animal</h3>
-
-            <p>
-                Short description or deadline information can go here.
-            </p>
-
-            <a
-                href="/urgent-animals/"
-                class="profile-link"
-            >
-                View Details
-            </a>
-        </div>
-
-        <div class="profile-card">
-            <img
-                src="/assets/urgent-animal-3.jpg"
-                alt="Urgent animal needing help"
-            >
-
-            <h3>Featured Animal</h3>
-
-            <p>
-                Short description or deadline information can go here.
-            </p>
-
-            <a
-                href="/urgent-animals/"
-                class="profile-link"
-            >
-                View Details
-            </a>
-        </div>
-
-    </div>
-
-    <p class="center-button">
-
-        <a href="/urgent-animals/" class="btn">
-            View All Urgent Animals
-        </a>
-
-    </p>
-
-</section>
--->
-
-
-<!-- YOU CAN MAKE A DIFFERENCE -->
+<!-- =========================================================
+     YOU CAN MAKE A DIFFERENCE
+     ========================================================= -->
 
 <section
     class="difference-section"
@@ -739,33 +899,32 @@ title: Home
         <h2>You Can Make a Difference</h2>
 
         <p>
-            Every voice matters. Every action helps improve outcomes for animals
-            in Gwinnett County.
+            Every voice matters. Every action helps improve outcomes
+            for animals in Gwinnett County.
         </p>
-
 
         <div class="home-card-grid three-across-cards">
 
-
-            <!-- EMAIL COMMISSIONERS -->
+            <!-- COUNCIL ACTION -->
 
             <a
                 href="/animal-advisory-council-action/"
-                class="home-card"
-            >
+                class="home-card">
 
                 <div class="home-card-icon icon-orange">
                     <i class="fas fa-envelope-open-text"></i>
                 </div>
 
-                <h3>Email the Commissioners</h3>
+                <h3>Animal Advisory Council Action</h3>
 
                 <p>
-                    Ask the Board to restore district-based citizen representation
-                    and independent leadership to the Animal Advisory Council.
+                    Read GAAA's requested changes to the
+                    Animal Advisory Council and access
+                    information about contacting
+                    the Board of Commissioners.
                 </p>
 
-                <span>Take Action →</span>
+                <span>View the Action Page →</span>
 
             </a>
 
@@ -776,22 +935,21 @@ title: Home
                 href="https://www.change.org/p/petition-for-an-independent-animal-welfare-task-for-gwinnett-county-animal-shelter"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="home-card"
-            >
+                class="home-card">
 
                 <div class="home-card-icon icon-green">
                     <i class="fas fa-file-signature"></i>
                 </div>
 
-                <h3>Sign the Petition</h3>
+                <h3>Independent Oversight Petition</h3>
 
                 <p>
-                    Support independent oversight, stronger transparency
-                    measures, and meaningful improvements at Gwinnett Animal
-                    Welfare.
+                    Read the community petition concerning
+                    independent oversight, transparency,
+                    and animal welfare improvements.
                 </p>
 
-                <span>Sign the Petition →</span>
+                <span>View the Petition →</span>
 
             </a>
 
@@ -800,8 +958,7 @@ title: Home
 
             <a
                 href="/get-involved/join-our-team/"
-                class="home-card"
-            >
+                class="home-card">
 
                 <div class="home-card-icon icon-blue">
                     <i class="fas fa-users"></i>
@@ -810,8 +967,10 @@ title: Home
                 <h3>Join Our Advocacy Team</h3>
 
                 <p>
-                    Help with outreach, research, public records, education,
-                    meeting attendance, and advocacy efforts.
+                    Learn about opportunities to help
+                    with outreach, research, public records,
+                    education, meeting attendance,
+                    and advocacy efforts.
                 </p>
 
                 <span>Get Involved →</span>
@@ -825,7 +984,9 @@ title: Home
 </section>
 
 
-<!-- WHO WE ARE -->
+<!-- =========================================================
+     WHO WE ARE
+     ========================================================= -->
 
 <section class="who-we-are-section">
 
@@ -834,32 +995,38 @@ title: Home
         <h2>We Are Their Voice.</h2>
 
         <p>
-            The Gwinnett Animal Advocacy Alliance (GAAA) is a coalition of
-            residents, volunteers, fosters, adopters, and concerned citizens
-            committed to improving animal welfare in Gwinnett County.
+            The Gwinnett Animal Advocacy Alliance (GAAA)
+            is a coalition of residents, volunteers, fosters,
+            adopters, and concerned citizens committed to
+            improving animal welfare in Gwinnett County.
         </p>
 
         <p>
-            Founded in 2024, GAAA was formed in response to growing concerns
-            about the conditions, policies, and leadership decisions affecting
-            animals within the Gwinnett County shelter system. We believe every
-            animal deserves humane treatment, compassionate care, transparency,
-            and the opportunity to leave the shelter alive whenever possible.
+            Founded in 2024, GAAA was formed in response
+            to growing concerns about the conditions,
+            policies, and leadership decisions affecting
+            animals within the Gwinnett County shelter system.
+            We believe every animal deserves humane treatment,
+            compassionate care, transparency, and the
+            opportunity to leave the shelter alive
+            whenever possible.
         </p>
 
         <p>
-            Our mission is to advocate for meaningful change through public
-            awareness, community engagement, accountability, and responsible
-            policy reform. We monitor shelter operations, raise concerns when
-            problems arise, support lifesaving efforts, and encourage county
-            leaders to prioritize the welfare of the animals entrusted to their
-            care.
+            Our mission is to advocate for meaningful change
+            through public awareness, community engagement,
+            accountability, and responsible policy reform.
+            We monitor shelter operations, raise concerns
+            when problems arise, support lifesaving efforts,
+            and encourage county leaders to prioritize
+            the welfare of the animals entrusted to their care.
         </p>
 
         <p>
-            While we may not always agree with shelter leadership, our focus
-            remains the same: ensuring that the voices of the animals are heard
-            and that decisions are made in their best interest.
+            While we may not always agree with shelter leadership,
+            our focus remains the same: ensuring that the voices
+            of the animals are heard and that decisions are made
+            in their best interest.
         </p>
 
         <p class="who-we-are-closing">
