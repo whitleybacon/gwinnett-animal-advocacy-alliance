@@ -21,6 +21,23 @@ description: "Part 1 of GAAA's Animal Welfare and Accountability series examines
 .gaaa-article .back a { display: inline-block; background: #1C4072; border-radius: 6px; color: #fff; padding: 11px 22px; font-weight: 700; }
 .gaaa-article .back a:hover { background: #2E8DCC; }
 @media (max-width: 768px) { .gaaa-article { margin: 12px auto 46px; font-size: 1rem; line-height: 1.75; } .gaaa-article header { padding: 18px 0 26px; } .gaaa-article .statement { padding: 16px; } }
+.gaaa-article .back {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .gaaa-article .back {
+        flex-direction: column;
+    }
+
+    .gaaa-article .back a {
+        display: block;
+        text-align: center;
+    }
+}
 </style>
 
 <article class="gaaa-article">
@@ -80,5 +97,12 @@ description: "Part 1 of GAAA's Animal Welfare and Accountability series examines
 <p><strong>And so does our government.</strong></p>
 <div class="closing">Holding our county accountable isn't “bashing” Gwinnett.<br>It is part of solving the human problem.</div>
 
-<nav class="back" aria-label="Blog navigation"><a href="/blog/">← Back to Blog</a></nav>
+<nav class="back" aria-label="Article navigation">
+    <a href="/blog/">
+        ← Back to Blog
+    </a>
+    <a href="/blog/human-problem-part-2.html">
+        Read Part 2 →
+    </a>
+</nav>
 </article>
