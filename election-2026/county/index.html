@@ -1,1 +1,959 @@
+---
+layout: default
+title: 2026 Gwinnett County Election
+permalink: /election-2026/county/
+---
 
+<style>
+  .election-page {
+    --election-gold: #d3a13a;
+    --election-soft: #f7fbff;
+    --election-green: #2f7d32;
+    --election-orange: #e88a1f;
+  }
+
+  .election-page .page-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(12,48,91,.98) 0%,
+        rgba(18,57,104,.97) 28%,
+        rgba(28,64,114,.80) 42%,
+        rgba(28,64,114,.28) 57%,
+        rgba(28,64,114,0) 72%
+      ),
+      url('/assets/election-2026-hero.png');
+    background-position: center;
+  }
+
+  .election-page .page-hero-content {
+    max-width: 690px;
+  }
+
+  .election-page .page-hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 22px;
+    line-height: 1.05;
+  }
+
+  .election-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  /* BREADCRUMB */
+
+  .election-breadcrumb-wrap {
+    max-width: 1200px;
+    margin: 26px auto 0;
+    padding: 0 24px;
+  }
+
+  .election-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .election-back-link:hover {
+    text-decoration: underline;
+  }
+
+  /* INTRO */
+
+  .election-intro {
+    max-width: 1240px;
+    margin: 34px auto 26px;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .election-intro h2 {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-size: 2.6rem;
+  }
+
+  .election-intro p {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.04rem;
+    line-height: 1.7;
+  }
+
+  /* CANDIDATES */
+
+  .candidate-section {
+    max-width: 1200px;
+    margin: 45px auto 70px;
+    padding: 0 24px;
+  }
+
+  .candidate-race {
+    margin-top: 42px;
+  }
+
+  .candidate-race-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 18px;
+    padding: 14px 18px;
+    background: var(--accent);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .candidate-race-title h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.12rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 26px;
+  }
+
+  .candidate-card {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  }
+
+  .candidate-photo {
+    width: 190px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+  }
+
+  .candidate-card h4 {
+    margin: 0 0 3px;
+    color: var(--accent);
+    font-size: 1.45rem;
+  }
+
+  .candidate-party {
+    margin: 0 0 16px;
+    color: #66717c;
+    font-size: .92rem;
+    font-weight: 600;
+  }
+
+  .candidate-status {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #ececec;
+  }
+
+  .candidate-status-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 8px 0;
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
+  .candidate-status-row i {
+    width: 18px;
+    margin-top: 3px;
+    color: var(--light);
+  }
+
+  .candidate-status-row.warning i {
+    color: var(--election-orange);
+  }
+
+  .candidate-status-row.no-response i {
+    color: #b02a2a;
+  }
+
+  .candidate-status-row.success i {
+    color: var(--election-green);
+  }
+
+  .candidate-status-row strong {
+    color: var(--accent);
+  }
+
+  .candidate-status-row.no-response strong {
+    color: #9f2424;
+  }
+
+  .candidate-status-row.success strong {
+    color: #246b2a;
+  }
+
+  .candidate-note {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    background: #fff8ed;
+    border-left: 4px solid var(--election-orange);
+    border-radius: 6px;
+    font-size: .85rem;
+    line-height: 1.55;
+  }
+
+  .candidate-card .candidate-response-link {
+    display: inline-flex;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #2f7d32;
+    color: #fff;
+    border-radius: 6px;
+    font-size: .82rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  /* STATUS EXPLANATION */
+
+  .status-explainer {
+    max-width: 1200px;
+    margin: 22px auto 0;
+    padding: 15px 18px;
+    background: #f7fbff;
+    border-left: 4px solid var(--light);
+    border-radius: 7px;
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  .status-explainer p {
+    margin: 0;
+  }
+
+  .status-explainer p + p {
+    margin-top: 6px;
+  }
+
+  .status-explainer strong {
+    color: var(--accent);
+  }
+
+  /* RESULTS CTA */
+
+  .candidate-results-cta {
+    max-width: 1152px;
+    margin: 34px auto 0;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: var(--accent);
+    border-radius: 10px;
+  }
+
+  .candidate-results-cta .section-label,
+  .candidate-results-cta h2,
+  .candidate-results-cta p {
+    color: #fff;
+  }
+
+  .candidate-results-cta h2 {
+    margin: 0 0 7px;
+    font-size: 1.95rem;
+  }
+
+  .candidate-results-cta p {
+    margin: 0;
+    max-width: 760px;
+    line-height: 1.6;
+  }
+
+  .candidate-results-cta .results-button {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 12px 18px;
+    background: #fff;
+    color: var(--accent);
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  /* RESOURCES */
+
+  .election-resource-heading {
+    max-width: 1050px;
+    margin: 55px auto 22px;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .election-resource-heading h2 {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 2rem;
+  }
+
+  .election-resource-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #66717c;
+    line-height: 1.65;
+  }
+
+  .election-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    max-width: 1100px;
+    gap: 28px;
+    margin: 0 auto 58px;
+    padding: 0 24px;
+  }
+
+  .election-resource-grid .home-card {
+    min-height: 250px;
+    padding: 30px 34px;
+    text-align: left;
+  }
+
+  /* ACCOUNTABILITY */
+
+  .accountability-section {
+    max-width: 1010px;
+    margin: 65px auto;
+    padding: 42px 44px;
+    background: #f7fbf6;
+    border: 1px solid rgba(31,93,43,.2);
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .accountability-section h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2.2rem;
+  }
+
+  .accountability-section p {
+    line-height: 1.8;
+  }
+
+  .election-note {
+    max-width: 1050px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    color: #6b7680;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 900px) {
+    .candidate-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .election-page .page-hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .election-kicker {
+      color: var(--accent);
+    }
+
+    .candidate-card {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .candidate-photo {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .candidate-results-cta {
+      margin-left: 24px;
+      margin-right: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .candidate-results-cta .results-button {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .election-resource-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .accountability-section {
+      margin-left: 24px;
+      margin-right: 24px;
+      padding: 32px 25px;
+    }
+  }
+</style>
+
+
+<div class="election-page">
+
+  <!-- HERO -->
+
+  <section class="page-hero">
+
+    <img
+      class="page-hero-mobile-img"
+      src="/assets/election-2026-hero-mobile.png"
+      alt="Dog and cat with voting signs and American flag">
+
+    <div class="page-hero-content">
+
+      <span class="election-kicker">
+        2026 Election • Local Government
+      </span>
+
+      <h1>
+        Gwinnett County Board of Commissioners
+      </h1>
+
+      <p>
+        Learn where candidates for Districts 2 and 4 stand on the
+        policies, oversight and funding decisions that affect animals
+        throughout our community.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- BACK TO MAIN ELECTION HUB -->
+
+  <div class="election-breadcrumb-wrap">
+
+    <a
+      class="election-back-link"
+      href="/election-2026/">
+
+      <i class="fas fa-arrow-left" aria-hidden="true"></i>
+      2026 Election Hub
+
+    </a>
+
+  </div>
+
+
+  <!-- INTRO -->
+
+  <section class="election-intro">
+
+    <span class="section-label">
+      County Commission Election Project
+    </span>
+
+    <h2>
+      Districts 2 &amp; 4
+    </h2>
+
+    <p>
+      GAAA invited candidates for Gwinnett County Commission
+      Districts 2 and 4 to participate in our Candidate Survey
+      and Animal Welfare Candidate Pledge.
+    </p>
+
+    <p>
+      The project focuses on animal-welfare issues connected to
+      County policy, funding, oversight and leadership.
+    </p>
+
+    <p>
+      <strong>
+        Our goal is to give Gwinnett residents clear, accessible
+        information about candidate participation and positions
+        before they cast their ballots.
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- CANDIDATES -->
+
+  <section class="candidate-section">
+
+
+    <!-- DISTRICT 2 -->
+
+    <div class="candidate-race">
+
+      <div class="candidate-race-title">
+        <h3>District 2</h3>
+      </div>
+
+      <div class="candidate-grid">
+
+
+        <!-- BEN KU -->
+
+        <article class="candidate-card">
+
+          <img
+            class="candidate-photo"
+            src="/assets/ben-ku.jpg"
+            alt="Ben Ku">
+
+          <div>
+
+            <h4>Ben Ku</h4>
+
+            <p class="candidate-party">
+              District 2 Candidate • Incumbent
+            </p>
+
+            <div class="candidate-status">
+
+              <div class="candidate-status-row no-response">
+
+                <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Survey:</strong>
+                  No response received by the August 21 deadline
+                </div>
+
+              </div>
+
+              <div class="candidate-status-row no-response">
+
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Pledge:</strong>
+                  Not returned by deadline
+                </div>
+
+              </div>
+
+            </div>
+
+            <p
+              class="candidate-note"
+              style="background:#fff1f1;border-left-color:#b02a2a;">
+
+              Commissioner Ku received the Candidate Survey,
+              supporting materials and the same opportunity to explain
+              his positions as other candidates. No survey response
+              was submitted by the deadline.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- RODOLFO OCHOA -->
+
+        <article class="candidate-card">
+
+          <img
+            class="candidate-photo"
+            src="/assets/rodolfo-ochoa.jpg"
+            alt="Rodolfo Ochoa">
+
+          <div>
+
+            <h4>Rodolfo Ochoa</h4>
+
+            <p class="candidate-party">
+              District 2 Candidate
+            </p>
+
+            <div class="candidate-status">
+
+              <div class="candidate-status-row warning">
+
+                <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Survey:</strong>
+                  Not delivered — verified campaign contact information
+                  was not located before the deadline
+                </div>
+
+              </div>
+
+              <div class="candidate-status-row warning">
+
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Pledge:</strong>
+                  Not delivered
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="candidate-note">
+
+              GAAA was unable to locate verified public campaign contact
+              information for this candidate before the August 21
+              deadline. As a result, the survey and pledge were not
+              delivered. Rodolfo Ochoa is not classified as a candidate
+              who failed to respond.
+
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- DISTRICT 4 -->
+
+    <div class="candidate-race">
+
+      <div class="candidate-race-title">
+        <h3>District 4</h3>
+      </div>
+
+      <div class="candidate-grid">
+
+
+        <!-- MATTHEW HOLTKAMP -->
+
+        <article class="candidate-card">
+
+          <img
+            class="candidate-photo"
+            src="/assets/matthew-holtkamp.jpg"
+            alt="Matthew Holtkamp">
+
+          <div>
+
+            <h4>Matthew Holtkamp</h4>
+
+            <p class="candidate-party">
+              District 4 Candidate • Incumbent
+            </p>
+
+            <div class="candidate-status">
+
+              <div class="candidate-status-row no-response">
+
+                <i class="fas fa-circle-xmark" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Survey:</strong>
+                  No response received by the August 21 deadline
+                </div>
+
+              </div>
+
+              <div class="candidate-status-row no-response">
+
+                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Pledge:</strong>
+                  Not returned by deadline
+                </div>
+
+              </div>
+
+            </div>
+
+            <p
+              class="candidate-note"
+              style="background:#fff1f1;border-left-color:#b02a2a;">
+
+              Commissioner Holtkamp received the Candidate Survey,
+              supporting materials and the same opportunity to explain
+              his positions as other candidates. No survey response
+              was submitted by the deadline.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- BENJAMIN CULBERSON -->
+
+        <article class="candidate-card">
+
+          <img
+            class="candidate-photo"
+            src="/assets/ben-culberson.jpg"
+            alt="Benjamin Culberson">
+
+          <div>
+
+            <h4>Benjamin Culberson</h4>
+
+            <p class="candidate-party">
+              District 4 Candidate
+            </p>
+
+            <div class="candidate-status">
+
+              <div class="candidate-status-row success">
+
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Survey:</strong>
+                  Response received August 21, 2026
+                </div>
+
+              </div>
+
+              <div class="candidate-status-row success">
+
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+
+                <div>
+                  <strong>Candidate Pledge:</strong>
+                  Signed September 11, 2026
+                </div>
+
+              </div>
+
+            </div>
+
+            <div
+              class="candidate-note"
+              style="background:#edf7ee;border-left-color:#2f7d32;">
+
+              Benjamin Culberson completed the full Candidate Survey
+              on August 21, 2026, and signed GAAA's Animal Welfare
+              Candidate Pledge on September 11, 2026.
+
+              <br>
+
+              <a
+                class="candidate-response-link"
+                href="/election-2026/county/culberson/">
+                Read Benjamin Culberson's Survey Response →
+              </a>
+
+              <br>
+
+              <a
+                class="candidate-response-link"
+                href="/election-2026/county/candidate-pledge/">
+                View the Animal Welfare Candidate Pledge →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- STATUS EXPLANATION -->
+
+    <div class="status-explainer">
+
+      <p>
+        <strong>No Response:</strong>
+        Candidate received the Candidate Survey and supporting materials
+        but did not submit a response by the August 21, 2026 deadline.
+      </p>
+
+      <p>
+        <strong>Not Delivered:</strong>
+        GAAA was unable to locate verified campaign contact information
+        before the deadline and therefore could not provide the survey.
+        Rodolfo Ochoa is not classified as a candidate who failed to
+        respond.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESULTS CTA -->
+
+  <section class="candidate-results-cta">
+
+    <div>
+
+      <span class="section-label">
+        Candidate Survey Results
+      </span>
+
+      <h2>
+        See Where the Candidates Stand
+      </h2>
+
+      <p>
+        Review candidate participation and the positions submitted
+        on the major animal-welfare issues facing Gwinnett County.
+      </p>
+
+    </div>
+
+    <a
+      class="results-button"
+      href="/election-2026/county/candidate-survey/#candidate-positions">
+
+      View Survey Responses &amp; Positions →
+
+    </a>
+
+  </section>
+
+
+  <!-- RESOURCES -->
+
+  <section class="election-resource-heading">
+
+    <span class="section-label">
+      Explore the Project
+    </span>
+
+    <h2>
+      Candidate Survey &amp; Pledge
+    </h2>
+
+    <p>
+      Review the questions candidates were asked and the animal-welfare
+      commitments County Commission candidates were invited to make.
+    </p>
+
+  </section>
+
+
+  <section class="election-resource-grid">
+
+
+    <!-- SURVEY -->
+
+    <a
+      class="home-card"
+      href="/election-2026/county/candidate-survey/">
+
+      <div class="home-card-icon icon-blue">
+        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+      </div>
+
+      <h3>
+        Candidate Survey
+      </h3>
+
+      <p>
+        Explore the Candidate Survey, supporting background information
+        and candidate participation and responses.
+      </p>
+
+      <span>
+        Explore Candidate Survey →
+      </span>
+
+    </a>
+
+
+    <!-- PLEDGE -->
+
+    <a
+      class="home-card"
+      href="/election-2026/county/candidate-pledge/">
+
+      <div class="home-card-icon icon-orange">
+        <i class="fas fa-pen-fancy" aria-hidden="true"></i>
+      </div>
+
+      <h3>
+        County Candidate Pledge
+      </h3>
+
+      <p>
+        Read the seven animal-welfare commitments County Commission
+        candidates were asked to make on oversight, accountability,
+        humane care, prevention and measurable action.
+      </p>
+
+      <span>
+        View Candidate Pledge →
+      </span>
+
+    </a>
+
+  </section>
+
+
+  <!-- AFTER THE ELECTION -->
+
+  <section class="accountability-section">
+
+    <span class="section-label">
+      After the Election
+    </span>
+
+    <h2>
+      A Public Record of What Candidates Said
+    </h2>
+
+    <p>
+      This project does not end on Election Day. Candidate responses,
+      signed pledges and participation records will remain publicly
+      available so residents can revisit what candidates said and
+      compare those positions with future votes, actions and policy
+      decisions by those who take office.
+    </p>
+
+  </section>
+
+
+  <!-- NON-ENDORSEMENT -->
+
+  <p class="election-note">
+
+    Participation in GAAA's Candidate Survey, meeting with GAAA,
+    attending a GAAA event, or signing an Animal Welfare Candidate
+    Pledge does not constitute an endorsement by Gwinnett Animal
+    Advocacy Alliance. Candidate responses are presented without
+    changing the substance of their answers.
+
+  </p>
+
+
+</div>
