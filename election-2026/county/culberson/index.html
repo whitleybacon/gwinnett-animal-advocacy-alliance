@@ -92,6 +92,31 @@ permalink: /election-2026/county/culberson/
     text-decoration: none;
   }
 
+  .candidate-response-page .response-back-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .candidate-response-page .response-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border: 1px solid #cfd8df;
+    background: #fff;
+    color: var(--accent);
+    border-radius: 6px;
+    font-size: .84rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .candidate-response-page .response-back-button:hover {
+    background: #f4f8fc;
+    text-decoration: none;
+  }
+
   .candidate-response-page .expand-controls {
     display: flex;
     gap: 9px;
@@ -380,15 +405,27 @@ permalink: /election-2026/county/culberson/
     </div>
   </section>
 
-  <div class="response-nav">
-    <a href="/election-2026/county/candidate-survey/">
-      ← Back to Candidate Survey
-    </a>
+    <div class="response-nav">
+  
+    <div class="response-back-links">
+  
+      <a href="/election-2026/county/" class="response-back-button">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        County Election Project
+      </a>
+  
+      <a href="/election-2026/county/candidate-survey/" class="response-back-button">
+        <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+        Candidate Survey
+      </a>
+  
+    </div>
   
     <div class="expand-controls">
       <button type="button" id="expand-all">Expand all</button>
       <button type="button" id="collapse-all">Collapse all</button>
     </div>
+  
   </div>
 
   <section class="response-intro">
