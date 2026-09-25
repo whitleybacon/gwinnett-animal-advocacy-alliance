@@ -1,1 +1,1720 @@
+---
+layout: default
+title: 2026 Georgia General Assembly Animal Welfare Candidate Outreach
+permalink: /election-2026/state/
+---
 
+<style>
+  .state-election-page {
+    --state-navy: var(--accent);
+    --state-green: #2f7d32;
+    --state-green-soft: #edf7ee;
+    --state-blue: #326f9f;
+    --state-blue-soft: #eef6fb;
+    --state-purple: #71549a;
+    --state-purple-soft: #f4effa;
+    --state-gold: #b98525;
+    --state-gold-soft: #fff8e8;
+    --state-gray: #687580;
+    --state-gray-soft: #f5f7f8;
+    --state-border: #dfe6eb;
+  }
+
+  .state-election-page * {
+    box-sizing: border-box;
+  }
+
+  .state-election-page .state-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* HERO */
+
+  .state-election-page .state-hero {
+    margin: 42px auto 50px;
+    padding: 55px 46px;
+    max-width: 1180px;
+    text-align: center;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(20,49,74,.97),
+        rgba(34,76,105,.94)
+      );
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  }
+
+  .state-election-page .hero-breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .state-election-page .hero-breadcrumb a {
+    color: rgba(255,255,255,.85);
+    font-size: .84rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .state-election-page .hero-breadcrumb a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .state-election-page .state-kicker {
+    display: block;
+    margin-bottom: 10px;
+    color: #c9e5f3;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+
+  .state-election-page .state-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    color: #fff;
+    font-size: 3.15rem;
+    line-height: 1.08;
+  }
+
+  .state-election-page .state-hero > p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255,255,255,.91);
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  /* METRICS */
+
+  .state-election-page .outreach-metrics {
+    max-width: 850px;
+    margin: 38px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .state-election-page .metric {
+    padding: 19px 12px;
+    background: rgba(255,255,255,.11);
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 10px;
+  }
+
+  .state-election-page .metric-number {
+    display: block;
+    margin-bottom: 4px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .state-election-page .metric-label {
+    color: rgba(255,255,255,.86);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  /* INTRO */
+
+  .state-election-page .state-intro {
+    max-width: 920px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+
+  .state-election-page .section-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--state-green);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .state-election-page .state-intro h2,
+  .state-election-page .candidate-section-header h2,
+  .state-election-page .pledge-development h2 {
+    margin: 0 0 14px;
+    color: var(--state-navy);
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .state-election-page .state-intro p {
+    margin: 0 auto 14px;
+    color: #53606c;
+    line-height: 1.75;
+  }
+
+  .state-election-page .project-note {
+    margin-top: 25px;
+    padding: 18px 20px;
+    text-align: left;
+    background: var(--state-blue-soft);
+    border-left: 4px solid var(--state-blue);
+    border-radius: 8px;
+    color: #465663;
+    line-height: 1.7;
+  }
+
+  .state-election-page .project-note strong {
+    color: var(--state-navy);
+  }
+
+  /* LEGEND */
+
+  .state-election-page .status-legend {
+    max-width: 1000px;
+    margin: 0 auto 48px;
+    padding: 22px 24px;
+    background: #fff;
+    border: 1px solid var(--state-border);
+    border-radius: 10px;
+  }
+
+  .state-election-page .status-legend h3 {
+    margin: 0 0 14px;
+    color: var(--state-navy);
+    font-size: 1rem;
+  }
+
+  .state-election-page .legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .state-election-page .legend-item {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    color: #586570;
+    font-size: .82rem;
+    font-weight: 600;
+  }
+
+  .state-election-page .legend-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    border-radius: 50%;
+  }
+
+  .state-election-page .legend-dot.engaged {
+    background: var(--state-green);
+  }
+
+  .state-election-page .legend-dot.met {
+    background: var(--state-purple);
+  }
+
+  .state-election-page .legend-dot.awaiting {
+    background: var(--state-blue);
+  }
+
+  .state-election-page .legend-dot.not-located {
+    background: var(--state-gold);
+  }
+
+  /* CANDIDATE SECTIONS */
+
+  .state-election-page .candidate-section {
+    max-width: 1180px;
+    margin: 0 auto 65px;
+  }
+
+  .state-election-page .candidate-section-header {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .state-election-page .candidate-section-header p {
+    margin: 0;
+    color: #66727d;
+  }
+
+  .state-election-page .district-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 18px;
+  }
+
+  .state-election-page .district-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--state-border);
+    border-radius: 11px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.035);
+  }
+
+  .state-election-page .district-heading {
+    padding: 12px 17px;
+    background: #f4f7f9;
+    border-bottom: 1px solid var(--state-border);
+    color: var(--state-navy);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .state-election-page .candidate-entry {
+    padding: 17px;
+  }
+
+  .state-election-page .candidate-entry + .candidate-entry {
+    border-top: 1px solid #e8edf1;
+  }
+
+  .state-election-page .candidate-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .state-election-page .candidate-name {
+    color: var(--state-navy);
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .state-election-page .party-label {
+    flex: 0 0 auto;
+    padding: 4px 7px;
+    background: #f0f2f4;
+    border-radius: 5px;
+    color: #69747e;
+    font-size: .67rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+
+  .state-election-page .incumbent {
+    margin-left: 4px;
+    color: #7a858e;
+    font-size: .73rem;
+    font-weight: 600;
+  }
+
+  .state-election-page .candidate-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .state-election-page .status-awaiting {
+    background: var(--state-blue-soft);
+    color: #2f678f;
+  }
+
+  .state-election-page .status-response {
+    background: var(--state-green-soft);
+    color: #246b2a;
+  }
+
+  .state-election-page .status-met {
+    background: var(--state-purple-soft);
+    color: #62448c;
+  }
+
+  .state-election-page .status-not-located {
+    background: var(--state-gold-soft);
+    color: #8a651f;
+  }
+
+  .state-election-page .status-detail {
+    margin: 8px 0 0;
+    color: #66727d;
+    font-size: .78rem;
+    line-height: 1.55;
+  }
+
+  /* PLEDGE */
+
+  .state-election-page .pledge-development {
+    max-width: 1000px;
+    margin: 10px auto 55px;
+    padding: 35px 38px;
+    text-align: center;
+    background: #f8fafb;
+    border: 1px solid var(--state-border);
+    border-radius: 12px;
+  }
+
+  .state-election-page .development-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    background: var(--state-gold-soft);
+    border-radius: 999px;
+    color: #87631f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .state-election-page .pledge-development p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #596671;
+    line-height: 1.75;
+  }
+
+  /* FOOTER NAV */
+
+  .state-election-page .state-footer-nav {
+    max-width: 1000px;
+    margin: 0 auto 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .state-election-page .nav-card {
+    display: block;
+    padding: 22px 24px;
+    background: #fff;
+    border: 1px solid var(--state-border);
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+
+  .state-election-page .nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 13px rgba(0,0,0,.06);
+    text-decoration: none;
+  }
+
+  .state-election-page .nav-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--state-green);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .state-election-page .nav-card strong {
+    color: var(--state-navy);
+    font-size: 1rem;
+  }
+
+  .state-election-page .nav-card p {
+    margin: 6px 0 0;
+    color: #66727d;
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .state-election-page .state-hero {
+      margin-top: 28px;
+      padding: 38px 22px;
+      border-radius: 10px;
+    }
+
+    .state-election-page .state-hero h1 {
+      font-size: 2.15rem;
+    }
+
+    .state-election-page .outreach-metrics {
+      grid-template-columns: 1fr;
+    }
+
+    .state-election-page .district-grid,
+    .state-election-page .state-footer-nav {
+      grid-template-columns: 1fr;
+    }
+
+    .state-election-page .state-intro {
+      text-align: left;
+      padding: 0 22px;
+    }
+
+    .state-election-page .state-intro h2,
+    .state-election-page .candidate-section-header h2,
+    .state-election-page .pledge-development h2 {
+      font-size: 1.75rem;
+    }
+
+    .state-election-page .candidate-section {
+      padding: 0 16px;
+    }
+
+    .state-election-page .pledge-development,
+    .state-election-page .state-footer-nav {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+
+    .state-election-page .pledge-development {
+      padding: 28px 20px;
+      text-align: left;
+    }
+  }
+</style>
+
+
+<div class="state-election-page">
+
+  <!-- HERO -->
+
+  <section class="state-hero">
+
+    <div class="hero-breadcrumb">
+      <a href="/election-2026/">
+        ← 2026 Election Hub
+      </a>
+    </div>
+
+    <span class="state-kicker">
+      2026 Georgia General Assembly
+    </span>
+
+    <h1>
+      Animal Welfare Candidate Outreach
+    </h1>
+
+    <p>
+      Gwinnett Animal Advocacy Alliance is reaching out to candidates
+      seeking to represent Gwinnett County in the Georgia House and
+      Senate to begin a broader conversation about animal-welfare policy
+      at the state level.
+    </p>
+
+    <div class="outreach-metrics">
+
+      <div class="metric">
+        <span class="metric-number">52</span>
+        <span class="metric-label">Candidates Identified</span>
+      </div>
+
+      <div class="metric">
+        <span class="metric-number">49</span>
+        <span class="metric-label">Candidates Contacted</span>
+      </div>
+
+      <div class="metric">
+        <span class="metric-number">3</span>
+        <span class="metric-label">Public Contacts Not Located</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="state-intro">
+
+    <span class="section-label">
+      State Legislative Outreach
+    </span>
+
+    <h2>
+      Bringing Animal Welfare Into the State-Level Conversation
+    </h2>
+
+    <p>
+      GAAA identified candidates seeking Georgia House and Senate seats
+      representing Gwinnett County and began direct outreach to introduce
+      our organization, discuss animal-welfare issues, and establish
+      communication with candidates across party lines.
+    </p>
+
+    <p>
+      This page documents that outreach and candidate participation.
+      Candidate status will be updated as additional responses and
+      conversations occur.
+    </p>
+
+    <div class="project-note">
+
+      <strong>This is a separate project from GAAA's Gwinnett County
+      Commission Candidate Survey and Candidate Pledge.</strong>
+
+      The County project focuses on policies and oversight within the
+      authority of the Gwinnett County Board of Commissioners. This
+      project focuses on candidates for the Georgia General Assembly
+      and animal-welfare issues that may involve state law or state-level
+      policy.
+
+    </div>
+
+  </section>
+
+
+  <!-- STATUS KEY -->
+
+  <div class="status-legend">
+
+    <h3>Outreach Status</h3>
+
+    <div class="legend-items">
+
+      <div class="legend-item">
+        <span class="legend-dot met"></span>
+        Met with GAAA
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-dot engaged"></span>
+        Response Received
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-dot awaiting"></span>
+        Contacted / Awaiting Response
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-dot not-located"></span>
+        Public Contact Not Located
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- GEORGIA SENATE -->
+
+  <section class="candidate-section">
+
+    <div class="candidate-section-header">
+
+      <span class="section-label">
+        Georgia State Senate
+      </span>
+
+      <h2>Senate Candidate Outreach</h2>
+
+      <p>
+        Candidates in State Senate districts representing portions of Gwinnett County.
+      </p>
+
+    </div>
+
+
+    <div class="district-grid">
+
+
+      <!-- SD 5 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 5
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Sheikh Rahman</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 7 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 7
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Aizaz Shaikh</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Ruwa Romman</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 9 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 9
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Michael Johnson</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Nikki Merritt</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 40 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 40
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Melina Mast</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Sally Harrell</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 43 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 43
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Tonya Anderson</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 45 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 45
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Scott Tippetts</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-response">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            Response Received
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Clint Dixon</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 46 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 46
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Marc McMain</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Ray Smith</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 48 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 48
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Laura Murvartian</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Shawn Still</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SD 55 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">
+          Senate District 55
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <span class="candidate-name">Mary Williams Benefield</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-not-located">
+            Public Contact Not Located
+          </span>
+
+          <p class="status-detail">
+            GAAA was unable to locate verified public campaign contact
+            information for outreach.
+          </p>
+
+        </div>
+
+        <div class="candidate-entry">
+
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Randal Mangham</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- GEORGIA HOUSE -->
+
+  <section class="candidate-section">
+
+    <div class="candidate-section-header">
+
+      <span class="section-label">
+        Georgia House of Representatives
+      </span>
+
+      <h2>House Candidate Outreach</h2>
+
+      <p>
+        Candidates in State House districts representing portions of Gwinnett County.
+      </p>
+
+    </div>
+
+
+    <div class="district-grid">
+
+
+      <!-- HD 30 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 30</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Braden Doxey</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-not-located">
+            Public Contact Not Located
+          </span>
+
+          <p class="status-detail">
+            GAAA was unable to locate verified public campaign contact
+            information for outreach.
+          </p>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Derrick McCollum</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 48 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 48</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Adam Cleveland</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Scott Hilton</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 88 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 88</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Billy Mitchell</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">William Freeman</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-not-located">
+            Public Contact Not Located
+          </span>
+
+          <p class="status-detail">
+            GAAA was unable to locate verified public campaign contact
+            information for outreach.
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- HD 93 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 93</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Doreen Carter</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 94 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 94</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Venola Mason</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 95 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 95</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Dar'shun Kendrick</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Reggie Hall</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 96 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 96</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Arlene Beckles</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 97 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 97</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Jyot Singh</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-response">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            Response Received
+          </span>
+
+          <p class="status-detail">
+            Candidate has indicated interest in further conversation with GAAA.
+          </p>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Yassin Moghazy</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 98 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 98</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Marvin Lim</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-response">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            Response Received
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 99 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 99</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Matt Reeves</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Michelle Kang</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-met">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            Met with GAAA · September 24
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 100 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 100</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Jennifer Ambler</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Josh Clark</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 102 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 102</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Gabe Okoye</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 103 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 103</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Chris Luchey</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Soo Hong</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 104 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 104</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Chuck Efstration</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 105 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 105</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Farooq Mughal</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Sandy Donatucci</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 106 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 106</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Muhammad Akbar Ali</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 107 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 107</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Murray Berkowitz</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Sam Park</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 108 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 108</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Elvia Davila</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Rahim Asani</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 109 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 109</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Juan Estrada</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-response">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            Response Received
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 110 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 110</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Charles Lollar</span>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Segun Adeyina</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 111 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 111</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Rey Martinez</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Scott T. Jackson</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+
+      <!-- HD 112 -->
+
+      <article class="district-card">
+
+        <div class="district-heading">House District 112</div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <div>
+              <span class="candidate-name">Bruce Williamson</span>
+              <span class="incumbent">Incumbent</span>
+            </div>
+            <span class="party-label">Republican</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Lisa Maria</span>
+            <span class="party-label">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLEDGE DEVELOPMENT -->
+
+  <section class="pledge-development">
+
+    <span class="development-badge">
+      In Development
+    </span>
+
+    <h2>
+      State Legislative Animal Welfare Pledge
+    </h2>
+
+    <p>
+      GAAA is developing a separate Animal Welfare Candidate Pledge
+      specifically for candidates seeking election to the Georgia
+      General Assembly. The state pledge will focus on commitments
+      appropriate to the authority and responsibilities of state
+      legislators and will be published when finalized.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER NAVIGATION -->
+
+  <div class="state-footer-nav">
+
+    <a class="nav-card" href="/election-2026/">
+
+      <span>2026 Elections</span>
+
+      <strong>
+        ← Return to the Election Hub
+      </strong>
+
+      <p>
+        Explore GAAA's 2026 election-related animal-welfare projects.
+      </p>
+
+    </a>
+
+
+    <a class="nav-card" href="/election-2026/county/">
+
+      <span>Gwinnett County Commission</span>
+
+      <strong>
+        View the County Election Project →
+      </strong>
+
+      <p>
+        Review the County Commission Candidate Survey, candidate
+        participation and Animal Welfare Candidate Pledge.
+      </p>
+
+    </a>
+
+  </div>
+
+</div>
