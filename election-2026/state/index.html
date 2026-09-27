@@ -124,6 +124,14 @@ permalink: /election-2026/state/
     text-transform: uppercase;
   }
 
+  .state-election-page .metric-detail {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255,255,255,.72);
+    font-size: .7rem;
+    font-weight: 600;
+  }
+
   /* INTRO */
 
   .state-election-page .state-intro {
@@ -170,6 +178,63 @@ permalink: /election-2026/state/
 
   .state-election-page .project-note strong {
     color: var(--state-navy);
+  }
+
+  /* DISTRICT LOOKUP */
+
+  .state-election-page .district-lookup {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+    padding: 28px 30px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    background: var(--state-green-soft);
+    border: 1px solid #d4e7d5;
+    border-radius: 12px;
+  }
+
+  .state-election-page .district-lookup-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    color: var(--state-green);
+    font-size: 1.2rem;
+  }
+
+  .state-election-page .district-lookup-content h2 {
+    margin: 0 0 8px;
+    color: var(--state-navy);
+    font-size: 1.45rem;
+  }
+
+  .state-election-page .district-lookup-content p {
+    max-width: 720px;
+    margin: 0 0 17px;
+    color: #53606c;
+    line-height: 1.65;
+  }
+
+  .state-election-page .district-lookup-button {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--state-green);
+    border-radius: 7px;
+    color: #fff;
+    font-size: .84rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .state-election-page .district-lookup-button:hover {
+    opacity: .9;
+    color: #fff;
+    text-decoration: none;
   }
 
   /* LEGEND */
@@ -301,16 +366,16 @@ permalink: /election-2026/state/
   }
 
   .state-election-page .party-label.democrat {
-      background: #e7efff;
-      color: #2454a6;
-      border: 1px solid #b8ccef;
-    }
-    
-    .state-election-page .party-label.republican {
-      background: #fbeeee;
-      color: #a33a3a;
-      border: 1px solid #eccccc;
-    }
+    background: #e7efff;
+    color: #2454a6;
+    border: 1px solid #b8ccef;
+  }
+
+  .state-election-page .party-label.republican {
+    background: #fbeeee;
+    color: #a33a3a;
+    border: 1px solid #eccccc;
+  }
 
   .state-election-page .incumbent {
     margin-left: 4px;
@@ -386,6 +451,11 @@ permalink: /election-2026/state/
     margin: 0 auto;
     color: #596671;
     line-height: 1.75;
+  }
+
+  .state-election-page .pledge-status-note {
+    margin-top: 14px !important;
+    font-size: .88rem;
   }
 
   /* FOOTER NAV */
@@ -473,7 +543,8 @@ permalink: /election-2026/state/
     }
 
     .state-election-page .pledge-development,
-    .state-election-page .state-footer-nav {
+    .state-election-page .state-footer-nav,
+    .state-election-page .district-lookup {
       margin-left: 16px;
       margin-right: 16px;
     }
@@ -481,6 +552,15 @@ permalink: /election-2026/state/
     .state-election-page .pledge-development {
       padding: 28px 20px;
       text-align: left;
+    }
+
+    .state-election-page .district-lookup {
+      padding: 24px 20px;
+      align-items: flex-start;
+    }
+
+    .state-election-page .district-lookup-icon {
+      display: none;
     }
   }
 </style>
@@ -526,8 +606,9 @@ permalink: /election-2026/state/
       </div>
 
       <div class="metric">
-        <span class="metric-number">2</span>
-        <span class="metric-label">Public Contacts Not Located</span>
+        <span class="metric-number">8</span>
+        <span class="metric-label">Candidates Engaged</span>
+        <span class="metric-detail">1 meeting held · 7 additional responses</span>
       </div>
 
     </div>
@@ -562,14 +643,55 @@ permalink: /election-2026/state/
 
     <div class="project-note">
 
-      <strong>This is a separate project from GAAA's Gwinnett County
-      Commission Candidate Survey and Candidate Pledge.</strong>
+      <strong>
+        This is a separate project from GAAA's Gwinnett County
+        Commission Candidate Survey and Candidate Pledge.
+      </strong>
 
       The County project focuses on policies and oversight within the
       authority of the Gwinnett County Board of Commissioners. This
       project focuses on candidates for the Georgia General Assembly
       and animal-welfare issues that may involve state law or state-level
       policy.
+
+    </div>
+
+  </section>
+
+
+  <!-- FIND YOUR DISTRICT -->
+
+  <section class="district-lookup">
+
+    <div class="district-lookup-icon">
+      <i class="fas fa-location-dot" aria-hidden="true"></i>
+    </div>
+
+    <div class="district-lookup-content">
+
+      <span class="section-label">
+        Find Your State Legislators
+      </span>
+
+      <h2>
+        Not Sure Which District You Live In?
+      </h2>
+
+      <p>
+        Georgia's My Voter Page allows registered voters to look up their
+        voting information, including their Georgia House and Senate districts.
+        Once you know your districts, you can find the candidates below and
+        see their current outreach status with GAAA.
+      </p>
+
+      <a
+        class="district-lookup-button"
+        href="https://mvp.sos.ga.gov/s/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Find Your District &amp; Representatives →
+      </a>
 
     </div>
 
@@ -935,23 +1057,23 @@ permalink: /election-2026/state/
           Senate District 55
         </div>
 
-       <div class="candidate-entry">
+        <div class="candidate-entry">
 
-        <div class="candidate-top">
-          <span class="candidate-name">Mary Williams Benefield</span>
-          <span class="party-label republican">Republican</span>
+          <div class="candidate-top">
+            <span class="candidate-name">Mary Williams Benefield</span>
+            <span class="party-label republican">Republican</span>
+          </div>
+
+          <span class="candidate-status status-not-located">
+            Public Contact Not Located
+          </span>
+
+          <p class="status-detail">
+            GAAA was unable to locate verified public campaign contact
+            information for outreach.
+          </p>
+
         </div>
-      
-        <span class="candidate-status status-not-located">
-          Public Contact Not Located
-        </span>
-      
-        <p class="status-detail">
-          GAAA was unable to locate verified public campaign contact
-          information for outreach.
-        </p>
-      
-      </div>
 
         <div class="candidate-entry">
 
@@ -967,6 +1089,8 @@ permalink: /election-2026/state/
           <span class="candidate-status status-awaiting">
             Contacted · Awaiting Response
           </span>
+
+        </div>
 
       </article>
 
@@ -1003,16 +1127,16 @@ permalink: /election-2026/state/
 
         <div class="district-heading">House District 30</div>
 
-       <div class="candidate-entry">
-        <div class="candidate-top">
-          <span class="candidate-name">Braden Doxey</span>
-          <span class="party-label democrat">Democrat</span>
+        <div class="candidate-entry">
+          <div class="candidate-top">
+            <span class="candidate-name">Braden Doxey</span>
+            <span class="party-label democrat">Democrat</span>
+          </div>
+
+          <span class="candidate-status status-awaiting">
+            Contacted · Awaiting Response
+          </span>
         </div>
-      
-        <span class="candidate-status status-awaiting">
-          Contacted · Awaiting Response
-        </span>
-      </div>
 
         <div class="candidate-entry">
           <div class="candidate-top">
@@ -1451,27 +1575,27 @@ permalink: /election-2026/state/
       <!-- HD 106 -->
 
       <article class="district-card">
-      
+
         <div class="district-heading">House District 106</div>
-      
+
         <div class="candidate-entry">
-      
+
           <div class="candidate-top">
             <div>
               <span class="candidate-name">Muhammad Akbar Ali</span>
               <span class="incumbent">Incumbent</span>
             </div>
-      
+
             <span class="party-label democrat">Democrat</span>
           </div>
-      
+
           <span class="candidate-status status-response">
             <i class="fas fa-circle-check" aria-hidden="true"></i>
             Response Received
           </span>
-      
+
         </div>
-      
+
       </article>
 
 
@@ -1667,24 +1791,32 @@ permalink: /election-2026/state/
   </section>
 
 
-  <!-- PLEDGE DEVELOPMENT -->
+  <!-- STATE PLEDGE -->
 
   <section class="pledge-development">
 
     <span class="development-badge">
-      In Development
+      Final Review
     </span>
 
     <h2>
-      State Legislative Animal Welfare Pledge
+      Georgia General Assembly Animal Welfare Pledge
     </h2>
 
     <p>
-      GAAA is developing a separate Animal Welfare Candidate Pledge
-      specifically for candidates seeking election to the Georgia
-      General Assembly. The state pledge will focus on commitments
-      appropriate to the authority and responsibilities of state
-      legislators and will be published when finalized.
+      GAAA has developed a separate 11-point Animal Welfare Candidate
+      Pledge specifically for candidates seeking election to the Georgia
+      General Assembly. The pledge focuses on animal-welfare issues within
+      the authority and responsibilities of state legislators, including
+      pet-overpopulation prevention, animal-cruelty laws and enforcement,
+      protection of local animal-welfare authority, responsible breeding,
+      transparency, standards of care, and constituent engagement.
+    </p>
+
+    <p class="pledge-status-note">
+      The pledge is currently undergoing final review before being
+      distributed to candidates. Candidate participation will be published
+      here after outreach begins.
     </p>
 
   </section>
