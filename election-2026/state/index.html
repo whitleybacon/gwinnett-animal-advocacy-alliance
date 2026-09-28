@@ -678,45 +678,43 @@ permalink: /election-2026/state/
     }
   }
 
-  /* Candidate scan layout: identity/party left, outreach status right */
-  .state-election-page .candidate-row {
+  /* Candidate layout: identity + party on left, outreach status on right */
+  .state-election-page .candidate-entry {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      "main status";
-    column-gap: 28px;
-    align-items: center;
+    min-height: 108px;
+    padding: 20px 230px 20px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .state-election-page .candidate-main {
-    grid-area: main;
+  .state-election-page .candidate-top {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 8px;
-    min-width: 0;
+    margin-bottom: 0;
   }
 
-  .state-election-page .candidate-info {
+  .state-election-page .candidate-top > div {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 6px 10px;
+    gap: 4px 6px;
   }
 
-  .state-election-page .party-badge {
+  .state-election-page .party-label {
     align-self: flex-start;
-    font-size: .72rem;
-    padding: 4px 9px;
+    padding: 3px 7px;
+    font-size: .64rem;
   }
 
-  .state-election-page .candidate-row > .candidate-status,
-  .state-election-page .candidate-main + .candidate-status {
-    grid-area: status;
-    justify-self: end;
-    align-self: center;
+  .state-election-page .candidate-status {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0;
     font-size: .94rem;
   }
@@ -725,7 +723,7 @@ permalink: /election-2026/state/
   .state-election-page .status-scheduled,
   .state-election-page .status-met,
   .state-election-page .status-signed {
-    padding: 10px 15px;
+    padding: 11px 16px;
     font-size: .94rem;
     font-weight: 800;
   }
@@ -735,11 +733,16 @@ permalink: /election-2026/state/
     font-size: .88rem;
   }
 
-  /* Bottom information blocks align with the full candidate-grid width */
+  .state-election-page .status-detail {
+    max-width: 520px;
+    margin: 8px 0 0;
+  }
+
+  /* Bottom information blocks use the same width as the candidate grid */
   .state-election-page .district-lookup,
   .state-election-page .bottom-project-note {
-    width: 100%;
-    max-width: 1180px;
+    width: calc(100% - 40px);
+    max-width: 1380px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -749,58 +752,17 @@ permalink: /election-2026/state/
     max-width: none;
   }
 
-  @media (max-width: 650px) {
-    .state-election-page .candidate-row {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "main"
-        "status";
-      row-gap: 14px;
-      align-items: start;
+  @media (max-width: 700px) {
+    .state-election-page .candidate-entry {
+      min-height: 0;
+      padding: 17px;
     }
 
-    .state-election-page .candidate-row > .candidate-status,
-    .state-election-page .candidate-main + .candidate-status {
-      justify-self: start;
-    }
-  }
-
-
-  /* Support current markup where status may be nested in candidate-main */
-  .state-election-page .candidate-row .candidate-main {
-    position: relative;
-    padding-right: 210px;
-  }
-
-  .state-election-page .candidate-row .candidate-main .candidate-status {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-  }
-
-  .state-election-page .candidate-row .candidate-main .party-badge {
-    order: 2;
-  }
-
-  .state-election-page .candidate-row .candidate-main .candidate-info {
-    order: 1;
-  }
-
-  .state-election-page .candidate-row .candidate-main .candidate-status {
-    order: 3;
-  }
-
-  @media (max-width: 650px) {
-    .state-election-page .candidate-row .candidate-main {
-      padding-right: 0;
-    }
-
-    .state-election-page .candidate-row .candidate-main .candidate-status {
+    .state-election-page .candidate-status {
       position: static;
       transform: none;
-      margin-top: 6px;
+      align-self: flex-start;
+      margin-top: 14px;
     }
   }
 
