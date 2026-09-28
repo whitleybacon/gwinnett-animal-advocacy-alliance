@@ -180,6 +180,15 @@ permalink: /election-2026/state/
     color: var(--state-navy);
   }
 
+  .state-election-page .bottom-project-note {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  .state-election-page .bottom-project-note .project-note {
+    margin-top: 0;
+  }
+
   /* DISTRICT LOOKUP */
 
   .state-election-page .district-lookup {
@@ -269,35 +278,35 @@ permalink: /election-2026/state/
     font-weight: 600;
   }
 
- .state-election-page .legend-dot {
+  .state-election-page .legend-dot {
     width: 12px;
     height: 12px;
     flex: 0 0 12px;
     border-radius: 50%;
   }
-  
+
   .state-election-page .legend-dot.awaiting {
-    background: #2878B5;
+    background: #1565C0;
   }
-  
+
   .state-election-page .legend-dot.engaged {
-    background: #D9822B;
+    background: #E67E22;
   }
-  
+
   .state-election-page .legend-dot.scheduled {
-    background: #159A9C;
+    background: #00A6A6;
   }
-  
+
   .state-election-page .legend-dot.met {
-    background: #7547A8;
+    background: #7B3FB2;
   }
-  
-  .state-election-page .legend-dot.not-located {
-    background: #687580;
-  }
-  
+
   .state-election-page .legend-dot.signed {
-    background: #27823A;
+    background: #188A38;
+  }
+
+  .state-election-page .legend-dot.not-located {
+    background: #59636D;
   }
 
   .state-election-page .pledge-legend {
@@ -419,33 +428,39 @@ permalink: /election-2026/state/
   }
 
   .state-election-page .status-awaiting {
-    background: var(--state-blue-soft);
-    color: #2f678f;
+    background: #E8F2FC;
+    color: #0F579F;
+    border: 1px solid #B9D5F1;
   }
 
   .state-election-page .status-response {
-    background: var(--state-gold-soft);
-    color: #8a651f;
+    background: #FFF0E2;
+    color: #B95D0D;
+    border: 1px solid #F3C79F;
   }
 
   .state-election-page .status-scheduled {
-    background: #e9f4f5;
-    color: #2f7477;
+    background: #E2F7F7;
+    color: #007D7D;
+    border: 1px solid #9DDDDD;
   }
 
   .state-election-page .status-met {
-    background: var(--state-purple-soft);
-    color: #62448c;
+    background: #F1E8FA;
+    color: #65309A;
+    border: 1px solid #CEB2E8;
   }
 
   .state-election-page .status-signed {
-    background: var(--state-green-soft);
-    color: #246b2a;
+    background: #E5F6E9;
+    color: #126D29;
+    border: 1px solid #A9DAB5;
   }
 
   .state-election-page .status-not-located {
-    background: var(--state-gray-soft);
-    color: #687580;
+    background: #EEF1F3;
+    color: #4E5963;
+    border: 1px solid #CDD4D9;
   }
 
   .state-election-page .status-detail {
@@ -697,60 +712,44 @@ permalink: /election-2026/state/
       Candidate status will be updated as additional responses and
       conversations occur.
     </p>
-
-    <div class="project-note">
-
-      <strong>
-        This is a separate project from GAAA's Gwinnett County
-        Commission Candidate Survey and Candidate Pledge.
-      </strong>
-
-      The County project focuses on policies and oversight within the
-      authority of the Gwinnett County Board of Commissioners. This
-      project focuses on candidates for the Georgia General Assembly
-      and animal-welfare issues that may involve state law or state-level
-      policy.
-
-    </div>
-
-  </section>
+</section>
 
 
-  <!-- FIND YOUR DISTRICT -->
+<!-- STATE PLEDGE -->
 
-  <section class="district-lookup">
+  <section class="pledge-development">
 
-    <div class="district-lookup-icon">
-      <i class="fas fa-location-dot" aria-hidden="true"></i>
-    </div>
+    <span class="development-badge finalized">
+      2026 Candidate Pledge
+    </span>
 
-    <div class="district-lookup-content">
+    <h2>
+      Georgia General Assembly Animal Welfare Pledge
+    </h2>
 
-      <span class="section-label">
-        Find Your State Legislators
-      </span>
+    <p>
+      GAAA has developed an 11-point Animal Welfare Candidate Pledge
+      specifically for candidates seeking election to the Georgia General
+      Assembly. The pledge focuses on animal-welfare issues within the
+      authority and responsibilities of state legislators, including
+      pet-overpopulation prevention, animal-cruelty laws and enforcement,
+      protection of local animal-welfare authority, responsible breeding,
+      standards of care, transparency, stakeholder participation, and
+      constituent engagement.
+    </p>
 
-      <h2>
-        Not Sure Which District You Live In?
-      </h2>
+    <p class="pledge-status-note">
+      Candidates may review and electronically sign the pledge through
+      GAAA's website. Candidate participation will be reflected on this
+      page after GAAA verifies each submission.
+    </p>
 
-      <p>
-        Georgia's My Voter Page allows registered voters to look up their
-        voting information, including their Georgia House and Senate districts.
-        Once you know your districts, you can find the candidates below and
-        see their current outreach status with GAAA.
-      </p>
-
-      <a
-        class="district-lookup-button"
-        href="https://mvp.sos.ga.gov/s/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Find Your District &amp; Representatives →
-      </a>
-
-    </div>
+    <a
+      class="pledge-button"
+      href="/election-2026/state/pledge/"
+    >
+      Review &amp; Sign the Animal Welfare Pledge →
+    </a>
 
   </section>
 
@@ -1864,41 +1863,63 @@ permalink: /election-2026/state/
   </section>
 
 
-  <!-- STATE PLEDGE -->
+<!-- FIND YOUR DISTRICT -->
 
-  <section class="pledge-development">
+  <section class="district-lookup">
 
-    <span class="development-badge finalized">
-      Published
-    </span>
+    <div class="district-lookup-icon">
+      <i class="fas fa-location-dot" aria-hidden="true"></i>
+    </div>
 
-    <h2>
-      Georgia General Assembly Animal Welfare Pledge
-    </h2>
+    <div class="district-lookup-content">
 
-    <p>
-      GAAA has developed an 11-point Animal Welfare Candidate Pledge
-      specifically for candidates seeking election to the Georgia General
-      Assembly. The pledge focuses on animal-welfare issues within the
-      authority and responsibilities of state legislators, including
-      pet-overpopulation prevention, animal-cruelty laws and enforcement,
-      protection of local animal-welfare authority, responsible breeding,
-      standards of care, transparency, stakeholder participation, and
-      constituent engagement.
-    </p>
+      <span class="section-label">
+        Find Your State Legislators
+      </span>
 
-    <p class="pledge-status-note">
-      Candidates may review and electronically sign the pledge through
-      GAAA's website. Candidate participation will be reflected on this
-      page after GAAA verifies each submission.
-    </p>
+      <h2>
+        Not Sure Which District You Live In?
+      </h2>
 
-    <a
-      class="pledge-button"
-      href="/election-2026/state/pledge/"
-    >
-      Review &amp; Sign the Animal Welfare Pledge →
-    </a>
+      <p>
+        Georgia's My Voter Page allows registered voters to look up their
+        voting information, including their Georgia House and Senate districts.
+        Once you know your districts, you can find the candidates below and
+        see their current outreach status with GAAA.
+      </p>
+
+      <a
+        class="district-lookup-button"
+        href="https://mvp.sos.ga.gov/s/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Find Your District &amp; Representatives →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECT NOTE -->
+
+  <section class="state-intro bottom-project-note">
+
+    <div class="project-note">
+
+      <strong>
+        This is a separate project from GAAA's Gwinnett County
+        Commission Candidate Survey and Candidate Pledge.
+      </strong>
+
+      The County project focuses on policies and oversight within the
+      authority of the Gwinnett County Board of Commissioners. This
+      project focuses on candidates for the Georgia General Assembly
+      and animal-welfare issues that may involve state law or state-level
+      policy.
+
+    </div>
 
   </section>
 
