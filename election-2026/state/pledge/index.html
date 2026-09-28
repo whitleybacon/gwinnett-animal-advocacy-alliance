@@ -1,1 +1,1105 @@
+---
+layout: default
+title: Georgia General Assembly Animal Welfare Pledge
+permalink: /election-2026/state/pledge/
+---
 
+<style>
+  .state-pledge-page {
+    --pledge-navy: var(--accent);
+    --pledge-green: #2f7d32;
+    --pledge-green-soft: #edf7ee;
+    --pledge-blue: #326f9f;
+    --pledge-blue-soft: #eef6fb;
+    --pledge-gold: #b98525;
+    --pledge-gold-soft: #fff8e8;
+    --pledge-gray: #687580;
+    --pledge-gray-soft: #f5f7f8;
+    --pledge-border: #dfe6eb;
+  }
+
+  .state-pledge-page * {
+    box-sizing: border-box;
+  }
+
+  .state-pledge-page .pledge-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* HERO */
+
+  .state-pledge-page .pledge-hero {
+    max-width: 1180px;
+    margin: 42px auto 45px;
+    padding: 52px 46px;
+    text-align: center;
+    background: linear-gradient(
+      135deg,
+      rgba(20,49,74,.97),
+      rgba(34,76,105,.94)
+    );
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  }
+
+  .state-pledge-page .hero-breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .state-pledge-page .hero-breadcrumb a {
+    color: rgba(255,255,255,.85);
+    font-size: .84rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .state-pledge-page .hero-breadcrumb a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .state-pledge-page .pledge-kicker {
+    display: block;
+    margin-bottom: 10px;
+    color: #c9e5f3;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+
+  .state-pledge-page .pledge-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.08;
+  }
+
+  .state-pledge-page .pledge-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: rgba(255,255,255,.91);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  /* INTRO */
+
+  .state-pledge-page .pledge-intro {
+    max-width: 900px;
+    margin: 0 auto 38px;
+    text-align: center;
+  }
+
+  .state-pledge-page .section-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--pledge-green);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .state-pledge-page .pledge-intro h2,
+  .state-pledge-page .signing-section h2 {
+    margin: 0 0 14px;
+    color: var(--pledge-navy);
+    font-size: 2.15rem;
+    line-height: 1.2;
+  }
+
+  .state-pledge-page .pledge-intro p {
+    margin: 0 auto;
+    color: #53606c;
+    line-height: 1.75;
+  }
+
+  /* OPENING STATEMENT */
+
+  .state-pledge-page .pledge-statement {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    padding: 22px 25px;
+    background: var(--pledge-blue-soft);
+    border-left: 4px solid var(--pledge-blue);
+    border-radius: 8px;
+    color: #465663;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* PLEDGE ITEMS */
+
+  .state-pledge-page .pledge-list {
+    max-width: 900px;
+    margin: 0 auto 45px;
+  }
+
+  .state-pledge-page .pledge-item {
+    position: relative;
+    margin-bottom: 14px;
+    padding: 22px 24px 22px 74px;
+    background: #fff;
+    border: 1px solid var(--pledge-border);
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0,0,0,.025);
+  }
+
+  .state-pledge-page .pledge-number {
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pledge-green-soft);
+    border-radius: 50%;
+    color: var(--pledge-green);
+    font-size: .92rem;
+    font-weight: 800;
+  }
+
+  .state-pledge-page .pledge-item h3 {
+    margin: 0 0 7px;
+    color: var(--pledge-navy);
+    font-size: 1.04rem;
+    line-height: 1.4;
+  }
+
+  .state-pledge-page .pledge-item p {
+    margin: 0;
+    color: #596671;
+    font-size: .92rem;
+    line-height: 1.7;
+  }
+
+  /* AFFIRMATION */
+
+  .state-pledge-page .affirmation {
+    max-width: 900px;
+    margin: 0 auto 55px;
+    padding: 25px 28px;
+    text-align: center;
+    background: var(--pledge-green-soft);
+    border: 1px solid #d4e7d5;
+    border-radius: 10px;
+    color: #36583a;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+
+  /* SIGNING FORM */
+
+  .state-pledge-page .signing-section {
+    max-width: 900px;
+    margin: 0 auto 65px;
+    padding: 38px 42px;
+    background: #fff;
+    border: 1px solid var(--pledge-border);
+    border-radius: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.045);
+  }
+
+  .state-pledge-page .signing-header {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .state-pledge-page .signing-header p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #66727d;
+    line-height: 1.65;
+  }
+
+  .state-pledge-page .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+  }
+
+  .state-pledge-page .form-field {
+    margin-bottom: 18px;
+  }
+
+  .state-pledge-page .form-grid .form-field {
+    margin-bottom: 0;
+  }
+
+  .state-pledge-page .form-field.full {
+    grid-column: 1 / -1;
+  }
+
+  .state-pledge-page label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--pledge-navy);
+    font-size: .82rem;
+    font-weight: 800;
+  }
+
+  .state-pledge-page .required {
+    color: #a33a3a;
+  }
+
+  .state-pledge-page input[type="text"],
+  .state-pledge-page input[type="email"],
+  .state-pledge-page input[type="date"] {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #cfd8df;
+    border-radius: 7px;
+    background: #fff;
+    color: #303a42;
+    font: inherit;
+    font-size: .92rem;
+  }
+
+  .state-pledge-page input:focus {
+    outline: none;
+    border-color: var(--pledge-blue);
+    box-shadow: 0 0 0 3px rgba(50,111,159,.11);
+  }
+
+  .state-pledge-page .agreement-box {
+    margin-top: 28px;
+    padding: 22px;
+    background: var(--pledge-gray-soft);
+    border: 1px solid var(--pledge-border);
+    border-radius: 9px;
+  }
+
+  .state-pledge-page .agreement-box h3 {
+    margin: 0 0 17px;
+    color: var(--pledge-navy);
+    font-size: 1rem;
+  }
+
+  .state-pledge-page .checkbox-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .state-pledge-page .checkbox-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .state-pledge-page .checkbox-row input {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-top: 3px;
+  }
+
+  .state-pledge-page .checkbox-row label {
+    margin: 0;
+    color: #4f5d67;
+    font-size: .87rem;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  .state-pledge-page .signature-area {
+    margin-top: 27px;
+    padding-top: 25px;
+    border-top: 1px solid var(--pledge-border);
+  }
+
+  .state-pledge-page .signature-note {
+    margin: -7px 0 17px;
+    color: #73808a;
+    font-size: .79rem;
+    line-height: 1.5;
+  }
+
+  .state-pledge-page .submit-area {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .state-pledge-page .pledge-submit {
+    min-width: 220px;
+    padding: 13px 25px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--pledge-green);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+  }
+
+  .state-pledge-page .pledge-submit:hover {
+    opacity: .9;
+  }
+
+  .state-pledge-page .pledge-submit:disabled {
+    opacity: .6;
+    cursor: wait;
+  }
+
+  .state-pledge-page .form-note {
+    max-width: 620px;
+    margin: 13px auto 0;
+    color: #77838c;
+    font-size: .75rem;
+    line-height: 1.55;
+  }
+
+  /* FORM RESULT */
+
+  .state-pledge-page .form-result {
+    display: none;
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 9px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .state-pledge-page .form-result.success {
+    display: block;
+    background: var(--pledge-green-soft);
+    border: 1px solid #cfe5d1;
+    color: #2e6534;
+  }
+
+  .state-pledge-page .form-result.error {
+    display: block;
+    background: #fff1f1;
+    border: 1px solid #edcccc;
+    color: #8c3b3b;
+  }
+
+  /* FOOTER */
+
+  .state-pledge-page .pledge-footer-nav {
+    max-width: 900px;
+    margin: 0 auto 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .state-pledge-page .nav-card {
+    display: block;
+    padding: 22px 24px;
+    background: #fff;
+    border: 1px solid var(--pledge-border);
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .state-pledge-page .nav-card:hover {
+    box-shadow: 0 4px 13px rgba(0,0,0,.06);
+    text-decoration: none;
+  }
+
+  .state-pledge-page .nav-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--pledge-green);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .state-pledge-page .nav-card strong {
+    color: var(--pledge-navy);
+    font-size: 1rem;
+  }
+
+  .state-pledge-page .nav-card p {
+    margin: 6px 0 0;
+    color: #66727d;
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+
+  .state-pledge-page .botcheck {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .state-pledge-page .pledge-hero {
+      margin-top: 28px;
+      padding: 38px 22px;
+      border-radius: 10px;
+    }
+
+    .state-pledge-page .pledge-hero h1 {
+      font-size: 2.1rem;
+    }
+
+    .state-pledge-page .pledge-intro {
+      text-align: left;
+    }
+
+    .state-pledge-page .pledge-intro h2,
+    .state-pledge-page .signing-section h2 {
+      font-size: 1.7rem;
+    }
+
+    .state-pledge-page .pledge-item {
+      padding: 20px;
+    }
+
+    .state-pledge-page .pledge-number {
+      position: static;
+      margin-bottom: 12px;
+    }
+
+    .state-pledge-page .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .state-pledge-page .form-field.full {
+      grid-column: auto;
+    }
+
+    .state-pledge-page .signing-section {
+      padding: 28px 20px;
+    }
+
+    .state-pledge-page .pledge-footer-nav {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<div class="state-pledge-page">
+
+  <!-- HERO -->
+
+  <section class="pledge-hero">
+
+    <div class="hero-breadcrumb">
+      <a href="/election-2026/state/">
+        ← State Candidate Outreach
+      </a>
+    </div>
+
+    <span class="pledge-kicker">
+      2026 Georgia General Assembly
+    </span>
+
+    <h1>
+      Animal Welfare Candidate Pledge
+    </h1>
+
+    <p>
+      A commitment to practical, effective efforts that improve the
+      humane treatment and protection of animals throughout Georgia.
+    </p>
+
+  </section>
+
+
+  <div class="pledge-container">
+
+    <!-- INTRO -->
+
+    <section class="pledge-intro">
+
+      <span class="section-label">
+        Georgia General Assembly
+      </span>
+
+      <h2>
+        2026 Animal Welfare Candidate Pledge
+      </h2>
+
+      <p>
+        Gwinnett Animal Advocacy Alliance developed this pledge to give
+        candidates for the Georgia General Assembly an opportunity to
+        publicly demonstrate their commitment to animal-welfare issues
+        affecting communities throughout Georgia.
+      </p>
+
+    </section>
+
+
+    <!-- OFFICIAL OPENING -->
+
+    <div class="pledge-statement">
+      <strong>
+        As a candidate for the Georgia General Assembly, I pledge to
+        support practical, effective efforts that improve the humane
+        treatment and protection of animals throughout Georgia.
+        If elected, I commit to:
+      </strong>
+    </div>
+
+
+    <!-- OFFICIAL PLEDGE -->
+
+    <div class="pledge-list">
+
+      <article class="pledge-item">
+        <div class="pledge-number">1</div>
+        <h3>Prevent pet overpopulation and unnecessary shelter intake.</h3>
+        <p>
+          Support sustainable funding and policies that expand access to
+          affordable spay/neuter services and other effective prevention
+          programs throughout Georgia, while addressing preventable causes
+          of shelter intake and pet surrender, including barriers that make
+          it difficult for families to keep their pets.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">2</div>
+        <h3>
+          Protect local animal-welfare ordinances from state preemption.
+        </h3>
+        <p>
+          Oppose legislation that unnecessarily removes or restricts the
+          authority of local governments to adopt and enforce animal-welfare
+          ordinances that address the needs of their communities.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">3</div>
+        <h3>Strengthen Georgia's animal-cruelty laws when needed.</h3>
+        <p>
+          Support thoughtful legislation that protects animals from cruelty,
+          aggravated cruelty, severe neglect, abandonment, animal fighting,
+          and other serious mistreatment, including efforts to identify and
+          address gaps or inconsistencies in existing law.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">4</div>
+        <h3>Support effective enforcement of animal-protection laws.</h3>
+        <p>
+          Support appropriate tools, training, coordination, and resources
+          for the agencies, law-enforcement personnel, prosecutors, and
+          other officials responsible for investigating animal cruelty and
+          enforcing Georgia's animal-protection laws.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">5</div>
+        <h3>Protect animals from repeat offenders.</h3>
+        <p>
+          Support effective mechanisms for identifying and addressing
+          repeat animal-cruelty offenders and for ensuring that protections
+          for animals remain meaningful after serious or repeated violations.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">6</div>
+        <h3>
+          Address irresponsible breeding and the commercial sale of companion animals.
+        </h3>
+        <p>
+          Support reasonable, enforceable policies that promote responsible
+          breeding and appropriate standards of care for animals in commercial
+          breeding facilities, including those commonly referred to as
+          “puppy mills,” and address breeding and commercial-sale practices
+          that contribute to animal cruelty, neglect, abandonment, consumer
+          harm, and shelter overpopulation, while considering practical
+          effects and enforceability.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">7</div>
+        <h3>
+          Support transparency and useful statewide animal-welfare data.
+        </h3>
+        <p>
+          Support efforts to improve the accessibility, accuracy, and
+          usefulness of statewide animal-welfare reporting so policymakers
+          and the public can understand shelter intake and outcomes,
+          enforcement trends, and other animal-welfare issues and evaluate
+          whether policies are working.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">8</div>
+        <h3>
+          Include animal-welfare stakeholders in the legislative process.
+        </h3>
+        <p>
+          Listen to animal-welfare advocates, veterinarians, shelter
+          professionals, rescues, law enforcement, prosecutors,
+          subject-matter experts, and Georgia residents when considering
+          legislation or policy affecting animals and Georgia's
+          animal-welfare systems.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">9</div>
+        <h3>
+          Work across party lines on animal welfare.
+        </h3>
+        <p>
+          Seek practical bipartisan solutions that protect animals, prevent
+          cruelty, reduce unnecessary shelter intake, and improve animal
+          welfare throughout Georgia.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">10</div>
+        <h3>
+          Be responsive when constituents raise animal-welfare concerns.
+        </h3>
+        <p>
+          When constituents bring forward significant animal-welfare
+          concerns, communicate with appropriate local and state
+          officials—including county commissioners and animal-welfare
+          agencies—to better understand the issue, help identify available
+          solutions, and determine whether state action or assistance is
+          appropriate.
+        </p>
+      </article>
+
+
+      <article class="pledge-item">
+        <div class="pledge-number">11</div>
+        <h3>
+          Support strong standards of care and oversight for animals in regulated facilities.
+        </h3>
+        <p>
+          Support effective, enforceable standards that protect the health,
+          safety, and humane treatment of animals in shelters, kennels,
+          breeding operations, pet dealers, rescues, and other facilities
+          regulated by the State, along with appropriate oversight and
+          enforcement of those standards.
+        </p>
+      </article>
+
+    </div>
+
+
+    <!-- OFFICIAL AFFIRMATION -->
+
+    <div class="affirmation">
+      By signing this pledge, I affirm my commitment to these principles
+      and to continued dialogue with Georgia's animal-welfare community.
+    </div>
+
+
+    <!-- SIGNING FORM -->
+
+    <section class="signing-section" id="sign">
+
+      <div class="signing-header">
+
+        <span class="section-label">
+          Candidate Signature
+        </span>
+
+        <h2>Sign the Pledge</h2>
+
+        <p>
+          Candidates for the Georgia General Assembly may use the form
+          below to sign the 2026 GAAA Animal Welfare Candidate Pledge.
+        </p>
+
+      </div>
+
+
+      <form
+        id="pledge-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="access_key"
+          value="0231f105-09a2-407b-8464-f2c57c07cd58"
+        >
+
+        <input
+          type="hidden"
+          name="subject"
+          value="New GAAA Georgia General Assembly Pledge Signature"
+        >
+
+        <input
+          type="hidden"
+          name="source"
+          value="GAAA 2026 Georgia General Assembly Animal Welfare Pledge"
+        >
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="botcheck"
+          tabindex="-1"
+          autocomplete="off"
+        >
+
+
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label for="candidate-name">
+              Candidate Name <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="candidate-name"
+              name="Candidate Name"
+              required
+              autocomplete="name"
+            >
+          </div>
+
+
+          <div class="form-field">
+            <label for="office">
+              Office Sought <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="office"
+              name="Office Sought"
+              placeholder="Example: Georgia House"
+              required
+            >
+          </div>
+
+
+          <div class="form-field">
+            <label for="district">
+              District <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="district"
+              name="District"
+              placeholder="Example: House District 99"
+              required
+            >
+          </div>
+
+
+          <div class="form-field">
+            <label for="party">
+              Party <span style="font-weight:500;">(optional)</span>
+            </label>
+
+            <input
+              type="text"
+              id="party"
+              name="Party"
+            >
+          </div>
+
+
+          <div class="form-field full">
+            <label for="email">
+              Campaign Email <span class="required">*</span>
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            >
+          </div>
+
+        </div>
+
+
+        <!-- AGREEMENT -->
+
+        <div class="agreement-box">
+
+          <h3>Pledge Agreement</h3>
+
+          <div class="checkbox-row">
+
+            <input
+              type="checkbox"
+              id="pledge-agreement"
+              name="Pledge Agreement"
+              value="Agreed"
+              required
+            >
+
+            <label for="pledge-agreement">
+              I have read the Georgia General Assembly Animal Welfare
+              Pledge above and affirm my commitment to the principles
+              stated in the pledge.
+              <span class="required">*</span>
+            </label>
+
+          </div>
+
+
+          <div class="checkbox-row">
+
+            <input
+              type="checkbox"
+              id="publication-consent"
+              name="Publication Consent"
+              value="Agreed"
+              required
+            >
+
+            <label for="publication-consent">
+              I understand that Gwinnett Animal Advocacy Alliance may
+              publicly identify me as a candidate who has signed this
+              pledge, including on GAAA's website, Election Hub, social
+              media, and other public communications.
+              <span class="required">*</span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- SIGNATURE -->
+
+        <div class="signature-area">
+
+          <div class="form-grid">
+
+            <div class="form-field">
+
+              <label for="signature">
+                Electronic Signature <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="signature"
+                name="Electronic Signature"
+                required
+                autocomplete="name"
+              >
+
+              <p class="signature-note">
+                Type your full name. By entering your name and submitting
+                this form, you are electronically signing the pledge above.
+              </p>
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="signature-date">
+                Date <span class="required">*</span>
+              </label>
+
+              <input
+                type="date"
+                id="signature-date"
+                name="Signature Date"
+                required
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="submit-area">
+
+          <button
+            type="submit"
+            class="pledge-submit"
+            id="pledge-submit"
+          >
+            Sign the Pledge
+          </button>
+
+          <p class="form-note">
+            Your submission will be sent to Gwinnett Animal Advocacy
+            Alliance for verification before the candidate's participation
+            is reflected on the GAAA Election Hub.
+          </p>
+
+        </div>
+
+
+        <div
+          id="form-result"
+          class="form-result"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+      </form>
+
+    </section>
+
+
+    <!-- FOOTER NAV -->
+
+    <div class="pledge-footer-nav">
+
+      <a class="nav-card" href="/election-2026/state/">
+
+        <span>State Outreach</span>
+
+        <strong>← Candidate Outreach</strong>
+
+        <p>
+          View GAAA's outreach to Georgia General Assembly candidates
+          representing Gwinnett County.
+        </p>
+
+      </a>
+
+
+      <a class="nav-card" href="/election-2026/">
+
+        <span>2026 Elections</span>
+
+        <strong>Election Hub →</strong>
+
+        <p>
+          Explore GAAA's 2026 election-related animal-welfare projects.
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("pledge-form");
+  const result = document.getElementById("form-result");
+  const submitButton = document.getElementById("pledge-submit");
+  const dateField = document.getElementById("signature-date");
+
+  /* Automatically fill today's local date */
+  function setToday() {
+    const today = new Date();
+
+    const localDate = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    )
+      .toISOString()
+      .split("T")[0];
+
+    dateField.value = localDate;
+  }
+
+  if (dateField && !dateField.value) {
+    setToday();
+  }
+
+
+  form.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    result.className = "form-result";
+    result.style.display = "none";
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+    const formData = new FormData(form);
+
+    try {
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+
+        result.className = "form-result success";
+
+        result.innerHTML =
+          "<strong>Thank you for signing the pledge.</strong><br>" +
+          "Your submission has been received by Gwinnett Animal Advocacy Alliance. " +
+          "GAAA will verify the submission before updating candidate participation " +
+          "on the 2026 Election Hub.";
+
+        form.reset();
+        setToday();
+
+        result.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      } else {
+
+        throw new Error(
+          data.message || "Submission failed."
+        );
+
+      }
+
+    } catch (error) {
+
+      result.className = "form-result error";
+
+      result.innerHTML =
+        "<strong>We couldn't submit the pledge.</strong><br>" +
+        "Please try again. If the problem continues, contact GAAA directly.";
+
+    } finally {
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Sign the Pledge";
+
+    }
+
+  });
+
+});
+</script>
