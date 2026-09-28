@@ -284,6 +284,10 @@ permalink: /election-2026/state/
     background: var(--state-purple);
   }
 
+  .state-election-page .legend-dot.scheduled {
+    background: #3f8f92;
+  }
+
   .state-election-page .legend-dot.awaiting {
     background: var(--state-blue);
   }
@@ -409,6 +413,11 @@ permalink: /election-2026/state/
     color: #62448c;
   }
 
+  .state-election-page .status-scheduled {
+    background: #e9f4f5;
+    color: #2f7477;
+  }
+
   .state-election-page .status-not-located {
     background: var(--state-gold-soft);
     color: #8a651f;
@@ -458,6 +467,29 @@ permalink: /election-2026/state/
     font-size: .88rem;
   }
 
+  .state-election-page .pledge-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: var(--state-green);
+    border-radius: 7px;
+    color: #fff;
+    font-size: .86rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .state-election-page .pledge-button:hover {
+    opacity: .9;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .state-election-page .development-badge.finalized {
+    background: var(--state-green-soft);
+    color: #246b2a;
+  }
+  
   /* FOOTER NAV */
 
   .state-election-page .state-footer-nav {
@@ -608,7 +640,7 @@ permalink: /election-2026/state/
       <div class="metric">
         <span class="metric-number">8</span>
         <span class="metric-label">Candidates Engaged</span>
-        <span class="metric-detail">1 meeting held · 7 additional responses</span>
+        <span class="metric-detail">1 meeting held · 2 meetings scheduled · 5 additional responses</span>
       </div>
 
     </div>
@@ -709,6 +741,11 @@ permalink: /election-2026/state/
       <div class="legend-item">
         <span class="legend-dot met"></span>
         Met with GAAA
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-dot scheduled"></span>
+        Meeting Scheduled
       </div>
 
       <div class="legend-item">
@@ -1438,9 +1475,9 @@ permalink: /election-2026/state/
             <span class="party-label democrat">Democrat</span>
           </div>
 
-          <span class="candidate-status status-response">
-            <i class="fas fa-circle-check" aria-hidden="true"></i>
-            Response Received
+          <span class="candidate-status status-scheduled">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            Meeting Scheduled
           </span>
         </div>
 
@@ -1589,9 +1626,9 @@ permalink: /election-2026/state/
             <span class="party-label democrat">Democrat</span>
           </div>
 
-          <span class="candidate-status status-response">
-            <i class="fas fa-circle-check" aria-hidden="true"></i>
-            Response Received
+          <span class="candidate-status status-scheduled">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            Meeting Scheduled
           </span>
 
         </div>
@@ -1791,12 +1828,12 @@ permalink: /election-2026/state/
   </section>
 
 
-  <!-- STATE PLEDGE -->
+   <!-- STATE PLEDGE -->
 
   <section class="pledge-development">
 
-    <span class="development-badge">
-      Final Review
+    <span class="development-badge finalized">
+      Published
     </span>
 
     <h2>
@@ -1804,20 +1841,28 @@ permalink: /election-2026/state/
     </h2>
 
     <p>
-      GAAA has developed a separate 11-point Animal Welfare Candidate
-      Pledge specifically for candidates seeking election to the Georgia
-      General Assembly. The pledge focuses on animal-welfare issues within
-      the authority and responsibilities of state legislators, including
+      GAAA has developed an 11-point Animal Welfare Candidate Pledge
+      specifically for candidates seeking election to the Georgia General
+      Assembly. The pledge focuses on animal-welfare issues within the
+      authority and responsibilities of state legislators, including
       pet-overpopulation prevention, animal-cruelty laws and enforcement,
       protection of local animal-welfare authority, responsible breeding,
-      transparency, standards of care, and constituent engagement.
+      standards of care, transparency, stakeholder participation, and
+      constituent engagement.
     </p>
 
     <p class="pledge-status-note">
-      The pledge is currently undergoing final review before being
-      distributed to candidates. Candidate participation will be published
-      here after outreach begins.
+      Candidates may review and electronically sign the pledge through
+      GAAA's website. Candidate participation will be reflected on this
+      page after GAAA verifies each submission.
     </p>
+
+    <a
+      class="pledge-button"
+      href="/election-2026/state/pledge/"
+    >
+      Review &amp; Sign the Animal Welfare Pledge →
+    </a>
 
   </section>
 
