@@ -309,21 +309,6 @@ permalink: /election-2026/state/
     background: #59636D;
   }
 
-  .state-election-page .pledge-legend {
-    margin-top: 18px;
-    padding-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 18px;
-    align-items: center;
-    border-top: 1px solid var(--state-border);
-  }
-
-  .state-election-page .pledge-legend-label {
-    color: var(--state-navy);
-    font-size: .78rem;
-    font-weight: 800;
-  }
 
   /* CANDIDATE SECTIONS */
 
@@ -428,9 +413,9 @@ permalink: /election-2026/state/
   }
 
   .state-election-page .status-awaiting {
-    background: #E8F2FC;
-    color: #0F579F;
-    border: 1px solid #B9D5F1;
+    background: #FFF7D6;
+    color: #8A6500;
+    border: 1px solid #E8D27A;
   }
 
   .state-election-page .status-response {
@@ -528,6 +513,55 @@ permalink: /election-2026/state/
     opacity: .9;
     color: #fff;
     text-decoration: none;
+  }
+
+  .state-election-page .pledge-development.pledge-compact {
+    max-width: 1180px;
+    margin: 28px auto 38px;
+    padding: 28px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+  }
+
+  .state-election-page .pledge-compact-copy {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .state-election-page .pledge-compact .development-badge {
+    margin-bottom: 10px;
+  }
+
+  .state-election-page .pledge-compact h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    line-height: 1.15;
+  }
+
+  .state-election-page .pledge-compact p {
+    margin: 0;
+    max-width: 850px;
+  }
+
+  .state-election-page .pledge-compact .pledge-button {
+    flex: 0 0 auto;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 850px) {
+    .state-election-page .pledge-development.pledge-compact {
+      display: block;
+      padding: 24px;
+    }
+
+    .state-election-page .pledge-compact .pledge-button {
+      margin-top: 18px;
+      white-space: normal;
+    }
   }
 
   /* FOOTER NAV */
@@ -692,118 +726,47 @@ permalink: /election-2026/state/
 
   <section class="state-intro">
 
-    <span class="section-label">
-      State Legislative Outreach
-    </span>
+    <span class="section-kicker">State Legislative Outreach</span>
 
-    <h2>
-      Bringing Animal Welfare Into the State-Level Conversation
-    </h2>
+    <h2>Bringing Animal Welfare Into the State-Level Conversation</h2>
 
     <p>
-      GAAA identified candidates seeking Georgia House and Senate seats
-      representing Gwinnett County and began direct outreach to introduce
-      our organization, discuss animal-welfare issues, and establish
-      communication with candidates across party lines.
+      GAAA is reaching out to Georgia House and Senate candidates representing
+      Gwinnett County to discuss animal-welfare issues and track candidate engagement.
     </p>
 
-    <p>
-      This page documents that outreach and candidate participation.
-      Candidate status will be updated as additional responses and
-      conversations occur.
-    </p>
-</section>
+  </section>
 
 
-<!-- STATE PLEDGE -->
+  <!-- STATE PLEDGE -->
 
-  <section class="pledge-development">
+  <section class="pledge-development pledge-compact">
 
-    <span class="development-badge finalized">
-      2026 Candidate Pledge
-    </span>
+    <div class="pledge-compact-copy">
 
-    <h2>
-      Georgia General Assembly Animal Welfare Pledge
-    </h2>
+      <span class="development-badge finalized">2026 Candidate Pledge</span>
 
-    <p>
-      GAAA has developed an 11-point Animal Welfare Candidate Pledge
-      specifically for candidates seeking election to the Georgia General
-      Assembly. The pledge focuses on animal-welfare issues within the
-      authority and responsibilities of state legislators, including
-      pet-overpopulation prevention, animal-cruelty laws and enforcement,
-      protection of local animal-welfare authority, responsible breeding,
-      standards of care, transparency, stakeholder participation, and
-      constituent engagement.
-    </p>
+      <h2>Georgia General Assembly Animal Welfare Pledge</h2>
 
-    <p class="pledge-status-note">
-      Candidates may review and electronically sign the pledge through
-      GAAA's website. Candidate participation will be reflected on this
-      page after GAAA verifies each submission.
-    </p>
+      <p>
+        GAAA's 11-point state legislative pledge addresses pet-overpopulation prevention,
+        animal cruelty and enforcement, local authority, responsible breeding, standards
+        of care, transparency, and constituent engagement.
+      </p>
+
+    </div>
 
     <a
       class="pledge-button"
-      href="/election-2026/state/pledge/"
+      href="/election-2026/state/animal-welfare-pledge/"
     >
-      Review &amp; Sign the Animal Welfare Pledge →
+      View the 11-Point Pledge →
     </a>
 
   </section>
 
 
-  <!-- STATUS KEY -->
-
-  <div class="status-legend">
-
-    <h3>Outreach Status</h3>
-
-    <div class="legend-items">
-
-      <div class="legend-item">
-        <span class="legend-dot awaiting"></span>
-        Awaiting Response
-      </div>
-
-      <div class="legend-item">
-        <span class="legend-dot engaged"></span>
-        Response Received
-      </div>
-
-      <div class="legend-item">
-        <span class="legend-dot scheduled"></span>
-        Meeting Scheduled
-      </div>
-
-      <div class="legend-item">
-        <span class="legend-dot met"></span>
-        Met with GAAA
-      </div>
-
-      <div class="legend-item">
-        <span class="legend-dot not-located"></span>
-        Public Contact Not Located
-      </div>
-
-    </div>
-
-    <div class="pledge-legend">
-
-      <span class="pledge-legend-label">Pledge Participation</span>
-
-      <div class="legend-item">
-        <span class="legend-dot signed"></span>
-        Pledge Signed
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- GEORGIA SENATE -->
+<!-- GEORGIA SENATE -->
 
   <section class="candidate-section">
 
