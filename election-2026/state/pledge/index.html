@@ -1114,13 +1114,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitButton = document.getElementById("pledge-submit");
   const dateField = document.getElementById("signature-date");
 
+  if (!form || !result || !submitButton) {
+    console.error("Pledge form elements were not found.");
+    return;
+  }
 
   /* AUTO-FILL TODAY'S DATE */
-
   function setToday() {
+    if (!dateField) return;
 
     const today = new Date();
-
     const localDate = new Date(
       today.getTime() - today.getTimezoneOffset() * 60000
     )
@@ -1128,51 +1131,65 @@ document.addEventListener("DOMContentLoaded", function () {
       .split("T")[0];
 
     dateField.value = localDate;
-
   }
 
-
-  if (dateField && !dateField.value) {
-    setToday();
-  }
+  setToday();
 
 
-  /* SUBMIT FORM */
-
+  /* FORM SUBMISSION */
   form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
-    result.className = "form-result";
-    result.style.display = "none";
+    /* Let browser handle required fields first */
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
     submitButton.disabled = true;
     submitButton.textContent = "Submitting...";
 
-    const formData = new FormData(form);
+    result.style.display = "block";
+    result.className = "form-result";
+    result.innerHTML = "Submitting your pledge...";
 
 
     try {
+
+      const formData = new FormData(form);
+
+      const object = Object.fromEntries(formData);
+
+      const json = JSON.stringify(object);
+
 
       const response = await fetch(
         "https://api.web3forms.com/submit",
         {
           method: "POST",
-          body: formData
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: json
         }
       );
+
 
       const data = await response.json();
 
 
-      if (data.success) {
+      if (response.ok && data.success) {
 
         result.className = "form-result success";
 
         result.innerHTML =
-          "<strong>Thank you for signing the pledge.</strong><br>" +
+          "<strong>Thank you for signing the pledge!</strong><br>" +
           "Your submission has been received by Gwinnett Animal Advocacy Alliance. " +
-          "GAAA will verify the submission before updating candidate participation " +
+          "GAAA will verify the submission before updating your participation " +
           "on the 2026 Election Hub.";
 
         form.reset();
@@ -1186,13 +1203,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       } else {
 
-        throw new Error(
-          data.message || "Submission failed."
-        );
+        console.error("Web3Forms response:", data);
+
+        result.className = "form-result error";
+
+        result.innerHTML =
+          "<strong>We couldn't submit the pledge.</strong><br>" +
+          (data.message || "Please try again.");
 
       }
 
     } catch (error) {
+
+      console.error("Web3Forms submission error:", error);
 
       result.className = "form-result error";
 
