@@ -78,9 +78,10 @@ permalink: /election-2026/state/animal-welfare-pledge/
 
   .state-pledge-public .pledge-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 16px;
-    margin-top: 28px;
+    max-width: 1000px;
+    margin: 28px auto 0;
   }
 
   .state-pledge-public .pledge-item {
@@ -142,7 +143,8 @@ permalink: /election-2026/state/animal-welfare-pledge/
   }
 
   .state-pledge-public .candidate-note {
-    margin-top: 20px;
+    max-width: 1000px;
+    margin: 24px auto 0;
     padding: 18px 22px;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -160,8 +162,19 @@ permalink: /election-2026/state/animal-welfare-pledge/
   }
 
   .state-pledge-public .footer-nav a {
-    color: var(--navy);
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 7px;
+    background: var(--navy);
+    color: #fff;
+    font-size: .88rem;
     font-weight: 800;
+    text-decoration: none;
+  }
+
+  .state-pledge-public .footer-nav a:hover {
+    opacity: .9;
+    color: #fff;
     text-decoration: none;
   }
 
@@ -273,13 +286,6 @@ permalink: /election-2026/state/animal-welfare-pledge/
 
   </div>
 
-  <section class="affirmation">
-    <h2>Candidate Commitment</h2>
-    <p>
-      By signing this pledge, I affirm my commitment to these principles and to
-      continued dialogue with Georgia's animal-welfare community.
-    </p>
-  </section>
 
   <div class="candidate-note">
     <strong>Candidate signing:</strong> Candidates are invited directly by GAAA to
